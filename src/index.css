@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #dc2626;
+  --primary-hover: #b91c1c;
+  --text-dark: #111827;
+  --text-light: #f9fafb;
+  --bg-dark: #111827;
+  --bg-light: #ffffff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  transition: all 0.3s;
+  background-color: rgba(106, 115, 125, 0.2);
+  &:hover {
+    background-color: rgba(106, 115, 125, 0.27);
+  }
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+/* Dark mode */
+.dark {
+  color-scheme: dark;
+}
+
+/* Global styles */
+body {
+  font-family: 'Inter', sans-serif;
+  @apply text-gray-800 dark:text-gray-200;
+  @apply bg-white dark:bg-gray-900;
+  @apply transition-colors duration-200;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+}
+
+/* Button styles */
+@layer components {
+  .btn-primary {
+    @apply inline-block px-6 py-2.5 bg-red-600 text-white font-medium rounded-md
+           hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50
+           transition-colors duration-200 ease-in-out;
+  }
+  
+  .btn-secondary {
+    @apply inline-block px-6 py-2.5 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white font-medium rounded-md
+           hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-500
+           transition-colors duration-200 ease-in-out;
+  }
+  
+  .btn-outline {
+    @apply inline-block px-6 py-2.5 border border-red-600 dark:border-red-500 text-red-600 dark:text-red-500 font-medium rounded-md
+           hover:bg-red-600 hover:text-white dark:hover:bg-red-500 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50
+           transition-colors duration-200 ease-in-out;
+  }
+}
+
+/* Section bar separator */
+.section-bar {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #dc2626, #ef4444);
+  border-radius: 2px;
+}
+
+/* Page transition animations */
+.page-enter {
+  opacity: 0;
+}
+.page-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.page-exit {
+  opacity: 1;
+}
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+/* Form elements */
+input, textarea, select {
+  @apply border border-gray-300 dark:border-gray-600 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500;
+  @apply bg-white dark:bg-gray-700 text-gray-900 dark:text-white;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden;
+}
+
+/* Accessibility focus styles */
+:focus-visible {
+  @apply outline-none ring-2 ring-red-500 ring-opacity-50;
+}
