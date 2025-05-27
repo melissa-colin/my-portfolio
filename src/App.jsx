@@ -11,9 +11,12 @@ import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import Research from './pages/Research';
 import Publications from './pages/Publications';
+import Experience from './pages/ExperiencePage';
+import Education from './pages/EducationPage';
 import Projects from './pages/Projects';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 // Admin pages
 import Login from './pages/admin/Login';
@@ -42,6 +45,8 @@ function App() {
                 <Route index element={<Home />} />
                 <Route path="research" element={<Research />} />
                 <Route path="publications" element={<Publications />} />
+                <Route path="experience" element={<Experience />} />
+                <Route path="education" element={<Education />} />
                 <Route path="projects" element={<Projects />} />
                 <Route path="blog" element={<Blog />} />
                 <Route path="contact" element={<Contact />} />
@@ -61,26 +66,7 @@ function App() {
               } />
 
               {/* 404 Route */}
-              <Route path="*" element={
-                <Layout>
-                  <div className="min-h-screen flex items-center justify-center">
-                    <div className="text-center">
-                      <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                        404
-                      </h1>
-                      <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
-                        Page not found
-                      </p>
-                      <a 
-                        href="/" 
-                        className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700"
-                      >
-                        Go Home
-                      </a>
-                    </div>
-                  </div>
-                </Layout>
-              } />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Router>
         </AuthProvider>
