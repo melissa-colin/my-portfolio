@@ -1,21 +1,23 @@
-# Définir les types MIME corrects
+# Définir les types MIME corrects pour tous les fichiers JavaScript
 <IfModule mod_mime.c>
-  AddType application/javascript .js
+  AddType application/javascript .js .mjs .jsx
   AddType text/css .css
-  AddType image/svg+xml .svg
+  AddType application/json .json
+  AddType text/html .html .htm
 </IfModule>
 
-# Activer la compression
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json
+# Désactiver temporairement l'en-tête X-Content-Type-Options pour déboguer
+<IfModule mod_headers.c>
+  Header unset X-Content-Type-Options
 </IfModule>
 
-# Pour le routage SPA (Single Page Application)
+# Redirection vers index.html pour SPA
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
   RewriteRule . /index.html [L]
 </IfModule>
