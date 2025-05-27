@@ -11,7 +11,7 @@ export default defineConfig({
     outDir: 'dist',
   },
   // Add base path configuration
-  base: '/',
+  base: './',
   // This ensures the router works correctly in production
   preview: {
     port: 3000
