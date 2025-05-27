@@ -6,6 +6,17 @@ echo "🚀 Starting deployment preparation process..."
 echo "🧹 Cleaning up previous builds..."
 rm -rf dist
 
+# Ensure pnpm is installed
+if ! command -v pnpm &> /dev/null
+then
+	echo "pnpm could not be found. Installing pnpm globally..."
+	npm install -g pnpm
+fi
+
+# Approve build scripts for dependencies
+echo "✅ Approving build scripts..."
+pnpm approve-builds
+
 # Installing dependencies
 echo "📦 Installing dependencies..."
 pnpm install
@@ -35,3 +46,5 @@ echo "🌐 For GitHub deployment:
 2. Push to GitHub: git push origin main
 3. If using GitHub Pages, configure it to deploy from the /dist folder
 "
+git add . && git commit -m 'Prepare for deployment'
+git push origin main
