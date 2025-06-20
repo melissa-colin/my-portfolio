@@ -212,7 +212,7 @@ const fr = {
   
   projects: {
     title: "Projets",
-    subtitle: "Une vitrine de mon travail technique et mes implémentations de recherche",
+    subtitle: "Le laboratoire un peu fou des idées qui s’aventurent sans guide.",
     filter: "Filtrer Par",
     allCategories: "Toutes les Catégories",
     search: "Rechercher des projets...",
@@ -228,34 +228,33 @@ const fr = {
     list: [
       {
         id: 1,
-        title: "Tableau de bord XAI",
-        description: "Un tableau de bord interactif pour visualiser et comprendre comment les réseaux de neurones profonds prennent des décisions dans les applications de vision par ordinateur.",
-        image: "/assets/images/project-xai.jpg",
-        technologies: ["Python", "TensorFlow", "React", "D3.js"],
-        github: "https://github.com/melissacolin/xai-dashboard",
-        demo: "https://xai-demo.example.com",
-        category: "xai",
+        title: "PoseNet",
+        description: "Un projet de recherche sur la reconnaissance d'actions grâce aux données de pose humaine.",
+        image: "/assets/images/projects/posenet.png",
+        technologies: ["Python", "Pose Estimation", "OpenCV", "Deep Learning"],
+        github: "https://github.com/melissa-colin/PoseNet",
+        category: "vision",
         featured: false
       },
       {
         id: 2,
-        title: "Boîte à outils de détection des biais",
-        description: "Une boîte à outils complète pour identifier et atténuer divers biais dans les modèles et ensembles de données ML pour un développement d'IA plus éthique.",
-        image: "/assets/images/project-bias.jpg",
-        technologies: ["Python", "Scikit-learn", "Pandas"],
-        github: "https://github.com/melissacolin/bias-detection",
+        title: "WitHub",
+        description: "Une boîte à outils complète pour automatiser le versionning de projets sur Git grâce à l'IA.",
+        image: "/assets/images/projects/withub.png",
+        technologies: ["Python", "Git", "Ollama", "LLMs"],
+        github: null,
         demo: null,
-        category: "ethics",
+        category: "tools",
         featured: false
       },
       {
         id: 3,
-        title: "Explicabilité ViT vs CNN",
-        description: "Projet de recherche comparant l'explicabilité des Vision Transformers et des CNN en utilisant les techniques LIME, SHAP et Grad-CAM.",
-        image: "/assets/images/project-vit-cnn.jpg",
-        technologies: ["PyTorch", "Python", "LIME", "SHAP", "Grad-CAM"],
-        github: "https://github.com/melissacolin/vit-cnn-explainability",
-        demo: "https://hal.science/hal-04641791v1",
+        title: "EcoSort",
+        description: "Application mobile qui combine la reconnaissance d'image et la géolocalisation pour aider les utilisateurs à trier correctement leurs déchets.",
+        image: "/assets/images/projects/ecosort.png",
+        technologies: ["YOLO", "Python", "OpenCV"],
+        github: "https://github.com/melissa-colin/EcoSort",
+        demo: "https://www.youtube.com/watch?v=GGjImtkW-us",
         category: "vision",
         featured: false
       }
