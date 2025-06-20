@@ -220,20 +220,15 @@ const fr = {
     viewLive: "Voir la Démo",
     viewCode: "Voir le Code",
     readMore: "En Savoir Plus",
-    categories: {
-      xai: "XAI",
-      vision: "Vision",
-      ethics: "Éthique"
-    },
     list: [
       {
         id: 1,
         title: "PoseNet",
         description: "Un projet de recherche sur la reconnaissance d'actions grâce aux données de pose humaine.",
-        image: "/assets/images/projects/posenet.png",
+        image: "/assets/images/projects/posenet2.png",
         technologies: ["Python", "Pose Estimation", "OpenCV", "Deep Learning"],
         github: "https://github.com/melissa-colin/PoseNet",
-        category: "vision",
+        category: "Vision",
         featured: false
       },
       {
@@ -244,7 +239,7 @@ const fr = {
         technologies: ["Python", "Git", "Ollama", "LLMs"],
         github: null,
         demo: null,
-        category: "tools",
+        category: "Tools",
         featured: false
       },
       {
@@ -255,7 +250,7 @@ const fr = {
         technologies: ["YOLO", "Python", "OpenCV"],
         github: "https://github.com/melissa-colin/EcoSort",
         demo: "https://www.youtube.com/watch?v=GGjImtkW-us",
-        category: "vision",
+        category: "Vision",
         featured: false
       }
     ],

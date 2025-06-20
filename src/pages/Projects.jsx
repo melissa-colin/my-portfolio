@@ -8,7 +8,12 @@ const Projects = () => {
 
   // Récupération des projets et catégories depuis les fichiers de traduction
   const projects = t('projects.list');
-  const categories = t('projects.categories');
+  const categories = Array.from(
+    new Set(projects.map(project => project.category))
+  ).reduce((acc, category) => {
+    acc[category] = category;
+    return acc;
+  }, {});
 
   // Gestion du filtre et de la recherche
   const [selectedCategory, setSelectedCategory] = useState('all');
