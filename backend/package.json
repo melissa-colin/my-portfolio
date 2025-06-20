@@ -1,0 +1,22 @@
+{
+  "name": "my-portfolio-backend",
+  "version": "1.0.0",
+  "description": "Backend for my portfolio project",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "lint": "eslint .",
+    "build": "echo 'No build step defined for backend'"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "nodemailer": "^6.6.3",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  },
+  "author": "Melissa Colin",
+  "license": "MIT"
+}
