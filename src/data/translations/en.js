@@ -3,20 +3,20 @@
  */
 const en = {
   site: {
-    title: "Mélissa Colin | XAI & Computer Vision Specialist",
-    tagline: "XAI & Computer Vision Specialist",
-    description: "Portfolio of Mélissa Colin, AI Researcher specializing in Explainable AI and Computer Vision"
+    title: "Mélissa Colin | Artificial Intelligence Student",
+    tagline: "Artificial Intelligence Student",
+    description: "AI student passionate about computer vision applications, with the ambition to work on innovative research projects involving deep learning model architectures, explainable AI, and computer vision.",
   },
-  
+
   theme: {
     dark: "Dark Mode",
     light: "Light Mode",
-    toggle: "Toggle theme"
+    toggle: "Toggle Theme"
   },
-  
+
   nav: {
     home: "Home",
-    certification: "Certification",
+    certification: "Certifications",
     publications: "Publications",
     experience: "Experience",
     education: "Education",
@@ -27,30 +27,33 @@ const en = {
 
   home: {
     heroTitle: "Mélissa Colin",
-    heroSubtitle: "I'm an AI researcher specializing in Explainable AI (XAI) and Computer Vision, passionate about making AI systems more interpretable and trustworthy.",
+    heroSubtitle: "I'm an engineering student in computer science at ENSEIRB-MATMECA, specializing in AI applied to computer vision. I explore and enhance systems to make them more interpretable and reliable—or design new ones altogether.",
     viewProjects: "View Projects",
-    viewResearch: "View Certification",
     viewPublications: "View Publications",
     viewExperience: "View Experience",
-    viewEducation: "View Education",
-    viewBlog: "View Blog",
     learnMore: "Learn More",
     aboutTitle: "About Me",
     skillsSection: {
       title: "Expertise & Skills",
-      subtitle: "A broad spectrum of technical skills with specialization in explainable AI and computer vision.",
+      subtitle: "A broad set of both technical and interpersonal skills, with a focus on explainable AI and computer vision.",
       skills: [
         {
           id: 'deeplearning',
           icon: 'FiCpu',
           name: "Deep Learning & Computer Vision",
-          description: "CNN, ViT, Transformers, attention mechanisms, encoder-decoder architectures"
+          description: "CNNs, ViTs, Transformers, attention mechanisms, encoder-decoder architectures"
         },
         {
-          id: 'xai',
-          icon: 'FiEye',
-          name: "Explainable AI (XAI)",
-          description: "LIME, SHAP, Grad-CAM, interpretability techniques"
+          id: 'languages',
+          icon: 'FiCode',
+          name: "Programming Languages",
+          description: "Python, C, JavaScript, R, SQL"
+        },
+        {
+          id: 'frameworks',
+          icon: 'FiDatabase',
+          name: "Data & AI Frameworks",
+          description: "OpenCV, PyTorch, TensorFlow, NumPy, Pandas, scikit-learn"
         },
         {
           id: 'mlops',
@@ -59,53 +62,64 @@ const en = {
           description: "Docker, Kubernetes, Kubeflow, optimized training pipelines"
         },
         {
-          id: 'languages',
-          icon: 'FiCode',
-          name: "Programming Languages",
-          description: "Python, R, SQL"
+          id: 'xai',
+          icon: 'FiEye',
+          name: "Explainable AI (XAI)",
+          description: "LIME, SHAP, Grad-CAM, interpretability techniques"
         },
         {
-          id: 'frameworks',
-          icon: 'FiDatabase',
-          name: "AI Frameworks",
-          description: "PyTorch, TensorFlow, scikit-learn, OpenCV"
-        },
-        {
-          id: 'research',
+          id: 'certification',
           icon: 'FiMessageSquare',
           name: "Research & Communication",
           description: "Scientific writing, technical presentations, knowledge dissemination"
+        },
+        {
+          id: 'laws-ethics',
+          icon: 'FiShield',
+          name: "AI Law & Ethics",
+          description: "GDPR compliance, AI Act, AI ethics, algorithmic bias, system accountability"
+        },
+        {
+          id: 'softskills',
+          icon: 'FiUsers',
+          name: "Interpersonal Skills",
+          description: "Curiosity, organization, adaptability, leadership, teamwork"
+        },
+        {
+          id: 'languages-spoken',
+          icon: 'FiGlobe',
+          name: "Languages Spoken",
+          description: "French (native), English (fluent), Chinese (beginner)"
         }
       ],
       notableTitle: "Notable Achievements",
       notable: [
-        "Development of a suspicious behavior recognition AI model (accuracy improved from <strong>60% to 90%</strong>)",
-        "Reduction of model inference time by <strong>70%</strong>",
-        "Co-organization of AI4Industry networking session, moderating a roundtable on post-PhD perspectives",
-        "Published an <a href=\"https://medium.com/@melissa.colin/yolov8-explained-understanding-object-detection-from-scratch-763479652312\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">explanatory article</a> on YOLOv8 on Medium",
-        "Co-author of a <a href=\"https://hal.science/hal-04641791v1\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">scientific publication</a> presented at PFIA 2024"
+        "Author of a first <a href=\"https://hal.science/hal-04641791v1\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">scientific publication</a> at age 20, presented at PFIA 2024",
+        "Organizer of the networking session at <a href=\"https://www.ai4industry.fr/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">AI4Industry</a>, and moderator of a roundtable on post-PhD opportunities",
+        "Published an in-depth explainer on YOLOv8 on <a href=\"https://medium.com/@melissa.colin/yolov8-explained-understanding-object-detection-from-scratch-763479652312\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Medium</a>",
+        "Vice-president of the <a href=\"https://www.ingenib.fr/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Ingenib</a> recruitment forum at ENSEIRB-MATMECA"
       ]
     },
-    projectsTitle: "Featured Projects",
     viewAllProjects: "View All Projects",
     age: "21 years old",
-    status: "Student-Engineer",
+    status: "Engineering Student",
     school: "ENSEIRB-MATMECA"
   },
 
   about: {
     title: "About Me",
-    intro: "My name is <strong>Mélissa Colin</strong>, I'm 21 years old, and I'm currently an engineering student in computer science and artificial intelligence at <strong>ENSEIRB-MATMECA</strong> in Bordeaux, where I'm pursuing an <strong>engineer-doctor track</strong> with the clear ambition to engage in <strong>AI research</strong>.",
-    section1Title: "An atypical journey, forged by passion",
-    section1p1: "My passion for computer science began very early. At <strong>12 years old</strong>, I discovered Scratch, at <strong>13</strong>, I taught myself Python, and by <strong>15</strong>, I chose a high school specializing in Information Systems and Digital Technology. Very quickly, I realized that what fascinated me was <strong>algorithmic design</strong>, more than website creation or game development. I experimented for a while – robotics, development, Arduino projects – before finding a true resonance in <strong>artificial intelligence</strong>.",
-    section1p2: "This realization came during an AI internship at Cali Intelligences, a startup specializing in data and AI. It was a revelation. I then threw myself wholeheartedly into the study of AI, with one goal: <strong>to actively contribute to its evolution</strong>, particularly through <strong>the design and improvement of deep learning model architectures</strong>.",
-    section2Title: "A determination to reorient and excel",
-    section2p1: "Initially coming from a private curriculum oriented toward practical applications, I made the courageous choice to <strong>transition to public education</strong> in order to strengthen my theoretical foundations in mathematics and algorithms. I entered ENSEIRB-MATMECA, a school known for its academic rigor, despite the many obstacles and doubts expressed about my application. My determination paid off: I entered the program ranked <strong>first on the waiting list</strong>, proving that <strong>motivation and self-teaching can compete with the most traditional educational paths</strong>.",
-    cta: "Discover my certification"
+    intro: "I am currently a computer and artificial intelligence engineering student at <strong>ENSEIRB-MATMECA</strong> in Bordeaux, following the <strong>engineer-doctor pathway</strong> with a clear ambition to pursue <strong>AI research</strong>.",
+    section1Title: "An Unconventional Journey Driven by Passion",
+    section1p1: "My passion for computing began very early. At <strong>12 years old</strong>, I discovered Scratch; at <strong>13</strong>, I taught myself Python; and by <strong>15</strong>, I enrolled in a technical high school. I quickly realized that what fascinated me most was <strong>algorithms</strong>, more than web development or game creation. I experimented for a while—robotics, development, Arduino projects—before finding a true calling in <strong>artificial intelligence</strong>.",
+    section1p2: "That spark came during an AI internship at Cali Intelligences, a startup specializing in computer vision and AI. It was a revelation. I then threw myself wholeheartedly into AI studies, determined to <strong>actively contribute to its advancement</strong>, especially through <strong>designing and refining deep learning model architectures</strong>.",
+    section2Title: "A Determination to Pivot and Excel",
+    section2p1: "Originally enrolled in a practice-oriented program, I made the bold decision to <strong>transition to academia</strong> to strengthen my theoretical foundation in mathematics and algorithms. I joined ENSEIRB-MATMECA, renowned for its academic rigor and its computer science track, despite numerous doubts surrounding my application. My determination paid off: I was admitted on merit, proving that <strong>motivation and self-learning can stand shoulder to shoulder with the most traditional paths</strong>.",
+    cta: "Explore My Journey"
   },
+
   certification: {
-    pageTitle: "Professional Certifications",
-    pageIntro: "Continuous learning is essential in the rapidly evolving field of AI. These certifications represent my commitment to developing expertise across multiple domains within artificial intelligence and machine learning.",
+    pageTitle: "Certifications",
+    pageIntro: "When curiosity comes with a stamp of approval.",
     filterByCategory: "Filter by Category",
     clearFilters: "Clear Filters",
     noMatch: "No certifications match the selected categories. Please adjust your filters.",
@@ -117,221 +131,61 @@ const en = {
       { id: 'mlops', name: "MLOps" },
       { id: 'xai', name: "Explainable AI" },
       { id: 'ethics', name: "AI Ethics" },
-      { id: 'cloud', name: "Cloud Computing" }
+      { id: 'cloud', name: "Cloud Computing" },
+      { id: 'python', name: "Python" },
+      { id: 'data-science', name: "Data Science" },
+      { id: 'math', name: "Mathematics" },
+      { id: 'transversal', name: "Cross-Disciplinary Skills" },
+      { id: 'research', name: "Research" },
+      { id: 'ml', name: "Machine Learning" },
     ],
     certifications: [
       {
-        id: 'deeplearning',
-        title: "Deep Learning Specialization",
-        issuer: "DeepLearning.AI",
-        date: "December 2022",
-        description: "Mastered fundamental concepts in deep neural networks, including convolutional networks, sequence models, and practical engineering techniques.",
-        categories: ['deep-learning', 'computer-vision'],
+        id: 'math',
+        title: "Math Prep: College & Work Ready",
+        issuer: "University of North Texas",
+        date: "February 2024",
+        description: "Mathematics preparation for university students and professionals, covering algebra, geometry, and statistics.",
+        categories: ['math'],
         verified: true,
-        link: "https://www.coursera.org/account/accomplishments/specialization/XXXXXX"
+        link: "https://www.coursera.org/account/accomplishments/verify/76JFT8RWXAH8"
       },
       {
-        id: 'mlops',
-        title: "MLOps Engineering Certification",
-        issuer: "Google Cloud",
-        date: "March 2023",
-        description: "Advanced training in building and deploying machine learning systems in production environments, with expertise in containerization, continuous delivery, and monitoring.",
-        categories: ['mlops', 'cloud'],
+        id: 'mlpos',
+        title: "Docker for Developers",
+        issuer: "LinkedIn Learning",
+        date: "December 2023",
+        description: "Training on using Docker for application containerization, including image creation and container management.",
+        categories: ['mlops'],
         verified: true,
-        link: "https://cloud.google.com/certification/machine-learning-engineer"
+        link: "https://www.linkedin.com/learning/certificates/2ad9ec98113985ae1fb24fe5cbbc3db1a7a73233590d74d901f354cf760fdaf4?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B3EQveap8SVSnKDTYquyfvQ%3D%3D"
       },
       {
-        id: 'explainableai',
-        title: "Explainable AI: Foundations and Applications",
-        issuer: "MIT Professional Education",
-        date: "September 2023",
-        description: "Comprehensive program covering theoretical foundations and practical implementation of explainable AI methods, with a focus on model interpretability, fairness, and regulatory compliance.",
-        categories: ['xai', 'ethics'],
-        verified: false,
-        link: "https://professional.mit.edu/course-catalog/explainable-ai"
+        id: 'ml',
+        title: "Machine Learning: Natural Language Processing with Python",
+        issuer: "LinkedIn Learning",
+        date: "December 2023",
+        description: "Course on natural language processing techniques with Python, including lemmatization, stemming, and K-fold cross-validation.",
+        categories: ['ml', 'python'],
+        verified: true,
+        link: "https://www.linkedin.com/learning/certificates/721d19e8108b366ae34ccbc857580cb4c2a085f8870f7dfd2060e583c1a53643?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B3EQveap8SVSnKDTYquyfvQ%3D%3D"
       },
       {
-        id: 'computervision',
-        title: "Advanced Computer Vision Certification",
-        issuer: "NVIDIA Deep Learning Institute",
-        date: "January 2023",
-        description: "Specialized training in state-of-the-art computer vision techniques using deep learning, with hands-on experience in designing and implementing vision models for real-world applications.",
-        categories: ['computer-vision', 'deep-learning'],
+        id: 'research',
+        title: "Writing and Publishing a Scientific Article",
+        issuer: "France Université Numérique",
+        date: "December 2023",
+        description: "Program led by the Institut de Recherche pour le Développement and taught by researchers from the Francophone Engineering Sciences Excellence Network, providing the keys to meet scientific publishers' standards.",
+        categories: ['research'],
         verified: true,
-        link: "https://www.nvidia.com/en-us/training/online/"
-      },
-      {
-        id: 'ethics',
-        title: "AI Ethics and Governance",
-        issuer: "Oxford University",
-        date: "June 2023",
-        description: "Interdisciplinary program exploring ethical challenges in AI development and deployment, including bias mitigation, privacy protection, and creating responsible AI frameworks.",
-        categories: ['ethics', 'xai'],
-        verified: true,
-        link: "https://www.conted.ox.ac.uk/courses/artificial-intelligence-ethics-and-society"
-      },
-      {
-        id: 'cloudarch',
-        title: "Cloud Architecture Professional",
-        issuer: "AWS Training and Certification",
-        date: "April 2023",
-        description: "Professional certification covering cloud architecture best practices, scalable systems design, and implementation of secure and resilient cloud services.",
-        categories: ['cloud', 'mlops'],
-        verified: true,
-        link: "https://aws.amazon.com/certification/"
+        link: "https://openbadgefactory.com/validator/result?a=https%3A%2F%2Fopenbadgefactory.com%2Fv1%2Fassertion%2F680c4bd78593df8e2857621c811a5e97864584e4.json"
       }
     ]
   },
 
-  research: {
-    title: "Research Focus",
-    subtitle: "Exploring the frontiers of Explainable AI and Computer Vision",
-    interests: "Research Interests",
-    intro: "My research lies at the intersection of Explainable AI and Computer Vision, where I focus on developing interpretable deep learning models that provide meaningful explanations for their predictions while maintaining high performance.",
-    publications: "Recent Publications",
-    currentProjects: "Current Projects",
-    collaborations: "Collaborations",
-    currentProjects: "Current Projects",
-    collaborations: "Collaborations",
-    currentProjectsList: [
-      {
-        id: 'visionformer',
-        title: 'VisionFormer: A Hybrid CNN-Transformer Architecture',
-        status: 'In Progress',
-        description: 'Developing a novel hybrid architecture that combines the local feature extraction strengths of CNNs with the global context understanding of Vision Transformers. The model aims to balance computational efficiency with superior performance on complex image recognition tasks.',
-        link: 'https://github.com/melissacolin/visionformer'
-      },
-      {
-        id: 'xaibench',
-        title: 'XAIBench: Comprehensive Benchmarking Framework for XAI Methods',
-        status: 'Active',
-        description: 'Creating a standardized benchmarking framework to evaluate and compare different explainability methods across multiple dimensions: faithfulness to the model, comprehensibility to humans, and computational efficiency. The goal is to establish quantifiable metrics for XAI quality.',
-        link: 'https://xaibench.org'
-      },
-      {
-        id: 'medxai',
-        title: 'MedXAI: Explainable Medical Image Analysis',
-        status: 'Collaboration',
-        description: 'Collaborative project with medical researchers to develop explainable AI systems for medical image analysis, focusing on early cancer detection. The project emphasizes creating explanations that are clinically meaningful and actionable for healthcare professionals.',
-        link: 'https://www.bordeaux-neurocampus.fr/projects/medxai'
-      },
-      {
-        id: 'attentionxai',
-        title: 'AttentionXAI: Making Attention Mechanisms More Transparent',
-        status: 'New',
-        description: 'Investigating how attention mechanisms in neural networks can be designed to be inherently more interpretable, while maintaining or improving model performance. This project explores novel attention architectures and visualization techniques.',
-        link: 'https://github.com/melissacolin/attention-xai'
-      }
-    ],
-    noProjects: "No current projects available.",
-    interestsList: [
-      {
-        id: 'xai',
-        title: 'Explainable AI (XAI)',
-        description: 'Developing methods to make neural network decisions more transparent, interpretable, and explainable, particularly in high-stakes domains like healthcare and autonomous systems.'
-      },
-      {
-        id: 'vision',
-        title: 'Computer Vision',
-        description: 'Working on advanced vision architectures that combine the strengths of CNNs and Vision Transformers, with a focus on interpretability and robustness against adversarial attacks.'
-      },
-      {
-        id: 'attention',
-        title: 'Attention Mechanisms',
-        description: 'Studying and improving attention mechanisms in deep neural networks to enhance model performance while enabling better explainability of the learned features.'
-      },
-      {
-        id: 'ethics',
-        title: 'AI Ethics & Fairness',
-        description: 'Investigating how explainable AI methods can help identify and mitigate biases in datasets and algorithms, promoting fairer and more ethical AI systems.'
-      }
-    ],
-
-    collaborationsList: [
-      {
-        id: 'bordeaux-neuro',
-        title: 'Bordeaux NeuroComputing Institute',
-        description: 'Collaboration on interpretable deep learning models for medical image analysis.',
-        link: 'https://www.bordeaux-neurocampus.fr/',
-        linkLabel: 'bordeaux-neurocampus.fr'
-      },
-      {
-        id: 'ai-ethics-lab',
-        title: 'AI Ethics Lab',
-        description: 'Working on developing guidelines for ethical considerations in explainable AI systems.',
-        link: 'https://aiethicslab.com/',
-        linkLabel: 'aiethicslab.com'
-      },
-      {
-        id: 'inria-bordeaux',
-        title: 'INRIA Bordeaux',
-        description: 'Joint research on efficient self-attention mechanisms for vision transformers.',
-        link: 'https://www.inria.fr/en/inria-centre-bordeaux',
-        linkLabel: 'inria.fr/en/inria-centre-bordeaux'
-      },
-      {
-        id: 'xai-research',
-        title: 'XAI Research Group',
-        description: 'International collaboration on developing standardized evaluation metrics for explainable AI methods.',
-        link: 'https://xai-research.org',
-        linkLabel: 'xai-research.org'
-      }
-    ]
-  },
-  
-  education: {
-    subtitle: "Because in deep learning, there is also supervised learning. Unlike machines, I sought knowledge—not just validations.",
-    footer: "Because learning isn’t just about optimizing parameters; it’s also about giving meaning to each iteration.",
-    gpa : "GPA",
-    rank : "Rank",
-    list: [
-      {
-        id: 1,
-        degree: "Ph.D. in Computer Science",
-        specialization: "Specialization in AI and Computer Vision",
-        institution: "University of Paris",
-        location: "Paris, France",
-        period: "2014 - 2018",
-        description: "Thesis: 'Explainable Deep Learning Methods for Computer Vision'. Developed novel approaches for interpreting convolutional neural networks. Received honors for research contributions.",
-        achievements: [
-          "Published 4 papers in top-tier conferences (CVPR, NeurIPS)",
-          "Recipient of the Excellence in Research Award",
-          "Teaching assistant for Advanced Machine Learning"
-        ]
-      },
-      {
-        id: 2,
-        degree: "M.Sc. in Artificial Intelligence",
-        specialization: "Machine Learning and Computer Vision",
-        institution: "Technical University of Lyon",
-        location: "Lyon, France",
-        period: "2012 - 2014",
-        description: "Focus on machine learning algorithms and computer vision techniques. Master's thesis on 'Efficient Deep Learning for Image Classification'.",
-        achievements: [
-          "Graduated with highest honors (Summa Cum Laude)",
-          "Research internship at National Research Center",
-          "Published master's research in international journal"
-        ]
-      },
-      {
-        id: 3,
-        degree: "B.Sc. in Computer Science",
-        specialization: "Mathematics and Computer Science",
-        institution: "University of Toulouse",
-        location: "Toulouse, France",
-        period: "2009 - 2012",
-        description: "Core curriculum in computer science, mathematics, and algorithms. Developed strong foundations in programming and computational theory.",
-        achievements: [
-          "Dean's List for academic excellence (all semesters)",
-          "Undergraduate research project on algorithm optimization",
-          "President of Computer Science Student Association"
-        ]
-      }
-    ]
-  },
   publications: {
     title: "Publications",
-    subtitle: "Scientific contributions and research papers",
+    subtitle: "Explorations driven by the desire to understand (and explain).",
     filter: "Filter",
     sort: "Sort by",
     date: "Date",
@@ -351,206 +205,423 @@ const en = {
         venue: "PFIA 2024",
         year: "2024",
         url: "https://hal.science/hal-04641791v1",
-        abstract: "In recent years, explainable AI has been presented as the main solution for building trust between users and AI sys- tems. To investigate this hypothesis, we propose an empiri- cal study on the link between the performance and explai- nability of four computer vision algorithms : ViT, ResNet50, VGG16 and InceptionV3. Our study uses three local explai- nability methods : LIME, SHAP and GradCam. We show that, while explainable AI can be a tool for challenging the artificial representation of an algorithm and its behavior, it can also present robustness problems or contradictory in- formation that undermines trust. Our results show that by multiplying the use of explainable AI algorithms to explain one prediction, it is possible to verify the reliability of the explanations and extracted information."
+        abstract: "In recent years, explainable AI has been presented as the main solution for building trust between users and AI sys- tems. To investigate this hypothesis, we propose an empirical study on the link between the performance and explai- nability of four computer vision algorithms : ViT, ResNet50, VGG16 and InceptionV3. Our study uses three local explai- nability methods : LIME, SHAP and GradCam. We show that, while explainable AI can be a tool for challenging the artificial representation of an algorithm and its behavior, it can also present robustness problems or contradictory in- formation that undermines trust. Our results show that by multiplying the use of explainable AI algorithms to explain one prediction, it is possible to verify the reliability of the explanations and extracted information.",
+        type: "Conference Paper",
       },
     ]
   },
-  
+
   projects: {
     title: "Projects",
-    subtitle: "A showcase of my technical work and research implementations",
+    subtitle: "A slightly mad lab for ideas that venture out without a guide.",
     filter: "Filter By",
     allCategories: "All Categories",
     search: "Search projects...",
     techStack: "Technologies",
     viewLive: "View Demo",
     viewCode: "View Code",
-    readMore: "Read More",
-    categories: {
-      xai: "XAI",
-      vision: "Vision",
-      ethics: "Ethics"
-    },
+    readMore: "Learn More",
     list: [
       {
         id: 1,
-        title: "XAI Dashboard",
-        description: "An interactive dashboard for visualizing and understanding how deep neural networks make decisions in computer vision applications.",
-        image: "/assets/images/project-xai.jpg",
-        technologies: ["Python", "TensorFlow", "React", "D3.js"],
-        github: "https://github.com/melissacolin/xai-dashboard",
-        demo: "https://xai-demo.example.com",
-        category: "xai",
+        title: "PoseNet",
+        description: "A research project on action recognition using human pose data.",
+        image: "/assets/images/projects/posenet2.png",
+        technologies: ["Python", "Pose Estimation", "OpenCV", "Deep Learning"],
+        github: "https://github.com/melissa-colin/PoseNet",
+        category: "Vision",
         featured: false
       },
       {
         id: 2,
-        title: "Bias Detection Toolkit",
-        description: "A comprehensive toolkit for identifying and mitigating various biases in ML models and datasets for more ethical AI development.",
-        image: "/assets/images/project-bias.jpg",
-        technologies: ["Python", "Scikit-learn", "Pandas"],
-        github: "https://github.com/melissacolin/bias-detection",
+        title: "WitHub",
+        description: "A comprehensive toolkit to automate project versioning on Git using AI.",
+        image: "/assets/images/projects/withub2.png",
+        technologies: ["Python", "Git", "Ollama", "LLMs"],
+        github: null,
         demo: null,
-        category: "ethics",
+        category: "Tools",
         featured: false
       },
       {
         id: 3,
-        title: "ViT vs CNN Explainability",
-        description: "Research project comparing the explainability of Vision Transformers and CNNs using LIME, SHAP and Grad-CAM techniques.",
-        image: "/assets/images/project-vit-cnn.jpg",
-        technologies: ["PyTorch", "Python", "LIME", "SHAP", "Grad-CAM"],
-        github: "https://github.com/melissacolin/vit-cnn-explainability",
-        demo: "https://hal.science/hal-04641791v1",
-        category: "vision",
+        title: "EcoSort",
+        description: "A mobile app combining image recognition and geolocation to help users sort their waste properly.",
+        image: "/assets/images/projects/ecosort.png",
+        technologies: ["YOLO", "Python", "OpenCV"],
+        github: "https://github.com/melissa-colin/EcoSort",
+        demo: "https://www.youtube.com/watch?v=GGjImtkW-us",
+        category: "Vision",
         featured: false
       }
     ],
     featuredSection: {
-      title: "Featured Projects", // ou "Projets en Vedette" en français
-      subtitle: "Discover my recent projects in explainable AI and computer vision.", // ou la version FR
-      button: "View All Projects", // ou "Voir Tous les Projets"
-      demo: "Demo", // ou "Démo"
-      publication: "Publication" // ou "Publication"
+      title: "Featured Projects",
+      subtitle: "Explore my latest research projects and technical implementations.",
+      button: "View All Projects",
+      demo: "Demo",
+      publication: "Publication"
     },
-  
   },
 
   experience: {
     pageTitle: "Professional Experience",
-    pageSubtitle: "My journey in AI research and development, focusing on explainable AI and computer vision.",
-    moreInfo: "For more information about my professional experience, please contact me.",
+    pageSubtitle: "The places where I’ve learned outside of school.",
+    moreInfo: "If you would like to know more about my professional experience, feel free to get in touch.",
     noExperience: "No professional experience available.",
     list: [
       {
         id: 1,
-        title: "Senior AI Researcher",
-        company: "AI Research Lab, University of Technology",
-        companyUrl: "",
-        location: "Paris, France",
-        period: "January 2022 - Present",
-        description: "Leading research in Explainable AI methods for computer vision applications. Developed novel techniques for interpreting deep neural networks. Published 5 papers in top-tier conferences and journals.",
-        technologies: ["PyTorch", "TensorFlow", "Python", "Computer Vision", "XAI"]
+        title: "R&D Engineer – AI and Safety",
+        company: "Sector Group",
+        companyUrl: "https://www.sector-group.net/",
+        location: "Villebon-sur-Yvette, Île-de-France, France (remote)",
+        period: "June 2025 - Present",
+        description: "Contributed to an applied research project focused on developing trustworthy AI to extract information from unstructured and non-OCR PDF documents.",
+        technologies: ["Python", "Deep Learning", "Machine Learning", "Computer Vision", "Image Processing", "Trustworthy AI", "GDPR", "OCR", "RAG", "Safety"],
+        logo: "assets/images/logos/sector-group.jpeg",
+        type: "Internship",
       },
       {
         id: 2,
-        title: "AI Research Scientist",
-        company: "Tech Innovation Labs",
-        companyUrl: "",
-        location: "Lyon, France",
-        period: "March 2019 - December 2021",
-        description: "Researched and implemented state-of-the-art computer vision algorithms. Collaborated with cross-functional teams to integrate AI solutions into production environments.",
-        technologies: ["CUDA", "PyTorch", "Docker", "MLOps", "CI/CD"]
+        title: "Training Manager",
+        company: "Eirb'IA",
+        companyUrl: "https://bde.eirb.fr/clubs-assos/eirbia",
+        location: "Talence, Nouvelle-Aquitaine, France",
+        period: "June 2025 - Present",
+        description: "Led training sessions on AI and machine learning technologies within the student association.",
+        technologies: ["Python", "Deep Learning", "Machine Learning"],
+        type: "Volunteer",
+        logo: "assets/images/eirbia.jpeg",
       },
       {
         id: 3,
-        title: "Research Assistant",
-        company: "National Research Institute",
+        title: "Vice President",
+        company: "Forum INGENIB",
+        companyUrl: "https://www.ingenib.fr/",
+        location: "Talence, Nouvelle-Aquitaine, France",
+        period: "April 2025 - Present",
+        description: "Organized events, managed teams, and handled corporate relations for the school's career fair.",
+        technologies: ["Teamwork", "Organization", "Project Management", "Leadership"],
+        type: "Volunteer",
+        logo: "assets/images/logos/ingenib.png",
+      },
+      {
+        id: 4,
+        title: "Networking Manager",
+        company: "ai4industry",
+        companyUrl: "https://www.ai4industry.fr/",
+        location: "Talence, Nouvelle-Aquitaine, France",
+        period: "November 2024 - Present",
+        description: "Planned, coordinated, and hosted a networking event during a national AI workshop for engineering students.",
+        technologies: ["Organization", "Project Management", "Communication"],
+        type: "Volunteer",
+        logo: "assets/images/logos/ai4industry.png",
+        detail: `
+          <section>
+          <p>
+              <strong>ai4industry</strong> is a week-long workshop for final-year engineering or master’s students from across France, held annually at ENSERB-MATMECA.
+            </p>
+            <p>
+              As <strong>Networking Manager</strong>, I’m responsible for planning and coordinating the event, engaging participants, and managing the budget and resources for the networking session scheduled for Thursday afternoon during the workshop week.
+            </p>
+            <p>
+              During the event, I oversee setup, coordinate teams and speakers, and manage sessions held in the lecture hall, including moderating roundtables and delivering opening and closing speeches.
+            </p>
+            <p>
+              After the event, I lead a debrief to identify areas for improvement and develop strategies to make future networking sessions more dynamic and rewarding for all participants.
+            </p>
+          </section>
+        `
+      },
+      {
+        id: 5,
+        title: "AI Developer",
+        company: "Cali Intelligences",
+        companyUrl: "https://www.cali-intelligences.com/",
+        location: "Talence, Nouvelle-Aquitaine, France",
+        period: "July 2023 - October 2024",
+        description: "Developed action recognition methods, optimized models and MLOps processes. Analyzed and annotated data, enhanced training efficiency for AI systems.",
+        technologies: ["Python", "PyTorch", "Kubernetes", "OpenCV", "Docker", "Elasticsearch", "Kubeflow", "Computer Vision", "GDPR", "Machine Learning", "Deep Learning", "Explainable AI", "MLOps", "R&D", "QA/QC", "AI Act"],
+        type: "Apprenticeship",
+        detail: `
+          <section>
+            <h4>R&D:</h4>
+            <ul>
+              <li>Developed a new action recognition method for detecting suspicious behavior</li>
+              <li>Improved model performance and interpretability</li>
+              <li>Python and C++ development</li>
+              <li>Explainability</li>
+              <li>Reduced action recognition model processing time by 70% through algorithm optimization</li>
+              <li>Led R&D projects resulting in 3 new feature developments</li>
+            </ul>
+            <h4>QA/QC:</h4>
+            <ul>
+              <li>Data sorting</li>
+              <li>Data analysis and statistics for over 100,000 videos</li>
+              <li>Labeling</li>
+              <li>Implemented QA/QC processes to ensure high-quality training data</li>
+            </ul>
+            <h4>MLOps:</h4>
+            <ul>
+              <li>Built pipelines for AI training</li>
+              <li>Enhanced training using data augmentation</li>
+              <li>Optimized model hyperparameters</li>
+              <li>Improved deep learning models from 60% to 90% accuracy</li>
+            </ul>
+          </section>
+        `,
+        logo: "assets/images/logos/cali.jpeg",
+      },
+      {
+        id: 6,
+        title: "Python Developer",
+        company: "Cali Intelligences",
+        companyUrl: "https://www.cali-intelligences.com/",
+        location: "Talence, Nouvelle-Aquitaine, France",
+        period: "January 2023 - March 2023",
+        description: "Optimized algorithms, developed in Python, trained in computer vision and deep learning. GDPR awareness.",
+        technologies: ["Python", "Machine Learning", "Deep Learning", "OpenCV", "Computer Vision", "GDPR"],
+        type: "Internship",
+        detail: `
+          <section>
+            <ul>
+              <li>Algorithm optimization and enhancement</li>
+              <li>Python development and testing</li>
+              <li>AI model training</li>
+              <li>Data processing</li>
+              <li>Training in image processing, computer vision, deep learning, and machine learning</li>
+              <li>Training in GDPR regulations</li>
+              <li>Technical documentation</li>
+            </ul>
+          </section>
+        `,
+        logo: "assets/images/logos/cali.jpeg",
+      },
+      {
+        id: 7,
+        title: "Male Contraception Volunteer",
+        company: "Le Planning Familial",
+        companyUrl: "https://www.planning-familial.org/fr",
+        location: "Bordeaux, Nouvelle-Aquitaine, France",
+        period: "December 2022 - September 2024",
+        description: "Awareness and education on male contraception methods, including the Andro-switch.",
+        technologies: ["Communication"],
+        type: "Volunteer",
+        logo: "assets/images/logos/planning-familial.png",
+      },
+      {
+        id: 8,
+        title: "Ambassador",
+        company: "EPSI - School of IT Engineering",
         companyUrl: "",
-        location: "Toulouse, France",
-        period: "September 2017 - February 2019",
-        description: "Assisted senior researchers in developing and evaluating machine learning models for image recognition. Contributed to 3 published papers and presented findings at international conferences.",
-        technologies: ["Scikit-learn", "Keras", "NumPy", "Pandas", "Data Visualization"]
+        location: "France",
+        period: "November 2021 - June 2024",
+        description: "Represented the school at fairs, open houses, and online events.",
+        technologies: ["Communication"],
+        type: "Volunteer",
+        logo: "assets/images/logos/EPSI.png",
+      },
+      {
+        id: 9,
+        title: "Web Project Manager",
+        company: "eveho",
+        companyUrl: "https://eveho.io/",
+        location: "Cenon, Nouvelle-Aquitaine, France",
+        period: "June 2022 - August 2022",
+        description: "Created web pages using CMS, applied CSS styling, and worked on SEO.",
+        technologies: ["CMS", "CSS", "SEO"],
+        type: "Internship",
+        logo: "assets/images/logos/eveho.png",
+      },
+      {
+        id: 10,
+        title: "Webmaster",
+        company: "COACHINTERNET.FR",
+        companyUrl: "https://www.coachinternet.fr/",
+        location: "Mérignac, Nouvelle-Aquitaine, France (remote)",
+        period: "May 2022 - June 2022",
+        description: "Created WordPress pages, published social media content, and worked in digital marketing.",
+        technologies: ["Digital Marketing"],
+        type: "Internship",
+        logo: "assets/images/logos/coachinternet.png",
+      },
+      {
+        id: 11,
+        title: "Math Tutor",
+        company: "Superprof",
+        companyUrl: "https://www.superprof.fr/",
+        location: "Bordeaux, France",
+        period: "December 2018 - December 2021",
+        description: "Private math lessons and homework help for secondary school students.",
+        technologies: ["Teaching", "Communication"],
+        type: "Freelance",
+        logo: "assets/images/logos/superprof.jpg",
+      },
+      {
+        id: 12,
+        title: "Store Assistant",
+        company: "Action",
+        companyUrl: "https://www.action.com/fr-fr/",
+        location: "Saint-André-de-Cubzac, France",
+        period: "July 2021 - August 2021",
+        description: "Stocking shelves, inventory management, and cashier duties.",
+        technologies: ["Teamwork"],
+        type: "Temporary",
+        logo: "assets/images/logos/action.png",
+      },
+      {
+        id: 13,
+        title: "Content Reporting – Cybersecurity",
+        company: "#StopFisha",
+        companyUrl: "https://stopfisha.org/",
+        location: "France",
+        period: "November 2021 - July 2023",
+        description: "Participated in online content reporting actions in the context of cybersecurity and human rights.",
+        technologies: ["Cybersecurity", "Communication", "Digital Ethics"],
+        type: "Volunteer",
+        logo: "assets/images/logos/stopfisha.png",
+      },
+      {
+        id: 14,
+        title: "IT Maintenance Technician",
+        company: "Arveyres Informatique",
+        companyUrl: "",
+        location: "Arveyres, Nouvelle-Aquitaine, France",
+        period: "March 2018",
+        description: "Tested computer hardware, installed operating systems, and provided customer support.",
+        technologies: ["Communication", "Hardware"],
+        type: "Internship"
+      },
+    ]
+  },
+  
+  education: {
+    subtitle: "Because in deep learning, there’s also supervised learning. But unlike machines, I sought knowledge—not just validation.",
+    footer: "Because learning isn’t just about optimizing parameters, it’s about giving meaning to every iteration.",
+    gpa: "GPA",
+    rank: "Rank",
+    list: [
+      {
+        id: 1,
+        degree: "Engineering Degree in Computer Science",
+        specialization: "Specialization in Artificial Intelligence",
+        institution: "ENSERB-MATMECA",
+        location: "Talence, Nouvelle-Aquitaine, France",
+        period: "2024 - 2027",
+        description: "An engineering program accredited by the CTI, spanning three years and combining a strong scientific core curriculum with innovative projects (team-based and often in partnership with industry).",
+        gpa: "14.92/20"
+      },
+      {
+        id: 2,
+        degree: "Bachelor in Artificial Intelligence and Data Sciences",
+        institution: "EPSI - School of Computer Engineering",
+        location: "Bordeaux, Nouvelle-Aquitaine, France",
+        period: "2021 - 2024",
+        description: "Program focused on artificial intelligence, machine learning, and data science, with a strong emphasis on practical applications, including a work-study year in the final year.",
+        achievements: [
+          "EcoSort: Mobile app for waste sorting using image recognition and geolocation, winner of a national innovation competition. Watch the <a href=\"https://youtu.be/6nccMi2PK1Q\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">presentation video</a>",
+          "VidAI: Web tool that simplifies video editing through AI assistance."
+        ],
+        gpa: "16.38/20",
+        rank: "1st in class"
+      },
+      {
+        id: 3,
+        degree: "BTS in IT Services for Organizations",
+        specialization: "Software Solutions and Business Applications",
+        institution: "EPSI - School of Computer Engineering",
+        location: "Bordeaux, Nouvelle-Aquitaine, France",
+        period: "2021 - 2023",
+        description: "BTS pursued as an option during the first two years of the Bachelor’s program, focused on software development and business applications.",
+        rank: "1st in class"
+      },
+      {
+        id: 4,
+        degree: "Baccalaureate in Science and Technology for Industry and Sustainable Development",
+        specialization: "Information and Digital Systems",
+        institution: "Lycée Les Iris",
+        location: "Lormont, Nouvelle-Aquitaine, France",
+        period: "2019 - 2021",
+        rank: "1st in class"
       }
     ]
   },
   
   blog: {
     title: "Blog",
-    subtitle: "Thoughts, tutorials, and insights on AI research",
+    subtitle: "Tutorials, hypotheses, and other reasonably serious digressions.",
     readTime: "min read",
     categories: "Categories",
     recentPosts: "Recent Posts",
     popularTags: "Popular Tags",
-    readMore: "Read More",
+    readMore: "Read",
     searchPosts: "Search posts...",
     publishedOn: "Published on",
-    noPostsFound: "No posts found.",
+    noPosts: "No posts found.",
     sortBy: "Sort by",
     sortOptions: {
       date: "Date",
       popularity: "Popularity",
       title: "Title"
     },
-    formatDate: (date) => new Date(date).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric"
-    }),
+    formatDate: (dateString) => {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      return new Date(dateString).toLocaleDateString('en-US', options);
+    },
     clearTag: "Clear Tag",
     posts: [
       {
         id: 1,
-        title: "Understanding YOLOv8: Object Detection from Scratch",
+        title: "YOLOv8 Explained: Understanding Object Detection from Scratch",
         excerpt: "A deep dive into the architecture and implementation details of YOLOv8, the latest iteration of the popular object detection algorithm.",
-        image: "/assets/images/blog-yolov8.jpg",
-        date: "2024-01-15",
-        readTime: 12,
+        image: "/assets/images/blog-yolov8.png",
+        date: "2024-10-19",
+        readTime: 7,
         category: "Computer Vision",
         tags: ["Object Detection", "YOLO", "Deep Learning"],
-        link: "/blog/understanding-yolov8"
-      },
-      {
-        id: 2,
-        title: "Explainability in AI: Why Should We Care?",
-        excerpt: "Exploring the importance of making AI systems interpretable, the current state of XAI techniques, and their impact on building trustworthy artificial intelligence.",
-        image: "/assets/images/blog-xai.jpg",
-        date: "2023-12-03",
-        readTime: 8,
-        category: "XAI",
-        tags: ["Explainability", "Ethics", "AI Trust"],
-        link: "/blog/explainability-ai"
-      },
-      {
-        id: 3,
-        title: "Vision Transformers vs CNNs: The Battle for Computer Vision",
-        excerpt: "A comprehensive comparison of traditional Convolutional Neural Networks and the newer Vision Transformers for various computer vision tasks.",
-        image: "/assets/images/blog-vit-cnn.jpg",
-        date: "2023-09-22",
-        readTime: 15,
-        category: "Deep Learning",
-        tags: ["Vision Transformers", "CNN", "Architecture"],
-        link: "/blog/vit-vs-cnn"
+        link: "https://medium.com/@melissa.colin/yolov8-explained-understanding-object-detection-from-scratch-763479652312"
       }
-    ]
+    ],
   },
-  
+
   contact: {
     title: "Contact",
-    subtitle: "Get in touch with me",
+    subtitle: "Never too busy to discuss new ideas or collaborations.",
     name: "Name",
     email: "Email",
     subject: "Subject",
     message: "Message",
     send: "Send Message",
     sendMeMessage: "Send me a message",
-    success: "Your message has been sent successfully!",
-    error: "Sorry, there was an error sending your message.",
+    success: "Your message was sent successfully!",
+    error: "Sorry, an error occurred while sending your message.",
     required: "Required field",
     invalidEmail: "Please enter a valid email address",
-    messageSent: "Thank you for your message. I will get back to you soon!",
+    messageSent: "Thanks for your message. I’ll get back to you soon!",
     location: "Location",
     place: "Bordeaux, France",
-    followMe: "Follow Me",
+    followMe: "Follow me",
     emailAddress: "melissa.colin0@proton.me",
-    phone: "+33 6 XX XX XX XX",
+    phone: "+33 7 82 52 XX XX",
+    // linkedin: "www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=mélissa-colin",
     linkedin: "https://linkedin.com/in/mélissa-colin",
-    github: "https://github.com/melissacolin",
-    medium: "https://medium.com/@melissacolin",
-    scholar: "https://scholar.google.com/citations?user=melissacolin"
+    github: "https://github.com/melissa-colin",
+    medium: "https://medium.com/@melissa.colin",
+    scholar: "https://scholar.google.com/citations?user=7r7iFpsAAAAJ&hl=fr"
   },
-  
+
   footer: {
-    copyright: "© 2024 Mélissa Colin. All rights reserved.",
+    copyright: "© 2025 Mélissa Colin. All rights reserved.",
     navigation: "Navigation",
     language: "Language",
     darkMode: "Theme",
-    contactInfo: "Contact Info"
+    contactInfo: "Contact Information"
   },
-  
+
   notFound: {
     title: "Page Not Found",
-    message: "The page you are looking for does not exist.",
+    message: "The page you’re looking for doesn’t exist.",
     button: "Back to Home"
   }
 };
