@@ -107,6 +107,7 @@ const fr = {
     status: "Élève-Ingénieure",
     school: "ENSEIRB-MATMECA"
   },
+
   about: {
     title: "À Propos de Moi",
     intro: "Je suis actuellement élève-ingénieure en informatique et intelligence artificielle à l'<strong>ENSEIRB-MATMECA</strong> à Bordeaux, où je suis le <strong>parcours ingénieur-docteur</strong> avec l'ambition claire de m'engager dans la <strong>recherche en IA</strong>.",
@@ -152,7 +153,7 @@ const fr = {
       },
       {
         id: 'mlpos',
-        title: "Docker pour les Développeurs/ développeuses",
+        title: "Docker pour les Développeurs/développeuses",
         issuer: "Linkedin Learning",
         date: "Décembre 2023",
         description: "Formation sur l'utilisation de Docker pour la conteneurisation des applications, y compris la création d'images et la gestion des conteneurs.",
@@ -165,17 +166,17 @@ const fr = {
         title: "Machine learning : Traitement du langage naturel avec Python",
         issuer: "Linkedin Learning",
         date: "Décembre 2023",
-        description: "Formation sur les techniques de traitement du langage naturel (NLP) avec Python, y compris la lemmatization, le stemming et le K-fold. ",
+        description: "Formation sur les techniques de traitement du langage naturel (NLP) avec Python, y compris la lemmatisation, le stemming et le K-fold.",
         categories: ['ml', 'python'],
         verified: true,
         link: "https://www.linkedin.com/learning/certificates/721d19e8108b366ae34ccbc857580cb4c2a085f8870f7dfd2060e583c1a53643?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B3EQveap8SVSnKDTYquyfvQ%3D%3D"
       },
       {
         id: 'research',
-        title: "Rédiger et publier un article scientique",
+        title: "Rédiger et publier un article scientifique",
         issuer: "France Université Numérique",
         date: "Décembre 2023",
-        description: "Formation portée par l’Institut de recherche pour le Développement et animée par des chercheurs et enseignants-chercheurs du Réseau d’Excellence des Sciences de l’Ingénieur de la Francophonie, il leur offre ainsi les clés pour répondre aux exigences des éditeurs scientifiques.",
+        description: "Formation portée par l’Institut de recherche pour le Développement et animée par des chercheurs et enseignants-chercheurs du Réseau d’Excellence des Sciences de l’Ingénieur de la Francophonie, elle leur offre ainsi les clés pour répondre aux exigences des éditeurs scientifiques.",
         categories: ['research'],
         verified: true,
         link: "https://openbadgefactory.com/validator/result?a=https%3A%2F%2Fopenbadgefactory.com%2Fv1%2Fassertion%2F680c4bd78593df8e2857621c811a5e97864584e4.json"
@@ -205,7 +206,8 @@ const fr = {
         venue: "PFIA 2024",
         year: "2024",
         url: "https://hal.science/hal-04641791v1",
-        abstract: "Ces dernières années, l’IA explicable a été mise en avant comme la solution à plébisciter pour instaurer la confiance entre les utilisateurs et les systèmes d’IA. Pour étudier cette hypothèse, nous proposons une étude empirique sur le lien entre la performance et l’explicabilité de quatre al- gorithmes de vision par ordinateur : ViT, ResNet50, VGG16 et InceptionV3. Notre étude utilise trois méthodes d’expli- cabilité locale : LIME, SHAP et GradCam. Nous montrons que si l’IA explicable peut être un outil permettant de ques- tionner la représentation artificielle d’un algorithme et son comportement, elle peut aussi présenter des problèmes de robustesse ou d’informations contradictoires susceptibles de miner la confiance. Les résultats de notre étude montrent que multiplier les outils d’explicabilité permet de vérifier la fiabilité des explications et des informations extraites."
+        abstract: "Ces dernières années, l’IA explicable a été mise en avant comme la solution à plébisciter pour instaurer la confiance entre les utilisateurs et les systèmes d’IA. Pour étudier cette hypothèse, nous proposons une étude empirique sur le lien entre la performance et l’explicabilité de quatre algorithmes de vision par ordinateur : ViT, ResNet50, VGG16 et InceptionV3. Notre étude utilise trois méthodes d’explicabilité locale : LIME, SHAP et GradCam. Nous montrons que si l’IA explicable peut être un outil permettant de questionner la représentation artificielle d’un algorithme et son comportement, elle peut aussi présenter des problèmes de robustesse ou d’informations contradictoires susceptibles de miner la confiance. Les résultats de notre étude montrent que multiplier les outils d’explicabilité permet de vérifier la fiabilité des explications et des informations extraites.",
+        type: "Conférence",
       }
     ]
   },
@@ -234,8 +236,8 @@ const fr = {
       {
         id: 2,
         title: "WitHub",
-        description: "Une boîte à outils complète pour automatiser le versionning de projets sur Git grâce à l'IA.",
-        image: "/assets/images/projects/withub.png",
+        description: "Une boîte à outils complète pour automatiser le versioning de projets sur Git grâce à l'IA.",
+        image: "/assets/images/projects/withub2.png",
         technologies: ["Python", "Git", "Ollama", "LLMs"],
         github: null,
         demo: null,
@@ -319,7 +321,7 @@ const fr = {
         detail: `
           <section>
           <p>
-              <strong>ai4industry</strong> est un atelier d'une semaine destiné aux étudiants en dernière année d'école d'ingénieurs ou de master venant de toute la France, organisé chaque année à l'ENSERB-MATMECA.
+              <strong>ai4industry</strong> est un atelier d'une semaine destiné aux étudiants en dernière année d'école d'ingénieurs ou de master venant de toute la France, organisé chaque année à l'ENSEIRB-MATMECA.
             </p>
             <p>
               En tant que <strong>Responsable Networking</strong> pour ai4industry, je suis en charge de la planification et de la coordination de l’événement, de la mobilisation des participants, ainsi que de la gestion du budget et des ressources en amont de la session de networking, prévue le jeudi après-midi durant la semaine de l’atelier.
@@ -374,7 +376,7 @@ const fr = {
       },
       {
         id: 6,
-        title: "Developpeuse Python",
+        title: "Développeuse Python",
         company: "Cali Intelligences",
         companyUrl: "https://www.cali-intelligences.com/",
         location: "Talence, Nouvelle-Aquitaine, France",
@@ -387,11 +389,11 @@ const fr = {
             <ul>
               <li>Optimisation et amélioration des algorithmes</li>
               <li>Développement et test en python</li>
-              <li>Entraînement de model IA</li>
+              <li>Entraînement de modèles IA</li>
               <li>Traitement de la donnée</li>
               <li>Formation au traitement de l'image, à la vision par ordinateur, au deep learning et au machine learning</li>
               <li>Formation à la réglementation RGPD</li>
-              <li>Documentation techniqueA</li>
+              <li>Documentation technique</li>
             </ul>
           </section>
         `,
@@ -503,17 +505,12 @@ const fr = {
     list: [
       {
         id: 1,
-        degree: "Diplome d'Ingénieur en Informatique",
+        degree: "Diplôme d'Ingénieur en Informatique",
         specialization: "Spécialisation en Intelligence Artificielle",
-        institution: "ENSERB-MATMECA",
+        institution: "ENSEIRB-MATMECA",
         location: "Talence, Nouvelle-Aquitaine, France",
         period: "2024 - 2027",
         description: "Formation d’ingénieure reconnue par la CTI se déroulant sur trois ans et combinant un solide tronc commun scientifique, des projets innovants (en équipe et souvent en partenariat avec l’industrie).",
-        // achievements: [
-        //   "Publication de 4 articles dans des conférences prestigieuses (CVPR, NeurIPS)",
-        //   "Lauréate du Prix d'Excellence en Recherche",
-        //   "Assistante d'enseignement pour l'Apprentissage Automatique Avancé"
-        // ],
         gpa: "14.92/20",
       },
       {
@@ -522,7 +519,7 @@ const fr = {
         institution: "EPSI - L'école d'ingénierie informatique",
         location: "Bordeaux, Nouvelle-Aquitaine, France",
         period: "2021- 2024",
-        description: "Formation en intelligence artificielle, apprentissage automatique et sciences des données, avec un accent sur les applications pratiques et réalisé en alternance lors de la dernière année.",
+        description: "Formation en intelligence artificielle, apprentissage automatique et sciences des données, avec un accent sur les applications pratiques et réalisée en alternance lors de la dernière année.",
         achievements: [
           "EcoSort : Application mobile pour le tri des déchets via reconnaissance d’image et géolocalisation, gagnante d’une compétition nationale d’innovation. Voir la <a href=\"https://youtu.be/6nccMi2PK1Q\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">vidéo de présentation</a>",
           "VidAI : Outil web simplifiant l’édition vidéo grâce à une assistance IA."
@@ -551,6 +548,7 @@ const fr = {
       }
     ]
   },
+
   blog: {
     title: "Blog",
     subtitle: "Tutos, hypothèses et autres digressions raisonnablement sérieuses.",
@@ -584,29 +582,7 @@ const fr = {
         category: "Vision par Ordinateur",
         tags: ["Détection d'Objets", "YOLO", "Deep Learning"],
         link: "https://medium.com/@melissa.colin/yolov8-explained-understanding-object-detection-from-scratch-763479652312"
-      },
-      // {
-      //   id: 2,
-      //   title: "L'Explicabilité en IA : Pourquoi devons-nous nous en soucier ?",
-      //   excerpt: "Explorer l'importance de rendre les systèmes d'IA interprétables, l'état actuel des techniques XAI et leur impact sur la construction d'une intelligence artificielle fiable.",
-      //   image: "/assets/images/blog-xai.jpg",
-      //   date: "2023-12-03",
-      //   readTime: 8,
-      //   category: "XAI",
-      //   tags: ["Explicabilité", "Éthique", "Confiance en IA"],
-      //   link: "/blog/explicabilite-ia"
-      // },
-      // {
-      //   id: 3,
-      //   title: "Vision Transformers vs CNNs : La Bataille pour la Vision par Ordinateur",
-      //   excerpt: "Une comparaison complète des réseaux neuronaux convolutifs traditionnels et des nouveaux Vision Transformers pour diverses tâches de vision par ordinateur.",
-      //   image: "/assets/images/blog-vit-cnn.jpg",
-      //   date: "2023-09-22",
-      //   readTime: 15,
-      //   category: "Deep Learning",
-      //   tags: ["Vision Transformers", "CNN", "Architecture"],
-      //   link: "/blog/vit-vs-cnn"
-      // }
+      }
     ],
   },
   
