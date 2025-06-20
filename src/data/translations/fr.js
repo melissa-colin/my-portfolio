@@ -17,7 +17,7 @@ const fr = {
   },
   
   nav: {
-    home: "Accueilhihi",
+    home: "Accueil",
     certification: "Certifications",
     publications: "Publications",
     experience: "Expérience",
