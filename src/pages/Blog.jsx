@@ -123,7 +123,7 @@ const Blog = () => {
                   </div>
                 ) : (
                   filteredPosts.map(post => (
-                    <div key={post.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                    <div key={post.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-transform duration-200 hover:shadow-2xl hover:-translate-y-1">
                       <div className="md:flex">
                         <div className="md:w-1/3">
                           <div className="h-48 md:h-full">
