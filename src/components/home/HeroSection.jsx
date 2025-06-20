@@ -275,7 +275,7 @@ const HeroSection = () => {
       {/* Scroll indicator with enhanced animation */}
       {atTop && (
         <motion.div 
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center cursor-pointer z-20"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center cursor-pointer z-20"
           animate={{ 
             y: [0, 20, 0],
             opacity: [0.7, 1, 0.7]
