@@ -1,8 +1,0 @@
-This directory contains project images.
-
-Required images:
-1. melissa-profile.jpg - Profile photo for the hero section
-2. melissa-about.jpg - Photo for the about section
-3. project-xai.jpg - XAI Dashboard project image
-4. project-bias.jpg - Bias Detection Toolkit project image
-5. project-collab.jpg - Human-AI Collaboration Interface project image
