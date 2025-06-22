@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { ThemeProvider } from './context/ThemeContext';
 import { LanguageProvider } from './context/LanguageContext';
 import { AuthProvider } from './context/AuthContext';
+import ScrollToTop from './components/layout/ScrollToTop';
 
 // Layout components
 import Layout from './components/layout/Layout';
@@ -39,6 +40,7 @@ function App() {
       <LanguageProvider>
         <AuthProvider>
           <Router>
+            <ScrollToTop />
             <Routes>
               {/* Public Routes */}
               <Route path="/" element={<Layout />}>
