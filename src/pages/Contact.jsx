@@ -18,6 +18,46 @@ const Contact = () => {
     exit: { opacity: 0 }
   };
 
+  // Carousel state for mobile socials
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const socialLinks = [
+    {
+      href: t('contact.linkedin'),
+      icon: <FiLinkedin />,
+      label: 'LinkedIn',
+      className:
+        'bg-white dark:bg-gray-900 shadow-lg p-7 rounded-full text-blue-700 dark:text-blue-400 hover:bg-blue-50 hover:text-blue-800 dark:hover:bg-blue-950 dark:hover:text-blue-300 transition-colors text-6xl',
+    },
+    {
+      href: t('contact.github'),
+      icon: <FiGithub />,
+      label: 'GitHub',
+      className:
+        'bg-white dark:bg-gray-900 shadow-lg p-7 rounded-full text-gray-800 dark:text-gray-200 hover:bg-gray-100 hover:text-black dark:hover:bg-gray-800 dark:hover:text-white transition-colors text-6xl',
+    },
+    {
+      href: t('contact.medium'),
+      icon: <SiMedium />,
+      label: 'Medium',
+      className:
+        'bg-white dark:bg-gray-900 shadow-lg p-7 rounded-full text-green-700 dark:text-green-400 hover:bg-green-50 hover:text-green-800 dark:hover:bg-green-950 dark:hover:text-green-300 transition-colors text-6xl',
+    },
+    {
+      href: t('contact.scholar'),
+      icon: <SiGooglescholar />,
+      label: 'Google Scholar',
+      className:
+        'bg-white dark:bg-gray-900 shadow-lg p-7 rounded-full text-yellow-700 dark:text-yellow-400 hover:bg-yellow-50 hover:text-yellow-800 dark:hover:bg-yellow-950 dark:hover:text-yellow-300 transition-colors text-6xl',
+    },
+  ];
+
+  const handlePrev = () => {
+    setCarouselIndex((prev) => (prev === 0 ? socialLinks.length - 1 : prev - 1));
+  };
+  const handleNext = () => {
+    setCarouselIndex((prev) => (prev === socialLinks.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <motion.div
       variants={pageVariants}
@@ -27,32 +67,31 @@ const Contact = () => {
       className="pt-24 pb-20"
     >
       {/* Hero Section with CTA */}
-        <section className="bg-gray-900 dark:bg-black py-16 relative overflow-hidden">
-          <div className="absolute inset-0 bg-opacity-70">
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-gray-900 via-transparent to-red-900/20 opacity-80"></div>
+      <section className="bg-gray-900 dark:bg-black py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-opacity-70">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-gray-900 via-transparent to-red-900/20 opacity-80"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.h1
+              className="text-4xl md:text-5xl font-bold mb-6 text-white"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              {t('contact.title')}
+            </motion.h1>
+            <motion.p
+              className="mt-6 text-xl text-gray-200 max-w-2xl mx-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              {t('contact.subtitle')}
+            </motion.p>
           </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-3xl mx-auto text-center">
-          <motion.h1
-            className="text-4xl md:text-5xl font-bold mb-6 text-white"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            {t('contact.title')}
-          </motion.h1>
-          <motion.p
-            className="mt-6 text-xl text-gray-200 max-w-2xl mx-auto"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            {t('contact.subtitle')}
-          </motion.p>
-
-            </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
       {/* Big CTA Email Button */}
       <motion.div
@@ -128,57 +167,63 @@ const Contact = () => {
         </div>
       </section>
 
-        {/* Socials */}
-        <section className="py-12">
-          <div className="container mx-auto px-4">
-            <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4 text-red-600 dark:text-red-400">
-            {t('contact.followMe')}
-          </h2>
-          <p className="mb-8 text-lg text-gray-700 dark:text-gray-300">
-            {t('contact.socialMedia')}
-          </p>
-          <div className="flex justify-center space-x-8">
-            <a
-              href={t('contact.linkedin')}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white dark:bg-gray-900 shadow-lg p-7 rounded-full text-blue-700 dark:text-blue-400 hover:bg-blue-50 hover:text-blue-800 dark:hover:bg-blue-950 dark:hover:text-blue-300 transition-colors text-6xl"
-              aria-label="LinkedIn"
-            >
-              <FiLinkedin />
-            </a>
-            <a
-              href={t('contact.github')}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white dark:bg-gray-900 shadow-lg p-7 rounded-full text-gray-800 dark:text-gray-200 hover:bg-gray-100 hover:text-black dark:hover:bg-gray-800 dark:hover:text-white transition-colors text-6xl"
-              aria-label="GitHub"
-            >
-              <FiGithub />
-            </a>
-            <a
-              href={t('contact.medium')}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white dark:bg-gray-900 shadow-lg p-7 rounded-full text-green-700 dark:text-green-400 hover:bg-green-50 hover:text-green-800 dark:hover:bg-green-950 dark:hover:text-green-300 transition-colors text-6xl"
-              aria-label="Medium"
-            >
-              <SiMedium />
-            </a>
-            <a
-              href={t('contact.scholar')}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white dark:bg-gray-900 shadow-lg p-7 rounded-full text-yellow-700 dark:text-yellow-400 hover:bg-yellow-50 hover:text-yellow-800 dark:hover:bg-yellow-950 dark:hover:text-yellow-300 transition-colors text-6xl"
-              aria-label="Google Scholar"
-            >
-              <SiGooglescholar />
-            </a>
-          </div>
+      {/* Socials */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4 text-red-600 dark:text-red-400">
+              {t('contact.followMe')}
+            </h2>
+            <p className="mb-8 text-lg text-gray-700 dark:text-gray-300">
+              {t('contact.socialMedia')}
+            </p>
+            {/* Desktop: show all, Mobile: carousel */}
+            <div className="hidden sm:flex justify-center space-x-8">
+              {socialLinks.map((link, idx) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={link.className}
+                  aria-label={link.label}
+                >
+                  {link.icon}
+                </a>
+              ))}
+            </div>
+            <div className="sm:hidden flex items-center justify-center space-x-4">
+              <button
+                onClick={handlePrev}
+                aria-label="Previous"
+                className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+              >
+                <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <a
+                href={socialLinks[carouselIndex].href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={socialLinks[carouselIndex].className}
+                aria-label={socialLinks[carouselIndex].label}
+              >
+                {socialLinks[carouselIndex].icon}
+              </a>
+              <button
+                onClick={handleNext}
+                aria-label="Next"
+                className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+              >
+                <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M9 6l6 6-6 6" />
+                </svg>
+              </button>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
     </motion.div>
   );
 };
