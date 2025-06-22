@@ -608,7 +608,8 @@ const en = {
     linkedin: "https://linkedin.com/in/mélissa-colin",
     github: "https://github.com/melissa-colin",
     medium: "https://medium.com/@melissa.colin",
-    scholar: "https://scholar.google.com/citations?user=7r7iFpsAAAAJ&hl=fr"
+    scholar: "https://scholar.google.com/citations?user=7r7iFpsAAAAJ&hl=fr",
+    signalLink: "https://signal.me/#eu/5yuYK2KZs3zqsnzCWn_2mpBqIxc_MbQRDWjif_4UR5twTC5PvupLJo-CbZs2d6Dg",
   },
 
   footer: {

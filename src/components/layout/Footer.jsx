@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiMoon, FiSun, FiLinkedin, FiGithub, FiMail } from 'react-icons/fi';
+import { FiMoon, FiSun, FiLinkedin, FiGithub, FiMail, FiMessageCircle } from 'react-icons/fi';
 import { SiMedium, SiGooglescholar } from 'react-icons/si';
 import { useTheme } from '../../context/ThemeContext';
 import { useLanguage } from '../../context/LanguageContext';
@@ -65,6 +65,15 @@ const Footer = () => {
                 aria-label="Email"
               >
                 <FiMail size={20} />
+              </a>
+              <a
+                href={t('contact.signalLink')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500"
+                aria-label="Signal"
+              >
+                <FiMessageCircle size={20} />
               </a>
             </div>
           </div>
@@ -184,7 +193,7 @@ const Footer = () => {
               </p>
             </address>
             <Link 
-              to="/contact" 
+              to={t('contact.signalLink')} 
               className="inline-block mt-2 text-red-600 dark:text-red-500 hover:text-red-700 dark:hover:text-red-400"
             >
               {language === 'en' ? 'Send me a message' : 'M\'envoyer un message'}
