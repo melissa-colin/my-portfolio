@@ -164,14 +164,14 @@ const HeroSection = () => {
               className="flex flex-wrap gap-4 justify-center lg:justify-start"
             >
               <motion.div variants={buttonHoverVariants} whileHover="hover">
-                <Link to="/experience" className="btn-primary relative group">
+                <Link to="/experience" className="btn-primary relative group flex items-center">
                   {t('home.viewExperience')} 
                   <motion.span 
                     className="inline-block ml-2"
                     initial={{ x: 0 }}
                     whileHover={{ x: 5 }}
                   >
-                    <FiArrowRight />
+                    <FiArrowRight className="align-middle" />
                   </motion.span>
                   <motion.span
                     className="absolute inset-0 -z-10 rounded-md opacity-0 group-hover:opacity-100 bg-white/10"
@@ -275,7 +275,7 @@ const HeroSection = () => {
       {/* Scroll indicator with enhanced animation */}
       {atTop && (
         <motion.div 
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center cursor-pointer z-20"
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center cursor-pointer z-20"
           animate={{ 
             y: [0, 20, 0],
             opacity: [0.7, 1, 0.7]
