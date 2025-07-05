@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Page d'accueil -->
+  <url>
+    <loc>https://melissa-colin.github.io/my-portfolio-dist/</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://melissa-colin.github.io/my-portfolio-dist/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://melissa-colin.github.io/my-portfolio-dist/?lang=en" />
+  </url>
+  
+  <!-- Page certifications -->
+  <url>
+    <loc>https://melissa-colin.github.io/my-portfolio-dist/certification</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://melissa-colin.github.io/my-portfolio-dist/certification" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://melissa-colin.github.io/my-portfolio-dist/certification?lang=en" />
+  </url>
+  
+  <!-- Page publications -->
+  <url>
+    <loc>https://melissa-colin.github.io/my-portfolio-dist/publications</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://melissa-colin.github.io/my-portfolio-dist/publications" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://melissa-colin.github.io/my-portfolio-dist/publications?lang=en" />
+  </url>
+  
+  <!-- Page expérience -->
+  <url>
+    <loc>https://melissa-colin.github.io/my-portfolio-dist/experience</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://melissa-colin.github.io/my-portfolio-dist/experience" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://melissa-colin.github.io/my-portfolio-dist/experience?lang=en" />
+  </url>
+  
+  <!-- Page formation -->
+  <url>
+    <loc>https://melissa-colin.github.io/my-portfolio-dist/education</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://melissa-colin.github.io/my-portfolio-dist/education" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://melissa-colin.github.io/my-portfolio-dist/education?lang=en" />
+  </url>
+  
+  <!-- Page projets -->
+  <url>
+    <loc>https://melissa-colin.github.io/my-portfolio-dist/projects</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://melissa-colin.github.io/my-portfolio-dist/projects" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://melissa-colin.github.io/my-portfolio-dist/projects?lang=en" />
+  </url>
+  
+  <!-- Page blog -->
+  <url>
+    <loc>https://melissa-colin.github.io/my-portfolio-dist/blog</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://melissa-colin.github.io/my-portfolio-dist/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://melissa-colin.github.io/my-portfolio-dist/blog?lang=en" />
+  </url>
+  
+  <!-- Page contact -->
+  <url>
+    <loc>https://melissa-colin.github.io/my-portfolio-dist/contact</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://melissa-colin.github.io/my-portfolio-dist/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://melissa-colin.github.io/my-portfolio-dist/contact?lang=en" />
+  </url>
+  
+</urlset>
