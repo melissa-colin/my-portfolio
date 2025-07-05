@@ -30,7 +30,11 @@ export default defineConfig(({ command, mode }) => {
     assetsDir: 'assets',
     emptyOutDir: true,
     sourcemap: false,
-    chunkSizeWarningLimit: 1000, // (optional) increase warning limit to 1000kB
+    chunkSizeWarningLimit: 1000,
+    // Optimisations des assets
+    assetsInlineLimit: 8192, // Inline les assets < 8kb
+    cssCodeSplit: true,
+    minify: 'esbuild', // Utiliser esbuild au lieu de terser
     rollupOptions: {
       output: {
         manualChunks(id) {
@@ -40,9 +44,21 @@ export default defineConfig(({ command, mode }) => {
         },
         entryFileNames: 'assets/[name].[hash].js',
         chunkFileNames: 'assets/[name].[hash].js',
-        assetFileNames: 'assets/[name].[hash].[ext]'
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          // Organiser les assets par type
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
+            return `assets/images/[name].[hash][extname]`;
+          }
+          return `assets/[name].[hash][extname]`;
+        }
       }
     }
+  },
+  // Optimisations pour le dev
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'framer-motion']
   },
   preview: {
     port: 3000

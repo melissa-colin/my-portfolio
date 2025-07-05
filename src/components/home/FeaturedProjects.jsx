@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FiArrowRight, FiGithub, FiExternalLink } from 'react-icons/fi';
+import OptimizedImage from '../common/OptimizedImage';
 import en from '../../data/translations/en';
 import fr from '../../data/translations/fr';
 
@@ -110,13 +111,13 @@ const FeaturedProjects = ({ language }) => {
             >
               <div className="h-56 overflow-hidden relative">
                 <motion.div className="absolute inset-0 bg-gradient-red opacity-0 group-hover:opacity-30 z-10 transition-opacity duration-300" />
-                <motion.img 
+                <OptimizedImage 
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover"
-                  variants={imageVariants}
-                  whileHover="hover"
-                  initial={{ scale: 1.01 }}
+                  width={400}
+                  height={224}
+                  quality={90}
                 />
               </div>
               <div className="p-6 flex-grow">
