@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+# Sitemap principal
 Sitemap: https://melissa-colin.github.io/my-portfolio-dist/sitemap.xml
 
 # Optimisations pour l'indexation
@@ -17,7 +17,36 @@ Allow: /blog
 Allow: /contact
 Allow: /assets/
 
-# Disallow unnecessary files (if any)
+# Permettre spécifiquement les images et assets critiques pour le SEO
+Allow: /assets/images/profile-image.jpg
+Allow: /assets/images/screen.png
+Allow: /assets/images/favicon.ico
+Allow: /assets/images/logos/
+Allow: /assets/images/projects/
+
+# Instructions spécifiques pour les moteurs de recherche principaux
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: LinkedInBot
+Allow: /
+Allow: /assets/images/profile-image.jpg
+
+# Disallow unnecessary files pour éviter la dilution du crawl budget
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /build/
+Disallow: /dist/
+
+# Cache policy hint pour les bots
+# Ceci aide les moteurs de recherche à comprendre la fréquence de mise à jour
+# Host: melissa-colin.github.io
 Disallow: /node_modules/
 Disallow: /*.json
 Disallow: /src/

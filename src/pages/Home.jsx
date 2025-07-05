@@ -4,6 +4,7 @@ import HeroSection from '../components/home/HeroSection';
 import AboutSection from '../components/home/AboutSection';
 import SkillsSection from '../components/home/SkillsSection';
 import FeaturedProjects from '../components/home/FeaturedProjects';
+import SEOHead from '../components/SEOHead';
 import { useLanguage } from '../context/LanguageContext';
 
 const Home = () => {
@@ -19,20 +20,23 @@ const Home = () => {
   };
 
   return (
-    <motion.div
-      variants={pageVariants}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-    >
-      <HeroSection />
-      
-      <AboutSection language={language} />
-      
-      <SkillsSection language={language} />
-      
-      <FeaturedProjects language={language} />
-    </motion.div>
+    <>
+      <SEOHead pageType="home" />
+      <motion.div
+        variants={pageVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+      >
+        <HeroSection />
+        
+        <AboutSection language={language} />
+        
+        <SkillsSection language={language} />
+        
+        <FeaturedProjects language={language} />
+      </motion.div>
+    </>
   );
 };
 
