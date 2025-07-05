@@ -1,22 +1,26 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 
 // Plugin pour remplacer les variables d'environnement dans l'index.html
-const htmlEnvPlugin = () => {
+const htmlEnvPlugin = (env) => {
   return {
     name: 'html-env',
     transformIndexHtml: {
       enforce: 'pre',
       transform(html, ctx) {
-        return html.replace(/%VITE_GOOGLE_ANALYTICS_ID%/g, process.env.VITE_GOOGLE_ANALYTICS_ID || '')
+        return html.replace(/%VITE_GOOGLE_ANALYTICS_ID%/g, env.VITE_GOOGLE_ANALYTICS_ID || '')
       }
     }
   }
 }
 
-export default defineConfig({
-  plugins: [react(), htmlEnvPlugin()],
+export default defineConfig(({ command, mode }) => {
+  // Charger les variables d'environnement
+  const env = loadEnv(mode, process.cwd(), '')
+  
+  return {
+  plugins: [react(), htmlEnvPlugin(env)],
   server: {
     port: 3000
   },
@@ -47,5 +51,6 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, 'src')
     }
+  }
   }
 })
