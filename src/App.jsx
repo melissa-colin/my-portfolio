@@ -37,10 +37,9 @@ function App() {
               <Route path="projects" element={<Projects />} />
               <Route path="blog" element={<Blog />} />
               <Route path="contact" element={<Contact />} />
+              {/* 404 Route inside Layout */}
+              <Route path="*" element={<NotFound />} />
             </Route>
-
-            {/* 404 Route */}
-            <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>
       </LanguageProvider>
