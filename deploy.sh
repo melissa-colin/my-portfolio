@@ -7,42 +7,39 @@ echo "🔄 Mise à jour du submodule dist..."
 
 
 # Nettoyage
-rm -rf dist
+find my-portfolio-dist -mindepth 1 ! -name '.git' -exec rm -rf {} +
+if [ -d "dist" ]; then
+    rm -rf dist
+fi
 
 # Build frontend avec optimisations
 echo "🏗️ Build du frontend optimisé..."
 pnpm install
 ./build-optimized.sh
 
-# Crée le dossier backend dans dist
-mkdir -p dist/backend
+# Copier le contenu de dist dans my-portfolio-dist
+echo "📦 Copie du contenu du dossier dist dans my-portfolio-dist..."
+cp -r dist/* my-portfolio-dist/
 
-# Copie le backend (src, package.json, etc.)
-echo "📦 Copie du backend..."
-cp -r backend/src dist/backend/
-cp backend/package.json dist/backend/
-cp backend/pnpm-lock.yaml dist/backend/ 2>/dev/null || true
-cp backend/.env dist/backend/ 2>/dev/null || true
-
-# Restauration du .git dans dist
-echo "🔄 Restauration du .git dans dist..."
-cp tmp.git dist/.git 2>/dev/null || echo "Attention: impossible de restaurer .git"
-cp README.md dist/README.md
-rm tmp.git 2>/dev/null || true
+# Nettoyer le dossier dist
+echo "🧹 Nettoyage du dossier dist..."
+if [ -d "dist" ]; then
+    rm -rf dist
+fi
 
 echo "✅ Build terminé !"
-echo "Le dossier dist/ contient le frontend ET le backend prêt à être uploadé sur le serveur."
+
 
 # Push en production
 echo "🚀 Déploiement en production..."
-cd dist
+cd my-portfolio-dist
 git add .
-git commit -m "Update contenu du dist"
+git commit -m "Update contenu du site"
 git push
 
 # Commit de la version
 echo "📦 Commit de la version..."
 cd ..
 git add .
-git commit -m "Update"
+git commit -m "Update submodule my-portfolio-dist"
 git push
