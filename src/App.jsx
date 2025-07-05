@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { ThemeProvider } from './context/ThemeContext';
 import { LanguageProvider } from './context/LanguageContext';
 import ScrollToTop from './components/layout/ScrollToTop';
+import WebVitalsMonitor from './components/common/WebVitalsMonitor';
 
 // Layout components
 import Layout from './components/layout/Layout';
@@ -23,6 +24,7 @@ function App() {
     <ThemeProvider>
       <LanguageProvider>
         <Router>
+          <WebVitalsMonitor />
           <ScrollToTop />
           <Routes>
             {/* Public Routes */}

@@ -1,0 +1,83 @@
+{
+  "name": "Mélissa Colin - Portfolio Intelligence Artificielle",
+  "short_name": "Mélissa Colin IA",
+  "description": "Portfolio professionnel de Mélissa Colin, étudiante en intelligence artificielle spécialisée en vision par ordinateur et deep learning à l'ENSEIRB-MATMECA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "fr",
+  "categories": ["education", "portfolio", "technology"],
+  "icons": [
+    {
+      "src": "/assets/images/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/profile-image.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/images/screen.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Aperçu du portfolio"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Projets IA",
+      "short_name": "Projets",
+      "description": "Voir mes projets en intelligence artificielle",
+      "url": "/projects",
+      "icons": [
+        {
+          "src": "/assets/images/favicon.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Publications",
+      "short_name": "Publications",
+      "description": "Mes publications et recherches en IA",
+      "url": "/publications",
+      "icons": [
+        {
+          "src": "/assets/images/favicon.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Me contacter pour collaborations",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/assets/images/favicon.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_includes": false
+}

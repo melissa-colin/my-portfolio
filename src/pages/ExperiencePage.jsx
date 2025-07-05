@@ -4,6 +4,7 @@ import { FiBriefcase, FiExternalLink, FiCalendar, FiMapPin, FiCheckSquare, FiSqu
 import { useLanguage } from '../context/LanguageContext';
 import { Helmet } from 'react-helmet';
 import OptimizedImage from '../components/common/OptimizedImage';
+import SEOHead from '../components/SEOHead';
 
 const ExperiencePage = () => {
   const { t, language } = useLanguage();
@@ -76,6 +77,7 @@ const ExperiencePage = () => {
 
   return (
     <>
+      <SEOHead pageType="experience" />
       <Helmet>
         <title>{pageTitle} | {t('home.heroTitle')}</title>
       </Helmet>
