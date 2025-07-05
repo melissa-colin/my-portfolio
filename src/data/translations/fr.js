@@ -241,7 +241,7 @@ const fr = {
         technologies: ["Python", "Git", "Ollama", "LLMs"],
         github: null,
         demo: null,
-        category: "Tools",
+        category: "Outils",
         featured: false
       },
       {
@@ -512,6 +512,7 @@ const fr = {
         period: "2024 - 2027",
         description: "Formation d’ingénieure reconnue par la CTI se déroulant sur trois ans et combinant un solide tronc commun scientifique, des projets innovants (en équipe et souvent en partenariat avec l’industrie).",
         gpa: "14.92/20",
+        rank: "Top 3 de la promotion",
       },
       {
         id: 2,
