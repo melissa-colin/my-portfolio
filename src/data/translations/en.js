@@ -506,11 +506,12 @@ const en = {
         id: 1,
         degree: "Engineering Degree in Computer Science",
         specialization: "Specialization in Artificial Intelligence",
-        institution: "ENSERB-MATMECA",
+        institution: "ENSEIRB-MATMECA",
         location: "Talence, Nouvelle-Aquitaine, France",
         period: "2024 - 2027",
         description: "An engineering program accredited by the CTI, spanning three years and combining a strong scientific core curriculum with innovative projects (team-based and often in partnership with industry).",
-        gpa: "14.92/20"
+        gpa: "14.92/20",
+        rank: "Top 3 in class",
       },
       {
         id: 2,
