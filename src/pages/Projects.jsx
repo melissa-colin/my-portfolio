@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { FiGithub, FiExternalLink, FiFilter } from 'react-icons/fi';
+import OptimizedImage from '../components/common/OptimizedImage';
 
 const Projects = () => {
   const { t } = useLanguage();
@@ -134,10 +135,13 @@ const Projects = () => {
                 className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col h-full"
               >
                 <div className="h-48 overflow-hidden">
-                  <img 
+                  <OptimizedImage 
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    width={400}
+                    height={192}
+                    quality={85}
                   />
                 </div>
                 

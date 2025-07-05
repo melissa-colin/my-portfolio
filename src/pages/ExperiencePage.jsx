@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FiBriefcase, FiExternalLink, FiCalendar, FiMapPin, FiCheckSquare, FiSquare } from 'react-icons/fi';
 import { useLanguage } from '../context/LanguageContext';
 import { Helmet } from 'react-helmet';
+import OptimizedImage from '../components/common/OptimizedImage';
 
 const ExperiencePage = () => {
   const { t, language } = useLanguage();
@@ -176,10 +177,13 @@ const ExperiencePage = () => {
                       <div className="md:w-1/4 flex flex-col items-center justify-center bg-red-900/10 dark:bg-red-900/20">
                         <div className="w-16 h-16 flex items-center justify-center rounded-full bg-red-900/30 text-red-500 m-6">
                           {experience.logo ? (
-                            <img
+                            <OptimizedImage
                               src={experience.logo}
                               alt={experience.company}
                               className="w-16 h-16 flex items-center justify-center rounded-full bg-red-900/30 text-red-500 m-6"
+                              width={64}
+                              height={64}
+                              quality={90}
                             />
                           ) : (
                             <FiBriefcase size={32} />

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext';
 import { FiArrowRight } from 'react-icons/fi';
+import OptimizedImage from '../common/OptimizedImage';
 
 const HeroSection = () => {
   const { t, language } = useLanguage();
@@ -214,14 +215,13 @@ const HeroSection = () => {
                 <div className="absolute inset-0 overflow-hidden">
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-red-500/20 via-transparent to-transparent opacity-70"></div>
                   <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-tl from-red-500/20 via-transparent to-transparent opacity-70">
-                  <motion.img
+                  <OptimizedImage
                     src="/assets/images/profile-image.jpg"
                     alt="Profile"
                     className="w-full h-full object-cover shadow-lg"
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, delay: 0.3, type: 'spring' }}
-                    draggable={false}
+                    priority={true}
+                    width={500}
+                    height={500}
                   />
                   </div>
                 </div>

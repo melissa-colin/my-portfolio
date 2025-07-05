@@ -10,10 +10,10 @@ cp dist/.git tmp.git
 # Nettoyage
 rm -rf dist
 
-# Build frontend
-echo "🏗️ Build du frontend..."
+# Build frontend avec optimisations
+echo "🏗️ Build du frontend optimisé..."
 pnpm install
-pnpm run build
+./build-optimized.sh
 
 # Crée le dossier backend dans dist
 mkdir -p dist/backend

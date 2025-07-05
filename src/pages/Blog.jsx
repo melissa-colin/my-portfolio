@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { FiClock, FiSearch, FiArrowRight } from 'react-icons/fi';
+import OptimizedImage from '../components/common/OptimizedImage';
 
 
 const Blog = () => {
@@ -127,10 +128,13 @@ const Blog = () => {
                       <div className="md:flex">
                         <div className="md:w-1/3">
                           <div className="h-48 md:h-full">
-                            <img 
+                            <OptimizedImage 
                               src={post.image} 
                               alt={post.title} 
                               className="w-full h-full object-cover"
+                              width={300}
+                              height={192}
+                              quality={85}
                             />
                           </div>
                         </div>
