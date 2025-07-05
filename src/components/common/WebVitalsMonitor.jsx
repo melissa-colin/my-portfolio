@@ -9,8 +9,8 @@ import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 // Fonction pour envoyer les métriques à Google Analytics
 function sendToGoogleAnalytics({ name, delta, value, id }) {
   // Vérifier si gtag est disponible
-  if (typeof gtag !== 'undefined') {
-    gtag('event', name, {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', name, {
       event_category: 'Web Vitals',
       event_label: id,
       value: Math.round(name === 'CLS' ? delta * 1000 : delta),
@@ -24,7 +24,7 @@ function sendToGoogleAnalytics({ name, delta, value, id }) {
   }
   
   // Aussi afficher en console pour le développement
-  if (process.env.NODE_ENV === 'development') {
+  if (import.meta.env.DEV) {
     console.log(`%c[Web Vitals] ${name}:`, 'color: #4CAF50; font-weight: bold;', {
       value: Math.round(name === 'CLS' ? value * 1000 : value),
       delta: Math.round(name === 'CLS' ? delta * 1000 : delta),
@@ -35,7 +35,7 @@ function sendToGoogleAnalytics({ name, delta, value, id }) {
 
 // Fonction pour afficher les conseils d'optimisation
 function logOptimizationTips(metric) {
-  if (process.env.NODE_ENV === 'development') {
+  if (import.meta.env.DEV) {
     const tips = {
       CLS: [
         '• Ajouter des dimensions d\'image explicites',
@@ -127,8 +127,8 @@ export const useWebVitals = () => {
     
     // Monitorer les erreurs JavaScript
     window.addEventListener('error', (event) => {
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'javascript_error', {
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'javascript_error', {
           event_category: 'Error',
           event_label: event.message,
           value: 1,
@@ -139,8 +139,8 @@ export const useWebVitals = () => {
     
     // Monitorer les erreurs de ressources
     window.addEventListener('error', (event) => {
-      if (event.target !== window && typeof gtag !== 'undefined') {
-        gtag('event', 'resource_error', {
+      if (event.target !== window && typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'resource_error', {
           event_category: 'Error',
           event_label: event.target.src || event.target.href,
           value: 1,

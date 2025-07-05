@@ -15,12 +15,41 @@ const htmlEnvPlugin = (env) => {
   }
 }
 
+// Plugin pour générer un manifest de preload
+const preloadManifestPlugin = () => {
+  return {
+    name: 'preload-manifest',
+    generateBundle(options, bundle) {
+      const preloadAssets = [];
+      
+      Object.entries(bundle).forEach(([fileName, asset]) => {
+        if (asset.type === 'asset' && asset.fileName.includes('index')) {
+          preloadAssets.push({
+            file: asset.fileName,
+            type: fileName.endsWith('.css') ? 'style' : 'script'
+          });
+        }
+      });
+      
+      this.emitFile({
+        type: 'asset',
+        fileName: 'preload-manifest.json',
+        source: JSON.stringify(preloadAssets, null, 2)
+      });
+    }
+  }
+}
+
 export default defineConfig(({ command, mode }) => {
   // Charger les variables d'environnement
   const env = loadEnv(mode, process.cwd(), '')
   
   return {
-  plugins: [react(), htmlEnvPlugin(env)],
+  plugins: [
+    react(), 
+    htmlEnvPlugin(env),
+    preloadManifestPlugin()
+  ],
   server: {
     port: 3000
   },
@@ -32,14 +61,24 @@ export default defineConfig(({ command, mode }) => {
     sourcemap: false,
     chunkSizeWarningLimit: 1000,
     // Optimisations des assets
-    assetsInlineLimit: 8192, // Inline les assets < 8kb
+    assetsInlineLimit: 4096, // Inline les assets < 4kb pour réduire les requêtes
     cssCodeSplit: true,
-    minify: 'esbuild', // Utiliser esbuild au lieu de terser
+    minify: 'esbuild', // Utiliser esbuild pour une minification plus rapide
     rollupOptions: {
       output: {
         manualChunks(id) {
+          // Séparer les dépendances vendor pour un meilleur cache
           if (id.includes('node_modules')) {
-            return 'vendor'
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-vendor';
+            }
+            if (id.includes('framer-motion')) {
+              return 'animation-vendor';
+            }
+            if (id.includes('@mui') || id.includes('@emotion')) {
+              return 'ui-vendor';
+            }
+            return 'vendor';
           }
         },
         entryFileNames: 'assets/[name].[hash].js',
@@ -47,25 +86,41 @@ export default defineConfig(({ command, mode }) => {
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
-          // Organiser les assets par type
+          // Organiser les assets par type pour un meilleur cache
           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
             return `assets/images/[name].[hash][extname]`;
           }
+          if (/woff2?|ttf|eot/i.test(ext)) {
+            return `assets/fonts/[name].[hash][extname]`;
+          }
           return `assets/[name].[hash][extname]`;
         }
-      }
+      },
+      // Optimiser les dépendances externes
+      external: [],
     }
   },
   // Optimisations pour le dev
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion']
+    include: [
+      'react', 
+      'react-dom', 
+      'framer-motion',
+      'react-router-dom',
+      'react-helmet'
+    ]
   },
   preview: {
     port: 3000
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src')
+      '@': resolve(__dirname, 'src'),
+      '@components': resolve(__dirname, 'src/components'),
+      '@pages': resolve(__dirname, 'src/pages'),
+      '@utils': resolve(__dirname, 'src/utils'),
+      '@data': resolve(__dirname, 'src/data'),
+      '@assets': resolve(__dirname, 'src/assets')
     }
   }
   }

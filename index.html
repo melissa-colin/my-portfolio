@@ -110,9 +110,26 @@
   }
   </script>
   
+  <!-- Preload critical resources to eliminate render-blocking -->
+  <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/src/index.css"></noscript>
+  
   <!-- Optimisation pour la vitesse -->
   <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  
+  <!-- Preload critical images -->
+  <link rel="preload" href="/assets/images/profile-image.webp" as="image" type="image/webp">
+  <link rel="preload" href="/assets/images/profile-image.jpg" as="image" type="image/jpeg">
+  
+  <!-- Critical CSS inline (will be added by build process) -->
+  <style id="critical-css">
+    /* Critical above-the-fold styles */
+    html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0;font-family:system-ui,-apple-system,sans-serif}
+    .hero-section{min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg,#0a0a0a,#1a1a1a)}
+    .nav-header{position:fixed;top:0;width:100%;z-index:50;background:rgba(0,0,0,0.9);backdrop-filter:blur(10px)}
+  </style>
   
   <!-- Favicon et icônes -->
   <link rel="icon" href="/public/assets/images/favicon.ico" />
@@ -132,20 +149,39 @@
   <link rel="alternate" hreflang="en" href="https://melissa-colin.github.io/my-portfolio-dist/?lang=en" />
   <link rel="alternate" hreflang="x-default" href="https://melissa-colin.github.io/my-portfolio-dist/" />
   
-  <!-- Google tag (gtag.js) -->
+  <!-- Defer non-critical JavaScript -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=%VITE_GOOGLE_ANALYTICS_ID%"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', '%VITE_GOOGLE_ANALYTICS_ID%');
+  </script>
+  
+  <!-- Load polyfills conditionally -->
+  <script>
+    if (!window.IntersectionObserver) {
+      document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"><\/script>');
+    }
   </script>
 </head>
 
 <body>
   <div id="root"></div>
+  <!-- Load main script with module preload for better performance -->
+  <link rel="modulepreload" href="/src/main.jsx">
   <script type="module" src="/src/main.jsx"></script>
+  
+  <!-- Service Worker for caching (optional) -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => console.log('SW registered'))
+          .catch(error => console.log('SW registration failed'));
+      });
+    }
+  </script>
 </body>
 
 </html>

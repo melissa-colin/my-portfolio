@@ -10,12 +10,43 @@ const OptimizedImage = ({
   priority = false,
   quality = 75,
   sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
+  aspectRatio = 'auto',
+  objectFit = 'cover',
+  responsive = true,
   ...props
 }) => {
+  // Générer des srcset pour responsive images
+  const generateSrcSet = (baseSrc, ext) => {
+    // Pour l'instant, désactiver la génération de srcSet
+    // TODO: Implémenter après avoir généré les variantes d'images
+    return '';
+  };
+
+    // Calculer les dimensions optimales
+  const getOptimizedDimensions = () => {
+    if (!responsive) return { width, height };
+    
+    // Définir des breakpoints standards
+    const screenWidth = typeof window !== 'undefined' ? window.innerWidth : 1920;
+    const maxWidth = Math.min(width || screenWidth, screenWidth);
+    
+    if (aspectRatio !== 'auto' && width) {
+      const ratio = parseFloat(aspectRatio);
+      return {
+        width: maxWidth,
+        height: Math.round(maxWidth / ratio)
+      };
+    }
+    
+    return { width: maxWidth, height };
+  };
+
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [error, setError] = useState(false);
   const imgRef = useRef(null);
+
+  const optimizedDimensions = getOptimizedDimensions();
 
   // Intersection Observer pour lazy loading
   useEffect(() => {
@@ -41,17 +72,12 @@ const OptimizedImage = ({
     return () => observer.disconnect();
   }, [priority]);
 
-  // Créer une version WebP si possible
+  // Support pour les formats modernes (AVIF/WebP)
   const getOptimizedSrc = (originalSrc) => {
     if (typeof originalSrc !== 'string') return originalSrc;
     
-    // Pour les images locales, on peut essayer de charger une version optimisée
-    if (originalSrc.startsWith('/') || originalSrc.startsWith('./')) {
-      const ext = originalSrc.split('.').pop();
-      if (['jpg', 'jpeg', 'png'].includes(ext?.toLowerCase())) {
-        return originalSrc;
-      }
-    }
+    // Pour l'instant, retourner simplement l'image originale
+    // TODO: Implémenter la logique d'optimisation d'images après avoir généré les variantes
     return originalSrc;
   };
 
@@ -105,12 +131,18 @@ const OptimizedImage = ({
             transition-opacity duration-500
             ${isLoaded ? 'opacity-100' : 'opacity-0 absolute inset-0'}
           `}
-          width={width}
-          height={height}
+          width={optimizedDimensions.width}
+          height={optimizedDimensions.height}
           loading={priority ? 'eager' : 'lazy'}
           decoding="async"
           onLoad={handleLoad}
           onError={handleError}
+          style={{
+            objectFit: objectFit,
+            aspectRatio: aspectRatio !== 'auto' ? aspectRatio : undefined,
+            maxWidth: '100%',
+            height: 'auto'
+          }}
           {...props}
         />
       )}
