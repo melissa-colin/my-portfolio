@@ -5,7 +5,6 @@ echo "🚀 Début du déploiement fullstack..."
 # Copier le .git du submodule "dist" dans un dossier temporaire
 echo "🔄 Mise à jour du submodule dist..."
 
-cp dist/.git tmp.git 2>/dev/null || echo "Attention: impossible de sauvegarder .git"
 
 # Nettoyage
 rm -rf dist
