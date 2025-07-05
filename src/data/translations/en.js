@@ -576,7 +576,7 @@ const en = {
         id: 1,
         title: "YOLOv8 Explained: Understanding Object Detection from Scratch",
         excerpt: "A deep dive into the architecture and implementation details of YOLOv8, the latest iteration of the popular object detection algorithm.",
-        image: "/assets/images/blog-yolov8.png",
+        image: "/assets/images/blog-yolov8.jpg",
         date: "2024-10-19",
         readTime: 7,
         category: "Computer Vision",

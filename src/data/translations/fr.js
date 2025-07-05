@@ -577,7 +577,7 @@ const fr = {
         id: 1,
         title: "YOLOv8 Décrypté : Maîtriser la détection d’objets depuis zéro",
         excerpt: "Une plongée profonde dans l'architecture et les détails d'implémentation de YOLOv8, la dernière itération de l'algorithme populaire de détection d'objets.",
-        image: "/assets/images/blog-yolov8.png",
+        image: "/assets/images/blog-yolov8.jpg",
         date: "2024-10-19",
         readTime: 7,
         category: "Vision par Ordinateur",
