@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://melissa-colin.github.io/my-portfolio-dist/sitemap.xml
+
+# Optimisations pour l'indexation
+Crawl-delay: 1
+
+# Permettre l'indexation de tous les contenus importants
+Allow: /certification
+Allow: /publications
+Allow: /experience
+Allow: /education
+Allow: /projects
+Allow: /blog
+Allow: /contact
+Allow: /assets/
+
+# Disallow unnecessary files (if any)
+Disallow: /node_modules/
+Disallow: /*.json
+Disallow: /src/
