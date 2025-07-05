@@ -46,7 +46,7 @@ Disallow: /dist/
 
 # Cache policy hint pour les bots
 # Ceci aide les moteurs de recherche à comprendre la fréquence de mise à jour
-# Host: melissa-colin.github.io
+# Host: melissacolin.ai
 Disallow: /node_modules/
 Disallow: /*.json
 Disallow: /src/

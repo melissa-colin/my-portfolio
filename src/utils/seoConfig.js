@@ -140,8 +140,8 @@ export const SEO_CONFIG = {
     "@type": "Person",
     "name": "Mélissa Colin",
     "alternateName": ["Melissa Colin", "melissa colin", "mélissa colin"],
-    "url": "https://melissa-colin.github.io/my-portfolio-dist/",
-    "image": "https://melissa-colin.github.io/my-portfolio-dist/assets/images/profile-image.jpg",
+    "url": "https://melissacolin.ai/my-portfolio-dist/",
+    "image": "https://melissacolin.ai/my-portfolio-dist/assets/images/profile-image.jpg",
     "sameAs": [
       "https://linkedin.com/in/melissa-colin",
       "https://github.com/melissa-colin"
@@ -195,7 +195,7 @@ export const SEO_CONFIG = {
     "@type": "WebSite",
     "name": language === 'fr' ? "Portfolio de Mélissa Colin" : "Melissa Colin Portfolio",
     "alternateName": "Melissa Colin Portfolio IA",
-    "url": "https://melissa-colin.github.io/my-portfolio-dist/",
+    "url": "https://melissacolin.ai/my-portfolio-dist/",
     "description": language === 'fr' 
       ? "Portfolio professionnel de Mélissa Colin, étudiante en intelligence artificielle spécialisée en vision par ordinateur"
       : "Professional portfolio of Melissa Colin, AI student specialized in computer vision",
@@ -206,7 +206,7 @@ export const SEO_CONFIG = {
     "inLanguage": ["fr-FR", "en-US"],
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://melissa-colin.github.io/my-portfolio-dist/?q={search_term_string}",
+      "target": "https://melissacolin.ai/my-portfolio-dist/?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   }),

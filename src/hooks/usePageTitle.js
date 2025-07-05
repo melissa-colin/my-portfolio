@@ -16,8 +16,8 @@ const usePageTitle = () => {
       switch (pathname) {
         case '/':
           return currentLanguage === 'fr'
-            ? `${baseName} | ${baseTagline} | Portfolio IA`
-            : `${baseName} | ${baseTagline} | AI Portfolio`;
+            ? `${baseName} | ${baseTagline}`
+            : `${baseName} | ${baseTagline}`;
         case '/certification':
           return currentLanguage === 'fr'
             ? `Certifications IA | ${baseName} | Portfolio`

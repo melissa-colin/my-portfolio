@@ -1,5 +1,34 @@
 # Configuration SEO et Performance avancée pour Mélissa Colin Portfolio
 
+# ==============================================
+# REDIRECTIONS CRITIQUES POUR SEO
+# ==============================================
+
+# Force HTTPS et redirection www vers non-www
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Forcer HTTPS (HTTP vers HTTPS)
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  
+  # Rediriger www vers non-www pour canonicalisation
+  RewriteCond %{HTTP_HOST} ^www\.melissacolin\.ai$ [NC]
+  RewriteRule ^(.*)$ https://melissacolin.ai/$1 [L,R=301]
+  
+  # Redirection du domaine GitHub Pages legacy
+  RewriteCond %{HTTP_HOST} ^melissa-colin\.github\.io$ [NC]
+  RewriteRule ^my-portfolio-dist/(.*)$ https://melissacolin.ai/$1 [L,R=301]
+  
+  # Nettoyer les doubles slashes
+  RewriteCond %{THE_REQUEST} \s/+(.+?)//+(.*)\s [NC]
+  RewriteRule ^ /%1/%2 [R=301,L]
+</IfModule>
+
+# ==============================================
+# CONFIGURATION MIME ET CACHE
+# ==============================================
+
 # Définir les types MIME corrects
 <IfModule mod_mime.c>
   AddType application/javascript .js .mjs .jsx
@@ -61,8 +90,11 @@
   Header always set X-Frame-Options DENY
   Header always set X-XSS-Protection "1; mode=block"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
-  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
   Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  
+  # Content Security Policy pour éviter le mixed content
+  Header always set Content-Security-Policy "default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://tagmanager.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; frame-src 'none'; object-src 'none'; base-uri 'self'"
   
   # Performance hints pour les navigateurs
   Header add Link "</assets/fonts/>; rel=preconnect; crossorigin"
@@ -87,8 +119,6 @@
 
 # Optimisations pour les images - servir WebP/AVIF quand supporté
 <IfModule mod_rewrite.c>
-  RewriteEngine On
-  
   # Servir WebP si disponible et supporté par le navigateur
   RewriteCond %{HTTP_ACCEPT} image/webp
   RewriteCond %{REQUEST_FILENAME} \.(jpe?g|png)$
@@ -100,11 +130,10 @@
   RewriteCond %{REQUEST_FILENAME} \.(jpe?g|png)$
   RewriteCond %{REQUEST_FILENAME}\.avif -f
   RewriteRule (.+)\.(jpe?g|png)$ $1.$2.avif [T=image/avif,E=accept:1,L]
-</IfModule>
 
-# Configuration pour SPA (Single Page Application) avec gestion SEO
-<IfModule mod_rewrite.c>
-  RewriteEngine On
+  # ==============================================
+  # CONFIGURATION SPA ET ROUTAGE
+  # ==============================================
   
   # Gestion des URLs canoniques - redirection des trailing slashes
   RewriteCond %{REQUEST_FILENAME} !-f
