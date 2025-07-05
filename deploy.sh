@@ -5,7 +5,7 @@ echo "🚀 Début du déploiement fullstack..."
 # Copier le .git du submodule "dist" dans un dossier temporaire
 echo "🔄 Mise à jour du submodule dist..."
 
-cp dist/.git tmp.git
+cp dist/.git tmp.git 2>/dev/null || echo "Attention: impossible de sauvegarder .git"
 
 # Nettoyage
 rm -rf dist
@@ -27,9 +27,9 @@ cp backend/.env dist/backend/ 2>/dev/null || true
 
 # Restauration du .git dans dist
 echo "🔄 Restauration du .git dans dist..."
-cp tmp.git dist/.git
+cp tmp.git dist/.git 2>/dev/null || echo "Attention: impossible de restaurer .git"
 cp README.md dist/README.md
-rm tmp.git
+rm tmp.git 2>/dev/null || true
 
 echo "✅ Build terminé !"
 echo "Le dossier dist/ contient le frontend ET le backend prêt à être uploadé sur le serveur."
