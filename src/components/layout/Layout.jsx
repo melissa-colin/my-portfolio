@@ -4,9 +4,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Header from './Header';
 import Footer from './Footer';
 import { useTheme } from '../../context/ThemeContext';
+import useGoogleAnalytics from '../../hooks/useGoogleAnalytics';
+import usePageTitle from '../../hooks/usePageTitle';
 
 const Layout = () => {
   const { isDarkMode } = useTheme(); // Keep for compatibility
+  
+  // Activer le suivi Google Analytics
+  useGoogleAnalytics();
+  
+  // Mettre à jour le titre de la page
+  usePageTitle();
 
   return (
     <div className="min-h-screen flex flex-col">
