@@ -8,6 +8,10 @@ export const SEO_CONFIG = {
   baseUrl: 'https://melissacolin.ai',
   siteName: 'Mélissa Colin - Portfolio Intelligence Artificielle',
   
+  // Titre et description optimisés à la première personne
+  defaultTitle: 'Mélissa Colin | Portfolio IA & Computer Vision | ENSEIRB',
+  defaultDescription: 'Je suis Mélissa Colin, étudiante ingénieure IA à ENSEIRB. J\'explore la vision par ordinateur et développe des systèmes d\'IA plus fiables.',
+  
   // Mots-clés principaux pour le référencement personnel
   primaryKeywords: {
     fr: [
@@ -50,85 +54,85 @@ export const SEO_CONFIG = {
   pages: {
     home: {
       fr: {
-        title: 'Mélissa Colin | Étudiante Ingénieure en Intelligence Artificielle | Portfolio IA',
-        description: 'Mélissa Colin, étudiante ingénieure en intelligence artificielle à l\'ENSEIRB-MATMECA. Portfolio de projets IA innovants en vision par ordinateur, deep learning et IA explicable. Profil étudiant IA Bordeaux.',
+        title: 'Mélissa Colin | Portfolio IA & Computer Vision | ENSEIRB',
+        description: 'Je suis Mélissa Colin, étudiante ingénieure IA à ENSEIRB. J\'explore la vision par ordinateur et développe des systèmes d\'IA plus fiables.',
         keywords: 'portfolio, accueil, profil complet'
       },
       en: {
-        title: 'Melissa Colin | AI Engineering Student | Artificial Intelligence Portfolio',
-        description: 'Melissa Colin, AI engineering student at ENSEIRB-MATMECA. Portfolio of innovative AI projects in computer vision, deep learning, and explainable AI. AI student profile Bordeaux France.',
+        title: 'Melissa Colin | AI Portfolio & Computer Vision | ENSEIRB',
+        description: 'I am Melissa Colin, AI engineering student at ENSEIRB. I explore computer vision and develop more reliable AI systems.',
         keywords: 'portfolio, home, complete profile'
       }
     },
     projects: {
       fr: {
-        title: 'Projets IA | Mélissa Colin | Vision par Ordinateur & Deep Learning',
-        description: 'Découvrez les projets d\'intelligence artificielle de Mélissa Colin : vision par ordinateur, deep learning, CNN, transformers. Projets étudiants IA innovants ENSEIRB-MATMECA.',
+        title: 'Mes Projets IA | Mélissa Colin | Vision par Ordinateur',
+        description: 'Je développe des projets IA innovants en vision par ordinateur et deep learning. Découvrez mes réalisations en CNN, transformers et IA explicable.',
         keywords: 'projets IA, computer vision, CNN, transformers, YOLO, réseaux de neurones'
       },
       en: {
-        title: 'AI Projects | Melissa Colin | Computer Vision & Deep Learning',
-        description: 'Discover Melissa Colin\'s artificial intelligence projects: computer vision, deep learning, CNN, transformers. Innovative AI student projects ENSEIRB-MATMECA.',
+        title: 'My AI Projects | Melissa Colin | Computer Vision',
+        description: 'I develop innovative AI projects in computer vision and deep learning. Discover my work in CNN, transformers and explainable AI.',
         keywords: 'AI projects, computer vision, CNN, transformers, YOLO, neural networks'
       }
     },
     publications: {
       fr: {
-        title: 'Publications & Recherche IA | Mélissa Colin | IA Explicable',
-        description: 'Publications scientifiques et recherches en intelligence artificielle de Mélissa Colin. Spécialisation en IA explicable, vision par ordinateur et architectures de deep learning.',
+        title: 'Mes Publications IA | Mélissa Colin | Recherche en IA Explicable',
+        description: 'Je partage mes recherches en intelligence artificielle et IA explicable. Mes publications explorent la vision par ordinateur et l\'interprétabilité des modèles.',
         keywords: 'publications, recherche IA, articles scientifiques, IA explicable'
       },
       en: {
-        title: 'AI Publications & Research | Melissa Colin | Explainable AI',
-        description: 'Scientific publications and artificial intelligence research by Melissa Colin. Specialization in explainable AI, computer vision and deep learning architectures.',
+        title: 'My AI Publications | Melissa Colin | Explainable AI Research',
+        description: 'I share my research in artificial intelligence and explainable AI. My publications explore computer vision and model interpretability.',
         keywords: 'publications, AI research, scientific articles, explainable AI'
       }
     },
     experience: {
       fr: {
-        title: 'Expérience Professionnelle IA | Mélissa Colin | Stages & Missions',
-        description: 'Expérience professionnelle de Mélissa Colin en intelligence artificielle : stages, missions, projets industriels. Parcours étudiant ingénieur IA ENSEIRB-MATMECA.',
+        title: 'Mon Expérience IA | Mélissa Colin | Stages & Projets',
+        description: 'Je partage mon parcours et mes expériences en intelligence artificielle. Découvrez mes stages, missions et projets industriels en IA.',
         keywords: 'expérience IA, stages, missions, projets industriels'
       },
       en: {
-        title: 'AI Professional Experience | Melissa Colin | Internships & Projects',
-        description: 'Melissa Colin\'s professional experience in artificial intelligence: internships, missions, industrial projects. AI engineering student journey ENSEIRB-MATMECA.',
+        title: 'My AI Experience | Melissa Colin | Internships & Projects',
+        description: 'I share my journey and experiences in artificial intelligence. Discover my internships, missions and industrial AI projects.',
         keywords: 'AI experience, internships, missions, industrial projects'
       }
     },
     education: {
       fr: {
-        title: 'Formation IA | Mélissa Colin | ENSEIRB-MATMECA | Cursus Intelligence Artificielle',
-        description: 'Formation académique de Mélissa Colin en intelligence artificielle à l\'ENSEIRB-MATMECA. Cursus ingénieur IA, spécialisation vision par ordinateur et deep learning.',
+        title: 'Ma Formation IA | Mélissa Colin | ENSEIRB-MATMECA',
+        description: 'Je suis en formation d\'ingénieure IA à ENSEIRB-MATMECA. Mon cursus se spécialise en vision par ordinateur et deep learning.',
         keywords: 'formation IA, ENSEIRB-MATMECA, cursus ingénieur, études IA'
       },
       en: {
-        title: 'AI Education | Melissa Colin | ENSEIRB-MATMECA | Artificial Intelligence Curriculum',
-        description: 'Melissa Colin\'s academic education in artificial intelligence at ENSEIRB-MATMECA. AI engineering curriculum, specialization in computer vision and deep learning.',
+        title: 'My AI Education | Melissa Colin | ENSEIRB-MATMECA',
+        description: 'I am studying AI engineering at ENSEIRB-MATMECA. My curriculum specializes in computer vision and deep learning.',
         keywords: 'AI education, ENSEIRB-MATMECA, engineering curriculum, AI studies'
       }
     },
     blog: {
       fr: {
-        title: 'Blog IA | Mélissa Colin | Articles Intelligence Artificielle',
-        description: 'Blog de Mélissa Colin sur l\'intelligence artificielle : tutoriels, analyses, découvertes en IA. Contenu étudiant spécialisé en vision par ordinateur et deep learning.',
+        title: 'Mon Blog IA | Mélissa Colin | Articles Intelligence Artificielle',
+        description: 'Je partage mes découvertes et réflexions sur l\'IA. Mon blog explore la vision par ordinateur, le deep learning et l\'IA explicable.',
         keywords: 'blog IA, articles, tutoriels, analyses IA'
       },
       en: {
-        title: 'AI Blog | Melissa Colin | Artificial Intelligence Articles',
-        description: 'Melissa Colin\'s blog on artificial intelligence: tutorials, analyses, AI discoveries. Student content specialized in computer vision and deep learning.',
+        title: 'My AI Blog | Melissa Colin | Artificial Intelligence Articles',
+        description: 'I share my discoveries and thoughts on AI. My blog explores computer vision, deep learning and explainable AI.',
         keywords: 'AI blog, articles, tutorials, AI analyses'
       }
     },
     contact: {
       fr: {
-        title: 'Contact | Mélissa Colin | Étudiante IA ENSEIRB-MATMECA',
-        description: 'Contactez Mélissa Colin, étudiante en intelligence artificielle à l\'ENSEIRB-MATMECA. Disponible pour collaborations, stages, projets IA et opportunités de recherche.',
+        title: 'Me Contacter | Mélissa Colin | Étudiante IA ENSEIRB',
+        description: 'Je suis disponible pour des collaborations, stages et projets IA. Contactez-moi pour discuter d\'opportunités en intelligence artificielle.',
         keywords: 'contact, collaboration, stages IA, opportunités'
       },
       en: {
-        title: 'Contact | Melissa Colin | AI Student ENSEIRB-MATMECA',
-        description: 'Contact Melissa Colin, artificial intelligence student at ENSEIRB-MATMECA. Available for collaborations, internships, AI projects and research opportunities.',
+        title: 'Contact Me | Melissa Colin | AI Student ENSEIRB',
+        description: 'I am available for collaborations, internships and AI projects. Contact me to discuss artificial intelligence opportunities.',
         keywords: 'contact, collaboration, AI internships, opportunities'
       }
     }

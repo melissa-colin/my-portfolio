@@ -17,7 +17,7 @@ const SEOFallback = () => {
       }
       
       if (!metaDescription.content || metaDescription.content.trim() === '') {
-        metaDescription.content = 'Mélissa Colin, étudiante ingénieure en intelligence artificielle à l\'ENSEIRB-MATMECA, spécialisée en vision par ordinateur et deep learning. Portfolio de projets IA innovants et recherche en IA explicable.';
+        metaDescription.content = 'Je suis Mélissa Colin, étudiante ingénieure IA à ENSEIRB. J\'explore la vision par ordinateur et développe des systèmes d\'IA plus fiables.';
       }
     };
 
