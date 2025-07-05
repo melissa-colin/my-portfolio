@@ -148,9 +148,9 @@
   <meta name="apple-mobile-web-app-title" content="Mélissa Colin IA">
   
   <!-- Langues alternatives -->
-  <link rel="alternate" hreflang="fr" href="https://melissa-colin.github.io/my-portfolio-dist/" />
-  <link rel="alternate" hreflang="en" href="https://melissa-colin.github.io/my-portfolio-dist/?lang=en" />
-  <link rel="alternate" hreflang="x-default" href="https://melissa-colin.github.io/my-portfolio-dist/" />
+  <link rel="alternate" hreflang="fr" href="https://melissacolin.ai/" />
+  <link rel="alternate" hreflang="en" href="https://melissacolin.ai/?lang=en" />
+  <link rel="alternate" hreflang="x-default" href="https://melissacolin.ai/" />
   
   <!-- Defer non-critical JavaScript -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=%VITE_GOOGLE_ANALYTICS_ID%"></script>
@@ -170,7 +170,65 @@
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <!-- Contenu SEO statique visible pour les crawlers -->
+    <div id="seo-content" style="position: absolute; left: -9999px; top: -9999px;">
+      <h1>Mélissa Colin | Étudiante Ingénieure en Intelligence Artificielle</h1>
+      <h2>Portfolio Intelligence Artificielle</h2>
+      <p>Mélissa Colin, étudiante ingénieure en intelligence artificielle à l'ENSEIRB-MATMECA, spécialisée en vision par ordinateur et deep learning. Portfolio de projets IA innovants et recherche en IA explicable.</p>
+      
+      <!-- Navigation interne pour SEO -->
+      <nav>
+        <a href="/">Accueil</a>
+        <a href="/projects">Projets</a>
+        <a href="/experience">Expérience</a>
+        <a href="/education">Formation</a>
+        <a href="/publications">Publications</a>
+        <a href="/certification">Certifications</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      
+      <!-- Liens externes pour SEO -->
+      <div>
+        <h3>Liens utiles</h3>
+        <a href="https://www.enseirb-matmeca.fr/" rel="noopener noreferrer">ENSEIRB-MATMECA</a>
+        <a href="https://scholar.google.fr/" rel="noopener noreferrer">Google Scholar</a>
+        <a href="https://arxiv.org/list/cs.AI/recent" rel="noopener noreferrer">arXiv AI Papers</a>
+        <a href="https://github.com/melissa-colin" rel="noopener noreferrer">GitHub Profile</a>
+        <a href="https://linkedin.com/in/melissa-colin" rel="noopener noreferrer">LinkedIn Profile</a>
+      </div>
+      
+      <!-- Mots-clés pour SEO -->
+      <div>
+        <p>Spécialisations : Intelligence Artificielle, Deep Learning, Vision par Ordinateur, Machine Learning, IA Explicable, CNN, Transformers, Computer Vision, YOLO, Réseaux de Neurones</p>
+        <p>Formation : ENSEIRB-MATMECA Bordeaux, Étudiante Ingénieure IA, Nouvelle-Aquitaine</p>
+        <p>Projets : EcoSort, PoseNet, WithUB, Détection d'objets, Classification d'images, Analyse de poses</p>
+      </div>
+    </div>
+    
+    <!-- Fallback content for SEO and accessibility (noscript) -->
+    <noscript>
+      <div style="text-align: center; padding: 2rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+        <h1>Mélissa Colin | Étudiante Ingénieure en Intelligence Artificielle</h1>
+        <h2>Portfolio IA</h2>
+        <p>Étudiante en intelligence artificielle à l'ENSEIRB-MATMECA, spécialisée en vision par ordinateur et deep learning.</p>
+        <nav>
+          <a href="#home">Accueil</a> |
+          <a href="#projects">Projets</a> |
+          <a href="#experience">Expérience</a> |
+          <a href="#education">Formation</a> |
+          <a href="#contact">Contact</a>
+        </nav>
+        <div>
+          <h3>Liens externes</h3>
+          <a href="https://www.enseirb-matmeca.fr/">ENSEIRB-MATMECA</a> |
+          <a href="https://scholar.google.fr/">Google Scholar</a> |
+          <a href="https://arxiv.org/list/cs.AI/recent">arXiv AI</a>
+        </div>
+      </div>
+    </noscript>
+  </div>
   <!-- Load main script with module preload for better performance -->
   <link rel="modulepreload" href="/src/main.jsx">
   <script type="module" src="/src/main.jsx"></script>

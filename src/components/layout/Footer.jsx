@@ -4,8 +4,6 @@ import { FiMoon, FiSun, FiLinkedin, FiGithub, FiMail, FiMessageCircle } from 're
 import { SiMedium, SiGooglescholar } from 'react-icons/si';
 import { useTheme } from '../../context/ThemeContext';
 import { useLanguage } from '../../context/LanguageContext';
-import SocialLinks from '../common/SocialLinks';
-import SocialShare from '../common/SocialShare';
 
 const Footer = () => {
   const { isDarkMode, toggleTheme } = useTheme();
@@ -24,12 +22,60 @@ const Footer = () => {
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               {t('site.tagline')} 
             </p>
-            <SocialLinks showLabels={false} className="mb-4" />
-            <SocialShare 
-              title={t('site.title')} 
-              description={t('site.description')} 
-              className="mb-4" 
-            />
+            <div className="flex space-x-3">
+              <a 
+                href={t('contact.linkedin')}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500"
+                aria-label="LinkedIn"
+              >
+                <FiLinkedin size={20} />
+              </a>
+              <a 
+                href={t('contact.github')}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500"
+                aria-label="GitHub"
+              >
+                <FiGithub size={20} />
+              </a>
+              <a 
+                href={t('contact.medium')} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500"
+                aria-label="Medium"
+              >
+                <SiMedium size={20} />
+              </a>
+              <a 
+                href={t('contact.scholar')} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500"
+                aria-label="Google Scholar"
+              >
+                <SiGooglescholar size={20} />
+              </a>
+              <a 
+                href={`mailto:${t('contact.emailAddress')}`}
+                className="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500"
+                aria-label="Email"
+              >
+                <FiMail size={20} />
+              </a>
+              <a
+                href={t('contact.signalLink')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500"
+                aria-label="Signal"
+              >
+                <FiMessageCircle size={20} />
+              </a>
+            </div>
           </div>
 
           {/* Navigation */}

@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from './Header';
 import Footer from './Footer';
+import Breadcrumb from '../common/Breadcrumb';
 import { useTheme } from '../../context/ThemeContext';
 import useGoogleAnalytics from '../../hooks/useGoogleAnalytics';
 import usePageTitle from '../../hooks/usePageTitle';
@@ -19,6 +20,7 @@ const Layout = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
+      <Breadcrumb />
       <AnimatePresence mode="wait">
         <motion.main 
           className="flex-grow"
