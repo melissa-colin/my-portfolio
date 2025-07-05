@@ -9,7 +9,16 @@ const htmlEnvPlugin = (env) => {
     transformIndexHtml: {
       enforce: 'pre',
       transform(html, ctx) {
-        return html.replace(/%VITE_GOOGLE_ANALYTICS_ID%/g, env.VITE_GOOGLE_ANALYTICS_ID || '')
+        // Remplacer les variables d'environnement
+        let transformedHtml = html.replace(/%VITE_GOOGLE_ANALYTICS_ID%/g, env.VITE_GOOGLE_ANALYTICS_ID || '');
+        
+        // S'assurer que les meta tags SEO essentiels sont présents
+        if (!transformedHtml.includes('<meta name="description"')) {
+          const descriptionMeta = '<meta name="description" content="Mélissa Colin, étudiante ingénieure en intelligence artificielle à l\'ENSEIRB-MATMECA, spécialisée en vision par ordinateur et deep learning." />';
+          transformedHtml = transformedHtml.replace('<meta name="viewport"', descriptionMeta + '\n  <meta name="viewport"');
+        }
+        
+        return transformedHtml;
       }
     }
   }

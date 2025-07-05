@@ -4,6 +4,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import { LanguageProvider } from './context/LanguageContext';
 import ScrollToTop from './components/layout/ScrollToTop';
 import WebVitalsMonitor from './components/common/WebVitalsMonitor';
+import SEOFallback from './components/SEOFallback';
 
 // Layout components
 import Layout from './components/layout/Layout';
@@ -24,6 +25,7 @@ function App() {
     <ThemeProvider>
       <LanguageProvider>
         <Router>
+          <SEOFallback />
           <WebVitalsMonitor />
           <ScrollToTop />
           <Routes>
