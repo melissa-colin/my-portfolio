@@ -7,8 +7,8 @@ const htmlEnvPlugin = (env) => {
   return {
     name: 'html-env',
     transformIndexHtml: {
-      enforce: 'pre',
-      transform(html, ctx) {
+      order: 'pre',
+      handler(html, ctx) {
         // Remplacer les variables d'environnement
         let transformedHtml = html.replace(/%VITE_GOOGLE_ANALYTICS_ID%/g, env.VITE_GOOGLE_ANALYTICS_ID || '');
         
@@ -28,17 +28,20 @@ const htmlEnvPlugin = (env) => {
 const copySpecialFilesPlugin = () => {
   return {
     name: 'copy-special-files',
-    writeBundle(options, bundle) {
-      const fs = require('fs');
-      const path = require('path');
+    async writeBundle(options, bundle) {
+      const { promises: fs } = await import('fs');
+      const path = await import('path');
       
       // Copier .htaccess depuis public/ vers le dossier de build
       const htaccessSource = path.resolve('public/.htaccess');
       const htaccessDest = path.resolve(options.dir, '.htaccess');
       
-      if (fs.existsSync(htaccessSource)) {
-        fs.copyFileSync(htaccessSource, htaccessDest);
+      try {
+        await fs.access(htaccessSource);
+        await fs.copyFile(htaccessSource, htaccessDest);
         console.log('✓ .htaccess copié dans le dossier de build');
+      } catch (error) {
+        // File doesn't exist, which is fine
       }
     }
   }
