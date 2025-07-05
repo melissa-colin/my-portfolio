@@ -2,12 +2,10 @@
 
 echo "🚀 Début du déploiement fullstack..."
 
-# Copier le .git du submodule "dist" dans un dossier temporaire
-echo "🔄 Mise à jour du submodule dist..."
-
-
-# Nettoyage
+# Nettoyage du dossier de destination
+echo "🧹 Nettoyage du dossier my-portfolio-dist..."
 find my-portfolio-dist -mindepth 1 ! -name '.git' -exec rm -rf {} +
+
 if [ -d "dist" ]; then
     rm -rf dist
 fi
@@ -28,7 +26,6 @@ if [ -d "dist" ]; then
 fi
 
 echo "✅ Build terminé !"
-
 
 # Push en production
 echo "🚀 Déploiement en production..."
