@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap principal
-Sitemap: https://melissa-colin.github.io/my-portfolio-dist/sitemap.xml
+Sitemap: https://melissacolin.ai/sitemap.xml
 
 # Optimisations pour l'indexation
 Crawl-delay: 1

@@ -5,7 +5,7 @@
 
 export const SEO_CONFIG = {
   // Informations de base
-  baseUrl: 'https://melissa-colin.github.io/my-portfolio-dist',
+  baseUrl: 'https://melissacolin.ai',
   siteName: 'Mélissa Colin - Portfolio Intelligence Artificielle',
   
   // Mots-clés principaux pour le référencement personnel

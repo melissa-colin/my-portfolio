@@ -23,7 +23,7 @@ const SEOHead = ({
   
   // Utilisation de la configuration automatique si les props ne sont pas fournies
   const finalTitle = title || pageConfig?.title || SEO_CONFIG.siteName;
-  const finalDescription = description || pageConfig?.description || '';
+  const finalDescription = description || pageConfig?.description || 'Mélissa Colin, étudiante ingénieure en intelligence artificielle à l\'ENSEIRB-MATMECA, spécialisée en vision par ordinateur et deep learning.';
   
   const baseUrl = SEO_CONFIG.baseUrl;
   const fullCanonical = canonical ? getCanonicalUrl(canonical, currentLanguage) : getCanonicalUrl(location.pathname, currentLanguage);
