@@ -213,17 +213,27 @@ const HeroSection = () => {
               >
                 {/* Profile image container with corner gradients */}
                 <div className="absolute inset-0 overflow-hidden">
-                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-red-500/20 via-transparent to-transparent opacity-70"></div>
-                  <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-tl from-red-500/20 via-transparent to-transparent opacity-70">
-                  <OptimizedImage
+                  <motion.img
                     src="/assets/images/profile-image.jpg"
                     alt="Profile"
-                    className="w-full h-full object-cover shadow-lg"
-                    priority={true}
-                    width={500}
-                    height={500}
+                    className="w-full object-cover shadow-lg"
+                    style={{ 
+                      objectPosition: 'center center',
+                      imageRendering: 'auto',
+                      WebkitImageRendering: 'auto',
+                      height: '107%'
+                    }}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.3, type: 'spring' }}
+                    draggable={false}
+                    loading="eager"
+                    width={1200}
+                    height={800}
                   />
-                  </div>
+                  {/* Gradients par-dessus l'image */}
+                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-red-500/20 via-transparent to-transparent opacity-70 pointer-events-none"></div>
+                  <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-tl from-red-500/20 via-transparent to-transparent opacity-70 pointer-events-none"></div>
                 </div>
 
                 {/* Animated decorative elements */}
