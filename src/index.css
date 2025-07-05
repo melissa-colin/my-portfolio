@@ -14,7 +14,9 @@
   --gradient-red-3: #991b1b;
   --gradient-red-glow: rgba(239, 68, 68, 0.5);
 }
-
+.dark\:bg-gray-800:is(.dark *){
+  display: none;
+}
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
