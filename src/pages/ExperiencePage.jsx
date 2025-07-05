@@ -182,7 +182,7 @@ const ExperiencePage = () => {
                             <OptimizedImage
                               src={experience.logo}
                               alt={experience.company}
-                              className="w-16 h-16 flex items-center justify-center rounded-full bg-red-900/30 text-red-500 m-6"
+                              className="w-16 h-16 flex items-center justify-center rounded-full bg-red-900/30 text-red-500"
                               width={64}
                               height={64}
                               quality={90}
