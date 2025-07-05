@@ -25,11 +25,6 @@ cp backend/package.json dist/backend/
 cp backend/pnpm-lock.yaml dist/backend/ 2>/dev/null || true
 cp backend/.env dist/backend/ 2>/dev/null || true
 
-# (Optionnel) Installer les dépendances backend dans dist/backend
-cd dist/backend
-pnpm install --prod
-cd ../..
-
 # Restauration du .git dans dist
 echo "🔄 Restauration du .git dans dist..."
 cp tmp.git dist/.git
