@@ -27,6 +27,29 @@ const fr = {
     contact: "Contact"
   },
   
+  common: {
+    share: "Partager",
+    shareOn: "Partager sur",
+    copyLink: "Copier le lien",
+    linkCopied: "Lien copié !",
+    loading: "Chargement...",
+    error: "Erreur",
+    retry: "Réessayer"
+  },
+  
+  notFound: {
+    title: "Page non trouvée",
+    pageNotFound: "Page non trouvée",
+    message: "La page que vous recherchez n'existe pas.",
+    suggestion: "Elle a peut-être été déplacée ou supprimée.",
+    quickLinks: "Liens rapides",
+    searchSuggestion: "Que recherchez-vous ?",
+    searchHelp: "Utilisez la navigation ci-dessus ou contactez-moi directement.",
+    goBack: "Retour",
+    goHome: "Accueil",
+    funFact: "\" L'erreur est humaine mais un véritable désastre nécessite un ordinateur.\" - Paul R. Ehrlich"
+  },
+  
   home: {
     heroTitle: "Mélissa Colin",
     heroSubtitle: "Je suis une étudiante ingénieure en filière informatique de l'ENSEIRB-MATMECA, spécialisée en IA appliquée à la vision par ordinateur. J'explore les différents systèmes afin de les rendre plus interprétables et fiables ou d'en développer de nouveaux.",
@@ -615,12 +638,6 @@ const fr = {
     language: "Langue",
     darkMode: "Thème",
     contactInfo: "Informations de contact"
-  },
-  
-  notFound: {
-    title: "Page non trouvée",
-    message: "La page que vous recherchez n'existe pas.",
-    button: "Retour à l'accueil"
   }
 };
 

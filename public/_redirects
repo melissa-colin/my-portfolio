@@ -1,1 +1,12 @@
+# URL canonicalization - redirect all variations to primary URL
+https://melissa-colin.github.io/my-portfolio-dist/* https://melissa-colin.github.io/my-portfolio-dist/:splat 301!
+http://melissa-colin.github.io/my-portfolio-dist/* https://melissa-colin.github.io/my-portfolio-dist/:splat 301!
+https://www.melissa-colin.github.io/* https://melissa-colin.github.io/my-portfolio-dist/:splat 301!
+http://www.melissa-colin.github.io/* https://melissa-colin.github.io/my-portfolio-dist/:splat 301!
+
+# Redirect common variations
+/index.html /
+/home /
+
+# SPA fallback
 /*    /index.html   200

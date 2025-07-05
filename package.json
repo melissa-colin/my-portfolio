@@ -5,9 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run optimize:images && vite build",
+    "build:prod": "npm run optimize:images && npm run generate:responsive && vite build",
     "lint": "eslint ./src --quiet",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "optimize:images": "chmod +x ./optimize-images.sh && ./optimize-images.sh",
+    "generate:responsive": "node scripts/generate-responsive-images.js",
+    "analyze": "npm run build && npx vite-bundle-analyzer dist"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",

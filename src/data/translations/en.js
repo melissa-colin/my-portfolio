@@ -24,6 +24,29 @@ const en = {
     blog: "Blog",
     contact: "Contact"
   },
+  
+  common: {
+    share: "Share",
+    shareOn: "Share on",
+    copyLink: "Copy link",
+    linkCopied: "Link copied!",
+    loading: "Loading...",
+    error: "Error",
+    retry: "Retry"
+  },
+  
+  notFound: {
+    title: "Page not found",
+    pageNotFound: "Page not found",
+    message: "The page you are looking for does not exist.",
+    suggestion: "It may have been moved or deleted.",
+    quickLinks: "Quick links",
+    searchSuggestion: "What are you looking for?",
+    searchHelp: "Use the navigation above or contact me directly.",
+    goBack: "Go back",
+    goHome: "Home",
+    funFact: "\"To err is human, to really foul things up requires a computer.\" - Paul R. Ehrlich"
+  },
 
   home: {
     heroTitle: "Mélissa Colin",
@@ -616,11 +639,7 @@ const en = {
     contactInfo: "Contact Information"
   },
 
-  notFound: {
-    title: "Page Not Found",
-    message: "The page you’re looking for doesn’t exist.",
-    button: "Back to Home"
-  }
+
 };
 
 export default en;
