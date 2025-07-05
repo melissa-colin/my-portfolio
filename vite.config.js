@@ -15,6 +15,26 @@ const htmlEnvPlugin = (env) => {
   }
 }
 
+// Plugin pour copier les fichiers spéciaux comme .htaccess
+const copySpecialFilesPlugin = () => {
+  return {
+    name: 'copy-special-files',
+    writeBundle(options, bundle) {
+      const fs = require('fs');
+      const path = require('path');
+      
+      // Copier .htaccess depuis public/ vers le dossier de build
+      const htaccessSource = path.resolve('public/.htaccess');
+      const htaccessDest = path.resolve(options.dir, '.htaccess');
+      
+      if (fs.existsSync(htaccessSource)) {
+        fs.copyFileSync(htaccessSource, htaccessDest);
+        console.log('✓ .htaccess copié dans le dossier de build');
+      }
+    }
+  }
+}
+
 // Plugin pour générer un manifest de preload
 const preloadManifestPlugin = () => {
   return {
@@ -48,18 +68,21 @@ export default defineConfig(({ command, mode }) => {
   plugins: [
     react(), 
     htmlEnvPlugin(env),
-    preloadManifestPlugin()
+    preloadManifestPlugin(),
+    copySpecialFilesPlugin()
   ],
   server: {
     port: 3000
   },
   base: './',
   build: {
-    outDir: 'dist',
+    outDir: 'my-portfolio-dist',
     assetsDir: 'assets',
     emptyOutDir: true,
     sourcemap: false,
     chunkSizeWarningLimit: 1000,
+    // Copier les fichiers spéciaux
+    copyPublicDir: true,
     // Optimisations des assets
     assetsInlineLimit: 4096, // Inline les assets < 4kb pour réduire les requêtes
     cssCodeSplit: true,
