@@ -111,18 +111,25 @@
   RewriteCond %{REQUEST_URI} ^(.+)/$
   RewriteRule ^(.+)/$ /$1 [R=301,L]
   
-  # Routage SPA - toutes les routes vers index.html
+  # Routage SPA - toutes les routes vers index.html SAUF les fichiers existants
   RewriteBase /
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-l
+  # Exclure les dossiers assets pour éviter les conflits
+  RewriteCond %{REQUEST_URI} !^/assets/
   # Préserver les paramètres de langue pour le SEO
   RewriteRule . /index.html [L,QSA]
 </IfModule>
 
-# Configuration des erreurs personnalisées
+# Configuration des erreurs personnalisées - forcer la redirection vers React Router
 ErrorDocument 404 /index.html
+ErrorDocument 403 /index.html
+ErrorDocument 500 /index.html
+
+# Alternative si le serveur OVH ne supporte pas la redirection vers index.html
+# ErrorDocument 404 /404.html
 
 # Blocage des fichiers sensibles pour la sécurité
 <Files ~ "^\.">
