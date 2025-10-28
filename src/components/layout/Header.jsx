@@ -127,13 +127,13 @@ const Header = () => {
             <motion.button 
               onClick={toggleLanguage}
               className="p-2 rounded-full text-gray-300 hover:bg-red-900/30 transition-colors ml-2 flex items-center"
-              aria-label={language === 'en' ? 'Français' : 'English'}
+              aria-label={language === 'en' ? 'English' : 'Français'}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: 'spring', stiffness: 400 }}
             >
               <FiGlobe size={20} className="text-blue-400" />
-              <span className="ml-1">{language === 'en' ? 'FR' : 'EN'}</span>
+              <span className="ml-1">{language === 'en' ? 'EN' : 'FR'}</span>
             </motion.button>
 
             {/* Mobile Menu Button */}
