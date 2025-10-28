@@ -8,7 +8,7 @@ const STATIC_ASSETS = [
   '/index.html',
   '/manifest.json',
   '/assets/images/profile-image.webp',
-  '/assets/images/profile-image.jpg',
+  '/assets/images/profile-image.jpeg',
   '/assets/images/favicon.ico',
   // Add critical CSS and JS files (will be populated by build process)
 ];

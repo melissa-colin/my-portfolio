@@ -50,8 +50,8 @@ optimize_image() {
 }
 
 # Optimiser les images de profil (réduire à 800px max)
-if [ -f "public/assets/images/profile-image.jpg" ]; then
-    optimize_image "public/assets/images/profile-image.jpg" "public/assets/images-optimized/profile-image.jpg" 80 800
+if [ -f "public/assets/images/profile-image.jpeg" ]; then
+    optimize_image "public/assets/images/profile-image.jpeg" "public/assets/images-optimized/profile-image.jpeg" 80 800
 fi
 
 if [ -f "public/assets/images/profile-image1.jpg" ]; then

@@ -103,7 +103,7 @@ if [ -d "public/assets/images" ]; then
     fi
     
     # Vérifier les images critiques
-    critical_images=("profile-image.jpg" "favicon.ico" "screen.png")
+    critical_images=("profile-image.jpeg" "favicon.ico" "screen.png")
     for img in "${critical_images[@]}"; do
         if find public/assets/images -name "$img" | grep -q .; then
             print_check 0 "Image critique présente: $img"
