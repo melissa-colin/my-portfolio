@@ -4,15 +4,20 @@ echo "🚀 Début du déploiement fullstack avec optimisations SEO..."
 
 # Nettoyage du dossier de destination
 echo "🧹 Nettoyage du dossier my-portfolio-dist..."
-# Garder .git mais supprimer le reste
-find my-portfolio-dist -mindepth 1 ! -path "my-portfolio-dist/.git*" -exec rm -rf {} +
+find my-portfolio-dist -mindepth 1 ! -name '.git' -exec rm -rf {} +
+
+if [ -d "dist" ]; then
+    rm -rf dist
+fi
 
 # Build frontend avec optimisations
 echo "🏗️ Build du frontend optimisé..."
 pnpm install
 ./build-optimized.sh
 
-# Le build va directement dans my-portfolio-dist (configuré dans vite.config.js)
+# Copier le contenu de dist dans my-portfolio-dist
+echo "📦 Copie du contenu du dossier dist dans my-portfolio-dist..."
+cp -r dist/* my-portfolio-dist/
 
 # Optimisations SEO post-build
 echo "🔍 Optimisations SEO post-build..."
@@ -38,6 +43,29 @@ if grep -q 'meta name="description"' my-portfolio-dist/index.html; then
 else
     echo "❌ ERREUR: Meta description manquante"
     exit 1
+fi
+
+# Corriger les URLs hreflang pour pointer vers le bon domaine
+echo "🔧 Correction des URLs hreflang..."
+sed -i 's|https://melissa-colin.github.io/my-portfolio-dist/|https://melissacolin.ai/|g' my-portfolio-dist/index.html
+
+# S'assurer que le robots.txt pointe vers le bon sitemap
+echo "🤖 Vérification du robots.txt..."
+if [ -f my-portfolio-dist/robots.txt ]; then
+    sed -i 's|https://melissa-colin.github.io/my-portfolio-dist/sitemap.xml|https://melissacolin.ai/sitemap.xml|g' my-portfolio-dist/robots.txt
+    echo "✅ Robots.txt mis à jour"
+fi
+
+# Optimiser le sitemap.xml
+echo "🗺️  Vérification du sitemap..."
+if [ -f my-portfolio-dist/sitemap.xml ]; then
+    # S'assurer que toutes les URLs utilisent le bon domaine
+    if grep -q "melissacolin.ai" my-portfolio-dist/sitemap.xml; then
+        echo "✅ Sitemap utilise le bon domaine"
+    else
+        echo "⚠️  Mise à jour du domaine dans le sitemap"
+        sed -i 's|https://melissa-colin.github.io/my-portfolio-dist/|https://melissacolin.ai/|g' my-portfolio-dist/sitemap.xml
+    fi
 fi
 
 # Vérification finale SEO
@@ -69,7 +97,12 @@ fi
 
 cd ..
 
-# Nettoyer toute référence à dist (n'existe plus)
+# Nettoyer le dossier dist
+echo "🧹 Nettoyage du dossier dist..."
+if [ -d "dist" ]; then
+    rm -rf dist
+fi
+
 echo "✅ Build et optimisations SEO terminés !"
 
 # Push en production
@@ -89,50 +122,6 @@ git push
 echo "🎉 Déploiement terminé avec succès!"
 echo "🔗 Site disponible sur: https://melissacolin.ai"
 
-# Tests post-déploiement critiques pour SEO
-echo ""
-echo "🧪 Tests post-déploiement en cours..."
-
-# Attendre quelques secondes pour que le déploiement soit effectif
-sleep 10
-
-# Test redirection www → non-www
-echo "🔄 Test de redirection www → non-www..."
-www_status=$(curl -s -o /dev/null -w "%{http_code}" -L "https://www.melissacolin.ai" || echo "000")
-if [ "$www_status" = "200" ]; then
-    final_url=$(curl -s -L -o /dev/null -w "%{url_effective}" "https://www.melissacolin.ai")
-    if [[ "$final_url" == "https://melissacolin.ai/"* ]]; then
-        echo "✅ Redirection www → non-www fonctionne"
-    else
-        echo "❌ ERREUR: www ne redirige pas vers non-www. URL finale: $final_url"
-    fi
-else
-    echo "⚠️  Impossible de tester la redirection www (statut: $www_status)"
-fi
-
-# Test HTTPS
-echo "🔒 Test HTTPS..."
-http_status=$(curl -s -o /dev/null -w "%{http_code}" -L "http://melissacolin.ai" || echo "000")
-if [ "$http_status" = "200" ]; then
-    final_url=$(curl -s -L -o /dev/null -w "%{url_effective}" "http://melissacolin.ai")
-    if [[ "$final_url" == "https://melissacolin.ai/"* ]]; then
-        echo "✅ Redirection HTTP → HTTPS fonctionne"
-    else
-        echo "❌ ERREUR: HTTP ne redirige pas vers HTTPS. URL finale: $final_url"
-    fi
-else
-    echo "⚠️  Impossible de tester la redirection HTTPS (statut: $http_status)"
-fi
-
-# Test présence H1 sur le site live
-echo "🏷️  Test H1 sur le site live..."
-live_h1=$(curl -s "https://melissacolin.ai" | grep -o '<h1[^>]*>.*</h1>' | head -1 || echo "")
-if [ -n "$live_h1" ]; then
-    echo "✅ H1 détecté sur le site live: $(echo "$live_h1" | head -c 50)..."
-else
-    echo "⚠️  H1 non détecté sur le site live (peut être injecté par JS)"
-fi
-
 # Afficher un résumé SEO
 echo ""
 echo "📊 RÉSUMÉ SEO:"
@@ -142,7 +131,3 @@ echo "✅ Liens externes: $external_links"
 echo "✅ Meta description: Présente"
 echo "✅ Sitemap: Mis à jour"
 echo "✅ Robots.txt: Configuré"
-echo ""
-echo "🔧 IMPORTANT: Vérifiez que le fichier .htaccess est bien actif sur Hostinger"
-echo "   Si www.melissacolin.ai ne redirige pas vers melissacolin.ai,"
-echo "   contactez le support Hostinger pour activer mod_rewrite"

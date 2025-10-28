@@ -214,7 +214,7 @@ const HeroSection = () => {
                 {/* Profile image container with corner gradients */}
                 <div className="absolute inset-0 overflow-hidden">
                   <motion.img
-                    src="/assets/images/profile-image.jpg"
+                    src="/assets/images/profile-image.jpeg"
                     alt="Profile"
                     className="w-full object-cover shadow-lg"
                     style={{ 

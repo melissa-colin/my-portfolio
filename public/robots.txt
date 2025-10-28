@@ -18,7 +18,7 @@ Allow: /contact
 Allow: /assets/
 
 # Permettre spécifiquement les images et assets critiques pour le SEO
-Allow: /assets/images/profile-image.jpg
+Allow: /assets/images/profile-image.jpeg
 Allow: /assets/images/screen.png
 Allow: /assets/images/favicon.ico
 Allow: /assets/images/logos/
@@ -35,7 +35,7 @@ Crawl-delay: 2
 
 User-agent: LinkedInBot
 Allow: /
-Allow: /assets/images/profile-image.jpg
+Allow: /assets/images/profile-image.jpeg
 
 # Disallow unnecessary files pour éviter la dilution du crawl budget
 Disallow: /node_modules/
@@ -46,7 +46,7 @@ Disallow: /dist/
 
 # Cache policy hint pour les bots
 # Ceci aide les moteurs de recherche à comprendre la fréquence de mise à jour
-# Host: melissacolin.ai
+# Host: melissa-colin.github.io
 Disallow: /node_modules/
 Disallow: /*.json
 Disallow: /src/
