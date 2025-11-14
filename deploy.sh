@@ -2,6 +2,10 @@
 
 echo "🚀 Début du déploiement fullstack avec optimisations SEO..."
 
+# Mise à jour automatique des dates du sitemap
+echo "📅 Mise à jour du sitemap.xml..."
+./update-sitemap-dates.sh
+
 # Nettoyage du dossier de destination
 echo "🧹 Nettoyage du dossier my-portfolio-dist..."
 find my-portfolio-dist -mindepth 1 ! -name '.git' -exec rm -rf {} +
