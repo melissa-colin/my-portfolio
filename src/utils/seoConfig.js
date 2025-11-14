@@ -175,9 +175,16 @@ export const SEO_CONFIG = {
     ],
     "givenName": "Mélissa",
     "familyName": "Colin",
-    "birthDate": "2003",
+    "birthDate": "2003-07-08",
     "gender": "Female",
     "jobTitle": language === 'fr' ? "Étudiante Ingénieure en Intelligence Artificielle" : "AI Engineering Student",
+    "subjectOf": [
+      {
+        "@type": "WebSite",
+        "url": "https://melissacolin.ai/",
+        "name": "Portfolio Mélissa Colin - AI & Computer Vision"
+      }
+    ],
     "affiliation": [
       {
         "@type": "EducationalOrganization",
@@ -223,11 +230,11 @@ export const SEO_CONFIG = {
       }
     ],
     "description": language === 'fr' 
-      ? "Étudiante ingénieure en intelligence artificielle spécialisée en vision par ordinateur et deep learning à l'ENSEIRB-MATMECA. Née en 2004, actuellement en parcours ingénieur-docteur à Bordeaux."
-      : "AI engineering student specialized in computer vision and deep learning at ENSEIRB-MATMECA. Born in 2004, currently in engineering-PhD track in Bordeaux, France.",
+      ? "Étudiante ingénieure en intelligence artificielle spécialisée en vision par ordinateur et deep learning à l'ENSEIRB-MATMECA. Née le 8 juillet 2003, actuellement en parcours ingénieur-docteur à Bordeaux. Domaine: informatique et IA, PAS pharmacologie."
+      : "AI engineering student specialized in computer vision and deep learning at ENSEIRB-MATMECA. Born July 8, 2003, currently in engineering-PhD track in Bordeaux, France. Field: Computer Science and AI, NOT pharmacology.",
     "disambiguatingDescription": language === 'fr'
-      ? "Mélissa Colin (née en 2004), étudiante à l'ENSEIRB-MATMECA, spécialisation IA et vision par ordinateur. Auteure de publications scientifiques en IA explicable. ORCID: 0009-0003-2525-4824."
-      : "Mélissa Colin (born 2004), student at ENSEIRB-MATMECA, specializing in AI and computer vision. Author of scientific publications on explainable AI. ORCID: 0009-0003-2525-4824.",
+      ? "Mélissa Colin (née le 8 juillet 2003), étudiante à l'ENSEIRB-MATMECA Bordeaux, spécialisation IA et vision par ordinateur. Auteure de publications scientifiques en IA explicable (PFIA 2024). ORCID: 0009-0003-2525-4824. À NE PAS confondre avec l'homonyme chercheuse en pharmacologie à l'Université de Lorraine."
+      : "Mélissa Colin (born July 8, 2003), student at ENSEIRB-MATMECA Bordeaux, specializing in AI and computer vision. Author of scientific publications on explainable AI (PFIA 2024). ORCID: 0009-0003-2525-4824. NOT to be confused with the pharmacology researcher at Université de Lorraine.",
     "nationality": "French",
     "address": {
       "@type": "PostalAddress",
