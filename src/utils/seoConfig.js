@@ -136,6 +136,7 @@ export const SEO_CONFIG = {
 
   // Données structurées Schema.org
   getPersonSchema: (language = 'fr') => ({
+    "@id": "https://melissacolin.ai/#person",
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Mélissa Colin",
@@ -150,7 +151,46 @@ export const SEO_CONFIG = {
     ],
     "email": "mailto:melissa.colin0@proton.me",
     "telephone": "+3378252XXXX",
+    "identifier": [
+      {
+        "@type": "PropertyValue",
+        "propertyID": "URL",
+        "value": "https://melissacolin.ai/#person"
+      },
+      {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0009-0003-2525-4824"
+      },
+      {
+        "@type": "PropertyValue",
+        "propertyID": "Google Scholar",
+        "value": "7r7iFpsAAAAJ"
+      },
+      {
+        "@type": "PropertyValue",
+        "propertyID": "GitHub",
+        "value": "melissa-colin"
+      }
+    ],
+    "givenName": "Mélissa",
+    "familyName": "Colin",
+    "birthDate": "2003",
+    "gender": "Female",
     "jobTitle": language === 'fr' ? "Étudiante Ingénieure en Intelligence Artificielle" : "AI Engineering Student",
+    "affiliation": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "ENSEIRB-MATMECA",
+        "url": "https://enseirb-matmeca.bordeaux-inp.fr/",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Talence",
+          "addressRegion": "Nouvelle-Aquitaine",
+          "addressCountry": "FR"
+        }
+      }
+    ],
     "worksFor": {
       "@type": "EducationalOrganization",
       "name": "ENSEIRB-MATMECA",
@@ -183,8 +223,11 @@ export const SEO_CONFIG = {
       }
     ],
     "description": language === 'fr' 
-      ? "Étudiante ingénieure en intelligence artificielle spécialisée en vision par ordinateur et deep learning à l'ENSEIRB-MATMECA"
-      : "AI engineering student specialized in computer vision and deep learning at ENSEIRB-MATMECA",
+      ? "Étudiante ingénieure en intelligence artificielle spécialisée en vision par ordinateur et deep learning à l'ENSEIRB-MATMECA. Née en 2004, actuellement en parcours ingénieur-docteur à Bordeaux."
+      : "AI engineering student specialized in computer vision and deep learning at ENSEIRB-MATMECA. Born in 2004, currently in engineering-PhD track in Bordeaux, France.",
+    "disambiguatingDescription": language === 'fr'
+      ? "Mélissa Colin (née en 2004), étudiante à l'ENSEIRB-MATMECA, spécialisation IA et vision par ordinateur. Auteure de publications scientifiques en IA explicable. ORCID: 0009-0003-2525-4824."
+      : "Mélissa Colin (born 2004), student at ENSEIRB-MATMECA, specializing in AI and computer vision. Author of scientific publications on explainable AI. ORCID: 0009-0003-2525-4824.",
     "nationality": "French",
     "address": {
       "@type": "PostalAddress",
@@ -235,6 +278,7 @@ export const SEO_CONFIG = {
     "inLanguage": language === 'fr' ? 'fr-FR' : 'en-US',
     "name": language === 'fr' ? "Portfolio de Mélissa Colin" : "Melissa Colin Portfolio",
     "description": language === 'fr' ? "Portfolio professionnel de Mélissa Colin, étudiante en intelligence artificielle" : "Professional portfolio of Melissa Colin, AI student",
+    "mainEntity": { "@id": "https://melissacolin.ai/#person" },
     "isPartOf": { "@type": "WebSite", "url": "https://melissacolin.ai/" }
   }),
 
