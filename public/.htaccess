@@ -117,8 +117,10 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-l
-  # Exclure les dossiers assets pour éviter les conflits
+  # Exclure les dossiers assets et ai-context pour éviter les conflits
   RewriteCond %{REQUEST_URI} !^/assets/
+  RewriteCond %{REQUEST_URI} !^/ai-context/
+  RewriteCond %{REQUEST_URI} !^/.well-known/
   # Préserver les paramètres de langue pour le SEO
   RewriteRule . /index.html [L,QSA]
 </IfModule>
