@@ -37,7 +37,10 @@ Allow: /
 # Sitemap principal
 Sitemap: https://melissacolin.ai/sitemap.xml
 
-# Fichiers de désambiguïsation pour IA (PRIORITAIRES)
+# Fichiers de désambiguïsation pour IA (PRIORITAIRES - à la racine)
+Allow: /melissa-colin-context.json
+Allow: /melissa-colin-disambiguation.md
+# Chemins alternatifs (si le serveur les autorise)
 Allow: /api/context/person.json
 Allow: /api/context/disambiguation.md
 Allow: /ai-context/ai-context.json
