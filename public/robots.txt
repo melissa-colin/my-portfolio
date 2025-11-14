@@ -38,6 +38,8 @@ Allow: /
 Sitemap: https://melissacolin.ai/sitemap.xml
 
 # Fichiers de désambiguïsation pour IA (PRIORITAIRES)
+Allow: /ai-context/ai-context.json
+Allow: /ai-context/ai-disambiguation.md
 Allow: /.well-known/ai-context.json
 Allow: /.well-known/ai-disambiguation.md
 
