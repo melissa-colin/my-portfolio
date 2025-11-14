@@ -75,9 +75,10 @@ const SEOHead = ({
       <meta name="person:unique_id" content="melissa-colin-enseirb-matmeca-2003-07-08" />
       <meta name="person:disambiguation" content="AI/Computer Science student, NOT pharmacology researcher" />
       
-      {/* Lien vers le fichier de contexte AI pour les modèles */}
-      <link rel="alternate" type="application/ld+json" href="https://melissacolin.ai/ai-context/ai-context.json" />
-      <link rel="alternate" type="text/markdown" href="https://melissacolin.ai/ai-context/ai-disambiguation.md" />
+      {/* Lien vers le fichier de contexte AI pour les modèles - multiples chemins */}
+      <link rel="alternate" type="application/ld+json" href="https://melissacolin.ai/api/context/person.json" />
+      <link rel="alternate" type="text/markdown" href="https://melissacolin.ai/api/context/disambiguation.md" />
+      <link rel="me" href="https://melissacolin.ai/api/context/person.json" />
       <link rel="author" href="https://melissacolin.ai/#person" />
       
       <link rel="canonical" href={fullCanonical} />
