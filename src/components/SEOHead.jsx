@@ -7,7 +7,7 @@ const SEOHead = ({
   title, 
   description, 
   keywords = '', 
-  ogImage = '/assets/images/screen.png',
+  ogImage = '/assets/images/profile-image.jpeg',
   canonical = '',
   schemaData = null,
   pageType = 'home' // Nouveau: type de page pour la configuration SEO automatique
@@ -36,7 +36,14 @@ const SEOHead = ({
   // Schema.org automatique si non fourni
   const defaultSchemas = [
     SEO_CONFIG.getPersonSchema(currentLanguage),
-    SEO_CONFIG.getWebSiteSchema(currentLanguage)
+    SEO_CONFIG.getOrganizationSchema(currentLanguage),
+    SEO_CONFIG.getContactPointSchema(),
+    SEO_CONFIG.getWebSiteSchema(currentLanguage),
+    SEO_CONFIG.getWebPageSchema(currentLanguage, location.pathname),
+    SEO_CONFIG.getBreadcrumbSchema([
+      { name: currentLanguage === 'fr' ? 'Accueil' : 'Home', url: getCanonicalUrl('/', currentLanguage) },
+      { name: finalTitle, url: fullCanonical }
+    ])
   ];
   
   const finalSchemas = schemaData ? [schemaData, ...defaultSchemas] : defaultSchemas;

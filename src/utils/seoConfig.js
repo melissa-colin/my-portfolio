@@ -140,12 +140,16 @@ export const SEO_CONFIG = {
     "@type": "Person",
     "name": "Mélissa Colin",
     "alternateName": ["Melissa Colin", "melissa colin", "mélissa colin"],
-    "url": "https://melissa-colin.github.io/my-portfolio-dist/",
-    "image": "https://melissa-colin.github.io/my-portfolio-dist/assets/images/profile-image.jpeg",
+    "url": "https://melissacolin.ai/",
+    "image": "https://melissacolin.ai/assets/images/profile-image.jpeg",
     "sameAs": [
       "https://linkedin.com/in/melissa-colin",
-      "https://github.com/melissa-colin"
+      "https://github.com/melissa-colin",
+      "https://medium.com/@melissa.colin",
+      "https://scholar.google.com/citations?user=7r7iFpsAAAAJ&hl=fr"
     ],
+    "email": "mailto:melissa.colin0@proton.me",
+    "telephone": "+3378252XXXX",
     "jobTitle": language === 'fr' ? "Étudiante Ingénieure en Intelligence Artificielle" : "AI Engineering Student",
     "worksFor": {
       "@type": "EducationalOrganization",
@@ -170,6 +174,14 @@ export const SEO_CONFIG = {
       "Intelligence Artificielle",
       "Réseaux de Neurones"
     ],
+    "knowsLanguage": ["Français","English"],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Diplôme d'Ingénieur en Informatique (parcours IA)",
+        "recognizedBy": { "@type": "EducationalOrganization", "name": "ENSEIRB-MATMECA" }
+      }
+    ],
     "description": language === 'fr' 
       ? "Étudiante ingénieure en intelligence artificielle spécialisée en vision par ordinateur et deep learning à l'ENSEIRB-MATMECA"
       : "AI engineering student specialized in computer vision and deep learning at ENSEIRB-MATMECA",
@@ -190,12 +202,63 @@ export const SEO_CONFIG = {
     }
   }),
 
+  getOrganizationSchema: (language = 'fr') => ({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": language === 'fr' ? "Mélissa Colin - Portfolio IA" : "Melissa Colin - AI Portfolio",
+    "url": "https://melissacolin.ai/",
+    "logo": "https://melissacolin.ai/assets/images/logo.png",
+    "sameAs": [
+      "https://linkedin.com/in/melissa-colin",
+      "https://github.com/melissa-colin",
+      "https://medium.com/@melissa.colin"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "mailto:melissa.colin0@proton.me",
+      "telephone": "+3378252XXXX",
+      "availableLanguage": ["Français","English"]
+    }
+  }),
+
+  getContactPointSchema: () => ({
+    "@context": "https://schema.org",
+    "@type": "ContactPoint",
+    "telephone": "+3378252XXXX",
+    "contactType": "personal",
+    "email": "mailto:melissa.colin0@proton.me",
+    "areaServed": "FR",
+    "availableLanguage": ["Français","English"]
+  }),
+
+  getWebPageSchema: (language = 'fr', path = '/') => ({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": `https://melissacolin.ai${path}`,
+    "inLanguage": language === 'fr' ? 'fr-FR' : 'en-US',
+    "name": language === 'fr' ? "Portfolio de Mélissa Colin" : "Melissa Colin Portfolio",
+    "description": language === 'fr' ? "Portfolio professionnel de Mélissa Colin, étudiante en intelligence artificielle" : "Professional portfolio of Melissa Colin, AI student",
+    "isPartOf": { "@type": "WebSite", "url": "https://melissacolin.ai/" }
+  }),
+
+  getBreadcrumbSchema: (pathArray = []) => ({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": pathArray.map((item, idx) => ({
+      "@type": "ListItem",
+      "position": idx + 1,
+      "name": item.name,
+      "item": item.url
+    }))
+  }),
+
   getWebSiteSchema: (language = 'fr') => ({
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": language === 'fr' ? "Portfolio de Mélissa Colin" : "Melissa Colin Portfolio",
     "alternateName": "Melissa Colin Portfolio IA",
-    "url": "https://melissa-colin.github.io/my-portfolio-dist/",
+    "url": "https://melissacolin.ai/",
     "description": language === 'fr' 
       ? "Portfolio professionnel de Mélissa Colin, étudiante en intelligence artificielle spécialisée en vision par ordinateur"
       : "Professional portfolio of Melissa Colin, AI student specialized in computer vision",
@@ -204,9 +267,17 @@ export const SEO_CONFIG = {
       "name": "Mélissa Colin"
     },
     "inLanguage": ["fr-FR", "en-US"],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mélissa Colin - Portfolio IA",
+      "url": "https://melissacolin.ai/"
+    },
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://melissa-colin.github.io/my-portfolio-dist/?q={search_term_string}",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://melissacolin.ai/?q={search_term_string}"
+      },
       "query-input": "required name=search_term_string"
     }
   }),
