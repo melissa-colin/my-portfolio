@@ -195,10 +195,6 @@ export const SEO_CONFIG = {
     "hasOccupation": {
       "@type": "Occupation",
       "name": language === 'fr' ? "Étudiante en Intelligence Artificielle" : "Artificial Intelligence Student",
-      "occupationLocation": {
-        "@type": "Place",
-        "name": "Bordeaux, France"
-      }
     }
   }),
 
