@@ -24,7 +24,7 @@ const htmlEnvPlugin = (env) => {
   }
 }
 
-// Plugin pour copier les fichiers spéciaux comme .htaccess
+// Plugin pour copier les fichiers spéciaux comme .htaccess et .well-known
 const copySpecialFilesPlugin = () => {
   return {
     name: 'copy-special-files',
@@ -42,6 +42,25 @@ const copySpecialFilesPlugin = () => {
         console.log('✓ .htaccess copié dans le dossier de build');
       } catch (error) {
         // File doesn't exist, which is fine
+      }
+      
+      // Copier le dossier .well-known depuis public/ vers le dossier de build
+      const wellKnownSource = path.resolve('public/.well-known');
+      const wellKnownDest = path.resolve(options.dir, '.well-known');
+      
+      try {
+        await fs.access(wellKnownSource);
+        await fs.mkdir(wellKnownDest, { recursive: true });
+        const files = await fs.readdir(wellKnownSource);
+        for (const file of files) {
+          await fs.copyFile(
+            path.join(wellKnownSource, file),
+            path.join(wellKnownDest, file)
+          );
+        }
+        console.log('✓ .well-known copié dans le dossier de build');
+      } catch (error) {
+        console.error('⚠ Erreur copie .well-known:', error.message);
       }
     }
   }

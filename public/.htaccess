@@ -132,10 +132,25 @@ ErrorDocument 500 /index.html
 # ErrorDocument 404 /404.html
 
 # Blocage des fichiers sensibles pour la sécurité
-<Files ~ "^\.">
+# SAUF .well-known qui doit être accessible pour les bots IA
+<FilesMatch "^\.(?!well-known)">
   Order allow,deny
   Deny from all
-</Files>
+</FilesMatch>
+
+# Autoriser explicitement .well-known pour les bots IA
+<Directory ".well-known">
+  Order allow,deny
+  Allow from all
+  Require all granted
+</Directory>
+
+# Headers spécifiques pour les fichiers .well-known
+<FilesMatch "^\.well-known">
+  Header set Content-Type "application/json"
+  Header set Access-Control-Allow-Origin "*"
+  Header set Cache-Control "public, max-age=3600"
+</FilesMatch>
 
 # Protection des fichiers de configuration
 <FilesMatch "\.(env|json|yml|yaml|config)$">
