@@ -128,7 +128,7 @@
 
 # Configuration des erreurs personnalisées - forcer la redirection vers React Router
 ErrorDocument 404 /index.html
-ErrorDocument 403 /index.html
+# ErrorDocument 403 /index.html  # Commenté pour permettre l'accès aux fichiers de contexte
 ErrorDocument 500 /index.html
 
 # Alternative si le serveur OVH ne supporte pas la redirection vers index.html
@@ -155,10 +155,20 @@ ErrorDocument 500 /index.html
   Header set Cache-Control "public, max-age=3600"
 </FilesMatch>
 
-# Protection des fichiers de configuration
-<FilesMatch "\.(env|json|yml|yaml|config)$">
+# Protection des fichiers de configuration SAUF les fichiers de contexte publics
+<FilesMatch "\.(env|yml|yaml|config)$">
   Order allow,deny
   Deny from all
+</FilesMatch>
+
+# Autoriser explicitement les fichiers JSON de contexte
+<FilesMatch "^melissa-colin-.*\.(json|md)$">
+  Order allow,deny
+  Allow from all
+  Require all granted
+  Header set Content-Type "application/json"
+  Header set Access-Control-Allow-Origin "*"
+  Header set Cache-Control "public, max-age=3600"
 </FilesMatch>
 
 # Optimisation de la bande passante - éviter les requêtes inutiles
