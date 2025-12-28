@@ -595,6 +595,17 @@ const en = {
     },
     clearTag: "Clear Tag",
     posts: [
+        {
+          id: 0,
+          title: "Hacking the Google Interview: A Neurodivergent Candidate's Story (SWE 2026)",
+          excerpt: "Far from the polished success stories, here is the brutal reality of my recruitment for a Google SRE internship. Technical bugs, a wasted €300 coaching session, and adaptive strategies: discover how I turned my ADHD into an asset against Silicon Valley's algorithms.",
+          image: "/assets/images/blog-google-interview.png",
+          date: "2025-12-28",
+          readTime: 5,
+          category: "Career & Recruitment",
+          tags: ["Technical Interview", "Google", "Neurodiversity"],
+          link: "https://medium.com/@melissa.colin/google-swe-sre-internship-summer-2026-emea-the-survival-guide-and-my-300-mistakes-f41ba031ad8a"
+        },
       {
         id: 1,
         title: "YOLOv8 Explained: Understanding Object Detection from Scratch",
@@ -620,7 +631,7 @@ const en = {
     place: "Bordeaux, France",
     followMe: "Follow me",
     locationAndPhone: "Within earshot, but never exposed",
-    emailAddress: "melissa.colin0@proton.me",
+    emailAddress: "contact-me@melissacolin.ai",
     phone: "+33 7 82 52 XX XX",
     ctaMail: "Send an email",
     // linkedin: "www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=mélissa-colin",

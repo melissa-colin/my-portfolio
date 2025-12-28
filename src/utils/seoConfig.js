@@ -149,7 +149,7 @@ export const SEO_CONFIG = {
       "https://medium.com/@melissa.colin",
       "https://scholar.google.com/citations?user=7r7iFpsAAAAJ&hl=fr"
     ],
-    "email": "mailto:melissa.colin0@proton.me",
+    "email": "mailto:contact-me@melissacolin.ai",
     "telephone": "+3378252XXXX",
     "identifier": [
       {
@@ -262,7 +262,7 @@ export const SEO_CONFIG = {
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer support",
-      "email": "mailto:melissa.colin0@proton.me",
+      "email": "mailto:contact-me@melissacolin.ai",
       "telephone": "+3378252XXXX",
       "availableLanguage": ["Français","English"]
     }
@@ -273,7 +273,7 @@ export const SEO_CONFIG = {
     "@type": "ContactPoint",
     "telephone": "+3378252XXXX",
     "contactType": "personal",
-    "email": "mailto:melissa.colin0@proton.me",
+    "email": "mailto:contact-me@melissacolin.ai",
     "areaServed": "FR",
     "availableLanguage": ["Français","English"]
   }),
