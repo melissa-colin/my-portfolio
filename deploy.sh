@@ -2,6 +2,19 @@
 
 echo "🚀 Début du déploiement fullstack avec optimisations SEO..."
 
+# Vérifier et initialiser le submodule si nécessaire
+echo "🔍 Vérification du submodule my-portfolio-dist..."
+if [ ! -d "my-portfolio-dist/.git" ]; then
+    echo "⚠️  Submodule non initialisé, initialisation en cours..."
+    git submodule update --init --recursive
+else
+    echo "✅ Submodule déjà initialisé"
+    cd my-portfolio-dist
+    git checkout main
+    git pull origin main
+    cd ..
+fi
+
 # Mise à jour automatique des dates du sitemap
 echo "📅 Mise à jour du sitemap.xml..."
 ./update-sitemap-dates.sh
@@ -112,16 +125,16 @@ echo "✅ Build et optimisations SEO terminés !"
 # Push en production
 echo "🚀 Déploiement en production..."
 cd my-portfolio-dist
-git add ..
+git add .
 git commit -m "🚀 Update contenu du site avec optimisations SEO - $(date '+%Y-%m-%d %H:%M')"
-git push
+git push origin main
 
 # Commit de la version
 echo "📦 Commit de la version..."
 cd ..
-git add .
+git add my-portfolio-dist
 git commit -m "🔧 Update submodule my-portfolio-dist - $(date '+%Y-%m-%d %H:%M')"
-git push
+git push origin main
 
 echo "🎉 Déploiement terminé avec succès!"
 echo "🔗 Site disponible sur: https://melissacolin.ai"
