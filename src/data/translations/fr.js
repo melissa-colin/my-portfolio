@@ -596,18 +596,17 @@ const fr = {
     },
     clearTag: "Effacer le Tag",
     posts: [
-      {
+{
         id: 0,
-        title: "Hacker l'Entretien Google : Récit d'une candidate neuroatypique (SWE 2026)",
-        excerpt: "Loin des success stories polissées, voici la réalité brutale de mon recrutement pour un stage SWE chez Google. Bugs techniques, coaching inutile à 300€ et stratégie d'adaptation : découvrez comment j'ai transformé mon TDAH en atout face aux algorithmes de la Silicon Valley.",
+        title: "Le 'Non' qui veut dire 'Pas Encore' : Post-Mortem de mon entretien Google",
+        excerpt: "Google a dit 'Non' pour 2026. Loin des success stories, voici l'analyse technique de cet échec. Du 'bug' de coaching à 200€ à la révélation lors de l'entretien système : découvrez comment ce refus a validé mon pivot stratégique vers la Recherche à l'Université d'Alberta.",
         image: "/assets/images/blog-google-interview.png",
-        date: "2025-12-28",
-        readTime: 5,
-        category: "Carrière & Recrutement",
-        tags: ["Entretien Technique", "Google", "Neurodiversité"],
-        link: "https://medium.com/@melissa.colin/google-swe-sre-internship-summer-2026-emea-the-survival-guide-and-my-300-mistakes-f41ba031ad8a"
-      },
-      {
+        date: "2026-01-12",
+        readTime: 4,
+        category: "Ingénierie & Résilience",
+        tags: ["Post-Mortem", "Google", "Esprit Recherche"],
+        link: "https://medium.com/@melissa.colin/the-no-that-means-not-yet-anatomy-of-a-google-interview-process-and-why-ill-be-back-fb3f0c2fecc9"
+      },      {
         id: 1,
         title: "YOLOv8 Décrypté : Maîtriser la détection d’objets depuis zéro",
         excerpt: "Une plongée profonde dans l'architecture et les détails d'implémentation de YOLOv8, la dernière itération de l'algorithme populaire de détection d'objets.",

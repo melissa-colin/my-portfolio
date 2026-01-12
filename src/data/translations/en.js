@@ -597,14 +597,14 @@ const en = {
     posts: [
         {
           id: 0,
-          title: "Hacking the Google Interview: A Neurodivergent Candidate's Story (SWE 2026)",
-          excerpt: "Far from the polished success stories, here is the brutal reality of my recruitment for a Google SRE internship. Technical bugs, a wasted €300 coaching session, and adaptive strategies: discover how I turned my ADHD into an asset against Silicon Valley's algorithms.",
+          title: "The 'No' That Means 'Not Yet': A Google Interview Post-Mortem",
+          excerpt: "Google said 'No' for 2026. Instead of a polished success story, here is a technical analysis of the failure. From the €200 coaching 'bug' to the split-brain interview results, discover how this rejection fueled my strategic pivot to Research at the University of Alberta.",
           image: "/assets/images/blog-google-interview.png",
-          date: "2025-12-28",
-          readTime: 5,
-          category: "Career & Recruitment",
-          tags: ["Technical Interview", "Google", "Neurodiversity"],
-          link: "https://medium.com/@melissa.colin/google-swe-sre-internship-summer-2026-emea-the-survival-guide-and-my-300-mistakes-f41ba031ad8a"
+          date: "2026-01-12",
+          readTime: 4,
+          category: "Engineering & Resilience",
+          tags: ["Post-Mortem", "Google", "Research Mindset"],
+          link: "https://medium.com/@melissa.colin/the-no-that-means-not-yet-anatomy-of-a-google-interview-process-and-why-ill-be-back-fb3f0c2fecc9"
         },
       {
         id: 1,
