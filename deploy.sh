@@ -112,7 +112,7 @@ echo "✅ Build et optimisations SEO terminés !"
 # Push en production
 echo "🚀 Déploiement en production..."
 cd my-portfolio-dist
-git add .
+git add ..
 git commit -m "🚀 Update contenu du site avec optimisations SEO - $(date '+%Y-%m-%d %H:%M')"
 git push
 
