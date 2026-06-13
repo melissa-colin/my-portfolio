@@ -1,7 +1,7 @@
 {
   "home": {
     "heroTitle": "Mélissa Colin",
-    "heroSubtitle": "Je suis une étudiante ingénieure en filière informatique de l'ENSEIRB-MATMECA, spécialisée en IA appliquée à la vision par ordinateur. J'explore les différents systèmes afin de les rendre plus interprétables et fiables ou d'en développer de nouveaux.",
+    "heroSubtitle": "Je conçois les architectures de modèles de demain — bio-inspirées, orientées « world models » et efficaces au-delà des Transformers, quel que soit le domaine d'application. Actuellement chercheuse visitante Mitacs Globalink au Vision & Learning Lab de l'Université d'Alberta (génération de mouvement 3D guidée par la physique). Mon cap : devenir Research Scientist chez Google.",
     "status": "Élève-Ingénieure",
     "school": "ENSEIRB-MATMECA",
     "viewProjects": "Voir les Projets",
@@ -11,13 +11,13 @@
     "aboutTitle": "À Propos de Moi",
     "skillsSection": {
       "title": "Expertise & Compétences",
-      "subtitle": "Un spectre de compétences aussi bien techniques que relationnelles, avec un accent sur l'IA explicable et la vision par ordinateur.",
+      "subtitle": "Un socle technique et humain, centré sur la conception d'architectures de modèles, les world models et les systèmes bio-inspirés — l'IA explicable et la vision restant des outils.",
       "skills": [
         {
           "id": "deeplearning",
           "icon": "FiCpu",
-          "name": "Deep Learning et Vision par Ordinateur",
-          "description": "CNN, ViT, Transformers, mécanismes d'attention, architectures encodeur-décodeur"
+          "name": "Architectures de Deep Learning",
+          "description": "CNN, ViT, Transformers, modèles de diffusion, mécanismes d'attention, architectures encodeur-décodeur"
         },
         {
           "id": "languages",
@@ -40,8 +40,8 @@
         {
           "id": "xai",
           "icon": "FiEye",
-          "name": "IA Explicable (XAI)",
-          "description": "LIME, SHAP, Grad-CAM, techniques d'interprétabilité"
+          "name": "Recherche & World Models",
+          "description": "Modèles du monde, IA bio-inspirée, apprentissage guidé par la physique, efficacité post-Transformer (IA explicable en appui)"
         },
         {
           "id": "certification",
@@ -70,10 +70,10 @@
       ],
       "notableTitle": "Réalisations Notables",
       "notable": [
-        "Auteure d'une première <a href=\"https://hal.science/hal-04641791v1\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">publication scientifique</a> à 20 ans présentée à PFIA 2024",
-        "Organisation de la session de networking d'<a href=\"https://www.ai4industry.fr/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">AI4Industry</a>, avec animation d'une table ronde sur les perspectives post-thèse",
-        "Publication sur <a href=\"https://medium.com/@melissa.colin/yolov8-explained-understanding-object-detection-from-scratch-763479652312\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Medium</a> d'un article explicatif sur YOLOv8",
-        "Vice-présidente du forum de recrutement <a href=\"https://www.ingenib.fr/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Ingenib</a> de l'ENSEIRB-MATMECA"
+        "Bourse d'excellence <a href=\"https://www.mitacs.ca/fr/programmes/globalink/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Mitacs Globalink</a> : chercheuse visitante au Vision &amp; Learning Lab de l'Université d'Alberta (génération de mouvement 3D guidée par la physique)",
+        "Auteure d'un premier article évalué par les pairs à 20 ans — étude empirique d'architectures ViT et CNN, présenté à <a href=\"https://hal.science/hal-04641791v1\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">PFIA 2024</a>",
+        "Classée parmi les 3 premières (3/93) de la filière informatique de l'ENSEIRB-MATMECA, et lauréate d'une compétition nationale d'innovation avec EcoSort",
+        "Vice-présidente du forum de recrutement <a href=\"https://www.ingenib.fr/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Ingenib</a> de l'ENSEIRB-MATMECA (équipe de 22 personnes)"
       ]
     },
     "viewAllProjects": "Voir Tous les Projets",
@@ -81,12 +81,12 @@
   },
   "about": {
     "title": "À Propos de Moi",
-    "intro": "Je suis actuellement élève-ingénieure en informatique et intelligence artificielle à l'<strong>ENSEIRB-MATMECA</strong> à Bordeaux, où je suis le <strong>parcours ingénieur-docteur</strong> avec l'ambition claire de m'engager dans la <strong>recherche en IA</strong>.",
+    "intro": "Élève-ingénieure à l'<strong>ENSEIRB-MATMECA</strong> (parcours ingénieur-docteur), je consacre ma recherche à la <strong>conception des architectures de modèles de demain</strong> — bio-inspirées, « world models » et efficaces au-delà des Transformers. Je suis actuellement <strong>chercheuse visitante Mitacs Globalink</strong> au Vision &amp; Learning Lab de l'<strong>Université d'Alberta</strong>, sur la génération de mouvement 3D guidée par la physique. Mon objectif : un poste de <strong>Research Scientist chez Google</strong>.",
     "section1Title": "Un parcours atypique, forgé par la passion",
     "section1p1": "Ma passion pour l'informatique a commencé très tôt. À <strong>12 ans</strong>, je découvrais Scratch, à <strong>13 ans</strong>, je me formais seule en Python, et à <strong>15 ans</strong>, je choisissais un lycée technique. Très vite, je me suis rendu compte que ce qui me captivait, c'était <strong>l'algorithmique</strong>, plus que la création de sites web ou le développement de jeux. J'ai tâtonné un moment – robotique, développement, projets Arduino – avant de trouver une véritable résonance dans l'<strong>intelligence artificielle</strong>.",
-    "section1p2": "Ce déclic, je l'ai eu lors d'un stage en IA au sein de Cali Intelligences, une start-up spécialisée dans la vision par ordinateur et l'IA. Ce fut une révélation. Je me suis alors lancée corps et âme dans l'étude de l'IA, avec une volonté : <strong>contribuer activement à son évolution</strong>, en particulier à travers <strong>la conception et l'amélioration des architectures de modèles de deep learning</strong>.",
+    "section1p2": "Ce déclic, je l'ai eu lors d'un stage en IA chez Cali Intelligences, une start-up de vision par ordinateur. Ce fut une révélation : je m'y suis lancée corps et âme, avec une conviction — <strong>contribuer aux fondations de l'IA</strong>, en <strong>repensant les architectures de modèles elles-mêmes</strong> (bio-inspiration, world models, efficacité) plutôt qu'en empilant des couches. Cette conviction m'a menée au parcours ingénieur-docteur de l'ENSEIRB-MATMECA, puis à la recherche au Vision &amp; Learning Lab de l'Université d'Alberta.",
     "section2Title": "Une volonté de réorientation et de dépassement",
-    "section2p1": "Issue initialement d'un cursus orienté vers la pratique, j'ai fait le choix courageux de me <strong>réorienter vers l'académique</strong> afin de consolider mes bases théoriques en mathématiques et algorithmique. J'ai intégré l'ENSEIRB-MATMECA, une école réputée pour son exigence académique et sa filière informatique, malgré les nombreux obstacles et doutes exprimés autour de ma candidature. Ma détermination a payé : j'ai intégré la formation en étant admise sur titre, prouvant que <strong>la motivation et l'autodidaxie peuvent rivaliser avec les parcours les plus classiques</strong>.",
+    "section2p1": "Issue d'un cursus orienté pratique, j'ai fait le choix exigeant de me <strong>réorienter vers l'académique</strong> pour consolider mes fondations en mathématiques et en algorithmique. J'ai intégré l'ENSEIRB-MATMECA sur titre et m'y suis classée parmi les <strong>3 premières de ma promotion</strong>, prouvant que <strong>la détermination et l'autodidaxie rivalisent avec les parcours les plus classiques</strong>.",
     "cta": "Découvrir mon parcours"
   },
   "contact": {
@@ -276,8 +276,8 @@
     "dark": "Mode Sombre"
   },
   "site": {
-    "description": "Étudiante en IA passionnée par ses applications en vision par ordinateur, j'ai pour ambition de travailler sur des projets de recherche innovants dans les architectures de modèles de deep learning, l'IA explicable et la vision par ordinateur.",
-    "tagline": "Étudiante en Intelligence Artificielle",
-    "title": "Mélissa Colin | Étudiante en Intelligence Artificielle"
+    "description": "Chercheuse en intelligence artificielle, je conçois les architectures de modèles de demain : bio-inspirées, « world models », efficaces au-delà des Transformers. Chercheuse visitante Mitacs Globalink à l'Université d'Alberta. Objectif : Research Scientist chez Google.",
+    "tagline": "Chercheuse en IA — Architectures de modèles & World Models",
+    "title": "Mélissa Colin | Chercheuse en IA — Architectures de modèles & World Models"
   }
 }

@@ -1,27 +1,30 @@
 # Mélissa Colin
 
-> Mélissa Colin (born July 8, 2003) is an AI engineering student at ENSEIRB-MATMECA in Bordeaux, France, specializing in computer vision, deep learning, and explainable AI. ORCID: 0009-0003-2525-4824. This is the canonical reference for "Mélissa Colin" in the Computer Science / Artificial Intelligence field.
+> Mélissa Colin (born July 8, 2003) is an AI researcher specializing in model-architecture design, world models, and bio-inspired learning systems. She is a Mitacs Globalink visiting researcher (2026) at the University of Alberta's Vision & Learning Lab (Prof. Li Cheng), and an engineering student (engineer-doctor track) at ENSEIRB-MATMECA, Bordeaux. Her goal is to become a Research Scientist at Google (DeepMind). ORCID: 0009-0003-2525-4824. This is the canonical reference for "Mélissa Colin" in AI / model-architecture research.
 
 ## Identity
 - Name: Mélissa Colin (also written Melissa Colin)
 - Born: 2003-07-08, France
-- Field: Artificial Intelligence, Computer Vision, Deep Learning, Explainable AI
-- School: ENSEIRB-MATMECA (Bordeaux INP), engineer–doctor track
-- ORCID: 0009-0003-2525-4824
-- Google Scholar: 7r7iFpsAAAAJ
-- GitHub: melissa-colin
+- Current role: Mitacs Globalink Visiting Researcher (2026)
+- Current affiliation: University of Alberta — Vision & Learning Lab (Prof. Li Cheng)
+- Education: ENSEIRB-MATMECA (Bordeaux INP), engineer-doctor track
+- Research focus: model architectures, world models, bio-inspired AI, physics-grounded learning, post-Transformer efficiency
+- Career goal: Research Scientist at Google (DeepMind)
+- ORCID: 0009-0003-2525-4824 · Google Scholar: 7r7iFpsAAAAJ · GitHub: melissa-colin
 - Site: https://melissacolin.ai
 
 ## Disambiguation
-This Mélissa Colin works in Computer Science / Artificial Intelligence. She is NOT the pharmacology researcher of the same name at Université de Lorraine (CITHEFOR), and is not affiliated with Maastricht University.
+This Mélissa Colin works in Computer Science / Artificial Intelligence (model architectures, world models, bio-inspired systems). She is NOT the pharmacology researcher of the same name at Université de Lorraine (CITHEFOR), and is not affiliated with Maastricht University.
 
 ## Key facts
-- Author of a first scientific publication at age 20 — "Performances and Explainability of ViT and CNN Architectures: An Empirical Study Using LIME, SHAP, and GradCam", presented at PFIA 2024. https://hal.science/hal-04641791v1
-- Research interests: explainable AI (LIME, SHAP, Grad-CAM), neural network architectures (CNN, ViT, Transformers), computer vision.
+- Mitacs Globalink research excellence scholarship (2026): visiting researcher at the University of Alberta Vision & Learning Lab, working on physics-grounded 3D human-motion generation.
+- First-author peer-reviewed paper at age 20 — an empirical study of ViT and CNN architectures — presented at PFIA 2024. https://hal.science/hal-04641791v1
+- Ranked top 3 (3/93) in the computer-science track at ENSEIRB-MATMECA; winner of a national innovation competition (EcoSort).
+- Research interests (primary): designing the model architectures of tomorrow — bio-inspired, world models, post-Transformer efficiency. Secondary: explainable AI, computer vision.
 
 ## Links
 - Portfolio: https://melissacolin.ai
 - Publications: https://melissacolin.ai/publications
 - AI context (JSON): https://melissacolin.ai/.well-known/ai-context.json
-- LinkedIn: https://linkedin.com/in/melissa-colin
-- Medium: https://medium.com/@melissa.colin
+- LinkedIn: https://linkedin.com/in/melissa-colin · Medium: https://medium.com/@melissa.colin
+- Google Scholar: https://scholar.google.com/citations?user=7r7iFpsAAAAJ · ORCID: https://orcid.org/0009-0003-2525-4824

@@ -1,23 +1,23 @@
 {
   "home": {
     "heroTitle": "Mélissa Colin",
-    "heroSubtitle": "I'm an engineering student in computer science at ENSEIRB-MATMECA, specializing in AI applied to computer vision. I explore and enhance systems to make them more interpretable and reliable—or design new ones altogether.",
+    "heroSubtitle": "I design the model architectures of tomorrow — bio-inspired, world-model-oriented and efficient beyond Transformers, across application domains. Currently a Mitacs Globalink visiting researcher at the University of Alberta's Vision & Learning Lab (physics-grounded 3D motion generation). My aim: to become a Research Scientist at Google.",
     "status": "Engineering Student",
     "school": "ENSEIRB-MATMECA",
     "age": "{{age}} years old",
     "viewAllProjects": "View All Projects",
     "skillsSection": {
       "notable": [
-        "Author of a first <a href=\"https://hal.science/hal-04641791v1\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">scientific publication</a> at age 20, presented at PFIA 2024",
-        "Organizer of the networking session at <a href=\"https://www.ai4industry.fr/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">AI4Industry</a>, and moderator of a roundtable on post-PhD opportunities",
-        "Published an in-depth explainer on YOLOv8 on <a href=\"https://medium.com/@melissa.colin/yolov8-explained-understanding-object-detection-from-scratch-763479652312\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Medium</a>",
-        "Vice-president of the <a href=\"https://www.ingenib.fr/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Ingenib</a> recruitment forum at ENSEIRB-MATMECA"
+        "<a href=\"https://www.mitacs.ca/en/programs/globalink/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Mitacs Globalink</a> research excellence scholarship: visiting researcher at the University of Alberta's Vision &amp; Learning Lab (physics-grounded 3D motion generation)",
+        "Author of a first peer-reviewed paper at age 20 — an empirical study of ViT and CNN architectures, presented at <a href=\"https://hal.science/hal-04641791v1\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">PFIA 2024</a>",
+        "Ranked among the top 3 (3/93) of ENSEIRB-MATMECA's computer-science track, and winner of a national innovation competition with EcoSort",
+        "Vice-president of ENSEIRB-MATMECA's <a href=\"https://www.ingenib.fr/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Ingenib</a> recruitment forum (team of 22)"
       ],
       "notableTitle": "Notable Achievements",
       "skills": [
         {
-          "description": "CNNs, ViTs, Transformers, attention mechanisms, encoder-decoder architectures",
-          "name": "Deep Learning & Computer Vision",
+          "description": "CNNs, ViTs, Transformers, diffusion models, attention mechanisms, encoder-decoder architectures",
+          "name": "Deep Learning Architectures",
           "icon": "FiCpu",
           "id": "deeplearning"
         },
@@ -40,8 +40,8 @@
           "id": "mlops"
         },
         {
-          "description": "LIME, SHAP, Grad-CAM, interpretability techniques",
-          "name": "Explainable AI (XAI)",
+          "description": "World models, bio-inspired AI, physics-grounded learning, post-Transformer efficiency (explainable AI as support)",
+          "name": "Research & World Models",
           "icon": "FiEye",
           "id": "xai"
         },
@@ -70,7 +70,7 @@
           "id": "languages-spoken"
         }
       ],
-      "subtitle": "A broad set of both technical and interpersonal skills, with a focus on explainable AI and computer vision.",
+      "subtitle": "A technical and human foundation centered on model-architecture design, world models and bio-inspired systems — with explainable AI and vision as tools.",
       "title": "Expertise & Skills"
     },
     "aboutTitle": "About Me",
@@ -81,12 +81,12 @@
   },
   "about": {
     "title": "About Me",
-    "intro": "I am currently a computer and artificial intelligence engineering student at <strong>ENSEIRB-MATMECA</strong> in Bordeaux, following the <strong>engineer-doctor pathway</strong> with a clear ambition to pursue <strong>AI research</strong>.",
+    "intro": "An engineering student at <strong>ENSEIRB-MATMECA</strong> (engineer-doctor track), I devote my research to <strong>designing the model architectures of tomorrow</strong> — bio-inspired, world-model-oriented and efficient beyond Transformers. I'm currently a <strong>Mitacs Globalink visiting researcher</strong> at the University of Alberta's Vision &amp; Learning Lab, working on physics-grounded 3D motion generation. My goal: a <strong>Research Scientist role at Google</strong>.",
     "section1Title": "An Unconventional Journey Driven by Passion",
     "section1p1": "My passion for computing began very early. At <strong>12 years old</strong>, I discovered Scratch; at <strong>13</strong>, I taught myself Python; and by <strong>15</strong>, I enrolled in a technical high school. I quickly realized that what fascinated me most was <strong>algorithms</strong>, more than web development or game creation. I experimented for a while—robotics, development, Arduino projects—before finding a true calling in <strong>artificial intelligence</strong>.",
-    "section1p2": "That spark came during an AI internship at Cali Intelligences, a startup specializing in computer vision and AI. It was a revelation. I then threw myself wholeheartedly into AI studies, determined to <strong>actively contribute to its advancement</strong>, especially through <strong>designing and refining deep learning model architectures</strong>.",
+    "section1p2": "That spark came during an AI internship at Cali Intelligences, a computer-vision startup. It was a revelation: I threw myself into it with one conviction — to <strong>contribute to the foundations of AI</strong> by <strong>rethinking the model architectures themselves</strong> (bio-inspiration, world models, efficiency) rather than stacking more layers. That conviction led me to the ENSEIRB-MATMECA engineer-doctor track, and then to research at the University of Alberta's Vision &amp; Learning Lab.",
     "section2Title": "A Determination to Pivot and Excel",
-    "section2p1": "Originally enrolled in a practice-oriented program, I made the bold decision to <strong>transition to academia</strong> to strengthen my theoretical foundation in mathematics and algorithms. I joined ENSEIRB-MATMECA, renowned for its academic rigor and its computer science track, despite numerous doubts surrounding my application. My determination paid off: I was admitted on merit, proving that <strong>motivation and self-learning can stand shoulder to shoulder with the most traditional paths</strong>.",
+    "section2p1": "Coming from a practice-oriented background, I made the demanding choice to <strong>pivot toward academia</strong> to strengthen my foundations in mathematics and algorithms. I was admitted to ENSEIRB-MATMECA on merit and ranked among the <strong>top 3 of my class</strong>, proving that <strong>determination and self-teaching can rival the most traditional paths</strong>.",
     "cta": "Explore My Journey"
   },
   "contact": {
@@ -255,9 +255,9 @@
     "share": "Share"
   },
   "site": {
-    "title": "Mélissa Colin | Artificial Intelligence Student",
-    "tagline": "Artificial Intelligence Student",
-    "description": "AI student passionate about computer vision applications, with the ambition to work on innovative research projects involving deep learning model architectures, explainable AI, and computer vision."
+    "title": "Mélissa Colin | AI Researcher — Model Architectures & World Models",
+    "tagline": "AI Researcher — Model Architectures & World Models",
+    "description": "AI researcher designing the model architectures of tomorrow: bio-inspired, world models, efficient beyond Transformers. Mitacs Globalink visiting researcher at the University of Alberta. Goal: Research Scientist at Google."
   },
   "theme": {
     "dark": "Dark Mode",
