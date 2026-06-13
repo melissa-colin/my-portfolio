@@ -1,4 +1,259 @@
 {
+  "home": {
+    "heroTitle": "Mélissa Colin",
+    "heroSubtitle": "I'm an engineering student in computer science at ENSEIRB-MATMECA, specializing in AI applied to computer vision. I explore and enhance systems to make them more interpretable and reliable—or design new ones altogether.",
+    "status": "Engineering Student",
+    "school": "ENSEIRB-MATMECA",
+    "age": "{{age}} years old",
+    "viewAllProjects": "View All Projects",
+    "skillsSection": {
+      "notable": [
+        "Author of a first <a href=\"https://hal.science/hal-04641791v1\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">scientific publication</a> at age 20, presented at PFIA 2024",
+        "Organizer of the networking session at <a href=\"https://www.ai4industry.fr/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">AI4Industry</a>, and moderator of a roundtable on post-PhD opportunities",
+        "Published an in-depth explainer on YOLOv8 on <a href=\"https://medium.com/@melissa.colin/yolov8-explained-understanding-object-detection-from-scratch-763479652312\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Medium</a>",
+        "Vice-president of the <a href=\"https://www.ingenib.fr/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Ingenib</a> recruitment forum at ENSEIRB-MATMECA"
+      ],
+      "notableTitle": "Notable Achievements",
+      "skills": [
+        {
+          "description": "CNNs, ViTs, Transformers, attention mechanisms, encoder-decoder architectures",
+          "name": "Deep Learning & Computer Vision",
+          "icon": "FiCpu",
+          "id": "deeplearning"
+        },
+        {
+          "description": "Python, C, JavaScript, R, SQL",
+          "name": "Programming Languages",
+          "icon": "FiCode",
+          "id": "languages"
+        },
+        {
+          "description": "OpenCV, PyTorch, TensorFlow, NumPy, Pandas, scikit-learn",
+          "name": "Data & AI Frameworks",
+          "icon": "FiDatabase",
+          "id": "frameworks"
+        },
+        {
+          "description": "Docker, Kubernetes, Kubeflow, optimized training pipelines",
+          "name": "MLOps & Deployment",
+          "icon": "FiBriefcase",
+          "id": "mlops"
+        },
+        {
+          "description": "LIME, SHAP, Grad-CAM, interpretability techniques",
+          "name": "Explainable AI (XAI)",
+          "icon": "FiEye",
+          "id": "xai"
+        },
+        {
+          "description": "Scientific writing, technical presentations, knowledge dissemination",
+          "name": "Research & Communication",
+          "icon": "FiMessageSquare",
+          "id": "certification"
+        },
+        {
+          "description": "GDPR compliance, AI Act, AI ethics, algorithmic bias, system accountability",
+          "name": "AI Law & Ethics",
+          "icon": "FiShield",
+          "id": "laws-ethics"
+        },
+        {
+          "description": "Curiosity, organization, adaptability, leadership, teamwork",
+          "name": "Interpersonal Skills",
+          "icon": "FiUsers",
+          "id": "softskills"
+        },
+        {
+          "description": "French (native), English (fluent), Chinese (beginner)",
+          "name": "Languages Spoken",
+          "icon": "FiGlobe",
+          "id": "languages-spoken"
+        }
+      ],
+      "subtitle": "A broad set of both technical and interpersonal skills, with a focus on explainable AI and computer vision.",
+      "title": "Expertise & Skills"
+    },
+    "aboutTitle": "About Me",
+    "learnMore": "Learn More",
+    "viewExperience": "View Experience",
+    "viewPublications": "View Publications",
+    "viewProjects": "View Projects"
+  },
+  "about": {
+    "title": "About Me",
+    "intro": "I am currently a computer and artificial intelligence engineering student at <strong>ENSEIRB-MATMECA</strong> in Bordeaux, following the <strong>engineer-doctor pathway</strong> with a clear ambition to pursue <strong>AI research</strong>.",
+    "section1Title": "An Unconventional Journey Driven by Passion",
+    "section1p1": "My passion for computing began very early. At <strong>12 years old</strong>, I discovered Scratch; at <strong>13</strong>, I taught myself Python; and by <strong>15</strong>, I enrolled in a technical high school. I quickly realized that what fascinated me most was <strong>algorithms</strong>, more than web development or game creation. I experimented for a while—robotics, development, Arduino projects—before finding a true calling in <strong>artificial intelligence</strong>.",
+    "section1p2": "That spark came during an AI internship at Cali Intelligences, a startup specializing in computer vision and AI. It was a revelation. I then threw myself wholeheartedly into AI studies, determined to <strong>actively contribute to its advancement</strong>, especially through <strong>designing and refining deep learning model architectures</strong>.",
+    "section2Title": "A Determination to Pivot and Excel",
+    "section2p1": "Originally enrolled in a practice-oriented program, I made the bold decision to <strong>transition to academia</strong> to strengthen my theoretical foundation in mathematics and algorithms. I joined ENSEIRB-MATMECA, renowned for its academic rigor and its computer science track, despite numerous doubts surrounding my application. My determination paid off: I was admitted on merit, proving that <strong>motivation and self-learning can stand shoulder to shoulder with the most traditional paths</strong>.",
+    "cta": "Explore My Journey"
+  },
+  "contact": {
+    "emailAddress": "contact-me@melissacolin.ai",
+    "linkedin": "https://linkedin.com/in/melissacolin",
+    "github": "https://github.com/melissa-colin",
+    "medium": "https://medium.com/@melissa.colin",
+    "scholar": "https://scholar.google.com/citations?user=7r7iFpsAAAAJ&hl=fr",
+    "signalLink": "https://signal.me/#eu/5yuYK2KZs3zqsnzCWn_2mpBqIxc_MbQRDWjif_4UR5twTC5PvupLJo-CbZs2d6Dg",
+    "ctaMail": "Send an email",
+    "phone": "+33 7 82 52 XX XX",
+    "locationAndPhone": "Within earshot, but never exposed",
+    "followMe": "Follow me",
+    "place": "Bordeaux, France",
+    "location": "Location",
+    "signalButton": "Send a message",
+    "signalText": "For conversations that won’t end up in an ad algorithm.",
+    "signalTitle": "Want to talk without filters?",
+    "socialMedia": "My digital clones sometimes speak on my behalf",
+    "subtitle": "Never too busy to discuss new ideas or collaborations.",
+    "title": "Contact"
+  },
+  "footer": {
+    "contactInfo": "Contact Information",
+    "darkMode": "Theme",
+    "language": "Language",
+    "navigation": "Navigation",
+    "copyright": "© 2025 Mélissa Colin. All rights reserved."
+  },
+  "blog": {
+    "clearTag": "Clear Tag",
+    "sortOptions": {
+      "title": "Title",
+      "popularity": "Popularity",
+      "date": "Date"
+    },
+    "sortBy": "Sort by",
+    "noPosts": "No posts found.",
+    "publishedOn": "Published on",
+    "searchPosts": "Search posts...",
+    "readMore": "Read",
+    "popularTags": "Popular Tags",
+    "recentPosts": "Recent Posts",
+    "categories": "Categories",
+    "readTime": "min read",
+    "subtitle": "Tutorials, hypotheses, and other reasonably serious digressions.",
+    "title": "Blog"
+  },
+  "experience": {
+    "noExperience": "No professional experience available.",
+    "moreInfo": "If you would like to know more about my professional experience, feel free to get in touch.",
+    "pageSubtitle": "The places where I’ve learned outside of school.",
+    "pageTitle": "Professional Experience"
+  },
+  "projects": {
+    "featuredSection": {
+      "publication": "Publication",
+      "demo": "Demo",
+      "button": "View All Projects",
+      "subtitle": "Explore my latest research projects and technical implementations.",
+      "title": "Featured Projects"
+    },
+    "readMore": "Learn More",
+    "viewCode": "View Code",
+    "viewLive": "View Demo",
+    "techStack": "Technologies",
+    "search": "Search projects...",
+    "allCategories": "All Categories",
+    "filter": "Filter By",
+    "subtitle": "A slightly mad lab for ideas that venture out without a guide.",
+    "title": "Projects"
+  },
+  "publications": {
+    "noPublications": "No publications available.",
+    "readMore": "Read More",
+    "citeBibtex": "Cite (BibTeX)",
+    "viewPaper": "View Paper",
+    "keywords": "Keywords",
+    "abstract": "Abstract",
+    "venue": "Publication Venue",
+    "citations": "Citations",
+    "date": "Date",
+    "sort": "Sort by",
+    "filter": "Filter",
+    "subtitle": "Explorations driven by the desire to understand (and explain).",
+    "title": "Publications"
+  },
+  "certification": {
+    "categoriesList": [
+      {
+        "name": "Deep Learning",
+        "id": "deep-learning"
+      },
+      {
+        "name": "Computer Vision",
+        "id": "computer-vision"
+      },
+      {
+        "name": "MLOps",
+        "id": "mlops"
+      },
+      {
+        "name": "Explainable AI",
+        "id": "xai"
+      },
+      {
+        "name": "AI Ethics",
+        "id": "ethics"
+      },
+      {
+        "name": "Cloud Computing",
+        "id": "cloud"
+      },
+      {
+        "name": "Python",
+        "id": "python"
+      },
+      {
+        "name": "Data Science",
+        "id": "data-science"
+      },
+      {
+        "name": "Mathematics",
+        "id": "math"
+      },
+      {
+        "name": "Cross-Disciplinary Skills",
+        "id": "transversal"
+      },
+      {
+        "name": "Research",
+        "id": "research"
+      },
+      {
+        "name": "Machine Learning",
+        "id": "ml"
+      }
+    ],
+    "verified": "Verified Certificate",
+    "viewCertificate": "View Certificate",
+    "noMatch": "No certifications match the selected categories. Please adjust your filters.",
+    "clearFilters": "Clear Filters",
+    "filterByCategory": "Filter by Category",
+    "pageIntro": "When curiosity comes with a stamp of approval.",
+    "pageTitle": "Certifications"
+  },
+  "notFound": {
+    "funFact": "\"To err is human, to really foul things up requires a computer.\" - Paul R. Ehrlich",
+    "goHome": "Home",
+    "goBack": "Go back",
+    "searchHelp": "Use the navigation above or contact me directly.",
+    "searchSuggestion": "What are you looking for?",
+    "quickLinks": "Quick links",
+    "suggestion": "It may have been moved or deleted.",
+    "message": "The page you are looking for does not exist.",
+    "pageNotFound": "Page not found",
+    "title": "Page not found"
+  },
+  "common": {
+    "retry": "Retry",
+    "error": "Error",
+    "loading": "Loading...",
+    "linkCopied": "Link copied!",
+    "copyLink": "Copy link",
+    "shareOn": "Share on",
+    "share": "Share"
+  },
   "site": {
     "title": "Mélissa Colin | Artificial Intelligence Student",
     "tagline": "Artificial Intelligence Student",
@@ -19,265 +274,10 @@
     "blog": "Blog",
     "contact": "Contact"
   },
-  "common": {
-    "share": "Share",
-    "shareOn": "Share on",
-    "copyLink": "Copy link",
-    "linkCopied": "Link copied!",
-    "loading": "Loading...",
-    "error": "Error",
-    "retry": "Retry"
-  },
-  "notFound": {
-    "title": "Page not found",
-    "pageNotFound": "Page not found",
-    "message": "The page you are looking for does not exist.",
-    "suggestion": "It may have been moved or deleted.",
-    "quickLinks": "Quick links",
-    "searchSuggestion": "What are you looking for?",
-    "searchHelp": "Use the navigation above or contact me directly.",
-    "goBack": "Go back",
-    "goHome": "Home",
-    "funFact": "\"To err is human, to really foul things up requires a computer.\" - Paul R. Ehrlich"
-  },
-  "home": {
-    "heroTitle": "Mélissa Colin",
-    "heroSubtitle": "I'm an engineering student in computer science at ENSEIRB-MATMECA, specializing in AI applied to computer vision. I explore and enhance systems to make them more interpretable and reliable—or design new ones altogether.",
-    "viewProjects": "View Projects",
-    "viewPublications": "View Publications",
-    "viewExperience": "View Experience",
-    "learnMore": "Learn More",
-    "aboutTitle": "About Me",
-    "skillsSection": {
-      "title": "Expertise & Skills",
-      "subtitle": "A broad set of both technical and interpersonal skills, with a focus on explainable AI and computer vision.",
-      "skills": [
-        {
-          "id": "deeplearning",
-          "icon": "FiCpu",
-          "name": "Deep Learning & Computer Vision",
-          "description": "CNNs, ViTs, Transformers, attention mechanisms, encoder-decoder architectures"
-        },
-        {
-          "id": "languages",
-          "icon": "FiCode",
-          "name": "Programming Languages",
-          "description": "Python, C, JavaScript, R, SQL"
-        },
-        {
-          "id": "frameworks",
-          "icon": "FiDatabase",
-          "name": "Data & AI Frameworks",
-          "description": "OpenCV, PyTorch, TensorFlow, NumPy, Pandas, scikit-learn"
-        },
-        {
-          "id": "mlops",
-          "icon": "FiBriefcase",
-          "name": "MLOps & Deployment",
-          "description": "Docker, Kubernetes, Kubeflow, optimized training pipelines"
-        },
-        {
-          "id": "xai",
-          "icon": "FiEye",
-          "name": "Explainable AI (XAI)",
-          "description": "LIME, SHAP, Grad-CAM, interpretability techniques"
-        },
-        {
-          "id": "certification",
-          "icon": "FiMessageSquare",
-          "name": "Research & Communication",
-          "description": "Scientific writing, technical presentations, knowledge dissemination"
-        },
-        {
-          "id": "laws-ethics",
-          "icon": "FiShield",
-          "name": "AI Law & Ethics",
-          "description": "GDPR compliance, AI Act, AI ethics, algorithmic bias, system accountability"
-        },
-        {
-          "id": "softskills",
-          "icon": "FiUsers",
-          "name": "Interpersonal Skills",
-          "description": "Curiosity, organization, adaptability, leadership, teamwork"
-        },
-        {
-          "id": "languages-spoken",
-          "icon": "FiGlobe",
-          "name": "Languages Spoken",
-          "description": "French (native), English (fluent), Chinese (beginner)"
-        }
-      ],
-      "notableTitle": "Notable Achievements",
-      "notable": [
-        "Author of a first <a href=\"https://hal.science/hal-04641791v1\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">scientific publication</a> at age 20, presented at PFIA 2024",
-        "Organizer of the networking session at <a href=\"https://www.ai4industry.fr/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">AI4Industry</a>, and moderator of a roundtable on post-PhD opportunities",
-        "Published an in-depth explainer on YOLOv8 on <a href=\"https://medium.com/@melissa.colin/yolov8-explained-understanding-object-detection-from-scratch-763479652312\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Medium</a>",
-        "Vice-president of the <a href=\"https://www.ingenib.fr/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Ingenib</a> recruitment forum at ENSEIRB-MATMECA"
-      ]
-    },
-    "viewAllProjects": "View All Projects",
-    "age": "{{age}} years old",
-    "status": "Engineering Student",
-    "school": "ENSEIRB-MATMECA"
-  },
-  "about": {
-    "title": "About Me",
-    "intro": "I am currently a computer and artificial intelligence engineering student at <strong>ENSEIRB-MATMECA</strong> in Bordeaux, following the <strong>engineer-doctor pathway</strong> with a clear ambition to pursue <strong>AI research</strong>.",
-    "section1Title": "An Unconventional Journey Driven by Passion",
-    "section1p1": "My passion for computing began very early. At <strong>12 years old</strong>, I discovered Scratch; at <strong>13</strong>, I taught myself Python; and by <strong>15</strong>, I enrolled in a technical high school. I quickly realized that what fascinated me most was <strong>algorithms</strong>, more than web development or game creation. I experimented for a while—robotics, development, Arduino projects—before finding a true calling in <strong>artificial intelligence</strong>.",
-    "section1p2": "That spark came during an AI internship at Cali Intelligences, a startup specializing in computer vision and AI. It was a revelation. I then threw myself wholeheartedly into AI studies, determined to <strong>actively contribute to its advancement</strong>, especially through <strong>designing and refining deep learning model architectures</strong>.",
-    "section2Title": "A Determination to Pivot and Excel",
-    "section2p1": "Originally enrolled in a practice-oriented program, I made the bold decision to <strong>transition to academia</strong> to strengthen my theoretical foundation in mathematics and algorithms. I joined ENSEIRB-MATMECA, renowned for its academic rigor and its computer science track, despite numerous doubts surrounding my application. My determination paid off: I was admitted on merit, proving that <strong>motivation and self-learning can stand shoulder to shoulder with the most traditional paths</strong>.",
-    "cta": "Explore My Journey"
-  },
-  "certification": {
-    "pageTitle": "Certifications",
-    "pageIntro": "When curiosity comes with a stamp of approval.",
-    "filterByCategory": "Filter by Category",
-    "clearFilters": "Clear Filters",
-    "noMatch": "No certifications match the selected categories. Please adjust your filters.",
-    "viewCertificate": "View Certificate",
-    "verified": "Verified Certificate",
-    "categoriesList": [
-      {
-        "id": "deep-learning",
-        "name": "Deep Learning"
-      },
-      {
-        "id": "computer-vision",
-        "name": "Computer Vision"
-      },
-      {
-        "id": "mlops",
-        "name": "MLOps"
-      },
-      {
-        "id": "xai",
-        "name": "Explainable AI"
-      },
-      {
-        "id": "ethics",
-        "name": "AI Ethics"
-      },
-      {
-        "id": "cloud",
-        "name": "Cloud Computing"
-      },
-      {
-        "id": "python",
-        "name": "Python"
-      },
-      {
-        "id": "data-science",
-        "name": "Data Science"
-      },
-      {
-        "id": "math",
-        "name": "Mathematics"
-      },
-      {
-        "id": "transversal",
-        "name": "Cross-Disciplinary Skills"
-      },
-      {
-        "id": "research",
-        "name": "Research"
-      },
-      {
-        "id": "ml",
-        "name": "Machine Learning"
-      }
-    ]
-  },
-  "publications": {
-    "title": "Publications",
-    "subtitle": "Explorations driven by the desire to understand (and explain).",
-    "filter": "Filter",
-    "sort": "Sort by",
-    "date": "Date",
-    "citations": "Citations",
-    "venue": "Publication Venue",
-    "abstract": "Abstract",
-    "keywords": "Keywords",
-    "viewPaper": "View Paper",
-    "citeBibtex": "Cite (BibTeX)",
-    "readMore": "Read More",
-    "noPublications": "No publications available."
-  },
-  "projects": {
-    "title": "Projects",
-    "subtitle": "A slightly mad lab for ideas that venture out without a guide.",
-    "filter": "Filter By",
-    "allCategories": "All Categories",
-    "search": "Search projects...",
-    "techStack": "Technologies",
-    "viewLive": "View Demo",
-    "viewCode": "View Code",
-    "readMore": "Learn More",
-    "featuredSection": {
-      "title": "Featured Projects",
-      "subtitle": "Explore my latest research projects and technical implementations.",
-      "button": "View All Projects",
-      "demo": "Demo",
-      "publication": "Publication"
-    }
-  },
-  "experience": {
-    "pageTitle": "Professional Experience",
-    "pageSubtitle": "The places where I’ve learned outside of school.",
-    "moreInfo": "If you would like to know more about my professional experience, feel free to get in touch.",
-    "noExperience": "No professional experience available."
-  },
   "education": {
     "subtitle": "Because in deep learning, there’s also supervised learning. But unlike machines, I sought knowledge—not just validation.",
     "footer": "Because learning isn’t just about optimizing parameters, it’s about giving meaning to every iteration.",
     "gpa": "GPA",
     "rank": "Rank"
-  },
-  "blog": {
-    "title": "Blog",
-    "subtitle": "Tutorials, hypotheses, and other reasonably serious digressions.",
-    "readTime": "min read",
-    "categories": "Categories",
-    "recentPosts": "Recent Posts",
-    "popularTags": "Popular Tags",
-    "readMore": "Read",
-    "searchPosts": "Search posts...",
-    "publishedOn": "Published on",
-    "noPosts": "No posts found.",
-    "sortBy": "Sort by",
-    "sortOptions": {
-      "date": "Date",
-      "popularity": "Popularity",
-      "title": "Title"
-    },
-    "clearTag": "Clear Tag"
-  },
-  "contact": {
-    "title": "Contact",
-    "subtitle": "Never too busy to discuss new ideas or collaborations.",
-    "socialMedia": "My digital clones sometimes speak on my behalf",
-    "signalTitle": "Want to talk without filters?",
-    "signalText": "For conversations that won’t end up in an ad algorithm.",
-    "signalButton": "Send a message",
-    "location": "Location",
-    "place": "Bordeaux, France",
-    "followMe": "Follow me",
-    "locationAndPhone": "Within earshot, but never exposed",
-    "emailAddress": "contact-me@melissacolin.ai",
-    "phone": "+33 7 82 52 XX XX",
-    "ctaMail": "Send an email",
-    "linkedin": "https://linkedin.com/in/mélissa-colin",
-    "github": "https://github.com/melissa-colin",
-    "medium": "https://medium.com/@melissa.colin",
-    "scholar": "https://scholar.google.com/citations?user=7r7iFpsAAAAJ&hl=fr",
-    "signalLink": "https://signal.me/#eu/5yuYK2KZs3zqsnzCWn_2mpBqIxc_MbQRDWjif_4UR5twTC5PvupLJo-CbZs2d6Dg"
-  },
-  "footer": {
-    "copyright": "© 2025 Mélissa Colin. All rights reserved.",
-    "navigation": "Navigation",
-    "language": "Language",
-    "darkMode": "Theme",
-    "contactInfo": "Contact Information"
   }
 }
