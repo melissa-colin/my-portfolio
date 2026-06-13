@@ -40,20 +40,32 @@ const { locale, pageType, path, title, description } = Astro.props;
     </script>
 
     <style is:global>
-      /* Scroll reveal — content stays visible without JS (good for SEO/no-JS) */
+      /* ===== Scroll reveal (below-the-fold) — content stays visible without JS ===== */
       .reveal { transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
       html.js .reveal { opacity: 0; transform: translateY(24px); }
       html.js .reveal.in-view { opacity: 1; transform: none; }
       /* Staggered cascade for grid/list children (opacity-only -> no clash with hover transforms) */
       html.js [data-stagger] > * { opacity: 0; transition: opacity 0.5s ease-out; }
       html.js [data-stagger].in-view > * { opacity: 1; }
-      /* Gentle page-load fade-in for the whole content (like the old page transition) */
-      @keyframes pageEnter { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-      html.js .page-enter { animation: pageEnter 0.55s ease-out both; }
+
+      /* ===== Load entrance (above-the-fold), mirrors the old framer-motion intros ===== */
+      @keyframes aFadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+      @keyframes aFade { from { opacity: 0; } to { opacity: 1; } }
+      @keyframes aBar { from { opacity: 0; transform: scaleX(0); } to { opacity: 1; transform: scaleX(1); } }
+      @keyframes aSlideDown { from { opacity: 0; transform: translateY(-40px); } to { opacity: 1; transform: none; } }
+      @keyframes aTitleIn { from { opacity: 0; transform: translateY(18px) scale(0.96); } to { opacity: 1; transform: none; } }
+      html.js .a-fade-up { animation: aFadeUp 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+      html.js .a-fade { animation: aFade 0.8s ease-out both; }
+      html.js .a-bar { animation: aBar 0.7s ease-out both; transform-origin: center; }
+      html.js .a-slidedown { animation: aSlideDown 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+      html.js .anim-title { animation: aTitleIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+      /* page-level gentle fade (opacity only; per-element classes provide the movement) */
+      html.js .page-enter { animation: aFade 0.5s ease-out both; }
+
       @media (prefers-reduced-motion: reduce) {
-        html.js .reveal { opacity: 1; transform: none; transition: none; }
-        html.js [data-stagger] > * { opacity: 1; transition: none; }
-        html.js .page-enter { animation: none; }
+        html.js .reveal, html.js [data-stagger] > * { opacity: 1; transform: none; transition: none; }
+        html.js .a-fade-up, html.js .a-fade, html.js .a-bar, html.js .a-slidedown,
+        html.js .anim-title, html.js .page-enter { animation: none; }
       }
     </style>
   </head>
