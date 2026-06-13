@@ -1,5 +1,6 @@
 {
   "id": 3,
+  "order": 1,
   "title": "Vice President",
   "company": "Forum INGENIB",
   "companyUrl": "https://www.ingenib.fr/",
@@ -13,6 +14,5 @@
     "Leadership"
   ],
   "type": "Volunteer",
-  "logo": "assets/images/logos/ingenib.png",
-  "order": 1
+  "logo": "assets/images/logos/ingenib.png"
 }
