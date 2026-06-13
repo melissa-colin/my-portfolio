@@ -1,0 +1,221 @@
+# Sveltia CMS — content manager for melissacolin.ai (editable from phone at /admin)
+# Commits content changes to the source repo; GitHub Actions then rebuilds + deploys.
+backend:
+  name: github
+  repo: melissa-colin/my-portfolio
+  branch: main
+  base_url: https://melissacolin.ai
+  auth_endpoint: oauth
+
+# Bilingual content stored as <slug>.fr.json / <slug>.en.json (matches the Astro collections)
+i18n:
+  structure: multiple_files
+  locales: [fr, en]
+  default_locale: fr
+
+media_folder: public/assets/images
+public_folder: /assets/images
+
+collections:
+  - name: projects
+    label: Projets
+    label_singular: Projet
+    folder: src/content/projects
+    extension: json
+    format: json
+    create: true
+    i18n: true
+    identifier_field: title
+    summary: '{{title}}'
+    fields:
+      - { name: id, label: ID, widget: number, i18n: duplicate }
+      - { name: order, label: Ordre, widget: number, i18n: duplicate }
+      - { name: title, label: Titre, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: image, label: Image, widget: image, i18n: duplicate }
+      - { name: technologies, label: Technologies, widget: list, i18n: duplicate }
+      - { name: category, label: Catégorie, widget: string, i18n: duplicate }
+      - { name: github, label: Lien GitHub, widget: string, required: false, i18n: duplicate }
+      - { name: demo, label: Lien démo, widget: string, required: false, i18n: duplicate }
+      - { name: featured, label: Mis en avant, widget: boolean, default: false, required: false, i18n: duplicate }
+
+  - name: experiences
+    label: Expériences
+    label_singular: Expérience
+    folder: src/content/experiences
+    extension: json
+    format: json
+    create: true
+    i18n: true
+    identifier_field: title
+    summary: '{{company}} — {{title}}'
+    fields:
+      - { name: id, label: ID, widget: number, i18n: duplicate }
+      - { name: order, label: Ordre, widget: number, i18n: duplicate }
+      - { name: title, label: Poste, widget: string }
+      - { name: company, label: Entreprise, widget: string }
+      - { name: companyUrl, label: Site entreprise, widget: string, required: false, i18n: duplicate }
+      - { name: location, label: Lieu, widget: string }
+      - { name: period, label: Période, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: technologies, label: Technologies, widget: list, i18n: duplicate }
+      - { name: type, label: Type, widget: string }
+      - { name: logo, label: Logo, widget: image, required: false, i18n: duplicate }
+      - { name: detail, label: Détail (HTML), widget: text, required: false }
+
+  - name: education
+    label: Formation
+    label_singular: Diplôme
+    folder: src/content/education
+    extension: json
+    format: json
+    create: true
+    i18n: true
+    identifier_field: degree
+    summary: '{{degree}}'
+    fields:
+      - { name: id, label: ID, widget: number, i18n: duplicate }
+      - { name: order, label: Ordre, widget: number, i18n: duplicate }
+      - { name: degree, label: Diplôme, widget: string }
+      - { name: specialization, label: Spécialisation, widget: string, required: false }
+      - { name: institution, label: Établissement, widget: string }
+      - { name: location, label: Lieu, widget: string }
+      - { name: period, label: Période, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - { name: gpa, label: Moyenne, widget: string, required: false, i18n: duplicate }
+      - { name: rank, label: Rang, widget: string, required: false }
+      - { name: achievements, label: Réalisations (HTML), widget: list, required: false }
+
+  - name: certifications
+    label: Certifications
+    label_singular: Certification
+    folder: src/content/certifications
+    extension: json
+    format: json
+    create: true
+    i18n: true
+    identifier_field: title
+    summary: '{{title}}'
+    fields:
+      - { name: id, label: ID, widget: string, i18n: duplicate }
+      - { name: order, label: Ordre, widget: number, i18n: duplicate }
+      - { name: title, label: Titre, widget: string }
+      - { name: issuer, label: Émetteur, widget: string }
+      - { name: date, label: Date, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: categories, label: Catégories, widget: list, i18n: duplicate }
+      - { name: verified, label: Vérifiée, widget: boolean, default: true, required: false, i18n: duplicate }
+      - { name: link, label: Lien, widget: string, required: false, i18n: duplicate }
+
+  - name: publications
+    label: Publications
+    label_singular: Publication
+    folder: src/content/publications
+    extension: json
+    format: json
+    create: true
+    i18n: true
+    identifier_field: title
+    summary: '{{title}}'
+    fields:
+      - { name: id, label: ID, widget: number, i18n: duplicate }
+      - { name: order, label: Ordre, widget: number, i18n: duplicate }
+      - { name: title, label: Titre, widget: string }
+      - { name: authors, label: Auteurs, widget: string, i18n: duplicate }
+      - { name: venue, label: Conférence/Revue, widget: string, i18n: duplicate }
+      - { name: year, label: Année, widget: string, i18n: duplicate }
+      - { name: url, label: Lien, widget: string, i18n: duplicate }
+      - { name: abstract, label: Résumé, widget: text }
+      - { name: type, label: Type, widget: string }
+
+  - name: blog
+    label: Blog
+    label_singular: Article
+    folder: src/content/blog
+    extension: json
+    format: json
+    create: true
+    i18n: true
+    identifier_field: title
+    summary: '{{title}}'
+    fields:
+      - { name: id, label: ID, widget: number, i18n: duplicate }
+      - { name: order, label: Ordre, widget: number, i18n: duplicate }
+      - { name: title, label: Titre, widget: string }
+      - { name: excerpt, label: Extrait, widget: text }
+      - { name: image, label: Image, widget: image, i18n: duplicate }
+      - { name: date, label: Date, widget: string, i18n: duplicate }
+      - { name: readTime, label: Temps de lecture (min), widget: number, i18n: duplicate }
+      - { name: category, label: Catégorie, widget: string }
+      - { name: tags, label: Tags, widget: list, i18n: duplicate }
+      - { name: link, label: Lien article, widget: string, i18n: duplicate }
+
+  # Singleton UI text (hero, about, contact, footer, nav…) — one file per locale
+  - name: site_text
+    label: Textes du site
+    editor: { preview: false }
+    files:
+      - name: fr
+        label: Textes (Français)
+        file: src/content/ui/fr.json
+        fields:
+          - name: home
+            label: Accueil
+            widget: object
+            fields:
+              - { name: heroTitle, label: Titre principal, widget: string }
+              - { name: heroSubtitle, label: Sous-titre, widget: text }
+              - { name: status, label: Statut, widget: string }
+              - { name: school, label: École, widget: string }
+          - name: about
+            label: À propos
+            widget: object
+            fields:
+              - { name: title, label: Titre, widget: string }
+              - { name: intro, label: Intro (HTML), widget: text }
+              - { name: section1Title, label: Section 1 — titre, widget: string }
+              - { name: section1p1, label: Section 1 — paragraphe 1 (HTML), widget: text }
+              - { name: section1p2, label: Section 1 — paragraphe 2 (HTML), widget: text }
+              - { name: section2Title, label: Section 2 — titre, widget: string }
+              - { name: section2p1, label: Section 2 — paragraphe 1 (HTML), widget: text }
+          - name: contact
+            label: Contact
+            widget: object
+            fields:
+              - { name: emailAddress, label: Email, widget: string }
+              - { name: linkedin, label: LinkedIn, widget: string }
+              - { name: github, label: GitHub, widget: string }
+              - { name: medium, label: Medium, widget: string }
+              - { name: scholar, label: Google Scholar, widget: string }
+      - name: en
+        label: Text (English)
+        file: src/content/ui/en.json
+        fields:
+          - name: home
+            label: Home
+            widget: object
+            fields:
+              - { name: heroTitle, label: Hero title, widget: string }
+              - { name: heroSubtitle, label: Hero subtitle, widget: text }
+              - { name: status, label: Status, widget: string }
+              - { name: school, label: School, widget: string }
+          - name: about
+            label: About
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: intro, label: Intro (HTML), widget: text }
+              - { name: section1Title, label: Section 1 title, widget: string }
+              - { name: section1p1, label: Section 1 paragraph 1 (HTML), widget: text }
+              - { name: section1p2, label: Section 1 paragraph 2 (HTML), widget: text }
+              - { name: section2Title, label: Section 2 title, widget: string }
+              - { name: section2p1, label: Section 2 paragraph 1 (HTML), widget: text }
+          - name: contact
+            label: Contact
+            widget: object
+            fields:
+              - { name: emailAddress, label: Email, widget: string }
+              - { name: linkedin, label: LinkedIn, widget: string }
+              - { name: github, label: GitHub, widget: string }
+              - { name: medium, label: Medium, widget: string }
+              - { name: scholar, label: Google Scholar, widget: string }

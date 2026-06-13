@@ -112,39 +112,24 @@
   RewriteRule (.+)\.(jpe?g|png)$ $1.$2.avif [T=image/avif,E=accept:1,L]
 </IfModule>
 
-# Configuration pour SPA (Single Page Application) avec gestion SEO
+# Static site (Astro directory build): serve /path/index.html for /path — no redirect loops
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  
-  # Gestion des URLs canoniques - redirection des trailing slashes
+  # Don't let Apache auto-redirect /dir -> /dir/ (would loop); we serve index.html directly.
+  DirectorySlash Off
+
+  # Critical files served as-is
+  RewriteRule ^(sitemap\.xml|robots\.txt|manifest\.json|llms\.txt)$ - [L]
+
+  # Map a clean URL to its index.html (handles both /path and /path/), no external redirect
+  RewriteCond %{REQUEST_URI} !^/$
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_URI} ^(.+)/$
-  RewriteRule ^(.+)/$ /$1 [R=301,L]
-  
-  # Fichiers SEO critiques - ne jamais rediriger
-  RewriteRule ^sitemap\.xml$ - [L]
-  RewriteRule ^robots\.txt$ - [L]
-  RewriteRule ^manifest\.json$ - [L]
-  
-  # Routage SPA - toutes les routes vers index.html SAUF les fichiers existants
-  RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !-l
-  # Exclure les dossiers assets, api et ai-context pour éviter les conflits
-  RewriteCond %{REQUEST_URI} !^/assets/
-  RewriteCond %{REQUEST_URI} !^/api/
-  RewriteCond %{REQUEST_URI} !^/ai-context/
-  RewriteCond %{REQUEST_URI} !^/.well-known/
-  # Préserver les paramètres de langue pour le SEO
-  RewriteRule . /index.html [L,QSA]
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.*?)/?$ /$1/index.html [L]
 </IfModule>
 
-# Configuration des erreurs personnalisées - forcer la redirection vers React Router
-ErrorDocument 404 /index.html
-# ErrorDocument 403 /index.html  # Commenté pour permettre l'accès aux fichiers de contexte
-ErrorDocument 500 /index.html
+# Real static 404 page
+ErrorDocument 404 /404.html
 
 # Alternative si le serveur OVH ne supporte pas la redirection vers index.html
 # ErrorDocument 404 /404.html

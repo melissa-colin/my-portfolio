@@ -1,0 +1,18 @@
+{
+  "id": 4,
+  "title": "Networking Manager",
+  "company": "ai4industry",
+  "companyUrl": "https://www.ai4industry.fr/",
+  "location": "Talence, Nouvelle-Aquitaine, France",
+  "period": "November 2024 - Present",
+  "description": "Planned, coordinated, and hosted a networking event during a national AI workshop for engineering students.",
+  "technologies": [
+    "Organization",
+    "Project Management",
+    "Communication"
+  ],
+  "type": "Volunteer",
+  "logo": "assets/images/logos/ai4industry.png",
+  "detail": "\n          <section>\n          <p>\n              <strong>ai4industry</strong> is a week-long workshop for final-year engineering or master’s students from across France, held annually at ENSERB-MATMECA.\n            </p>\n            <p>\n              As <strong>Networking Manager</strong>, I’m responsible for planning and coordinating the event, engaging participants, and managing the budget and resources for the networking session scheduled for Thursday afternoon during the workshop week.\n            </p>\n            <p>\n              During the event, I oversee setup, coordinate teams and speakers, and manage sessions held in the lecture hall, including moderating roundtables and delivering opening and closing speeches.\n            </p>\n            <p>\n              After the event, I lead a debrief to identify areas for improvement and develop strategies to make future networking sessions more dynamic and rewarding for all participants.\n            </p>\n          </section>\n        ",
+  "order": 2
+}

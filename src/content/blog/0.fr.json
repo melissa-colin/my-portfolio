@@ -1,0 +1,16 @@
+{
+  "id": 0,
+  "title": "Le 'Non' qui veut dire 'Pas Encore' : Post-Mortem de mon entretien Google",
+  "excerpt": "Google a dit 'Non' pour 2026. Loin des success stories, voici l'analyse technique de cet échec. Du 'bug' de coaching à 200€ à la révélation lors de l'entretien système : découvrez comment ce refus a validé mon pivot stratégique vers la Recherche à l'Université d'Alberta.",
+  "image": "/assets/images/blog-google-interview.png",
+  "date": "2026-01-12",
+  "readTime": 6,
+  "category": "Ingénierie & Résilience",
+  "tags": [
+    "Post-Mortem",
+    "Google",
+    "Esprit Recherche"
+  ],
+  "link": "https://medium.com/@melissa.colin/the-no-that-means-not-yet-anatomy-of-a-google-interview-process-and-why-ill-be-back-fb3f0c2fecc9",
+  "order": 0
+}

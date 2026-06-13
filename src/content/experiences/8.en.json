@@ -1,0 +1,15 @@
+{
+  "id": 8,
+  "title": "Ambassador",
+  "company": "EPSI - School of IT Engineering",
+  "companyUrl": "",
+  "location": "France",
+  "period": "November 2021 - June 2024",
+  "description": "Represented the school at fairs, open houses, and online events.",
+  "technologies": [
+    "Communication"
+  ],
+  "type": "Volunteer",
+  "logo": "assets/images/logos/EPSI.png",
+  "order": 6
+}

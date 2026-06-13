@@ -1,0 +1,75 @@
+---
+import {
+  getPageMeta, getKeywords, canonicalUrl, personSchema, scholarlyArticleSchema,
+  webSiteSchema, webPageSchema, BASE_URL, SITE_NAME, GOOGLE_SITE_VERIFICATION,
+} from '../lib/seo';
+
+interface Props {
+  locale: 'fr' | 'en';
+  pageType: string;
+  path: string; // language-neutral, e.g. '/', '/projects'
+  title?: string;
+  description?: string;
+}
+const { locale, pageType, path, title, description } = Astro.props;
+const meta = getPageMeta(pageType, locale);
+const finalTitle = title ?? meta.title;
+const finalDesc = description ?? meta.description;
+const keywords = getKeywords(pageType, locale);
+const canonical = canonicalUrl(path, locale);
+const frUrl = canonicalUrl(path, 'fr');
+const enUrl = canonicalUrl(path, 'en');
+const ogImage = `${BASE_URL}/assets/images/screen.png`;
+
+const schemas = [
+  personSchema(locale),
+  webSiteSchema(locale),
+  webPageSchema(locale, path),
+  ...(pageType === 'publications' || pageType === 'home' ? [scholarlyArticleSchema()] : []),
+];
+---
+
+<title>{finalTitle}</title>
+<meta name="description" content={finalDesc} />
+<meta name="keywords" content={keywords} />
+<meta name="author" content="Mélissa Colin" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+{GOOGLE_SITE_VERIFICATION && <meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />}
+
+<link rel="canonical" href={canonical} />
+<link rel="alternate" hreflang="fr" href={frUrl} />
+<link rel="alternate" hreflang="en" href={enUrl} />
+<link rel="alternate" hreflang="x-default" href={frUrl} />
+
+{/* Academic citation metadata (respected by Scholar / indexers) */}
+<meta name="citation_author" content="Colin, Mélissa" />
+<meta name="citation_author_institution" content="ENSEIRB-MATMECA" />
+<meta name="citation_author_orcid" content="0009-0003-2525-4824" />
+
+{/* Canonical AI-context document for disambiguation */}
+<link rel="alternate" type="application/json" href={`${BASE_URL}/.well-known/ai-context.json`} title="AI context" />
+
+{/* Open Graph */}
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={SITE_NAME} />
+<meta property="og:title" content={finalTitle} />
+<meta property="og:description" content={finalDesc} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:locale" content={locale === 'fr' ? 'fr_FR' : 'en_US'} />
+<meta property="og:locale:alternate" content={locale === 'fr' ? 'en_US' : 'fr_FR'} />
+
+{/* Twitter */}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={finalTitle} />
+<meta name="twitter:description" content={finalDesc} />
+<meta name="twitter:image" content={ogImage} />
+
+{/* Geo */}
+<meta name="geo.region" content="FR-NAQ" />
+<meta name="geo.placename" content="Bordeaux" />
+<meta name="geo.position" content="44.837789;-0.579180" />
+<meta name="ICBM" content="44.837789, -0.579180" />
+
+{/* Structured data */}
+{schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}

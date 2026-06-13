@@ -1,0 +1,16 @@
+{
+  "id": 11,
+  "title": "Enseignante de mathématiques",
+  "company": "Superprof",
+  "companyUrl": "https://www.superprof.fr/",
+  "location": "Bordeaux, France",
+  "period": "Décembre 2018 - Décembre 2021",
+  "description": "Cours particuliers de mathématiques et aide aux devoirs pour élèves du secondaire.",
+  "technologies": [
+    "Pédagogie",
+    "Communication"
+  ],
+  "type": "Indépendante",
+  "logo": "assets/images/logos/superprof.jpg",
+  "order": 9
+}

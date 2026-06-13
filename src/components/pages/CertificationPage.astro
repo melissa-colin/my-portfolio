@@ -1,0 +1,184 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { FiAward, FiCheckCircle, FiExternalLink, FiFilter } from 'react-icons/fi';
+import { getUI, getList, type Locale } from '../../lib/content';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const ui = await getUI(locale);
+const c = ui.certification ?? {};
+const certifications = await getList('certifications', locale);
+
+const categoriesList: any[] = c.categoriesList ?? [];
+// Only categories that appear in at least one certification (matches source filter)
+const visibleCategories = categoriesList.filter((category: any) =>
+  certifications.some((cert: any) => cert.categories.includes(category.id))
+);
+const nameForId = (id: string) => {
+  const obj = categoriesList.find((cat: any) => cat.id === id);
+  return obj?.name;
+};
+---
+
+<PageLayout locale={locale} path="/certification" title={`${c.pageTitle} | Mélissa Colin`}>
+  <div class="pt-24 pb-20">
+    {/* Hero Section */}
+    <section class="bg-gray-900 dark:bg-black py-16 relative overflow-hidden">
+      <div class="absolute inset-0 bg-opacity-70">
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-gray-900 via-transparent to-red-900/20 opacity-80"></div>
+      </div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white flex items-center justify-center gap-3">
+            <FiAward className="text-red-500" />
+            {c.pageTitle}
+          </h1>
+          <div class="section-bar mx-auto bg-red-500"></div>
+          <p class="mt-6 text-xl text-gray-200 max-w-3xl mx-auto">
+            {c.pageIntro}
+          </p>
+        </div>
+      </div>
+    </section>
+    {/* Content Section */}
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center">
+          {/* Main Content */}
+          <div class="w-full lg:w-2/3 pr-0 lg:pr-8" id="cert-root">
+            {/* Category filter section */}
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-5 mb-8">
+              <div class="flex flex-wrap items-center justify-between gap-4">
+                <div class="flex items-center">
+                  <FiFilter className="text-red-600 dark:text-red-500 text-xl mr-2" />
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                    {c.filterByCategory}
+                  </h3>
+                </div>
+                <button
+                  id="cert-clear"
+                  class="text-sm text-red-600 dark:text-red-500 hover:underline flex items-center"
+                  style="display: none;"
+                >
+                  {c.clearFilters}
+                </button>
+              </div>
+              <div class="mt-4 flex flex-wrap gap-2">
+                {visibleCategories.map((category: any) => (
+                  <button
+                    data-cat={category.id}
+                    class="js-cat px-3 py-1 text-sm rounded-full transition-colors bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600"
+                    data-active-class="bg-red-600 text-white"
+                    data-idle-class="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600"
+                  >
+                    {category.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+            {/* Grid of certification cards */}
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal" id="cert-grid">
+              {certifications.map((certification: any) => (
+                <div
+                  class="js-cert bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden border-t border-red-100 dark:border-red-900/30 flex flex-col h-full transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
+                  data-categories={(certification.categories ?? []).join(' ')}
+                >
+                  <div class="p-6 flex flex-col h-full">
+                    <div class="flex flex-wrap items-start justify-between mb-4 gap-2">
+                      <div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white flex items-center">
+                          {certification.title}
+                          {certification.verified && (
+                            <span class="ml-2 text-green-500 dark:text-green-400" title={c.verified}>
+                              <FiCheckCircle />
+                            </span>
+                          )}
+                        </h3>
+                        <div class="text-gray-600 dark:text-gray-400 mt-1">
+                          {certification.issuer}
+                        </div>
+                      </div>
+                      <div class="px-3 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
+                        {certification.date}
+                      </div>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow">
+                      {certification.description}
+                    </p>
+                    {/* Categories tags */}
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      {certification.categories.map((catId: string) => (
+                        <span
+                          class="inline-block px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-full"
+                        >
+                          {nameForId(catId)}
+                        </span>
+                      ))}
+                    </div>
+                    <a
+                      href={certification.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center text-red-600 dark:text-red-500 hover:underline mt-auto"
+                    >
+                      <FiExternalLink className="mr-1" />
+                      {c.viewCertificate}
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+            {/* Message when no certifications match the current filter */}
+            <div id="cert-nomatch" class="text-center py-8 text-gray-600 dark:text-gray-400" style="display: none;">
+              {c.noMatch}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</PageLayout>
+
+<script is:inline>
+  (function () {
+    var root = document.getElementById('cert-root');
+    if (!root) return;
+    var btns = Array.prototype.slice.call(root.querySelectorAll('.js-cat'));
+    var clearBtn = document.getElementById('cert-clear');
+    var cards = Array.prototype.slice.call(document.querySelectorAll('#cert-grid .js-cert'));
+    var noMatch = document.getElementById('cert-nomatch');
+    var selected = [];
+
+    function setClasses(el, str) {
+      el.className = 'js-cat px-3 py-1 text-sm rounded-full transition-colors ' + str;
+    }
+    function apply() {
+      var visibleCount = 0;
+      cards.forEach(function (card) {
+        var cats = (card.getAttribute('data-categories') || '').split(' ');
+        var ok = selected.length === 0 || selected.some(function (s) { return cats.indexOf(s) !== -1; });
+        card.style.display = ok ? '' : 'none';
+        if (ok) visibleCount++;
+      });
+      btns.forEach(function (b) {
+        var active = selected.indexOf(b.getAttribute('data-cat')) !== -1;
+        setClasses(b, active ? b.getAttribute('data-active-class') : b.getAttribute('data-idle-class'));
+      });
+      if (clearBtn) clearBtn.style.display = selected.length > 0 ? '' : 'none';
+      if (noMatch) noMatch.style.display = visibleCount === 0 ? '' : 'none';
+    }
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var id = b.getAttribute('data-cat');
+        var idx = selected.indexOf(id);
+        if (idx !== -1) selected.splice(idx, 1);
+        else selected.push(id);
+        apply();
+      });
+    });
+    if (clearBtn) clearBtn.addEventListener('click', function () { selected = []; apply(); });
+    apply();
+  })();
+</script>

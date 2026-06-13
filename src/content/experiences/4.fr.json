@@ -1,0 +1,18 @@
+{
+  "id": 4,
+  "title": "Responsable Networking",
+  "company": "ai4industry",
+  "companyUrl": "https://www.ai4industry.fr/",
+  "location": "Talence, Nouvelle-Aquitaine, France",
+  "period": "Novembre 2024 - Présent",
+  "description": "Organisation, coordination et animation d’un événement de networking lors d’un workshop national en IA pour étudiants ingénieurs.",
+  "technologies": [
+    "Organisation",
+    "Gestion de projet",
+    "Communication"
+  ],
+  "type": "Associatif",
+  "logo": "assets/images/logos/ai4industry.png",
+  "detail": "\n          <section>\n          <p>\n              <strong>ai4industry</strong> est un atelier d'une semaine destiné aux étudiants en dernière année d'école d'ingénieurs ou de master venant de toute la France, organisé chaque année à l'ENSEIRB-MATMECA.\n            </p>\n            <p>\n              En tant que <strong>Responsable Networking</strong> pour ai4industry, je suis en charge de la planification et de la coordination de l’événement, de la mobilisation des participants, ainsi que de la gestion du budget et des ressources en amont de la session de networking, prévue le jeudi après-midi durant la semaine de l’atelier.\n            </p>\n            <p>\n              Pendant l’événement, je supervise la mise en place, je coordonne les équipes et les intervenants, et je gère les sessions se déroulant dans l’amphithéâtre, y compris l’animation des tables rondes ainsi que les discours d’ouverture et de clôture.\n            </p>\n            <p>\n              Après l’événement, je mène un débriefing afin d’identifier les axes d’amélioration et je travaille sur des stratégies pour rendre la session de networking plus dynamique et enrichissante pour l’ensemble des participants.\n            </p>\n          </section>\n        ",
+  "order": 2
+}

@@ -1,0 +1,16 @@
+{
+  "id": 3,
+  "title": "EcoSort",
+  "description": "A mobile app combining image recognition and geolocation to help users sort their waste properly.",
+  "image": "/assets/images/projects/ecosort.png",
+  "technologies": [
+    "YOLO",
+    "Python",
+    "OpenCV"
+  ],
+  "github": "https://github.com/melissa-colin/EcoSort",
+  "demo": "https://www.youtube.com/watch?v=GGjImtkW-us",
+  "category": "Vision",
+  "featured": false,
+  "order": 2
+}

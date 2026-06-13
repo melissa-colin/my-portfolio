@@ -1,0 +1,35 @@
+---
+import { FiArrowRight } from 'react-icons/fi';
+import { localizedHref, type Locale } from '../../lib/content';
+
+interface Props {
+  ui: any;
+  locale: Locale;
+}
+const { ui, locale } = Astro.props;
+const about = ui.about ?? {};
+---
+
+<section class="py-20 bg-gray-50 dark:bg-gray-800">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="reveal">
+        <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">{about.title}</h2>
+        <div class="section-bar mb-8"></div>
+        <div class="space-y-6 text-gray-700 dark:text-gray-300">
+          <p class="text-lg" set:html={about.intro} />
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">{about.section1Title}</h3>
+          <p set:html={about.section1p1} />
+          <p set:html={about.section1p2} />
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">{about.section2Title}</h3>
+          <p set:html={about.section2p1} />
+        </div>
+        <div class="mt-8">
+          <a href={localizedHref('/education', locale)} class="btn-outline flex items-center w-fit">
+            {about.cta} <FiArrowRight className="ml-2" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

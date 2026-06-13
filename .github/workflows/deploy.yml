@@ -1,0 +1,48 @@
+name: Build & Deploy
+
+# Rebuilds the static site and deploys it whenever content/code changes on main
+# (including commits made from the CMS at /admin). Hostinger auto-pulls the dist repo.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Deploy dist -> my-portfolio-dist (served by Hostinger)
+        run: |
+          cd dist
+          git init -q -b main
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Deploy ${GITHUB_SHA::7} from ${GITHUB_REF_NAME}"
+          git push -f "https://x-access-token:${DEPLOY_TOKEN}@github.com/melissa-colin/my-portfolio-dist.git" main
+        env:
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}

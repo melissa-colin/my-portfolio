@@ -1,0 +1,98 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { FiBookOpen } from 'react-icons/fi';
+import { getUI, getList, type Locale } from '../../lib/content';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const ui = await getUI(locale);
+const pub = ui.publications ?? {};
+const publications = await getList('publications', locale);
+
+// Group publications by type, preserving first-seen order (matches reduce).
+const grouped: Record<string, any[]> = {};
+for (const p of publications) {
+  (grouped[p.type] = grouped[p.type] || []).push(p);
+}
+const groups = Object.entries(grouped);
+---
+
+<PageLayout locale={locale} path="/publications" title={`${pub.title} | Mélissa Colin`}>
+  <div class="pt-24 pb-20">
+    {/* Hero Section */}
+    <section class="bg-gray-900 dark:bg-black py-16 relative overflow-hidden">
+      <div class="absolute inset-0 bg-opacity-70">
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-gray-900 via-transparent to-red-900/20 opacity-80"></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+            {pub.title}
+          </h1>
+
+          <div class="section-bar mx-auto bg-red-500"></div>
+
+          <p class="mt-6 text-xl text-gray-200 max-w-3xl mx-auto">
+            {pub.subtitle}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Publications List */}
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          {publications.length === 0 ? (
+            <div class="text-center text-gray-500 dark:text-gray-400 py-12">
+              {pub.noPublications}
+            </div>
+          ) : (
+            groups.map(([type, pubs]: any) => (
+              <div class="mb-12">
+                <div class="flex items-center mb-8">
+                  <FiBookOpen className="text-red-600 dark:text-red-500 text-3xl mr-4" />
+                  <h2 class="text-3xl font-bold text-gray-900 dark:text-white">
+                    {type}
+                  </h2>
+                </div>
+                <div class="section-bar mb-8"></div>
+                <div class="space-y-8">
+                  {pubs.map((p: any) => (
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                      <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">
+                          {p.title}
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                          {p.authors} • {p.venue} • {p.year}
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">
+                          {p.abstract}
+                        </p>
+                        <div class="flex items-center">
+                          <a
+                            href={p.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center text-red-600 dark:text-red-500 hover:underline mr-4"
+                          >
+                            <FiBookOpen className="mr-2" />
+                            {pub.viewPaper}
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+      </div>
+    </section>
+  </div>
+</PageLayout>

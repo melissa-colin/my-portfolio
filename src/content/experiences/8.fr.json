@@ -1,0 +1,15 @@
+{
+  "id": 8,
+  "title": "Ambassadrice",
+  "company": "EPSI - L'école d'ingénierie informatique",
+  "companyUrl": "",
+  "location": "France",
+  "period": "Novembre 2021 - Juin 2024",
+  "description": "Représentation de l’école lors des salons, JPO et événements en ligne.",
+  "technologies": [
+    "Communication"
+  ],
+  "type": "Associatif",
+  "logo": "assets/images/logos/EPSI.png",
+  "order": 6
+}

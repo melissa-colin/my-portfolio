@@ -1,0 +1,24 @@
+{
+  "id": 1,
+  "title": "R&D Engineer – AI and Safety",
+  "company": "Sector Group",
+  "companyUrl": "https://www.sector-group.net/",
+  "location": "Villebon-sur-Yvette, Île-de-France, France (remote)",
+  "period": "June 2025 - August 2025",
+  "description": "Contributed to an applied research project focused on developing trustworthy AI to extract information from unstructured and non-OCR PDF documents.",
+  "technologies": [
+    "Python",
+    "Deep Learning",
+    "Machine Learning",
+    "Computer Vision",
+    "Image Processing",
+    "Trustworthy AI",
+    "GDPR",
+    "OCR",
+    "RAG",
+    "Safety"
+  ],
+  "logo": "assets/images/logos/sector-group.jpeg",
+  "type": "Internship",
+  "order": 0
+}

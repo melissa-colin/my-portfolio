@@ -1,0 +1,15 @@
+{
+  "id": 2,
+  "degree": "Bachelor en Intelligence Artificielle et Data Sciences",
+  "institution": "EPSI - L'école d'ingénierie informatique",
+  "location": "Bordeaux, Nouvelle-Aquitaine, France",
+  "period": "2021- 2024",
+  "description": "Formation en intelligence artificielle, apprentissage automatique et sciences des données, avec un accent sur les applications pratiques et réalisée en alternance lors de la dernière année.",
+  "achievements": [
+    "EcoSort : Application mobile pour le tri des déchets via reconnaissance d’image et géolocalisation, gagnante d’une compétition nationale d’innovation. Voir la <a href=\"https://youtu.be/6nccMi2PK1Q\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">vidéo de présentation</a>",
+    "VidAI : Outil web simplifiant l’édition vidéo grâce à une assistance IA."
+  ],
+  "gpa": "16.38/20",
+  "rank": "1ère de promotion",
+  "order": 1
+}

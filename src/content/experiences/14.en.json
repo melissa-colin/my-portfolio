@@ -1,0 +1,15 @@
+{
+  "id": 14,
+  "title": "IT Maintenance Technician",
+  "company": "Arveyres Informatique",
+  "companyUrl": "",
+  "location": "Arveyres, Nouvelle-Aquitaine, France",
+  "period": "March 2018",
+  "description": "Tested computer hardware, installed operating systems, and provided customer support.",
+  "technologies": [
+    "Communication",
+    "Hardware"
+  ],
+  "type": "Internship",
+  "order": 12
+}

@@ -1,0 +1,31 @@
+{
+  "id": 5,
+  "title": "AI Developer",
+  "company": "Cali Intelligences",
+  "companyUrl": "https://www.cali-intelligences.com/",
+  "location": "Talence, Nouvelle-Aquitaine, France",
+  "period": "July 2023 - October 2024",
+  "description": "Developed action recognition methods, optimized models and MLOps processes. Analyzed and annotated data, enhanced training efficiency for AI systems.",
+  "technologies": [
+    "Python",
+    "PyTorch",
+    "Kubernetes",
+    "OpenCV",
+    "Docker",
+    "Elasticsearch",
+    "Kubeflow",
+    "Computer Vision",
+    "GDPR",
+    "Machine Learning",
+    "Deep Learning",
+    "Explainable AI",
+    "MLOps",
+    "R&D",
+    "QA/QC",
+    "AI Act"
+  ],
+  "type": "Apprenticeship",
+  "detail": "\n          <section>\n            <h4>R&D:</h4>\n            <ul>\n              <li>Developed a new action recognition method for detecting suspicious behavior</li>\n              <li>Improved model performance and interpretability</li>\n              <li>Python and C++ development</li>\n              <li>Explainability</li>\n              <li>Reduced action recognition model processing time by 70% through algorithm optimization</li>\n              <li>Led R&D projects resulting in 3 new feature developments</li>\n            </ul>\n            <h4>QA/QC:</h4>\n            <ul>\n              <li>Data sorting</li>\n              <li>Data analysis and statistics for over 100,000 videos</li>\n              <li>Labeling</li>\n              <li>Implemented QA/QC processes to ensure high-quality training data</li>\n            </ul>\n            <h4>MLOps:</h4>\n            <ul>\n              <li>Built pipelines for AI training</li>\n              <li>Enhanced training using data augmentation</li>\n              <li>Optimized model hyperparameters</li>\n              <li>Improved deep learning models from 60% to 90% accuracy</li>\n            </ul>\n          </section>\n        ",
+  "logo": "assets/images/logos/cali.jpeg",
+  "order": 3
+}

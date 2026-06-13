@@ -1,0 +1,15 @@
+{
+  "id": 7,
+  "title": "Permanence contraception masculine",
+  "company": "Le Planning Familial",
+  "companyUrl": "https://www.planning-familial.org/fr",
+  "location": "Bordeaux, Nouvelle-Aquitaine, France",
+  "period": "Décembre 2022 - Septembre 2024",
+  "description": "Sensibilisation et information sur les méthodes de contraception masculine, notamment l’Andro-switch.",
+  "technologies": [
+    "Communication"
+  ],
+  "type": "Associatif",
+  "logo": "assets/images/logos/planning-familial.png",
+  "order": 5
+}

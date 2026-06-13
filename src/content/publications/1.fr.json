@@ -1,0 +1,11 @@
+{
+  "id": 1,
+  "title": "Performances et explicabilité de ViT et d'architectures CNN : une étude empirique utilisant LIME, SHAP et GradCam",
+  "authors": "Colin, M., Chraibi Kkaadoud, I.",
+  "venue": "PFIA 2024",
+  "year": "2024",
+  "url": "https://hal.science/hal-04641791v1",
+  "abstract": "Ces dernières années, l’IA explicable a été mise en avant comme la solution à plébisciter pour instaurer la confiance entre les utilisateurs et les systèmes d’IA. Pour étudier cette hypothèse, nous proposons une étude empirique sur le lien entre la performance et l’explicabilité de quatre algorithmes de vision par ordinateur : ViT, ResNet50, VGG16 et InceptionV3. Notre étude utilise trois méthodes d’explicabilité locale : LIME, SHAP et GradCam. Nous montrons que si l’IA explicable peut être un outil permettant de questionner la représentation artificielle d’un algorithme et son comportement, elle peut aussi présenter des problèmes de robustesse ou d’informations contradictoires susceptibles de miner la confiance. Les résultats de notre étude montrent que multiplier les outils d’explicabilité permet de vérifier la fiabilité des explications et des informations extraites.",
+  "type": "Conférence",
+  "order": 0
+}

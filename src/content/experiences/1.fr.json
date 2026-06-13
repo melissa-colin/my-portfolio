@@ -1,0 +1,24 @@
+{
+  "id": 1,
+  "title": "Ingénieure R&D – IA et Sûreté",
+  "company": "Sector Group",
+  "companyUrl": "https://www.sector-group.net/",
+  "location": "Villebon-sur-Yvette, Île-de-France, France (à distance)",
+  "period": "Juin 2025 - Août 2025",
+  "description": "Participation à un projet de recherche appliquée sur le développement d’une IA fiable pour extraire de l’information à partir de documents PDF non structurés et non OCRisés.",
+  "technologies": [
+    "Python",
+    "Deep Learning",
+    "Machine Learning",
+    "Vision par Ordinateur",
+    "Traitement de l'image",
+    "IA digne de confiance",
+    "RGPD",
+    "OCR",
+    "RAG",
+    "Sûreté"
+  ],
+  "logo": "assets/images/logos/sector-group.jpeg",
+  "type": "Stage",
+  "order": 0
+}

@@ -1,0 +1,18 @@
+{
+  "id": 3,
+  "title": "Vice President",
+  "company": "Forum INGENIB",
+  "companyUrl": "https://www.ingenib.fr/",
+  "location": "Talence, Nouvelle-Aquitaine, France",
+  "period": "April 2025 - Present",
+  "description": "Organized events, managed teams, and handled corporate relations for the school's career fair.",
+  "technologies": [
+    "Teamwork",
+    "Organization",
+    "Project Management",
+    "Leadership"
+  ],
+  "type": "Volunteer",
+  "logo": "assets/images/logos/ingenib.png",
+  "order": 1
+}

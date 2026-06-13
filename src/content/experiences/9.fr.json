@@ -1,0 +1,17 @@
+{
+  "id": 9,
+  "title": "Web Project Manager",
+  "company": "eveho",
+  "companyUrl": "https://eveho.io/",
+  "location": "Cenon, Nouvelle-Aquitaine, France",
+  "period": "Juin 2022 - Août 2022",
+  "description": "Création de pages web via CMS, stylisation CSS, référencement SEO.",
+  "technologies": [
+    "CMS",
+    "CSS",
+    "SEO"
+  ],
+  "type": "Stage",
+  "logo": "assets/images/logos/eveho.png",
+  "order": 7
+}

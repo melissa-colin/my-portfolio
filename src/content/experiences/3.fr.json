@@ -1,0 +1,18 @@
+{
+  "id": 3,
+  "title": "Vice-présidente",
+  "company": "Forum INGENIB",
+  "companyUrl": "https://www.ingenib.fr/",
+  "location": "Talence, Nouvelle-Aquitaine, France",
+  "period": "Avril 2025 - Présent",
+  "description": "Organisation d'événements, coordination d'équipe et relations entreprises pour le forum de recrutement de l'école.",
+  "technologies": [
+    "Travail d’équipe",
+    "Organisation",
+    "Gestion de projet",
+    "Management"
+  ],
+  "type": "Associatif",
+  "logo": "assets/images/logos/ingenib.png",
+  "order": 1
+}

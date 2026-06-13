@@ -1,0 +1,17 @@
+{
+  "id": 13,
+  "title": "Content Reporting – Cybersecurity",
+  "company": "#StopFisha",
+  "companyUrl": "https://stopfisha.org/",
+  "location": "France",
+  "period": "November 2021 - July 2023",
+  "description": "Participated in online content reporting actions in the context of cybersecurity and human rights.",
+  "technologies": [
+    "Cybersecurity",
+    "Communication",
+    "Digital Ethics"
+  ],
+  "type": "Volunteer",
+  "logo": "assets/images/logos/stopfisha.png",
+  "order": 11
+}

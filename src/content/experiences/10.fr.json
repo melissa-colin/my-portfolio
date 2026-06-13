@@ -1,0 +1,15 @@
+{
+  "id": 10,
+  "title": "Webmaster",
+  "company": "COACHINTERNET.FR",
+  "companyUrl": "https://www.coachinternet.fr/",
+  "location": "Mérignac, Nouvelle-Aquitaine, France (à distance)",
+  "period": "Mai 2022 - Juin 2022",
+  "description": "Création de pages WordPress, publication de contenus sur les réseaux sociaux et marketing digital.",
+  "technologies": [
+    "Marketing Digital"
+  ],
+  "type": "Stage",
+  "logo": "assets/images/logos/coachinternet.png",
+  "order": 8
+}

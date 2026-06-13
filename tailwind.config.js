@@ -2,7 +2,14 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{astro,js,ts,jsx,tsx,md,mdx}",
+  ],
+  // Classes that appear ONLY inside HTML strings stored in content (rendered via
+  // set:html) are invisible to Tailwind's content scanner — keep them explicitly.
+  safelist: [
+    "text-red-600",
+    "dark:text-red-500",
+    "hover:underline",
   ],
   darkMode: 'class',
   theme: {

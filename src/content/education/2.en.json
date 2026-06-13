@@ -1,0 +1,15 @@
+{
+  "id": 2,
+  "degree": "Bachelor in Artificial Intelligence and Data Sciences",
+  "institution": "EPSI - School of Computer Engineering",
+  "location": "Bordeaux, Nouvelle-Aquitaine, France",
+  "period": "2021 - 2024",
+  "description": "Program focused on artificial intelligence, machine learning, and data science, with a strong emphasis on practical applications, including a work-study year in the final year.",
+  "achievements": [
+    "EcoSort: Mobile app for waste sorting using image recognition and geolocation, winner of a national innovation competition. Watch the <a href=\"https://youtu.be/6nccMi2PK1Q\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">presentation video</a>",
+    "VidAI: Web tool that simplifies video editing through AI assistance."
+  ],
+  "gpa": "16.38/20",
+  "rank": "1st in class",
+  "order": 1
+}

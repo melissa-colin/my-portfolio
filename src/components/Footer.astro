@@ -1,0 +1,110 @@
+---
+import { FiMoon, FiLinkedin, FiGithub, FiMail, FiMessageCircle } from 'react-icons/fi';
+import { SiMedium, SiGooglescholar } from 'react-icons/si';
+import { getUI, localizedHref, otherLocaleHref, type Locale } from '../lib/content';
+
+interface Props {
+  locale: Locale;
+  path: string;
+}
+const { locale, path } = Astro.props;
+const ui = await getUI(locale);
+const c = ui.contact ?? {};
+const year = 2026;
+
+const navCol1 = [
+  ['/', ui.nav?.home],
+  ['/publications', ui.nav?.publications],
+  ['/experience', ui.nav?.experience],
+  ['/education', ui.nav?.education],
+] as const;
+const navCol2 = [
+  ['/projects', ui.nav?.projects],
+  ['/certification', ui.nav?.certification],
+  ['/blog', ui.nav?.blog],
+  ['/contact', ui.nav?.contact],
+] as const;
+
+// Language buttons become cross-locale links (en, then fr — original insertion order)
+const langs: Array<[Locale, string]> = [
+  ['en', 'English'],
+  ['fr', 'Français'],
+];
+const linkCls = 'text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500';
+---
+
+<footer class="bg-gray-100 dark:bg-gray-800 py-12 mt-12">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      {/* About */}
+      <div class="md:col-span-1">
+        <h3 class="text-lg font-bold mb-4 text-gray-900 dark:text-white">{ui.home?.heroTitle}</h3>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">{ui.site?.tagline}</p>
+        <div class="flex space-x-3">
+          <a href={c.linkedin} target="_blank" rel="noopener noreferrer" class={linkCls} aria-label="LinkedIn"><FiLinkedin size={20} /></a>
+          <a href={c.github} target="_blank" rel="noopener noreferrer" class={linkCls} aria-label="GitHub"><FiGithub size={20} /></a>
+          <a href={c.medium} target="_blank" rel="noopener noreferrer" class={linkCls} aria-label="Medium"><SiMedium size={20} /></a>
+          <a href={c.scholar} target="_blank" rel="noopener noreferrer" class={linkCls} aria-label="Google Scholar"><SiGooglescholar size={20} /></a>
+          <a href={`mailto:${c.emailAddress}`} class={linkCls} aria-label="Email"><FiMail size={20} /></a>
+          <a href={c.signalLink} target="_blank" rel="noopener noreferrer" class={linkCls} aria-label="Signal"><FiMessageCircle size={20} /></a>
+        </div>
+      </div>
+
+      {/* Navigation */}
+      <div class="md:col-span-1">
+        <h3 class="text-lg font-bold mb-4 text-gray-900 dark:text-white">{ui.footer?.navigation}</h3>
+        <div class="grid grid-cols-2 gap-x-4">
+          <ul class="space-y-2">
+            {navCol1.map(([p, label]) => (
+              <li><a href={localizedHref(p, locale)} class={linkCls}>{label}</a></li>
+            ))}
+          </ul>
+          <ul class="space-y-2">
+            {navCol2.map(([p, label]) => (
+              <li><a href={localizedHref(p, locale)} class={linkCls}>{label}</a></li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {/* Language */}
+      <div class="md:col-span-1">
+        <h3 class="text-lg font-bold mb-4 text-gray-900 dark:text-white">{ui.footer?.language}</h3>
+        <div class="space-y-2">
+          {langs.map(([code, name]) => (
+            <a
+              href={code === locale ? localizedHref(path, locale) : otherLocaleHref(path, locale)}
+              class={`block w-fit px-3 py-1 rounded-md ${code === locale ? 'bg-red-600 text-white' : 'bg-transparent text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
+            >{name}</a>
+          ))}
+        </div>
+
+        {/* Theme Toggle (icon stays moon to match current site) */}
+        <div class="mt-6">
+          <h3 class="text-lg font-bold mb-4 text-gray-900 dark:text-white">{ui.footer?.darkMode}</h3>
+          <button data-theme-toggle class="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500">
+            <FiMoon size={20} />
+            <span>{ui.theme?.dark}</span>
+          </button>
+        </div>
+      </div>
+
+      {/* Contact */}
+      <div class="md:col-span-1">
+        <h3 class="text-lg font-bold mb-4 text-gray-900 dark:text-white">{ui.nav?.contact}</h3>
+        <address class="not-italic text-gray-600 dark:text-gray-400">
+          <p class="mb-2">{c.place}</p>
+          <p class="mb-2"><a href={`mailto:${c.emailAddress}`} class="hover:text-red-600 dark:hover:text-red-500">{c.emailAddress}</a></p>
+        </address>
+        <a href={c.signalLink} class="inline-block mt-2 text-red-600 dark:text-red-500 hover:text-red-700 dark:hover:text-red-400">
+          {locale === 'en' ? 'Send me a message' : "M'envoyer un message"}
+        </a>
+      </div>
+    </div>
+
+    {/* Copyright */}
+    <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-6 text-center text-gray-600 dark:text-gray-400">
+      <p>© {year} {ui.home?.heroTitle}. {locale === 'en' ? 'All rights reserved.' : 'Tous droits réservés.'}</p>
+    </div>
+  </div>
+</footer>

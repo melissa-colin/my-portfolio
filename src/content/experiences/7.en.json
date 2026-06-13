@@ -1,0 +1,15 @@
+{
+  "id": 7,
+  "title": "Male Contraception Volunteer",
+  "company": "Le Planning Familial",
+  "companyUrl": "https://www.planning-familial.org/fr",
+  "location": "Bordeaux, Nouvelle-Aquitaine, France",
+  "period": "December 2022 - September 2024",
+  "description": "Awareness and education on male contraception methods, including the Andro-switch.",
+  "technologies": [
+    "Communication"
+  ],
+  "type": "Volunteer",
+  "logo": "assets/images/logos/planning-familial.png",
+  "order": 5
+}

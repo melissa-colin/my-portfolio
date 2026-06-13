@@ -1,0 +1,16 @@
+{
+  "id": 0,
+  "title": "The 'No' That Means 'Not Yet': A Google Interview Post-Mortem",
+  "excerpt": "Google said 'No' for 2026. Instead of a polished success story, here is a technical analysis of the failure. From the €200 coaching 'bug' to the split-brain interview results, discover how this rejection fueled my strategic pivot to Research at the University of Alberta.",
+  "image": "/assets/images/blog-google-interview.png",
+  "date": "2026-01-12",
+  "readTime": 6,
+  "category": "Engineering & Resilience",
+  "tags": [
+    "Post-Mortem",
+    "Google",
+    "Research Mindset"
+  ],
+  "link": "https://medium.com/@melissa.colin/the-no-that-means-not-yet-anatomy-of-a-google-interview-process-and-why-ill-be-back-fb3f0c2fecc9",
+  "order": 0
+}

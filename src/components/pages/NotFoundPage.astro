@@ -1,0 +1,174 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { FiHome, FiArrowLeft, FiSearch, FiMail } from 'react-icons/fi';
+import { FaTwitter, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { getUI, localizedHref, type Locale } from '../../lib/content';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const ui = await getUI(locale);
+
+const quickLinks = [
+  { name: ui.nav.home, path: '/', icon: FiHome },
+  { name: ui.nav.projects, path: '/projects', icon: FiSearch },
+  { name: ui.nav.experience, path: '/experience', icon: FiArrowLeft },
+  { name: ui.nav.contact, path: '/contact', icon: FiMail },
+];
+
+const socialLinks = [
+  {
+    name: 'LinkedIn',
+    icon: FaLinkedin,
+    url: 'https://www.linkedin.com/in/melissa-colin',
+    color: 'hover:text-blue-600',
+    bgColor: 'hover:bg-blue-600/20',
+    label: 'LinkedIn Profile',
+  },
+  {
+    name: 'GitHub',
+    icon: FaGithub,
+    url: 'https://github.com/melissa-colin',
+    color: 'hover:text-gray-800 dark:hover:text-white',
+    bgColor: 'hover:bg-gray-800/20',
+    label: 'GitHub Profile',
+  },
+  {
+    name: 'Twitter',
+    icon: FaTwitter,
+    url: 'https://twitter.com/melissa_colin_ai',
+    color: 'hover:text-blue-400',
+    bgColor: 'hover:bg-blue-400/20',
+    label: 'Twitter Profile',
+  },
+  {
+    name: 'Email',
+    icon: FaEnvelope,
+    url: 'mailto:melissa.colin@enseirb-matmeca.fr',
+    color: 'hover:text-red-500',
+    bgColor: 'hover:bg-red-500/20',
+    label: 'Send Email',
+  },
+];
+---
+
+<PageLayout locale={locale} path="/404" title={`${ui.notFound.title} | ${ui.site.title}`} description={ui.notFound.message}>
+  <div class="min-h-screen flex flex-col items-center justify-center px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+    <div class="w-full max-w-2xl text-center">
+      {/* Error code with animation */}
+      <div class="relative mb-8">
+        <h1 class="text-9xl md:text-[12rem] font-black text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">
+          404
+        </h1>
+        <div class="absolute inset-0 text-9xl md:text-[12rem] font-black text-red-500/20">
+          404
+        </div>
+      </div>
+
+      {/* Error message */}
+      <div class="mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+          {ui.notFound.pageNotFound}
+        </h2>
+        <p class="text-xl text-gray-300 mb-2">
+          {ui.notFound.message}
+        </p>
+        <p class="text-gray-400">
+          {ui.notFound.suggestion}
+        </p>
+      </div>
+
+      {/* Quick navigation links */}
+      <div class="mb-8">
+        <h3 class="text-lg font-semibold text-white mb-4">
+          {ui.notFound.quickLinks}
+        </h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {quickLinks.map((link: any) => (
+            <div>
+              <a
+                href={localizedHref(link.path, locale)}
+                class="flex flex-col items-center p-4 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-red-500 transition-all duration-300 group"
+              >
+                <link.icon className="w-6 h-6 text-gray-400 group-hover:text-red-400 mb-2" />
+                <span class="text-gray-300 group-hover:text-white text-sm">
+                  {link.name}
+                </span>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Search suggestion */}
+      <div class="mb-8">
+        <div class="bg-gray-800/30 rounded-lg p-6 border border-gray-700">
+          <h3 class="text-lg font-semibold text-white mb-3">
+            {ui.notFound.searchSuggestion}
+          </h3>
+          <p class="text-gray-300 mb-4">
+            {ui.notFound.searchHelp}
+          </p>
+          <div class="social-links justify-center">
+            <div class="flex items-center space-x-4">
+              {socialLinks.map((link: any) => (
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class={`
+              p-2
+              rounded-full transition-all duration-300
+              text-gray-600 dark:text-gray-400
+              ${link.color} ${link.bgColor}
+              hover:transform hover:scale-110
+              focus:outline-none focus:ring-2 focus:ring-red-500/50
+
+            `}
+                  title={link.label}
+                >
+                  <link.icon className="w-6 h-6" />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Back button */}
+      <div>
+        <button
+          id="notfound-back"
+          class="inline-flex items-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors duration-300 mr-4"
+        >
+          <FiArrowLeft className="w-4 h-4 mr-2" />
+          {ui.notFound.goBack}
+        </button>
+
+        <a href={localizedHref('/', locale)}>
+          <button
+            class="inline-flex items-center px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-medium rounded-lg transition-colors duration-300"
+          >
+            <FiHome className="w-4 h-4 mr-2" />
+            {ui.notFound.goHome}
+          </button>
+        </a>
+      </div>
+
+      {/* Fun fact or quote */}
+      <div class="mt-12 text-center">
+        <p class="text-gray-500 text-sm italic">
+          {ui.notFound.funFact}
+        </p>
+      </div>
+    </div>
+  </div>
+</PageLayout>
+
+<script is:inline>
+  (function () {
+    var btn = document.getElementById('notfound-back');
+    if (btn) btn.addEventListener('click', function () { window.history.back(); });
+  })();
+</script>

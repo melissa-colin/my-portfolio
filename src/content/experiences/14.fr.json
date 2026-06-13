@@ -1,0 +1,15 @@
+{
+  "id": 14,
+  "title": "Technicienne maintenance informatique",
+  "company": "Arveyres Informatique",
+  "companyUrl": "",
+  "location": "Arveyres, Nouvelle-Aquitaine, France",
+  "period": "Mars 2018",
+  "description": "Tests de matériel informatique, installation de systèmes d’exploitation, support client.",
+  "technologies": [
+    "Communication",
+    "Matériel"
+  ],
+  "type": "Stage",
+  "order": 12
+}

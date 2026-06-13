@@ -1,0 +1,16 @@
+{
+  "id": 11,
+  "title": "Math Tutor",
+  "company": "Superprof",
+  "companyUrl": "https://www.superprof.fr/",
+  "location": "Bordeaux, France",
+  "period": "December 2018 - December 2021",
+  "description": "Private math lessons and homework help for secondary school students.",
+  "technologies": [
+    "Teaching",
+    "Communication"
+  ],
+  "type": "Freelance",
+  "logo": "assets/images/logos/superprof.jpg",
+  "order": 9
+}

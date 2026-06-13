@@ -1,0 +1,17 @@
+{
+  "id": 9,
+  "title": "Web Project Manager",
+  "company": "eveho",
+  "companyUrl": "https://eveho.io/",
+  "location": "Cenon, Nouvelle-Aquitaine, France",
+  "period": "June 2022 - August 2022",
+  "description": "Created web pages using CMS, applied CSS styling, and worked on SEO.",
+  "technologies": [
+    "CMS",
+    "CSS",
+    "SEO"
+  ],
+  "type": "Internship",
+  "logo": "assets/images/logos/eveho.png",
+  "order": 7
+}

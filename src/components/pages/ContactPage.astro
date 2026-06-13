@@ -1,0 +1,228 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { FiMail, FiMapPin, FiPhone, FiLinkedin, FiGithub, FiMessageCircle } from 'react-icons/fi';
+import { SiMedium, SiGooglescholar, SiSignal } from 'react-icons/si';
+import { getUI, type Locale } from '../../lib/content';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const ui = await getUI(locale);
+const c = ui.contact ?? {};
+
+const socialLinks = [
+  {
+    href: c.linkedin,
+    icon: 'linkedin',
+    label: 'LinkedIn',
+    className:
+      'bg-white dark:bg-gray-900 shadow-lg p-7 rounded-full text-blue-700 dark:text-blue-400 hover:bg-blue-50 hover:text-blue-800 dark:hover:bg-blue-950 dark:hover:text-blue-300 transition-colors text-6xl',
+  },
+  {
+    href: c.github,
+    icon: 'github',
+    label: 'GitHub',
+    className:
+      'bg-white dark:bg-gray-900 shadow-lg p-7 rounded-full text-gray-800 dark:text-gray-200 hover:bg-gray-100 hover:text-black dark:hover:bg-gray-800 dark:hover:text-white transition-colors text-6xl',
+  },
+  {
+    href: c.medium,
+    icon: 'medium',
+    label: 'Medium',
+    className:
+      'bg-white dark:bg-gray-900 shadow-lg p-7 rounded-full text-green-700 dark:text-green-400 hover:bg-green-50 hover:text-green-800 dark:hover:bg-green-950 dark:hover:text-green-300 transition-colors text-6xl',
+  },
+  {
+    href: c.scholar,
+    icon: 'scholar',
+    label: 'Google Scholar',
+    className:
+      'bg-white dark:bg-gray-900 shadow-lg p-7 rounded-full text-yellow-700 dark:text-yellow-400 hover:bg-yellow-50 hover:text-yellow-800 dark:hover:bg-yellow-950 dark:hover:text-yellow-300 transition-colors text-6xl',
+  },
+];
+---
+
+<PageLayout locale={locale} path="/contact" title={`${c.title} | Mélissa Colin`}>
+  <div class="pt-24 pb-20">
+    {/* Hero Section with CTA */}
+    <section class="bg-gray-900 dark:bg-black py-16 relative overflow-hidden">
+      <div class="absolute inset-0 bg-opacity-70">
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-gray-900 via-transparent to-red-900/20 opacity-80"></div>
+      </div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+            {c.title}
+          </h1>
+          <p class="mt-6 text-xl text-gray-200 max-w-2xl mx-auto">
+            {c.subtitle}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Big CTA Email Button */}
+    <div class="mt-10 flex justify-center">
+      <a
+        href={`mailto:${c.emailAddress}`}
+        class="inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white text-2xl font-bold rounded-full shadow-lg transition-colors"
+      >
+        <FiMail className="mr-3 text-3xl" />
+        {c.ctaMail}
+      </a>
+    </div>
+    {/* Signal CTA + Location & Phone side by side */}
+    <section class="py-8">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-8">
+          {/* Signal CTA */}
+          <div class="flex-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white flex items-center justify-center">
+              <SiSignal className="mr-2 text-blue-500" />
+              {c.signalTitle}
+            </h3>
+            <p class="mb-6 text-gray-700 dark:text-gray-300">{c.signalText}</p>
+            <a
+              href={c.signalLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold rounded-full shadow transition-colors"
+            >
+              <FiMessageCircle className="mr-2 text-2xl" />
+              {c.signalButton}
+            </a>
+          </div>
+          {/* Location & Phone */}
+          <div class="flex-1 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+            <h3 class="text-2xl font-bold mb-8 text-gray-900 dark:text-white text-center">
+              {c.locationAndPhone}
+            </h3>
+            <div class="space-y-8">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 bg-red-100 dark:bg-red-900/20 p-3 rounded-full">
+                  <FiMapPin className="text-red-600 dark:text-red-500" />
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-md font-semibold text-gray-900 dark:text-white">
+                    {c.location}
+                  </h4>
+                  <p class="mt-1 text-gray-600 dark:text-gray-400">
+                    {c.place}
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="flex-shrink-0 bg-red-100 dark:bg-red-900/20 p-3 rounded-full">
+                  <FiPhone className="text-red-600 dark:text-red-500" />
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-md font-semibold text-gray-900 dark:text-white">
+                    {locale === 'en' ? 'Phone' : 'Téléphone'}
+                  </h4>
+                  <p class="mt-1 text-gray-600 dark:text-gray-400">
+                    {c.phone}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Socials */}
+    <section class="py-12">
+      <div class="container mx-auto px-4">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-4 text-red-600 dark:text-red-400">
+            {c.followMe}
+          </h2>
+          <p class="mb-8 text-lg text-gray-700 dark:text-gray-300">
+            {c.socialMedia}
+          </p>
+          {/* Desktop: show all, Mobile: carousel */}
+          <div class="hidden sm:flex justify-center space-x-8">
+            {socialLinks.map((link: any) => (
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                class={link.className}
+                aria-label={link.label}
+              >
+                {link.icon === 'linkedin' && <FiLinkedin />}
+                {link.icon === 'github' && <FiGithub />}
+                {link.icon === 'medium' && <SiMedium />}
+                {link.icon === 'scholar' && <SiGooglescholar />}
+              </a>
+            ))}
+          </div>
+          <div class="sm:hidden flex items-center justify-center space-x-4" id="contact-carousel">
+            <button
+              aria-label="Previous"
+              id="contact-carousel-prev"
+              class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+            >
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            {socialLinks.map((link: any, idx: number) => (
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                class={link.className}
+                aria-label={link.label}
+                data-carousel-slide={idx}
+                style={idx === 0 ? '' : 'display:none'}
+              >
+                {link.icon === 'linkedin' && <FiLinkedin />}
+                {link.icon === 'github' && <FiGithub />}
+                {link.icon === 'medium' && <SiMedium />}
+                {link.icon === 'scholar' && <SiGooglescholar />}
+              </a>
+            ))}
+            <button
+              aria-label="Next"
+              id="contact-carousel-next"
+              class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+            >
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 6l6 6-6 6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</PageLayout>
+
+<script is:inline>
+  (function () {
+    var root = document.getElementById('contact-carousel');
+    if (!root) return;
+    var slides = Array.prototype.slice.call(root.querySelectorAll('[data-carousel-slide]'));
+    if (!slides.length) return;
+    var prev = document.getElementById('contact-carousel-prev');
+    var next = document.getElementById('contact-carousel-next');
+    var index = 0;
+
+    function show() {
+      slides.forEach(function (s, i) {
+        s.style.display = i === index ? '' : 'none';
+      });
+    }
+    if (prev) prev.addEventListener('click', function () {
+      index = index === 0 ? slides.length - 1 : index - 1;
+      show();
+    });
+    if (next) next.addEventListener('click', function () {
+      index = index === slides.length - 1 ? 0 : index + 1;
+      show();
+    });
+    show();
+  })();
+</script>

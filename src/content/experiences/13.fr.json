@@ -1,0 +1,17 @@
+{
+  "id": 13,
+  "title": "Signalement - Cybersécurité",
+  "company": "#StopFisha",
+  "companyUrl": "https://stopfisha.org/",
+  "location": "France",
+  "period": "Novembre 2021 - Juillet 2023",
+  "description": "Participation à des actions de signalement de contenus en ligne dans le cadre de la cybersécurité et des droits humains.",
+  "technologies": [
+    "Cybersécurité",
+    "Communication",
+    "Éthique numérique"
+  ],
+  "type": "Associatif",
+  "logo": "assets/images/logos/stopfisha.png",
+  "order": 11
+}

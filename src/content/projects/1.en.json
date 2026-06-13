@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "title": "PoseNet",
+  "description": "A research project on action recognition using human pose data.",
+  "image": "/assets/images/projects/posenet2.png",
+  "technologies": [
+    "Python",
+    "Pose Estimation",
+    "OpenCV",
+    "Deep Learning"
+  ],
+  "github": "https://github.com/melissa-colin/PoseNet",
+  "category": "Vision",
+  "featured": false,
+  "order": 0
+}

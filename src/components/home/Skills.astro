@@ -1,0 +1,55 @@
+---
+import {
+  FiCpu, FiDatabase, FiCode, FiEye, FiMessageSquare, FiBriefcase, FiShield, FiUsers, FiGlobe,
+} from 'react-icons/fi';
+
+interface Props {
+  ui: any;
+}
+const { ui } = Astro.props;
+const { title, subtitle, skills = [], notableTitle, notable = [] } = ui.home?.skillsSection ?? {};
+
+const Icons: Record<string, any> = {
+  FiCpu, FiEye, FiBriefcase, FiCode, FiDatabase, FiMessageSquare, FiShield, FiUsers, FiGlobe,
+};
+---
+
+<section class="py-20">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16 reveal">
+      <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">{title}</h2>
+      <div class="section-bar mx-auto"></div>
+      <p class="mt-6 text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">{subtitle}</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {skills.map((skill: any, i: number) => {
+        const Icon = Icons[skill.icon];
+        return (
+          <div class="reveal bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300" data-reveal-delay={i * 120}>
+            <div class="w-14 h-14 bg-red-100 dark:bg-red-900/20 rounded-full flex items-center justify-center text-red-600 dark:text-red-500 mb-6 mx-auto md:mx-0">
+              {Icon && <Icon size={28} />}
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">{skill.name}</h3>
+            <p class="text-gray-700 dark:text-gray-300">{skill.description}</p>
+          </div>
+        );
+      })}
+    </div>
+
+    {/* Notable achievements */}
+    <div class="mt-16 max-w-4xl mx-auto reveal">
+      <h3 class="text-2xl font-bold mb-6 text-center text-gray-900 dark:text-white">{notableTitle}</h3>
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 md:p-8">
+        <ul class="space-y-4 text-gray-700 dark:text-gray-300">
+          {notable.map((item: string) => (
+            <li class="flex">
+              <span class="text-red-600 dark:text-red-500 mr-2">•</span>
+              <span set:html={item} />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

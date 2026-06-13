@@ -1,0 +1,15 @@
+{
+  "id": 12,
+  "title": "Employée de magasin",
+  "company": "Action",
+  "companyUrl": "https://www.action.com/fr-fr/",
+  "location": "Saint-André-de-Cubzac, France",
+  "period": "Juillet 2021 - Août 2021",
+  "description": "Mise en rayon, gestion des stocks, encaissement.",
+  "technologies": [
+    "Travail d’équipe"
+  ],
+  "type": "Intérimaire",
+  "logo": "assets/images/logos/action.png",
+  "order": 10
+}

@@ -1,0 +1,158 @@
+---
+import { FiMenu, FiX, FiMoon, FiGlobe } from 'react-icons/fi';
+import { getUI, localizedHref, otherLocaleHref, type Locale } from '../lib/content';
+
+interface Props {
+  locale: Locale;
+  /** Language-neutral current path, e.g. '/', '/projects'. */
+  path: string;
+}
+const { locale, path } = Astro.props;
+const ui = await getUI(locale);
+
+const desktopNav = [
+  { path: '/', label: ui.nav?.home },
+  { path: '/publications', label: ui.nav?.publications },
+  { path: '/experience', label: ui.nav?.experience },
+  { path: '/education', label: ui.nav?.education },
+  { path: '/projects', label: ui.nav?.projects },
+  { path: '/certification', label: ui.nav?.certification },
+  { path: '/blog', label: ui.nav?.blog },
+  { path: '/contact', label: ui.nav?.contact },
+];
+const mobileNav = [
+  { path: '/', label: ui.nav?.home },
+  { path: '/certification', label: ui.nav?.certification },
+  { path: '/publications', label: ui.nav?.publications },
+  { path: '/experience', label: ui.nav?.experience },
+  { path: '/education', label: ui.nav?.education },
+  { path: '/projects', label: ui.nav?.projects },
+  { path: '/blog', label: ui.nav?.blog },
+  { path: '/contact', label: ui.nav?.contact },
+];
+
+const isActive = (p: string) => path === p;
+const langCode = locale === 'en' ? 'EN' : 'FR';
+const otherHref = otherLocaleHref(path, locale);
+---
+
+<header
+  id="site-header"
+  class="fixed w-full z-50 bg-transparent"
+  data-scrolled-class="bg-black/80 backdrop-blur-md shadow-lg shadow-red-900/20"
+>
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between py-4">
+      {/* Logo */}
+      <div class="inline-block transition-transform duration-200 hover:scale-105">
+        <a href={localizedHref('/', locale)} class="flex items-center space-x-2">
+          <span class="font-bold text-xl text-white bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent">
+            {ui.home?.heroTitle}
+          </span>
+          <span class="hidden md:block text-red-600">|</span>
+          <span class="hidden md:block text-sm text-gray-300">{ui.site?.tagline}</span>
+        </a>
+      </div>
+
+      {/* Desktop Navigation */}
+      <nav class="hidden md:flex items-center space-x-8">
+        {desktopNav.map((item) => (
+          <div class="transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-110">
+            <a
+              href={localizedHref(item.path, locale)}
+              class={`nav-link relative inline-flex items-center ${isActive(item.path) ? 'text-red-500 font-medium' : 'text-white'}`}
+            >
+              {item.label}
+              {isActive(item.path) && (
+                <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-red-500 to-red-700"></span>
+              )}
+            </a>
+          </div>
+        ))}
+      </nav>
+
+      {/* Header Actions */}
+      <div class="flex items-center">
+        {/* Theme Toggle (icon stays moon to match current site; toggles .dark) */}
+        <button
+          data-theme-toggle
+          class="p-2 rounded-full text-gray-300 hover:bg-red-900/30 transition-all duration-200 hover:scale-110 hover:rotate-12"
+          aria-label={ui.theme?.dark}
+        >
+          <FiMoon size={20} />
+        </button>
+
+        {/* Language Toggle -> cross-locale link */}
+        <a
+          href={otherHref}
+          class="p-2 rounded-full text-gray-300 hover:bg-red-900/30 transition-all duration-200 hover:scale-110 ml-2 flex items-center"
+          aria-label={locale === 'en' ? 'English' : 'Français'}
+        >
+          <FiGlobe size={20} className="text-blue-400" />
+          <span class="ml-1">{langCode}</span>
+        </a>
+
+        {/* Mobile Menu Button */}
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden p-2 rounded-full text-gray-300 hover:bg-red-900/30 transition-colors ml-2"
+          aria-label="Toggle menu"
+        >
+          <span data-menu-icon="closed"><FiMenu size={24} /></span>
+          <span data-menu-icon="open" class="hidden"><FiX size={24} className="text-red-500" /></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {/* Mobile Menu */}
+  <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-lg shadow-xl border-t border-gray-800">
+    <nav class="container mx-auto px-4 py-6">
+      <div class="flex flex-col space-y-4">
+        {mobileNav.map((item) => (
+          <div>
+            <a
+              href={localizedHref(item.path, locale)}
+              class={`block text-lg py-2 ${isActive(item.path) ? 'text-red-500 font-semibold' : 'text-white hover:text-red-400 transition-colors'}`}
+            >
+              {item.label}
+              {isActive(item.path) && <span class="ml-2 inline-block w-2 h-2 rounded-full bg-red-500"></span>}
+            </a>
+          </div>
+        ))}
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script is:inline>
+  (function () {
+    // Scroll / menu background toggle
+    var header = document.getElementById('site-header');
+    var scrolledClasses = (header.getAttribute('data-scrolled-class') || '').split(' ').filter(Boolean);
+    var menuOpen = false;
+    function applyBg() {
+      var on = window.scrollY > 10 || menuOpen;
+      scrolledClasses.forEach(function (c) { header.classList.toggle(c, on); });
+      header.classList.toggle('bg-transparent', !on);
+    }
+    window.addEventListener('scroll', applyBg, { passive: true });
+
+    // Mobile menu toggle
+    var btn = document.getElementById('mobile-menu-btn');
+    var menu = document.getElementById('mobile-menu');
+    var iconClosed = header.querySelector('[data-menu-icon="closed"]');
+    var iconOpen = header.querySelector('[data-menu-icon="open"]');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        menuOpen = !menuOpen;
+        menu.classList.toggle('hidden', !menuOpen);
+        iconClosed.classList.toggle('hidden', menuOpen);
+        iconOpen.classList.toggle('hidden', !menuOpen);
+        applyBg();
+      });
+    }
+
+    applyBg();
+  })();
+</script>

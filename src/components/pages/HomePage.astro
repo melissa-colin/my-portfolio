@@ -1,0 +1,19 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import Hero from '../home/Hero.astro';
+import About from '../home/About.astro';
+import Skills from '../home/Skills.astro';
+import { getUI, type Locale } from '../../lib/content';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const ui = await getUI(locale);
+---
+
+<PageLayout locale={locale} path="/">
+  <Hero ui={ui} locale={locale} />
+  <About ui={ui} locale={locale} />
+  <Skills ui={ui} />
+</PageLayout>

@@ -1,0 +1,15 @@
+{
+  "id": 12,
+  "title": "Store Assistant",
+  "company": "Action",
+  "companyUrl": "https://www.action.com/fr-fr/",
+  "location": "Saint-André-de-Cubzac, France",
+  "period": "July 2021 - August 2021",
+  "description": "Stocking shelves, inventory management, and cashier duties.",
+  "technologies": [
+    "Teamwork"
+  ],
+  "type": "Temporary",
+  "logo": "assets/images/logos/action.png",
+  "order": 10
+}

@@ -1,0 +1,202 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { FiBriefcase, FiExternalLink, FiCalendar, FiMapPin, FiCheckSquare, FiSquare } from 'react-icons/fi';
+import { getUI, getList, type Locale } from '../../lib/content';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const ui = await getUI(locale);
+const e = ui.experience ?? {};
+const experiences = await getList('experiences', locale);
+
+const pageTitle = e.pageTitle;
+const pageSubtitle = e.pageSubtitle ?? '';
+const moreInfo = e.moreInfo ?? '';
+const noExperienceText = e.noExperience ?? 'No experience available.';
+
+// Unique types in first-seen order (matches Array.from(new Set(...)))
+const allTypes = [...new Set(experiences.map((exp: any) => exp.type).filter(Boolean))];
+
+const resetLabel = locale === 'fr' ? 'Réinitialiser' : 'Reset';
+---
+
+<PageLayout locale={locale} path="/experience" title={`${pageTitle} | ${ui.home?.heroTitle}`}>
+  <div class="pt-24 pb-20">
+    {/* Hero Section */}
+    <section class="bg-gray-900 dark:bg-black py-16 relative overflow-hidden exp-page">
+      <div class="absolute inset-0 bg-opacity-70">
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-gray-900 via-transparent to-red-900/20 opacity-80"></div>
+      </div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">{pageTitle}</h1>
+          <div class="section-bar mx-auto bg-red-500"></div>
+          <p class="mt-6 text-xl text-gray-200 max-w-3xl mx-auto">{pageSubtitle}</p>
+        </div>
+      </div>
+    </section>
+    {/* Experience Content */}
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        {/* Filtres par type */}
+        {allTypes.length > 0 && (
+          <div class="mb-10 flex flex-wrap gap-4 justify-center" id="exp-filter">
+            {allTypes.map((type: string) => (
+              <button
+                type="button"
+                data-type={type}
+                class="js-type flex items-center px-4 py-2 rounded-full border transition-colors bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 border-gray-300 dark:border-gray-700 hover:bg-red-100 dark:hover:bg-red-900/30"
+                data-active-class="bg-red-500 text-white border-red-500"
+                data-idle-class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 border-gray-300 dark:border-gray-700 hover:bg-red-100 dark:hover:bg-red-900/30"
+              >
+                <FiCheckSquare className="mr-2 js-icon-check" />
+                <FiSquare className="mr-2 js-icon-square" />
+                <span>{type}</span>
+              </button>
+            ))}
+            <button
+              type="button"
+              id="exp-reset"
+              class="ml-2 px-3 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 border border-gray-300 dark:border-gray-600 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+              style="display:none"
+            >{resetLabel}</button>
+          </div>
+        )}
+        <div id="exp-empty" class="flex justify-center items-center h-64" style="display:none">
+          <span class="text-gray-400 text-lg">{noExperienceText}</span>
+        </div>
+        <div class="space-y-12 max-w-4xl mx-auto reveal" id="exp-list">
+          {experiences.map((experience: any) => (
+            <div
+              class="js-exp bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
+              data-type={experience.type}
+            >
+              <div class="md:flex">
+                <div class="md:w-1/4 flex flex-col items-center justify-center bg-red-900/10 dark:bg-red-900/20">
+                  <div class="w-16 h-16 flex items-center justify-center rounded-full bg-red-900/30 text-red-500 m-6">
+                    {experience.logo ? (
+                      <img
+                        src={experience.logo.startsWith('/') ? experience.logo : `/${experience.logo}`}
+                        alt={experience.company}
+                        class="w-16 h-16 flex items-center justify-center rounded-full bg-red-900/30 text-red-500"
+                        width={64}
+                        height={64}
+                        loading="lazy"
+                      />
+                    ) : (
+                      <FiBriefcase size={32} />
+                    )}
+                  </div>
+                  <span class="mt-2 text-sm text-gray-600 dark:text-gray-300 text-center">
+                    {experience.type}
+                  </span>
+                </div>
+                <div class="md:w-3/4 p-6">
+                  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">{experience.title}</h3>
+                    <div class="flex items-center text-sm text-red-500 font-semibold">
+                      <FiCalendar className="mr-1" />
+                      <span>{experience.period}</span>
+                    </div>
+                  </div>
+                  <div class="flex flex-col md:flex-row md:items-center gap-2 mb-6">
+                    <div class="flex items-center text-gray-700 dark:text-gray-300">
+                      {experience.companyUrl ? (
+                        <a href={experience.companyUrl} target="_blank" rel="noopener noreferrer" class="hover:text-red-500 transition-colors flex items-center">
+                          {experience.company} <FiExternalLink className="ml-1 text-sm" />
+                        </a>
+                      ) : (
+                        <span>{experience.company}</span>
+                      )}
+                    </div>
+                    <span class="hidden md:block text-gray-400 dark:text-gray-600">•</span>
+                    <div class="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+                      <FiMapPin className="mr-1" />
+                      <span>{experience.location}</span>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 dark:text-gray-300 mb-6">{experience.description}</p>
+                  {experience.detail && (
+                    <div
+                      class="js-detail bg-gray-100 dark:bg-gray-900 rounded p-4 mb-4 text-gray-800 dark:text-gray-200"
+                      style="display:none"
+                    >
+                      <div set:html={experience.detail} />
+                    </div>
+                  )}
+                  <div class="flex flex-wrap gap-2">
+                    {experience.technologies && experience.technologies.map((tech: string) => (
+                      <span class="px-3 py-1 bg-gray-200 dark:bg-red-900/20 text-red-600 dark:text-red-400 text-sm rounded-full">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div class="text-center mt-16">
+          <p class="text-gray-400 italic">
+            {moreInfo}
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</PageLayout>
+
+<script is:inline>
+  (function () {
+    var filter = document.getElementById('exp-filter');
+    var list = document.getElementById('exp-list');
+    var empty = document.getElementById('exp-empty');
+    var cards = Array.prototype.slice.call(document.querySelectorAll('#exp-list .js-exp'));
+
+    // Detail reveal on hover (matches original hoveredId behavior)
+    cards.forEach(function (c) {
+      var detail = c.querySelector('.js-detail');
+      if (!detail) return;
+      c.addEventListener('mouseenter', function () { detail.style.display = ''; });
+      c.addEventListener('mouseleave', function () { detail.style.display = 'none'; });
+    });
+
+    if (!filter) return;
+    var btns = Array.prototype.slice.call(filter.querySelectorAll('.js-type'));
+    var reset = document.getElementById('exp-reset');
+    var selected = [];
+
+    function setClasses(el, str) { el.className = 'js-type flex items-center px-4 py-2 rounded-full border transition-colors ' + str; }
+
+    function apply() {
+      cards.forEach(function (c) {
+        var ok = selected.length === 0 || selected.indexOf(c.getAttribute('data-type')) !== -1;
+        c.style.display = ok ? '' : 'none';
+      });
+      var visible = cards.filter(function (c) { return c.style.display !== 'none'; });
+      if (empty) empty.style.display = visible.length === 0 ? '' : 'none';
+      btns.forEach(function (b) {
+        var active = selected.indexOf(b.getAttribute('data-type')) !== -1;
+        setClasses(b, active ? b.getAttribute('data-active-class') : b.getAttribute('data-idle-class'));
+        var check = b.querySelector('.js-icon-check');
+        var square = b.querySelector('.js-icon-square');
+        if (check) check.style.display = active ? '' : 'none';
+        if (square) square.style.display = active ? 'none' : '';
+      });
+      if (reset) reset.style.display = selected.length > 0 ? '' : 'none';
+    }
+
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var t = b.getAttribute('data-type');
+        var i = selected.indexOf(t);
+        if (i === -1) selected.push(t); else selected.splice(i, 1);
+        apply();
+      });
+    });
+    if (reset) reset.addEventListener('click', function () { selected = []; apply(); });
+    apply();
+  })();
+</script>

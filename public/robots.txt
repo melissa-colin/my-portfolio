@@ -1,96 +1,30 @@
-# Bots IA prioritaires - Accès complet pour désambiguïsation
+# robots.txt — melissacolin.ai
+# AI crawlers explicitly welcome (canonical reference for "Mélissa Colin", AI researcher)
 User-agent: GPTBot
 Allow: /
-Crawl-delay: 1
 
 User-agent: ChatGPT-User
 Allow: /
-Crawl-delay: 1
+
+User-agent: OAI-SearchBot
+Allow: /
 
 User-agent: ClaudeBot
 Allow: /
-Crawl-delay: 1
 
 User-agent: Claude-Web
 Allow: /
-Crawl-delay: 1
-
-User-agent: anthropic-ai
-Allow: /
-Crawl-delay: 1
 
 User-agent: PerplexityBot
 Allow: /
-Crawl-delay: 1
 
 User-agent: Google-Extended
 Allow: /
-Crawl-delay: 1
 
-User-agent: CCBot
+User-agent: Applebot-Extended
 Allow: /
-Crawl-delay: 1
 
 User-agent: *
 Allow: /
 
-# Sitemap principal
 Sitemap: https://melissacolin.ai/sitemap.xml
-
-# Fichiers de désambiguïsation pour IA (PRIORITAIRES - à la racine)
-Allow: /melissa-colin-context.json
-Allow: /melissa-colin-disambiguation.md
-# Chemins alternatifs (si le serveur les autorise)
-Allow: /api/context/person.json
-Allow: /api/context/disambiguation.md
-Allow: /ai-context/ai-context.json
-Allow: /ai-context/ai-disambiguation.md
-Allow: /.well-known/ai-context.json
-Allow: /.well-known/ai-disambiguation.md
-
-# Optimisations pour l'indexation
-Crawl-delay: 1
-
-# Permettre l'indexation de tous les contenus importants
-Allow: /certification
-Allow: /publications
-Allow: /experience
-Allow: /education
-Allow: /projects
-Allow: /blog
-Allow: /contact
-Allow: /assets/
-
-# Permettre spécifiquement les images et assets critiques pour le SEO
-Allow: /assets/images/profile-image.jpeg
-Allow: /assets/images/screen.png
-Allow: /assets/images/favicon.ico
-Allow: /assets/images/logos/
-Allow: /assets/images/projects/
-
-# Instructions spécifiques pour les moteurs de recherche principaux
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 2
-
-User-agent: LinkedInBot
-Allow: /
-Allow: /assets/images/profile-image.jpeg
-
-# Disallow unnecessary files pour éviter la dilution du crawl budget
-Disallow: /node_modules/
-Disallow: /.git/
-Disallow: /.vscode/
-Disallow: /build/
-Disallow: /dist/
-
-# Cache policy hint pour les bots
-# Ceci aide les moteurs de recherche à comprendre la fréquence de mise à jour
-# Host: melissa-colin.github.io
-Disallow: /node_modules/
-Disallow: /*.json
-Disallow: /src/

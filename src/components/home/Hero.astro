@@ -1,0 +1,143 @@
+---
+import { FiChevronDown, FiArrowRight } from 'react-icons/fi';
+import { getAge, BIRTH_DATE } from '../../utils/age.js';
+import { localizedHref, type Locale } from '../../lib/content';
+
+interface Props {
+  ui: any;
+  locale: Locale;
+}
+const { ui, locale } = Astro.props;
+const home = ui.home ?? {};
+const age = getAge();
+const ageText = String(home.age ?? '{{age}}').replace('{{age}}', String(age));
+---
+
+<section class="min-h-screen flex items-center py-20 relative overflow-hidden">
+  {/* Background grid pattern */}
+  <div class="absolute inset-0 bg-grid-pattern opacity-10 z-0"></div>
+
+  {/* Ambient pulsing blobs (decorative) */}
+  <div class="absolute inset-0 z-0">
+    <div class="blob absolute top-20 left-10 w-80 h-80 bg-red-400/10 rounded-full blur-3xl" style="animation-duration:8s"></div>
+    <div class="blob absolute bottom-20 right-20 w-96 h-96 bg-red-500/10 rounded-full blur-3xl" style="animation-duration:10s;animation-delay:1s"></div>
+    <div class="blob-center absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-red-600/5 rounded-full blur-3xl" style="animation-duration:15s"></div>
+  </div>
+
+  <div class="container mx-auto px-4 z-10 relative">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <div class="text-center lg:text-left">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 animate-text-shimmer">{home.heroTitle}</h1>
+        <h2 class="text-xl md:text-2xl font-medium mb-6 text-red-400 dark:text-red-400">{ui.site?.tagline}</h2>
+        <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-xl mx-auto lg:mx-0">{home.heroSubtitle}</p>
+
+        <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+          <div class="transition-transform duration-200 hover:-translate-y-1 hover:drop-shadow-[0_10px_25px_rgba(229,20,0,0.4)]">
+            <a href={localizedHref('/experience', locale)} class="btn-primary relative group flex items-center">
+              {home.viewExperience}
+              <span class="inline-block ml-2"><FiArrowRight className="align-middle" /></span>
+              <span class="absolute inset-0 -z-10 rounded-md opacity-0 group-hover:opacity-100 bg-white/10"></span>
+            </a>
+          </div>
+          <div>
+            <a href={localizedHref('/contact', locale)} class="btn-outline relative group overflow-hidden">
+              {home.learnMore}
+              <span class="absolute inset-0 -z-10 bg-gradient-red opacity-0 group-hover:opacity-100"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden lg:block">
+        <div class="relative">
+          <div
+            class="w-full h-[500px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-[1.02]"
+            style="box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1); position: relative;"
+          >
+            <div class="absolute inset-0 overflow-hidden">
+              <img
+                src="/assets/images/profile-image.jpeg"
+                alt="Profile"
+                class="w-full object-cover shadow-lg"
+                style="object-position: center center; image-rendering: auto; height: 107%;"
+                draggable={false}
+                loading="eager"
+                width={1200}
+                height={800}
+              />
+              <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-red-500/20 via-transparent to-transparent opacity-70 pointer-events-none"></div>
+              <div class="absolute bottom-0 right-0 w-full h-full bg-gradient-to-tl from-red-500/20 via-transparent to-transparent opacity-70 pointer-events-none"></div>
+            </div>
+
+            <div class="absolute inset-0">
+              <div class="hline1 absolute top-10 left-10 h-1 bg-red-500 rounded-full" style="animation-duration:5s"></div>
+              <div class="hline2 absolute top-16 left-10 h-1 bg-red-500 rounded-full" style="animation-duration:7s;animation-delay:0.5s"></div>
+              <div class="hline1 absolute bottom-10 right-10 h-1 bg-red-500/30 rounded-full" style="animation-duration:6s;animation-delay:1s"></div>
+              <div class="hline2 absolute bottom-16 right-10 h-1 bg-red-500/20 rounded-full" style="animation-duration:8s;animation-delay:1.5s"></div>
+            </div>
+          </div>
+
+          <div class="absolute -bottom-6 -right-6 bg-gradient-red text-white p-6 rounded-lg shadow-red-glow transition-transform duration-200 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-105">
+            <p class="text-xl font-bold" data-age-text>{ageText}</p>
+            <p class="text-sm">{home.status}</p>
+            <p class="text-sm">{home.school}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Scroll indicator */}
+  <div id="hero-scroll-indicator" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center cursor-pointer z-20">
+    <FiChevronDown className="text-7xl text-red-400 dark:text-red-500 animate-bounce" />
+  </div>
+</section>
+
+<script is:inline define:vars={{ birthDate: BIRTH_DATE, template: home.age ?? '{{age}} years old' }}>
+  // Recompute age live (never stale without a rebuild)
+  (function () {
+    try {
+      var dob = new Date(birthDate);
+      var now = new Date();
+      var age = now.getFullYear() - dob.getFullYear();
+      var hadBday = now.getMonth() > dob.getMonth() || (now.getMonth() === dob.getMonth() && now.getDate() >= dob.getDate());
+      if (!hadBday) age -= 1;
+      var el = document.querySelector('[data-age-text]');
+      if (el) el.textContent = String(template).replace('{{age}}', String(age));
+    } catch (e) {}
+
+    // Hide scroll indicator once scrolled (mirrors atTop behaviour)
+    var ind = document.getElementById('hero-scroll-indicator');
+    if (ind) {
+      ind.addEventListener('click', function () {
+        window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+      });
+      var onScroll = function () { ind.style.display = window.scrollY < 10 ? '' : 'none'; };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+  })();
+</script>
+
+<style>
+  .blob,
+  .blob-center { will-change: transform, opacity; }
+  .blob { animation: blobPulse ease-in-out infinite; }
+  .blob-center { animation: blobPulseCenter ease-in-out infinite; }
+  @keyframes blobPulse {
+    0%, 100% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.2); opacity: 0.5; }
+  }
+  @keyframes blobPulseCenter {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.2; }
+    50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.3; }
+  }
+  /* Decorative corner lines that grow/shrink in width */
+  .hline1 { width: 20px; animation: lineGrow1 ease-in-out infinite; }
+  .hline2 { width: 10px; animation: lineGrow2 ease-in-out infinite; }
+  @keyframes lineGrow1 { 0%, 100% { width: 20px; } 50% { width: 80px; } }
+  @keyframes lineGrow2 { 0%, 100% { width: 10px; } 50% { width: 40px; } }
+  @media (prefers-reduced-motion: reduce) {
+    .blob, .blob-center, .hline1, .hline2 { animation: none; }
+  }
+</style>

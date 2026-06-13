@@ -1,0 +1,25 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import type { Locale } from '../lib/content';
+
+interface Props {
+  locale: Locale;
+  /** Language-neutral current path, e.g. '/', '/projects'. */
+  path: string;
+}
+const { locale, path } = Astro.props;
+// SEO title/description come from src/lib/seo.ts, keyed by pageType (derived from path).
+const pageType = path === '/' ? 'home' : path.replace(/^\//, '');
+---
+
+<BaseLayout locale={locale} pageType={pageType} path={path}>
+  <div class="min-h-screen flex flex-col">
+    <Header locale={locale} path={path} />
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <Footer locale={locale} path={path} />
+  </div>
+</BaseLayout>
