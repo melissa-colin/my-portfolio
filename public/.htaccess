@@ -155,8 +155,9 @@ ErrorDocument 404 /404.html
   Header set Cache-Control "public, max-age=3600"
 </FilesMatch>
 
-# Protection des fichiers de configuration SAUF les fichiers de contexte publics
-<FilesMatch "\.(env|yml|yaml|config)$">
+# Protection des fichiers de configuration sensibles.
+# (.yml/.yaml NOT blocked: the only deployed YAML is /admin/config.yml, which the CMS must read.)
+<FilesMatch "\.(env|config)$">
   Order allow,deny
   Deny from all
 </FilesMatch>
