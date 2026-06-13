@@ -1,5 +1,4 @@
 {
-  "id": 2,
   "degree": "Bachelor en Intelligence Artificielle et Data Sciences",
   "institution": "EPSI - L'école d'ingénierie informatique",
   "location": "Bordeaux, Nouvelle-Aquitaine, France",
@@ -11,5 +10,5 @@
   ],
   "gpa": "16.38/20",
   "rank": "1ère de promotion",
-  "order": 1
+  "order": 30
 }

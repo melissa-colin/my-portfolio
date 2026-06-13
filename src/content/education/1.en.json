@@ -1,5 +1,4 @@
 {
-  "id": 1,
   "degree": "Engineering Degree in Computer Science",
   "specialization": "Specialization in Artificial Intelligence",
   "institution": "ENSEIRB-MATMECA",
@@ -8,5 +7,5 @@
   "description": "An engineering program accredited by the CTI, spanning three years and combining a strong scientific core curriculum with innovative projects (team-based and often in partnership with industry).",
   "gpa": "14.92/20",
   "rank": "Top 3 in class",
-  "order": 0
+  "order": 40
 }

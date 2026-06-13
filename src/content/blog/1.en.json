@@ -1,5 +1,4 @@
 {
-  "id": 1,
   "title": "YOLOv8 Explained: Understanding Object Detection from Scratch",
   "excerpt": "A deep dive into the architecture and implementation details of YOLOv8, the latest iteration of the popular object detection algorithm.",
   "image": "/assets/images/blog-yolov8.jpg",
@@ -12,5 +11,5 @@
     "Deep Learning"
   ],
   "link": "https://medium.com/@melissa.colin/yolov8-explained-understanding-object-detection-from-scratch-763479652312",
-  "order": 1
+  "order": 10
 }

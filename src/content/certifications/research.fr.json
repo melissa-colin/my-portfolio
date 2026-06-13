@@ -1,5 +1,4 @@
 {
-  "id": "research",
   "title": "Rédiger et publier un article scientifique",
   "issuer": "France Université Numérique",
   "date": "Décembre 2023",
@@ -9,5 +8,5 @@
   ],
   "verified": true,
   "link": "https://openbadgefactory.com/validator/result?a=https%3A%2F%2Fopenbadgefactory.com%2Fv1%2Fassertion%2F680c4bd78593df8e2857621c811a5e97864584e4.json",
-  "order": 3
+  "order": 10
 }

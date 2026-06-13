@@ -1,5 +1,4 @@
 {
-  "id": 3,
   "title": "EcoSort",
   "description": "Application mobile qui combine la reconnaissance d'image et la géolocalisation pour aider les utilisateurs à trier correctement leurs déchets.",
   "image": "/assets/images/projects/ecosort.png",
@@ -12,5 +11,5 @@
   "demo": "https://www.youtube.com/watch?v=GGjImtkW-us",
   "category": "Vision",
   "featured": false,
-  "order": 2
+  "order": 10
 }

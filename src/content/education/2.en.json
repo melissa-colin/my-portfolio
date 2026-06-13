@@ -1,5 +1,4 @@
 {
-  "id": 2,
   "degree": "Bachelor in Artificial Intelligence and Data Sciences",
   "institution": "EPSI - School of Computer Engineering",
   "location": "Bordeaux, Nouvelle-Aquitaine, France",
@@ -11,5 +10,5 @@
   ],
   "gpa": "16.38/20",
   "rank": "1st in class",
-  "order": 1
+  "order": 30
 }

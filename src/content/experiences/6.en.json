@@ -1,5 +1,4 @@
 {
-  "id": 6,
   "title": "Python Developer",
   "company": "Cali Intelligences",
   "companyUrl": "https://www.cali-intelligences.com/",
@@ -17,5 +16,5 @@
   "type": "Internship",
   "detail": "\n          <section>\n            <ul>\n              <li>Algorithm optimization and enhancement</li>\n              <li>Python development and testing</li>\n              <li>AI model training</li>\n              <li>Data processing</li>\n              <li>Training in image processing, computer vision, deep learning, and machine learning</li>\n              <li>Training in GDPR regulations</li>\n              <li>Technical documentation</li>\n            </ul>\n          </section>\n        ",
   "logo": "assets/images/logos/cali.jpeg",
-  "order": 4
+  "order": 90
 }

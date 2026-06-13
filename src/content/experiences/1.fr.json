@@ -1,5 +1,4 @@
 {
-  "id": 1,
   "title": "Ingénieure R&D – IA et Sûreté",
   "company": "Sector Group",
   "companyUrl": "https://www.sector-group.net/",
@@ -20,5 +19,5 @@
   ],
   "logo": "assets/images/logos/sector-group.jpeg",
   "type": "Stage",
-  "order": 0
+  "order": 130
 }

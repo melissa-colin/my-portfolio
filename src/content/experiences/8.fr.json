@@ -1,5 +1,4 @@
 {
-  "id": 8,
   "title": "Ambassadrice",
   "company": "EPSI - L'école d'ingénierie informatique",
   "companyUrl": "",
@@ -11,5 +10,5 @@
   ],
   "type": "Associatif",
   "logo": "assets/images/logos/EPSI.png",
-  "order": 6
+  "order": 70
 }

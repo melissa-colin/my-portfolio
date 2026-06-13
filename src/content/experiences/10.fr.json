@@ -1,5 +1,4 @@
 {
-  "id": 10,
   "title": "Webmaster",
   "company": "COACHINTERNET.FR",
   "companyUrl": "https://www.coachinternet.fr/",
@@ -11,5 +10,5 @@
   ],
   "type": "Stage",
   "logo": "assets/images/logos/coachinternet.png",
-  "order": 8
+  "order": 50
 }

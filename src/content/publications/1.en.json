@@ -1,5 +1,4 @@
 {
-  "id": 1,
   "title": "Performances and Explainability of ViT and CNN Architectures: An Empirical Study Using LIME, SHAP, and GradCam",
   "authors": "Colin, M., Chraibi Kkaadoud, I.",
   "venue": "PFIA 2024",
@@ -7,5 +6,5 @@
   "url": "https://hal.science/hal-04641791v1",
   "abstract": "In recent years, explainable AI has been presented as the main solution for building trust between users and AI sys- tems. To investigate this hypothesis, we propose an empirical study on the link between the performance and explai- nability of four computer vision algorithms : ViT, ResNet50, VGG16 and InceptionV3. Our study uses three local explai- nability methods : LIME, SHAP and GradCam. We show that, while explainable AI can be a tool for challenging the artificial representation of an algorithm and its behavior, it can also present robustness problems or contradictory in- formation that undermines trust. Our results show that by multiplying the use of explainable AI algorithms to explain one prediction, it is possible to verify the reliability of the explanations and extracted information.",
   "type": "Conference Paper",
-  "order": 0
+  "order": 10
 }

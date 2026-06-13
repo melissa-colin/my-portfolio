@@ -16,6 +16,8 @@ i18n:
 media_folder: public/assets/images
 public_folder: /assets/images
 
+# Field rule: only "order" and images are shared across languages (i18n: duplicate, edited once
+# on the FR tab, greyed on the EN tab). Everything else is fully editable in both FR and EN.
 collections:
   - name: projects
     label: Projets
@@ -24,19 +26,18 @@ collections:
     extension: json
     format: json
     create: true
-    i18n: true
     identifier_field: title
     summary: '{{title}}'
+    i18n: true
     fields:
-      - { name: id, label: ID, widget: number, i18n: duplicate }
-      - { name: order, label: Ordre, widget: number, i18n: duplicate }
+      - { name: order, label: 'Position (plus le nombre est grand, plus c''est haut)', widget: number, i18n: duplicate, hint: 'Laisse des écarts (10, 20, 30…) pour insérer facilement un nouvel élément.' }
       - { name: title, label: Titre, widget: string }
       - { name: description, label: Description, widget: text }
       - { name: image, label: Image, widget: image, i18n: duplicate }
-      - { name: technologies, label: Technologies, widget: list, i18n: duplicate }
-      - { name: category, label: Catégorie, widget: string, i18n: duplicate }
-      - { name: github, label: Lien GitHub, widget: string, required: false, i18n: duplicate }
-      - { name: demo, label: Lien démo, widget: string, required: false, i18n: duplicate }
+      - { name: technologies, label: Technologies, widget: list }
+      - { name: category, label: Catégorie, widget: string }
+      - { name: github, label: Lien GitHub, widget: string, required: false }
+      - { name: demo, label: Lien démo, widget: string, required: false }
       - { name: featured, label: Mis en avant, widget: boolean, default: false, required: false, i18n: duplicate }
 
   - name: experiences
@@ -46,19 +47,18 @@ collections:
     extension: json
     format: json
     create: true
-    i18n: true
     identifier_field: title
     summary: '{{company}} — {{title}}'
+    i18n: true
     fields:
-      - { name: id, label: ID, widget: number, i18n: duplicate }
-      - { name: order, label: Ordre, widget: number, i18n: duplicate }
+      - { name: order, label: 'Position (plus le nombre est grand, plus c''est haut)', widget: number, i18n: duplicate, hint: 'Laisse des écarts (10, 20, 30…) pour insérer facilement un nouvel élément.' }
       - { name: title, label: Poste, widget: string }
       - { name: company, label: Entreprise, widget: string }
-      - { name: companyUrl, label: Site entreprise, widget: string, required: false, i18n: duplicate }
+      - { name: companyUrl, label: Site entreprise, widget: string, required: false }
       - { name: location, label: Lieu, widget: string }
       - { name: period, label: Période, widget: string }
       - { name: description, label: Description, widget: text }
-      - { name: technologies, label: Technologies, widget: list, i18n: duplicate }
+      - { name: technologies, label: Technologies, widget: list }
       - { name: type, label: Type, widget: string }
       - { name: logo, label: Logo, widget: image, required: false, i18n: duplicate }
       - { name: detail, label: Détail (HTML), widget: text, required: false }
@@ -70,19 +70,18 @@ collections:
     extension: json
     format: json
     create: true
-    i18n: true
     identifier_field: degree
     summary: '{{degree}}'
+    i18n: true
     fields:
-      - { name: id, label: ID, widget: number, i18n: duplicate }
-      - { name: order, label: Ordre, widget: number, i18n: duplicate }
+      - { name: order, label: 'Position (plus le nombre est grand, plus c''est haut)', widget: number, i18n: duplicate, hint: 'Laisse des écarts (10, 20, 30…) pour insérer facilement un nouvel élément.' }
       - { name: degree, label: Diplôme, widget: string }
       - { name: specialization, label: Spécialisation, widget: string, required: false }
       - { name: institution, label: Établissement, widget: string }
       - { name: location, label: Lieu, widget: string }
       - { name: period, label: Période, widget: string }
       - { name: description, label: Description, widget: text, required: false }
-      - { name: gpa, label: Moyenne, widget: string, required: false, i18n: duplicate }
+      - { name: gpa, label: Moyenne, widget: string, required: false }
       - { name: rank, label: Rang, widget: string, required: false }
       - { name: achievements, label: Réalisations (HTML), widget: list, required: false }
 
@@ -93,19 +92,18 @@ collections:
     extension: json
     format: json
     create: true
-    i18n: true
     identifier_field: title
     summary: '{{title}}'
+    i18n: true
     fields:
-      - { name: id, label: ID, widget: string, i18n: duplicate }
-      - { name: order, label: Ordre, widget: number, i18n: duplicate }
+      - { name: order, label: 'Position (plus le nombre est grand, plus c''est haut)', widget: number, i18n: duplicate, hint: 'Laisse des écarts (10, 20, 30…) pour insérer facilement un nouvel élément.' }
       - { name: title, label: Titre, widget: string }
       - { name: issuer, label: Émetteur, widget: string }
       - { name: date, label: Date, widget: string }
       - { name: description, label: Description, widget: text }
-      - { name: categories, label: Catégories, widget: list, i18n: duplicate }
+      - { name: categories, label: Catégories, widget: list }
       - { name: verified, label: Vérifiée, widget: boolean, default: true, required: false, i18n: duplicate }
-      - { name: link, label: Lien, widget: string, required: false, i18n: duplicate }
+      - { name: link, label: Lien, widget: string, required: false }
 
   - name: publications
     label: Publications
@@ -114,17 +112,16 @@ collections:
     extension: json
     format: json
     create: true
-    i18n: true
     identifier_field: title
     summary: '{{title}}'
+    i18n: true
     fields:
-      - { name: id, label: ID, widget: number, i18n: duplicate }
-      - { name: order, label: Ordre, widget: number, i18n: duplicate }
+      - { name: order, label: 'Position (plus le nombre est grand, plus c''est haut)', widget: number, i18n: duplicate, hint: 'Laisse des écarts (10, 20, 30…) pour insérer facilement un nouvel élément.' }
       - { name: title, label: Titre, widget: string }
-      - { name: authors, label: Auteurs, widget: string, i18n: duplicate }
-      - { name: venue, label: Conférence/Revue, widget: string, i18n: duplicate }
-      - { name: year, label: Année, widget: string, i18n: duplicate }
-      - { name: url, label: Lien, widget: string, i18n: duplicate }
+      - { name: authors, label: Auteurs, widget: string }
+      - { name: venue, label: Conférence/Revue, widget: string }
+      - { name: year, label: Année, widget: string }
+      - { name: url, label: Lien, widget: string }
       - { name: abstract, label: Résumé, widget: text }
       - { name: type, label: Type, widget: string }
 
@@ -135,20 +132,19 @@ collections:
     extension: json
     format: json
     create: true
-    i18n: true
     identifier_field: title
     summary: '{{title}}'
+    i18n: true
     fields:
-      - { name: id, label: ID, widget: number, i18n: duplicate }
-      - { name: order, label: Ordre, widget: number, i18n: duplicate }
+      - { name: order, label: 'Position (plus le nombre est grand, plus c''est haut)', widget: number, i18n: duplicate, hint: 'Laisse des écarts (10, 20, 30…) pour insérer facilement un nouvel élément.' }
       - { name: title, label: Titre, widget: string }
       - { name: excerpt, label: Extrait, widget: text }
       - { name: image, label: Image, widget: image, i18n: duplicate }
-      - { name: date, label: Date, widget: string, i18n: duplicate }
-      - { name: readTime, label: Temps de lecture (min), widget: number, i18n: duplicate }
+      - { name: date, label: Date, widget: string }
+      - { name: readTime, label: Temps de lecture (min), widget: number }
       - { name: category, label: Catégorie, widget: string }
-      - { name: tags, label: Tags, widget: list, i18n: duplicate }
-      - { name: link, label: Lien article, widget: string, i18n: duplicate }
+      - { name: tags, label: Tags, widget: list }
+      - { name: link, label: Lien article, widget: string }
 
   # Singleton UI text (hero, about, contact, footer, nav…) — one file per locale
   - name: site_text

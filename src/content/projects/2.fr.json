@@ -1,5 +1,4 @@
 {
-  "id": 2,
   "title": "WitHub",
   "description": "Une boîte à outils complète pour automatiser le versioning de projets sur Git grâce à l'IA.",
   "image": "/assets/images/projects/withub2.png",
@@ -13,5 +12,5 @@
   "demo": null,
   "category": "Outils",
   "featured": false,
-  "order": 1
+  "order": 20
 }

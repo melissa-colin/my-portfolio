@@ -1,5 +1,4 @@
 {
-  "id": 8,
   "title": "Ambassador",
   "company": "EPSI - School of IT Engineering",
   "companyUrl": "",
@@ -11,5 +10,5 @@
   ],
   "type": "Volunteer",
   "logo": "assets/images/logos/EPSI.png",
-  "order": 6
+  "order": 70
 }

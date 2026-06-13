@@ -1,5 +1,4 @@
 {
-  "id": 6,
   "title": "Développeuse Python",
   "company": "Cali Intelligences",
   "companyUrl": "https://www.cali-intelligences.com/",
@@ -17,5 +16,5 @@
   "type": "Stage",
   "detail": "\n          <section>\n            <ul>\n              <li>Optimisation et amélioration des algorithmes</li>\n              <li>Développement et test en python</li>\n              <li>Entraînement de modèles IA</li>\n              <li>Traitement de la donnée</li>\n              <li>Formation au traitement de l'image, à la vision par ordinateur, au deep learning et au machine learning</li>\n              <li>Formation à la réglementation RGPD</li>\n              <li>Documentation technique</li>\n            </ul>\n          </section>\n        ",
   "logo": "assets/images/logos/cali.jpeg",
-  "order": 4
+  "order": 90
 }

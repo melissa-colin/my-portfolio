@@ -18,14 +18,14 @@ export async function getUI(locale: Locale): Promise<any> {
   return entry?.data ?? {};
 }
 
-/** Items of a folder collection for a locale, in their original order. */
+/** Items of a folder collection for a locale, highest `order` first (top of the list). */
 export async function getList(collection: ListCollection, locale: Locale): Promise<any[]> {
   const entries = await getCollection(collection, (e: CollectionEntry<ListCollection>) =>
     e.id.endsWith(`.${locale}`)
   );
   return entries
     .map((e) => e.data as any)
-    .sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+    .sort((a, b) => (b.order ?? 0) - (a.order ?? 0));
 }
 
 /** Localized URL: French is unprefixed (`/path`), English is under `/en`. */

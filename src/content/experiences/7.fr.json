@@ -1,5 +1,4 @@
 {
-  "id": 7,
   "title": "Permanence contraception masculine",
   "company": "Le Planning Familial",
   "companyUrl": "https://www.planning-familial.org/fr",
@@ -11,5 +10,5 @@
   ],
   "type": "Associatif",
   "logo": "assets/images/logos/planning-familial.png",
-  "order": 5
+  "order": 80
 }

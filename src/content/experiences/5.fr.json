@@ -1,5 +1,4 @@
 {
-  "id": 5,
   "title": "Développeuse IA",
   "company": "Cali Intelligences",
   "companyUrl": "https://www.cali-intelligences.com/",
@@ -27,5 +26,5 @@
   "type": "Alternance",
   "detail": "\n          <section>\n            <h4>R&D :</h4>\n            <ul>\n              <li>Développement d'une nouvelle méthode de reconnaissance d'actions pour les comportements suspects</li>\n              <li>Amélioration des modèles et de leur compréhension</li>\n              <li>Développement Python et C++</li>\n              <li>Explicabilité</li>\n              <li>Réduction du temps de traitement des modèles de reconnaissance d'actions de 70 % grâce à l'optimisation des algorithmes</li>\n              <li>Conduite de projets de R&D ayant abouti à la création de 3 nouvelles fonctionnalités</li>\n            </ul>\n            <h4>QA/QC :</h4>\n            <ul>\n              <li>Tri des données</li>\n              <li>Analyse des données et statistiques pour plus de 100 000 vidéos</li>\n              <li>Labellisation</li>\n              <li>Mise en place de processus de QA/QC, garantissant des données de haute qualité pour l'entraînement des modèles</li>\n            </ul>\n            <h4>MLOps :</h4>\n            <ul>\n              <li>Mise en place de pipelines pour l'entraînement de l'IA</li>\n              <li>Amélioration de l'entraînement grâce à l'augmentation de données</li>\n              <li>Optimisation des hyperparamètres du modèle</li>\n              <li>Optimisation des modèles d'apprentissage profond améliorant la précision du modèle de 60 % à 90 %</li>\n            </ul>\n          </section>\n        ",
   "logo": "assets/images/logos/cali.jpeg",
-  "order": 3
+  "order": 100
 }
