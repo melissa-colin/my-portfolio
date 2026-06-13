@@ -70,7 +70,7 @@ const formatDate = (dateString: string) => fmt.format(new Date(dateString));
               </div>
             </div>
             {/* Posts */}
-            <div class="space-y-10" id="blog-posts">
+            <div class="space-y-10" id="blog-posts" data-stagger>
               <div id="blog-empty" class="text-center text-gray-500 dark:text-gray-400" style="display:none;">
                 {b.noPostsFound || 'Aucun article trouvé.'}
               </div>

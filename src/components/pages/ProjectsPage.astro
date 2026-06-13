@@ -71,7 +71,7 @@ const demoLabel = (demo: string) =>
         </div>
 
         {/* Cards */}
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto reveal" id="projects-grid">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto" id="projects-grid" data-stagger>
           {projects.map((project: any) => (
             <div
               class="js-project bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"

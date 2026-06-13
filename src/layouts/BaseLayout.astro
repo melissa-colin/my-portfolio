@@ -44,8 +44,12 @@ const { locale, pageType, path, title, description } = Astro.props;
       .reveal { transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
       html.js .reveal { opacity: 0; transform: translateY(24px); }
       html.js .reveal.in-view { opacity: 1; transform: none; }
+      /* Staggered cascade for grid/list children (opacity-only -> no clash with hover transforms) */
+      html.js [data-stagger] > * { opacity: 0; transition: opacity 0.5s ease-out; }
+      html.js [data-stagger].in-view > * { opacity: 1; }
       @media (prefers-reduced-motion: reduce) {
         html.js .reveal { opacity: 1; transform: none; transition: none; }
+        html.js [data-stagger] > * { opacity: 1; transition: none; }
       }
     </style>
   </head>
@@ -57,22 +61,28 @@ const { locale, pageType, path, title, description } = Astro.props;
     {/* Scroll reveal: reveal elements as they enter the viewport (with optional stagger) */}
     <script is:inline>
       (function () {
-        var els = document.querySelectorAll('.reveal');
+        var els = document.querySelectorAll('.reveal, [data-stagger]');
         if (!('IntersectionObserver' in window) || !els.length) {
           els.forEach(function (e) { e.classList.add('in-view'); });
           return;
         }
         var io = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              var el = entry.target;
+            if (!entry.isIntersecting) return;
+            var el = entry.target;
+            if (el.hasAttribute('data-stagger')) {
+              var kids = el.children;
+              for (var i = 0; i < kids.length; i++) {
+                kids[i].style.transitionDelay = ((i % 8) * 70) + 'ms';
+              }
+            } else {
               var delay = el.getAttribute('data-reveal-delay');
               if (delay) el.style.transitionDelay = delay + 'ms';
-              el.classList.add('in-view');
-              io.unobserve(el);
             }
+            el.classList.add('in-view');
+            io.unobserve(el);
           });
-        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
         els.forEach(function (e) { io.observe(e); });
       })();
     </script>

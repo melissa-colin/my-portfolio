@@ -67,7 +67,7 @@ const resetLabel = locale === 'fr' ? 'Réinitialiser' : 'Reset';
         <div id="exp-empty" class="flex justify-center items-center h-64" style="display:none">
           <span class="text-gray-400 text-lg">{noExperienceText}</span>
         </div>
-        <div class="space-y-12 max-w-4xl mx-auto reveal" id="exp-list">
+        <div class="space-y-12 max-w-4xl mx-auto" id="exp-list" data-stagger>
           {experiences.map((experience: any) => (
             <div
               class="js-exp bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"

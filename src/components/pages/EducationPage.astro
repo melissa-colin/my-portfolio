@@ -35,7 +35,7 @@ const educationData = await getList('education', locale);
             <p>{locale === 'fr' ? 'Aucune formation à afficher.' : 'No education to display.'}</p>
           </div>
         ) : (
-          <div class="space-y-12 max-w-4xl mx-auto">
+          <div class="space-y-12 max-w-4xl mx-auto" data-stagger>
             {educationData.map((edu: any) => (
               <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 md:p-8 border border-gray-200 dark:border-gray-800 hover:border-red-900/50 transition-colors">
                 <div class="flex flex-col md:flex-row md:items-start gap-6">

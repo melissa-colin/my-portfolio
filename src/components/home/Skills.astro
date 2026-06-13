@@ -22,11 +22,11 @@ const Icons: Record<string, any> = {
       <p class="mt-6 text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">{subtitle}</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {skills.map((skill: any, i: number) => {
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-stagger>
+      {skills.map((skill: any) => {
         const Icon = Icons[skill.icon];
         return (
-          <div class="reveal bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300" data-reveal-delay={i * 120}>
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
             <div class="w-14 h-14 bg-red-100 dark:bg-red-900/20 rounded-full flex items-center justify-center text-red-600 dark:text-red-500 mb-6 mx-auto md:mx-0">
               {Icon && <Icon size={28} />}
             </div>
