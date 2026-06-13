@@ -37,12 +37,16 @@ jobs:
 
       - name: Deploy dist -> my-portfolio-dist (served by Hostinger)
         run: |
-          cd dist
-          git init -q -b main
+          # Clone the deploy repo to PRESERVE its history, so Hostinger can fast-forward
+          # (a fresh `git init` + force-push rewrites history and breaks Hostinger's pull).
+          git clone --depth 5 "https://x-access-token:${DEPLOY_TOKEN}@github.com/melissa-colin/my-portfolio-dist.git" deploy-repo
+          rsync -a --delete --exclude '.git' dist/ deploy-repo/
+          cd deploy-repo
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
+          if git diff --cached --quiet; then echo "No changes to deploy"; exit 0; fi
           git commit -q -m "Deploy ${GITHUB_SHA::7} from ${GITHUB_REF_NAME}"
-          git push -f "https://x-access-token:${DEPLOY_TOKEN}@github.com/melissa-colin/my-portfolio-dist.git" main
+          git push origin HEAD:main
         env:
           DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
