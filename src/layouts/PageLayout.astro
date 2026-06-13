@@ -17,7 +17,7 @@ const pageType = path === '/' ? 'home' : path.replace(/^\//, '');
 <BaseLayout locale={locale} pageType={pageType} path={path}>
   <div class="min-h-screen flex flex-col">
     <Header locale={locale} path={path} />
-    <main class="flex-grow">
+    <main class="flex-grow page-enter">
       <slot />
     </main>
     <Footer locale={locale} path={path} />
