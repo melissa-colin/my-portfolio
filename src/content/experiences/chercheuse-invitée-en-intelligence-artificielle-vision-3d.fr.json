@@ -1,0 +1,16 @@
+{
+  "id": 15,
+  "order": 0,
+  "title": "Chercheuse Invitée en Intelligence Artificielle (Vision 3D)",
+  "company": "University of Alberta | Vision and Learning lab",
+  "companyUrl": "https://vision-and-learning-lab-ualberta.github.io/",
+  "location": "Edmonton, AB, Canada",
+  "period": "Mai 2026 - Sept 2026",
+  "description": "Lauréate de la bourse d'excellence Mitacs Globalink pour mener des recherches fondamentales au sein du Vision and Learning Lab, sous la supervision du Prof. Li Cheng\n\nObjectif de recherche : Soumission des résultats aux conférences majeures du domaine (CVPR/ICCV/ICLR).",
+  "technologies": [
+    "Python"
+  ],
+  "type": "Stage",
+  "logo": "/assets/images/images-4.jpeg",
+  "detail": ""
+}
