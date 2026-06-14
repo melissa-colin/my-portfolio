@@ -57,7 +57,7 @@ const ageText = String(home.age ?? '{{age}}').replace('{{age}}', String(age));
             <div class="absolute inset-0 overflow-hidden">
               <img
                 src="/assets/images/profile-image.jpeg"
-                alt="Profile"
+                alt={locale === 'en' ? 'Portrait of Mélissa Colin' : 'Portrait de Mélissa Colin'}
                 class="w-full object-cover shadow-lg"
                 style="object-position: center center; image-rendering: auto; height: 107%;"
                 draggable={false}

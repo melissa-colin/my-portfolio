@@ -1,0 +1,18 @@
+{
+  "title": "ASR for dysarthria",
+  "description": "Real-time speech recognition adapted to dysarthric voices. Two-stage pipeline: fine-tuning wav2vec2 on healthy speech, then speaker adaptation via LoRA to avoid catastrophic forgetting. My ENSEIRB-MATMECA capstone, driven by accessibility (+28 accuracy points over zero-shot on the target speaker).",
+  "image": "/assets/images/projects/asr.png",
+  "technologies": [
+    "Python",
+    "PyTorch",
+    "wav2vec2",
+    "LoRA / PEFT",
+    "Hugging Face",
+    "ASR"
+  ],
+  "github": "https://github.com/melissa-colin/asr-dysarthrie",
+  "demo": null,
+  "category": "Research",
+  "featured": true,
+  "order": 40
+}

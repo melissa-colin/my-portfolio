@@ -20,26 +20,27 @@ const { locale, pageType, path, title, description } = Astro.props;
 
     <SEO locale={locale} pageType={pageType} path={path} title={title} description={description} />
 
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/assets/images/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon.png" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#171717" />
 
-    {/* Pre-paint theme (no flash): mirror ThemeContext — localStorage 'theme' else system pref */}
+    {/* Dark-only theme (the design is dark by nature). Set before first paint. */}
     <script is:inline>
       (function () {
         document.documentElement.classList.add('js'); // enables scroll-reveal only when JS is on
-        try {
-          var t = localStorage.getItem('theme');
-          var dark = t ? t === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
-          document.documentElement.classList.toggle('dark', dark);
-        } catch (e) {
-          document.documentElement.classList.add('dark');
-        }
+        document.documentElement.classList.add('dark');
       })();
     </script>
 
     <style is:global>
+      /* ===== Accessibility: visible keyboard focus (recruiter/a11y-grade) ===== */
+      a:focus-visible, button:focus-visible, [tabindex]:focus-visible, input:focus-visible, textarea:focus-visible {
+        outline: 2px solid #ff3131;
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
       /* ===== Scroll reveal (below-the-fold) — content stays visible without JS ===== */
       .reveal { transition: opacity 0.9s ease-out, transform 0.9s ease-out; }
       html.js .reveal { opacity: 0; transform: translateY(28px); }
@@ -98,7 +99,7 @@ const { locale, pageType, path, title, description } = Astro.props;
             el.classList.add('in-view');
             io.unobserve(el);
           });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
         els.forEach(function (e) { io.observe(e); });
       })();
     </script>
@@ -114,16 +115,5 @@ const { locale, pageType, path, title, description } = Astro.props;
       });
     </script>
 
-    {/* Global theme toggle: any [data-theme-toggle] flips .dark + persists (mirrors ThemeContext) */}
-    <script is:inline>
-      document.addEventListener('click', function (e) {
-        var t = e.target.closest && e.target.closest('[data-theme-toggle]');
-        if (!t) return;
-        var isDark = document.documentElement.classList.toggle('dark');
-        try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch (err) {}
-        var meta = document.querySelector('meta[name="theme-color"]');
-        if (meta) meta.setAttribute('content', isDark ? '#171717' : '#ffffff');
-      });
-    </script>
   </body>
 </html>

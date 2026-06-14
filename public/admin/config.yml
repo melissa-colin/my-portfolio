@@ -121,8 +121,10 @@ collections:
       - { name: authors, label: Auteurs, widget: string }
       - { name: venue, label: Conférence/Revue, widget: string }
       - { name: year, label: Année, widget: string }
-      - { name: url, label: Lien, widget: string }
-      - { name: abstract, label: Résumé, widget: text }
+      - { name: url, label: Lien, widget: string, required: false }
+      - { name: contribution, label: Ma contribution, widget: text, required: false }
+      - { name: abstract, label: Résumé, widget: text, required: false }
+      - { name: bibtex, label: BibTeX, widget: text, required: false }
       - { name: type, label: Type, widget: string }
 
   - name: blog
@@ -183,6 +185,36 @@ collections:
               - { name: github, label: GitHub, widget: string }
               - { name: medium, label: Medium, widget: string }
               - { name: scholar, label: Google Scholar, widget: string }
+          - name: proof
+            label: Bande de preuves
+            widget: object
+            fields:
+              - name: items
+                label: Chiffres clés
+                widget: list
+                fields:
+                  - { name: value, label: Valeur, widget: string }
+                  - { name: label, label: Légende, widget: string }
+          - name: research
+            label: Section recherche
+            widget: object
+            fields:
+              - { name: title, label: Titre, widget: string }
+              - { name: lead, label: Accroche, widget: string }
+              - { name: intro, label: Intro, widget: text }
+              - name: pillars
+                label: Piliers
+                widget: list
+                fields:
+                  - { name: icon, label: 'Icône (FiGlobe/FiActivity/FiZap)', widget: string }
+                  - { name: title, label: Titre, widget: string }
+                  - { name: desc, label: Description, widget: text }
+              - { name: nowLabel, label: 'Libellé « en ce moment »', widget: string }
+              - { name: now, label: 'En ce moment', widget: text }
+              - { name: goalLabel, label: 'Libellé « objectif »', widget: string }
+              - { name: goal, label: Objectif, widget: string }
+              - { name: ctaPublications, label: 'CTA publications', widget: string }
+              - { name: ctaContact, label: 'CTA contact', widget: string }
       - name: en
         label: Text (English)
         file: src/content/ui/en.json
@@ -215,3 +247,33 @@ collections:
               - { name: github, label: GitHub, widget: string }
               - { name: medium, label: Medium, widget: string }
               - { name: scholar, label: Google Scholar, widget: string }
+          - name: proof
+            label: Proof bar
+            widget: object
+            fields:
+              - name: items
+                label: Key figures
+                widget: list
+                fields:
+                  - { name: value, label: Value, widget: string }
+                  - { name: label, label: Caption, widget: string }
+          - name: research
+            label: Research section
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: lead, label: Lead, widget: string }
+              - { name: intro, label: Intro, widget: text }
+              - name: pillars
+                label: Pillars
+                widget: list
+                fields:
+                  - { name: icon, label: 'Icon (FiGlobe/FiActivity/FiZap)', widget: string }
+                  - { name: title, label: Title, widget: string }
+                  - { name: desc, label: Description, widget: text }
+              - { name: nowLabel, label: '"Right now" label', widget: string }
+              - { name: now, label: 'Right now', widget: text }
+              - { name: goalLabel, label: '"Goal" label', widget: string }
+              - { name: goal, label: Goal, widget: string }
+              - { name: ctaPublications, label: 'CTA publications', widget: string }
+              - { name: ctaContact, label: 'CTA contact', widget: string }

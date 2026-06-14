@@ -1,0 +1,19 @@
+{
+  "order": 140,
+  "title": "AI Research Intern (3D Motion Generation)",
+  "company": "University of Alberta | Vision and Learning Lab",
+  "companyUrl": "https://vision-and-learning-lab-ualberta.github.io/",
+  "location": "Edmonton, AB, Canada",
+  "period": "May 2026 - Sept 2026",
+  "description": "Mitacs Globalink research excellence scholarship, at Prof. Li Cheng's Vision and Learning Lab. Together with Yilin Wang, I work on a model for music- and text-prompt-conditioned multi-person 3D dance generation, aiming for a CVPR submission.\n\nMy first step is to make the data reliable, meaning physically correct motion. In practice, I estimate the ground plane robustly and fix motion artifacts (foot-skating, floating, dancer-to-dancer interpenetration, foot-ground contacts), while building the physics-based evaluation metrics, on the AIOZ-GDANCE dataset. After that, I'll move on to the architecture of the generative model itself.",
+  "technologies": [
+    "Python",
+    "PyTorch",
+    "SMPL",
+    "3D Motion Generation",
+    "Physics-based Metrics"
+  ],
+  "type": "Research Internship",
+  "logo": "/assets/images/images-4.jpeg",
+  "detail": ""
+}

@@ -1,7 +1,7 @@
 {
   "home": {
     "heroTitle": "Mélissa Colin",
-    "heroSubtitle": "Je conçois les architectures de modèles de demain — bio-inspirées, orientées « world models » et efficaces au-delà des Transformers, quel que soit le domaine d'application. Actuellement chercheuse visitante Mitacs Globalink au Vision & Learning Lab de l'Université d'Alberta (génération de mouvement 3D guidée par la physique). Mon cap : devenir Research Scientist chez Google.",
+    "heroSubtitle": "Ce qui me passionne, c'est de repenser les fondations de l'IA : des architectures inspirées du vivant, capables de se construire un « modèle du monde » et plus sobres que les Transformers, quel que soit leur domaine d'application. En ce moment, je suis en stage de recherche Mitacs Globalink au Vision & Learning Lab de l'Université d'Alberta, où je travaille sur la génération de mouvement 3D guidée par la physique. Mon rêve : devenir un jour Research Scientist chez Google.",
     "status": "Élève-Ingénieure",
     "school": "ENSEIRB-MATMECA",
     "viewProjects": "Voir les Projets",
@@ -11,67 +11,67 @@
     "aboutTitle": "À Propos de Moi",
     "skillsSection": {
       "title": "Expertise & Compétences",
-      "subtitle": "Un socle technique et humain, centré sur la conception d'architectures de modèles, les world models et les systèmes bio-inspirés — l'IA explicable et la vision restant des outils.",
+      "subtitle": "Un socle technique et humain, tourné vers ce qui m'intéresse vraiment : les architectures de modèles, les world models et les systèmes bio-inspirés. La vision par ordinateur et l'IA explicable, elles, restent des outils.",
       "skills": [
         {
-          "id": "deeplearning",
+          "id": "architectures",
           "icon": "FiCpu",
-          "name": "Architectures de Deep Learning",
-          "description": "CNN, ViT, Transformers, modèles de diffusion, mécanismes d'attention, architectures encodeur-décodeur"
+          "name": "Conception d'architectures de modèles",
+          "description": "World models, modèles bio-inspirés, efficacité post-Transformer, mécanismes d'attention, modèles de diffusion, fine-tuning (LoRA/PEFT)"
+        },
+        {
+          "id": "research",
+          "icon": "FiActivity",
+          "name": "Méthodologie de recherche",
+          "description": "Études empiriques, ablations, métriques et reproductibilité, lecture critique de la littérature, rédaction scientifique"
+        },
+        {
+          "id": "math",
+          "icon": "FiTrendingUp",
+          "name": "Fondations mathématiques",
+          "description": "Algèbre linéaire, optimisation, probabilités, théorie de l'information"
+        },
+        {
+          "id": "vision",
+          "icon": "FiEye",
+          "name": "Deep Learning & Vision",
+          "description": "CNN, ViT, Transformers, modèles de diffusion, estimation de pose, OpenCV"
         },
         {
           "id": "languages",
           "icon": "FiCode",
-          "name": "Langages de Programmation",
-          "description": "Python, C, JavaScript, R, SQL"
-        },
-        {
-          "id": "frameworks",
-          "icon": "FiDatabase",
-          "name": "Frameworks data & IA",
-          "description": "OpenCV, PyTorch, TensorFlow, NumPy, Pandas, scikit-learn"
+          "name": "Langages & frameworks",
+          "description": "Python, PyTorch, NumPy, Pandas, scikit-learn, C, SQL"
         },
         {
           "id": "mlops",
           "icon": "FiBriefcase",
-          "name": "MLOps & Déploiement",
+          "name": "MLOps & passage à l'échelle",
           "description": "Docker, Kubernetes, Kubeflow, pipelines d'entraînement optimisés"
         },
         {
-          "id": "xai",
-          "icon": "FiEye",
-          "name": "Recherche & World Models",
-          "description": "Modèles du monde, IA bio-inspirée, apprentissage guidé par la physique, efficacité post-Transformer (IA explicable en appui)"
-        },
-        {
-          "id": "certification",
-          "icon": "FiMessageSquare",
-          "name": "Recherche & Communication",
-          "description": "Rédaction scientifique, présentations techniques, diffusion des connaissances"
-        },
-        {
-          "id": "laws-ethics",
+          "id": "ethics",
           "icon": "FiShield",
-          "name": "Droit & Éthique de l'IA",
-          "description": "Conformité RGPD, IA Act, éthique de l'IA, biais algorithmiques, responsabilité des systèmes d'IA"
+          "name": "Éthique & fiabilité de l'IA",
+          "description": "Robustesse, biais algorithmiques, RGPD et IA Act"
         },
         {
           "id": "softskills",
           "icon": "FiUsers",
-          "name": "Compétences Interpersonnelles",
-          "description": "Curiosité, organisation, adaptabilité, leadership, collaboration"
+          "name": "Compétences interpersonnelles",
+          "description": "Curiosité, rigueur, autonomie, leadership, collaboration"
         },
         {
           "id": "languages-spoken",
           "icon": "FiGlobe",
-          "name": "Langues Parlées",
-          "description": "Français (natif), Anglais (courant), Chinois (débutant)"
+          "name": "Langues",
+          "description": "Français (natif), Anglais (courant, TOEIC 840), Chinois (notions)"
         }
       ],
       "notableTitle": "Réalisations Notables",
       "notable": [
-        "Bourse d'excellence <a href=\"https://www.mitacs.ca/fr/programmes/globalink/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Mitacs Globalink</a> : chercheuse visitante au Vision &amp; Learning Lab de l'Université d'Alberta (génération de mouvement 3D guidée par la physique)",
-        "Auteure d'un premier article évalué par les pairs à 20 ans — étude empirique d'architectures ViT et CNN, présenté à <a href=\"https://hal.science/hal-04641791v1\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">PFIA 2024</a>",
+        "Bourse d'excellence <a href=\"https://www.mitacs.ca/fr/programmes/globalink/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Mitacs Globalink</a> : stage de recherche au Vision &amp; Learning Lab de l'Université d'Alberta, sur la génération de mouvement 3D guidée par la physique",
+        "Mon premier article évalué par les pairs, publié à 20 ans : une étude empirique d'architectures ViT et CNN, présentée à <a href=\"https://hal.science/hal-04641791v1\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">PFIA 2024</a>",
         "Classée parmi les 3 premières (3/93) de la filière informatique de l'ENSEIRB-MATMECA, et lauréate d'une compétition nationale d'innovation avec EcoSort",
         "Vice-présidente du forum de recrutement <a href=\"https://www.ingenib.fr/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Ingenib</a> de l'ENSEIRB-MATMECA (équipe de 22 personnes)"
       ]
@@ -81,22 +81,22 @@
   },
   "about": {
     "title": "À Propos de Moi",
-    "intro": "Élève-ingénieure à l'<strong>ENSEIRB-MATMECA</strong> (parcours ingénieur-docteur), je consacre ma recherche à la <strong>conception des architectures de modèles de demain</strong> — bio-inspirées, « world models » et efficaces au-delà des Transformers. Je suis actuellement <strong>chercheuse visitante Mitacs Globalink</strong> au Vision &amp; Learning Lab de l'<strong>Université d'Alberta</strong>, sur la génération de mouvement 3D guidée par la physique. Mon objectif : un poste de <strong>Research Scientist chez Google</strong>.",
-    "section1Title": "Un parcours atypique, forgé par la passion",
-    "section1p1": "Ma passion pour l'informatique a commencé très tôt. À <strong>12 ans</strong>, je découvrais Scratch, à <strong>13 ans</strong>, je me formais seule en Python, et à <strong>15 ans</strong>, je choisissais un lycée technique. Très vite, je me suis rendu compte que ce qui me captivait, c'était <strong>l'algorithmique</strong>, plus que la création de sites web ou le développement de jeux. J'ai tâtonné un moment – robotique, développement, projets Arduino – avant de trouver une véritable résonance dans l'<strong>intelligence artificielle</strong>.",
-    "section1p2": "Ce déclic, je l'ai eu lors d'un stage en IA chez Cali Intelligences, une start-up de vision par ordinateur. Ce fut une révélation : je m'y suis lancée corps et âme, avec une conviction — <strong>contribuer aux fondations de l'IA</strong>, en <strong>repensant les architectures de modèles elles-mêmes</strong> (bio-inspiration, world models, efficacité) plutôt qu'en empilant des couches. Cette conviction m'a menée au parcours ingénieur-docteur de l'ENSEIRB-MATMECA, puis à la recherche au Vision &amp; Learning Lab de l'Université d'Alberta.",
-    "section2Title": "Une volonté de réorientation et de dépassement",
-    "section2p1": "Issue d'un cursus orienté pratique, j'ai fait le choix exigeant de me <strong>réorienter vers l'académique</strong> pour consolider mes fondations en mathématiques et en algorithmique. J'ai intégré l'ENSEIRB-MATMECA sur titre et m'y suis classée parmi les <strong>3 premières de ma promotion</strong>, prouvant que <strong>la détermination et l'autodidaxie rivalisent avec les parcours les plus classiques</strong>.",
+    "intro": "Je suis élève-ingénieure à l'<strong>ENSEIRB-MATMECA</strong>, en parcours ingénieur-docteur. Ce qui m'anime, c'est de <strong>repenser les architectures de modèles</strong> : les rendre plus inspirées du vivant, capables de se construire un « modèle du monde » et plus efficaces que les Transformers. En ce moment, je suis en <strong>stage de recherche Mitacs Globalink</strong> au Vision &amp; Learning Lab de l'<strong>Université d'Alberta</strong>, sur la génération de mouvement 3D guidée par la physique. Et mon objectif à terme, c'est de devenir <strong>Research Scientist chez Google</strong>.",
+    "section1Title": "D'un village de Gironde à la recherche en IA",
+    "section1p1": "J'ai grandi dans un village rural de Gironde, dans une famille d'ouvriers. Petite, on m'a dit que je n'étais pas faite pour les études, mais pour le travail. J'ai appris à coder seule : Scratch à <strong>12 ans</strong>, Python à <strong>13 ans</strong>, puis un bac technologique. Ce qui m'a captivée, très vite, c'était l'<strong>algorithmique</strong> et la façon dont une machine peut apprendre, bien plus que les sites web ou les jeux.",
+    "section1p2": "Le déclic est venu pendant un stage chez Cali Intelligences, une start-up de vision par ordinateur. Je m'y suis lancée à fond, avec une conviction qui ne m'a plus quittée : plutôt que d'empiler des couches, j'ai eu envie de contribuer aux <strong>fondations mêmes de l'IA</strong>, en repensant les architectures de modèles. J'ai avancé une marche après l'autre, major à chaque étape, jusqu'à intégrer l'<strong>ENSEIRB-MATMECA</strong> sur titre et m'y classer <strong>3ᵉ sur 93</strong>, puis décrocher une bourse <strong>Mitacs Globalink</strong> pour faire de la recherche à l'Université d'Alberta.",
+    "section2Title": "Pourquoi je fais ça",
+    "section2p1": "Au fond, mon moteur n'est pas que scientifique. Je veux <strong>prouver que c'est possible</strong> : qu'une autre fille d'un milieu modeste puisse se dire, en me voyant, « si elle a pu, alors moi aussi ». La science est l'outil, ouvrir la voie est le but. Et je tiens à une ligne rouge : ne pas mettre mon travail au service de la surveillance ou d'usages militaires. Ma devise tient en une phrase de Stephen Hawking : <em>« L'intelligence est la capacité à s'adapter au changement. »</em>",
     "cta": "Découvrir mon parcours"
   },
   "contact": {
     "emailAddress": "contact-me@melissacolin.ai",
-    "linkedin": "https://linkedin.com/in/melissacolin",
+    "linkedin": "https://www.linkedin.com/in/melissacolin",
     "github": "https://github.com/melissa-colin",
     "medium": "https://medium.com/@melissa.colin",
     "scholar": "https://scholar.google.com/citations?user=7r7iFpsAAAAJ&hl=fr",
     "title": "Contact",
-    "subtitle": "On n'est jamais trop occupé pour discuter de nouvelles idées ou collaborations.",
+    "subtitle": "Je ne suis jamais trop occupée pour discuter de nouvelles idées ou de collaborations.",
     "socialMedia": "Mes clones digitaux parlent parfois à ma place",
     "signalTitle": "Envie de parler sans filtres ?",
     "signalText": "Pour les conversations qui ne finiront pas dans un algorithme publicitaire.",
@@ -276,8 +276,44 @@
     "dark": "Mode Sombre"
   },
   "site": {
-    "description": "Chercheuse en intelligence artificielle, je conçois les architectures de modèles de demain : bio-inspirées, « world models », efficaces au-delà des Transformers. Chercheuse visitante Mitacs Globalink à l'Université d'Alberta. Objectif : Research Scientist chez Google.",
-    "tagline": "Chercheuse en IA — Architectures de modèles & World Models",
-    "title": "Mélissa Colin | Chercheuse en IA — Architectures de modèles & World Models"
+    "description": "Étudiante en intelligence artificielle à l'ENSEIRB-MATMECA, passionnée par la conception des architectures de modèles de demain : bio-inspirées, « world models », plus efficaces que les Transformers. Actuellement en stage de recherche Mitacs Globalink à l'Université d'Alberta. Objectif : devenir Research Scientist chez Google.",
+    "tagline": "Étudiante en IA · World Models",
+    "title": "Mélissa Colin | Étudiante en IA, architectures de modèles & world models"
+  },
+  "proof": {
+    "items": [
+      { "value": "3ᵉ / 93", "label": "Classement à l'ENSEIRB-MATMECA" },
+      { "value": "Mitacs Globalink", "label": "Stage de recherche, Université d'Alberta" },
+      { "value": "1ʳᵉ autrice", "label": "Article évalué par les pairs (RJCIA / PFIA 2024)" },
+      { "value": "60 → 90 %", "label": "Précision en production sur 100k+ vidéos (Cali)" }
+    ]
+  },
+  "research": {
+    "title": "Ce qui me passionne",
+    "lead": "Concevoir les architectures de modèles de demain.",
+    "intro": "Mon cap : repenser les fondations de l'IA, vers des modèles plus généraux, plus sobres et inspirés du vivant, quel que soit le domaine d'application.",
+    "pillars": [
+      {
+        "icon": "FiGlobe",
+        "title": "World Models",
+        "desc": "Des modèles qui apprennent une représentation interne du monde pour anticiper, raisonner et agir."
+      },
+      {
+        "icon": "FiActivity",
+        "title": "Architectures bio-inspirées",
+        "desc": "S'inspirer du vivant pour des modèles plus efficaces, robustes et généralisables."
+      },
+      {
+        "icon": "FiZap",
+        "title": "Efficacité post-Transformer",
+        "desc": "Repenser l'attention et le calcul pour des modèles plus sobres en énergie et en données."
+      }
+    ],
+    "nowLabel": "En ce moment",
+    "now": "En stage de recherche Mitacs Globalink au Vision & Learning Lab de l'Université d'Alberta, sur la génération de mouvement 3D guidée par la physique.",
+    "goalLabel": "Objectif",
+    "goal": "Research Scientist chez Google.",
+    "ctaPublications": "Voir mes publications",
+    "ctaContact": "Discuter recherche"
   }
 }

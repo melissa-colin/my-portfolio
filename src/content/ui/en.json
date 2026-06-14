@@ -1,76 +1,76 @@
 {
   "home": {
     "heroTitle": "Mélissa Colin",
-    "heroSubtitle": "I design the model architectures of tomorrow — bio-inspired, world-model-oriented and efficient beyond Transformers, across application domains. Currently a Mitacs Globalink visiting researcher at the University of Alberta's Vision & Learning Lab (physics-grounded 3D motion generation). My aim: to become a Research Scientist at Google.",
+    "heroSubtitle": "What drives me is rethinking the foundations of AI: architectures inspired by living systems, able to build their own \"model of the world\" and more frugal than Transformers, whatever the application domain. Right now, I'm a Mitacs Globalink research intern at the University of Alberta's Vision & Learning Lab, working on physics-grounded 3D motion generation. My dream: to one day become a Research Scientist at Google.",
     "status": "Engineering Student",
     "school": "ENSEIRB-MATMECA",
     "age": "{{age}} years old",
     "viewAllProjects": "View All Projects",
     "skillsSection": {
       "notable": [
-        "<a href=\"https://www.mitacs.ca/en/programs/globalink/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Mitacs Globalink</a> research excellence scholarship: visiting researcher at the University of Alberta's Vision &amp; Learning Lab (physics-grounded 3D motion generation)",
-        "Author of a first peer-reviewed paper at age 20 — an empirical study of ViT and CNN architectures, presented at <a href=\"https://hal.science/hal-04641791v1\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">PFIA 2024</a>",
+        "<a href=\"https://www.mitacs.ca/en/programs/globalink/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Mitacs Globalink</a> research excellence scholarship: research internship at the University of Alberta's Vision &amp; Learning Lab, on physics-grounded 3D motion generation",
+        "My first peer-reviewed paper, published at age 20: an empirical study of ViT and CNN architectures, presented at <a href=\"https://hal.science/hal-04641791v1\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">PFIA 2024</a>",
         "Ranked among the top 3 (3/93) of ENSEIRB-MATMECA's computer-science track, and winner of a national innovation competition with EcoSort",
         "Vice-president of ENSEIRB-MATMECA's <a href=\"https://www.ingenib.fr/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Ingenib</a> recruitment forum (team of 22)"
       ],
       "notableTitle": "Notable Achievements",
       "skills": [
         {
-          "description": "CNNs, ViTs, Transformers, diffusion models, attention mechanisms, encoder-decoder architectures",
-          "name": "Deep Learning Architectures",
+          "description": "World models, bio-inspired models, post-Transformer efficiency, attention mechanisms, diffusion models, fine-tuning (LoRA/PEFT)",
+          "name": "Model-architecture design",
           "icon": "FiCpu",
-          "id": "deeplearning"
+          "id": "architectures"
         },
         {
-          "description": "Python, C, JavaScript, R, SQL",
-          "name": "Programming Languages",
+          "description": "Empirical studies, ablations, metrics and reproducibility, critical reading of the literature, scientific writing",
+          "name": "Research methodology",
+          "icon": "FiActivity",
+          "id": "research"
+        },
+        {
+          "description": "Linear algebra, optimization, probability, information theory",
+          "name": "Mathematical foundations",
+          "icon": "FiTrendingUp",
+          "id": "math"
+        },
+        {
+          "description": "CNNs, ViTs, Transformers, diffusion models, pose estimation, OpenCV",
+          "name": "Deep Learning & Vision",
+          "icon": "FiEye",
+          "id": "vision"
+        },
+        {
+          "description": "Python, PyTorch, NumPy, Pandas, scikit-learn, C, SQL",
+          "name": "Languages & frameworks",
           "icon": "FiCode",
           "id": "languages"
         },
         {
-          "description": "OpenCV, PyTorch, TensorFlow, NumPy, Pandas, scikit-learn",
-          "name": "Data & AI Frameworks",
-          "icon": "FiDatabase",
-          "id": "frameworks"
-        },
-        {
           "description": "Docker, Kubernetes, Kubeflow, optimized training pipelines",
-          "name": "MLOps & Deployment",
+          "name": "MLOps & scaling",
           "icon": "FiBriefcase",
           "id": "mlops"
         },
         {
-          "description": "World models, bio-inspired AI, physics-grounded learning, post-Transformer efficiency (explainable AI as support)",
-          "name": "Research & World Models",
-          "icon": "FiEye",
-          "id": "xai"
-        },
-        {
-          "description": "Scientific writing, technical presentations, knowledge dissemination",
-          "name": "Research & Communication",
-          "icon": "FiMessageSquare",
-          "id": "certification"
-        },
-        {
-          "description": "GDPR compliance, AI Act, AI ethics, algorithmic bias, system accountability",
-          "name": "AI Law & Ethics",
+          "description": "Robustness, algorithmic bias, GDPR and the AI Act",
+          "name": "AI ethics & reliability",
           "icon": "FiShield",
-          "id": "laws-ethics"
+          "id": "ethics"
         },
         {
-          "description": "Curiosity, organization, adaptability, leadership, teamwork",
-          "name": "Interpersonal Skills",
+          "description": "Curiosity, rigor, autonomy, leadership, teamwork",
+          "name": "Interpersonal skills",
           "icon": "FiUsers",
           "id": "softskills"
         },
         {
-          "description": "French (native), English (fluent), Chinese (beginner)",
-          "name": "Languages Spoken",
+          "description": "French (native), English (fluent, TOEIC 840), Chinese (basics)",
+          "name": "Languages",
           "icon": "FiGlobe",
           "id": "languages-spoken"
         }
       ],
-      "subtitle": "A technical and human foundation centered on model-architecture design, world models and bio-inspired systems — with explainable AI and vision as tools.",
+      "subtitle": "A technical and human foundation built around what really interests me: model architectures, world models and bio-inspired systems. Computer vision and explainable AI, meanwhile, remain tools.",
       "title": "Expertise & Skills"
     },
     "aboutTitle": "About Me",
@@ -81,17 +81,17 @@
   },
   "about": {
     "title": "About Me",
-    "intro": "An engineering student at <strong>ENSEIRB-MATMECA</strong> (engineer-doctor track), I devote my research to <strong>designing the model architectures of tomorrow</strong> — bio-inspired, world-model-oriented and efficient beyond Transformers. I'm currently a <strong>Mitacs Globalink visiting researcher</strong> at the University of Alberta's Vision &amp; Learning Lab, working on physics-grounded 3D motion generation. My goal: a <strong>Research Scientist role at Google</strong>.",
-    "section1Title": "An Unconventional Journey Driven by Passion",
-    "section1p1": "My passion for computing began very early. At <strong>12 years old</strong>, I discovered Scratch; at <strong>13</strong>, I taught myself Python; and by <strong>15</strong>, I enrolled in a technical high school. I quickly realized that what fascinated me most was <strong>algorithms</strong>, more than web development or game creation. I experimented for a while—robotics, development, Arduino projects—before finding a true calling in <strong>artificial intelligence</strong>.",
-    "section1p2": "That spark came during an AI internship at Cali Intelligences, a computer-vision startup. It was a revelation: I threw myself into it with one conviction — to <strong>contribute to the foundations of AI</strong> by <strong>rethinking the model architectures themselves</strong> (bio-inspiration, world models, efficiency) rather than stacking more layers. That conviction led me to the ENSEIRB-MATMECA engineer-doctor track, and then to research at the University of Alberta's Vision &amp; Learning Lab.",
-    "section2Title": "A Determination to Pivot and Excel",
-    "section2p1": "Coming from a practice-oriented background, I made the demanding choice to <strong>pivot toward academia</strong> to strengthen my foundations in mathematics and algorithms. I was admitted to ENSEIRB-MATMECA on merit and ranked among the <strong>top 3 of my class</strong>, proving that <strong>determination and self-teaching can rival the most traditional paths</strong>.",
+    "intro": "I'm an engineering student at <strong>ENSEIRB-MATMECA</strong>, on the engineer-doctor track. What drives me is <strong>rethinking model architectures</strong>: making them more inspired by living systems, able to build their own \"model of the world\" and more efficient than Transformers. Right now, I'm a <strong>Mitacs Globalink research intern</strong> at the University of Alberta's Vision &amp; Learning Lab, working on physics-grounded 3D motion generation. And my longer-term goal is to become a <strong>Research Scientist at Google</strong>.",
+    "section1Title": "From a village in Gironde to AI research",
+    "section1p1": "I grew up in a rural village in Gironde, in a working-class family. As a kid, I was told I wasn't made for studying, but for working. I taught myself to code: Scratch at <strong>12</strong>, Python at <strong>13</strong>, then a technical high school. What captivated me, very quickly, was <strong>algorithms</strong> and the way a machine can learn, far more than websites or games.",
+    "section1p2": "The spark came during an internship at Cali Intelligences, a computer-vision startup. I threw myself into it with a conviction that never left me: rather than stacking more layers, I wanted to contribute to the <strong>very foundations of AI</strong> by rethinking model architectures. I moved up one step at a time, ranking first at each stage, until I was admitted to <strong>ENSEIRB-MATMECA</strong> on merit and ranked <strong>3rd out of 93</strong>, then earned a <strong>Mitacs Globalink</strong> scholarship to do research at the University of Alberta.",
+    "section2Title": "Why I do this",
+    "section2p1": "At heart, my drive isn't only scientific. I want to <strong>prove it's possible</strong>: so that another girl from a modest background can look at me and think, \"if she could, then so can I.\" Science is the tool, opening the way is the goal. And I hold one red line: never to put my work in the service of surveillance or military uses. My motto is a line from Stephen Hawking: <em>\"Intelligence is the ability to adapt to change.\"</em>",
     "cta": "Explore My Journey"
   },
   "contact": {
     "emailAddress": "contact-me@melissacolin.ai",
-    "linkedin": "https://linkedin.com/in/melissacolin",
+    "linkedin": "https://www.linkedin.com/in/melissacolin",
     "github": "https://github.com/melissa-colin",
     "medium": "https://medium.com/@melissa.colin",
     "scholar": "https://scholar.google.com/citations?user=7r7iFpsAAAAJ&hl=fr",
@@ -255,9 +255,9 @@
     "share": "Share"
   },
   "site": {
-    "title": "Mélissa Colin | AI Researcher — Model Architectures & World Models",
-    "tagline": "AI Researcher — Model Architectures & World Models",
-    "description": "AI researcher designing the model architectures of tomorrow: bio-inspired, world models, efficient beyond Transformers. Mitacs Globalink visiting researcher at the University of Alberta. Goal: Research Scientist at Google."
+    "title": "Mélissa Colin | AI Student, Model Architectures & World Models",
+    "tagline": "AI Student · World Models",
+    "description": "AI student at ENSEIRB-MATMECA, passionate about designing the model architectures of tomorrow: bio-inspired, world models, more efficient than Transformers. Currently a Mitacs Globalink research intern at the University of Alberta. Goal: to become a Research Scientist at Google."
   },
   "theme": {
     "dark": "Dark Mode",
@@ -275,9 +275,45 @@
     "contact": "Contact"
   },
   "education": {
-    "subtitle": "Because in deep learning, there’s also supervised learning. But unlike machines, I sought knowledge—not just validation.",
+    "subtitle": "Because in deep learning, there’s also supervised learning. But unlike machines, I sought knowledge, not just validation.",
     "footer": "Because learning isn’t just about optimizing parameters, it’s about giving meaning to every iteration.",
     "gpa": "GPA",
     "rank": "Rank"
+  },
+  "proof": {
+    "items": [
+      { "value": "3rd / 93", "label": "Class rank at ENSEIRB-MATMECA" },
+      { "value": "Mitacs Globalink", "label": "Research internship, University of Alberta" },
+      { "value": "First author", "label": "Peer-reviewed paper (RJCIA / PFIA 2024)" },
+      { "value": "60 → 90%", "label": "Production accuracy on 100k+ videos (Cali)" }
+    ]
+  },
+  "research": {
+    "title": "What drives me",
+    "lead": "Designing the model architectures of tomorrow.",
+    "intro": "My north star: rethinking the foundations of AI, toward more general, more frugal, life-inspired models, whatever the application domain.",
+    "pillars": [
+      {
+        "icon": "FiGlobe",
+        "title": "World Models",
+        "desc": "Models that learn an internal representation of the world to anticipate, reason and act."
+      },
+      {
+        "icon": "FiActivity",
+        "title": "Bio-inspired architectures",
+        "desc": "Drawing from living systems for more efficient, robust and generalizable models."
+      },
+      {
+        "icon": "FiZap",
+        "title": "Post-Transformer efficiency",
+        "desc": "Rethinking attention and compute for models that are frugal in energy and data."
+      }
+    ],
+    "nowLabel": "Right now",
+    "now": "Mitacs Globalink research intern at the University of Alberta's Vision & Learning Lab, on physics-grounded 3D motion generation.",
+    "goalLabel": "Goal",
+    "goal": "Research Scientist at Google.",
+    "ctaPublications": "See my publications",
+    "ctaContact": "Talk research"
   }
 }

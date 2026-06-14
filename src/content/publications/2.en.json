@@ -1,0 +1,11 @@
+{
+  "title": "Physically plausible multi-person 3D motion generation (working title)",
+  "authors": "Colin, M., Wang, Y., et al.",
+  "venue": "Work in progress — targeting a CVPR 2027 submission",
+  "year": "2026",
+  "url": "",
+  "contribution": "Ongoing research at the University of Alberta's Vision & Learning Lab (Prof. Li Cheng), with Yilin Wang. Music- and text-prompt-conditioned multi-person 3D dance generation, with a focus on the physical plausibility of the motion (ground-plane estimation, contacts, foot-skating, interpenetration, physics-based metrics on AIOZ-GDANCE).",
+  "abstract": "",
+  "type": "Work in progress",
+  "order": 20
+}

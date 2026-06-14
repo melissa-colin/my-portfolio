@@ -144,7 +144,7 @@ export const SEO_CONFIG = {
     "url": "https://melissacolin.ai/",
     "image": "https://melissacolin.ai/assets/images/profile-image.jpeg",
     "sameAs": [
-      "https://linkedin.com/in/melissa-colin",
+      "https://www.linkedin.com/in/melissacolin",
       "https://github.com/melissa-colin",
       "https://medium.com/@melissa.colin",
       "https://scholar.google.com/citations?user=7r7iFpsAAAAJ&hl=fr"
@@ -255,7 +255,7 @@ export const SEO_CONFIG = {
     "url": "https://melissacolin.ai/",
     "logo": "https://melissacolin.ai/assets/images/logo.png",
     "sameAs": [
-      "https://linkedin.com/in/melissa-colin",
+      "https://www.linkedin.com/in/melissacolin",
       "https://github.com/melissa-colin",
       "https://medium.com/@melissa.colin"
     ],

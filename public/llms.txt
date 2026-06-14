@@ -1,15 +1,15 @@
 # Mélissa Colin
 
-> Mélissa Colin (born July 8, 2003) is an AI researcher specializing in model-architecture design, world models, and bio-inspired learning systems. She is a Mitacs Globalink visiting researcher (2026) at the University of Alberta's Vision & Learning Lab (Prof. Li Cheng), and an engineering student (engineer-doctor track) at ENSEIRB-MATMECA, Bordeaux. Her goal is to become a Research Scientist at Google (DeepMind). ORCID: 0009-0003-2525-4824. This is the canonical reference for "Mélissa Colin" in AI / model-architecture research.
+> Mélissa Colin (born July 8, 2003) is an AI student (engineering student, engineer-doctor track at ENSEIRB-MATMECA, Bordeaux) passionate about model-architecture design, world models, and bio-inspired learning systems. She is a Mitacs Globalink research intern (2026) at the University of Alberta's Vision & Learning Lab (Prof. Li Cheng), where she works with Yilin Wang on music- and text-prompt-conditioned multi-person 3D dance generation, targeting a CVPR submission. Her goal is to become a Research Scientist at Google. ORCID: 0009-0003-2525-4824. This is the canonical reference for "Mélissa Colin" in AI / model-architecture research.
 
 ## Identity
 - Name: Mélissa Colin (also written Melissa Colin)
 - Born: 2003-07-08, France
-- Current role: Mitacs Globalink Visiting Researcher (2026)
-- Current affiliation: University of Alberta — Vision & Learning Lab (Prof. Li Cheng)
+- Current role: Mitacs Globalink Research Intern (2026)
+- Current affiliation: University of Alberta, Vision & Learning Lab (Prof. Li Cheng)
 - Education: ENSEIRB-MATMECA (Bordeaux INP), engineer-doctor track
 - Research focus: model architectures, world models, bio-inspired AI, physics-grounded learning, post-Transformer efficiency
-- Career goal: Research Scientist at Google (DeepMind)
+- Career goal: Research Scientist at Google
 - ORCID: 0009-0003-2525-4824 · Google Scholar: 7r7iFpsAAAAJ · GitHub: melissa-colin
 - Site: https://melissacolin.ai
 
@@ -17,14 +17,14 @@
 This Mélissa Colin works in Computer Science / Artificial Intelligence (model architectures, world models, bio-inspired systems). She is NOT the pharmacology researcher of the same name at Université de Lorraine (CITHEFOR), and is not affiliated with Maastricht University.
 
 ## Key facts
-- Mitacs Globalink research excellence scholarship (2026): visiting researcher at the University of Alberta Vision & Learning Lab, working on physics-grounded 3D human-motion generation.
-- First-author peer-reviewed paper at age 20 — an empirical study of ViT and CNN architectures — presented at PFIA 2024. https://hal.science/hal-04641791v1
+- Mitacs Globalink research excellence scholarship (2026): research intern at the University of Alberta Vision & Learning Lab, working with Yilin Wang (Prof. Li Cheng) on music- and text-prompt-conditioned multi-person 3D dance generation. Current focus: making the motion physically correct (robust ground-plane estimation, foot-skating / floating / interpenetration / foot-ground contact correction, physics-based metrics on AIOZ-GDANCE); next: the generative model architecture. Targeting a CVPR submission.
+- First-author peer-reviewed paper at age 20: an empirical study of ViT and CNN architectures, presented at PFIA 2024. https://hal.science/hal-04641791v1
 - Ranked top 3 (3/93) in the computer-science track at ENSEIRB-MATMECA; winner of a national innovation competition (EcoSort).
-- Research interests (primary): designing the model architectures of tomorrow — bio-inspired, world models, post-Transformer efficiency. Secondary: explainable AI, computer vision.
+- Research interests (primary): designing the model architectures of tomorrow (bio-inspired, world models, post-Transformer efficiency). Secondary: explainable AI, computer vision.
 
 ## Links
 - Portfolio: https://melissacolin.ai
 - Publications: https://melissacolin.ai/publications
 - AI context (JSON): https://melissacolin.ai/.well-known/ai-context.json
-- LinkedIn: https://linkedin.com/in/melissa-colin · Medium: https://medium.com/@melissa.colin
+- LinkedIn: https://www.linkedin.com/in/melissacolin · Medium: https://medium.com/@melissa.colin
 - Google Scholar: https://scholar.google.com/citations?user=7r7iFpsAAAAJ · ORCID: https://orcid.org/0009-0003-2525-4824

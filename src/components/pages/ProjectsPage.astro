@@ -26,7 +26,7 @@ const demoLabel = (demo: string) =>
       </div>
       <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-4xl mx-auto text-center">
-          <h1 class="anim-title text-4xl md:text-5xl font-bold mb-6 text-white">{p.title}</h1>
+          <h1 class="anim-title title-gradient text-4xl md:text-5xl font-bold mb-6 text-white">{p.title}</h1>
           <div class="a-bar section-bar mx-auto bg-red-500" style="animation-delay:0.25s"></div>
           <p class="a-fade mt-6 text-xl text-gray-200 max-w-3xl mx-auto" style="animation-delay:0.4s">{p.subtitle}</p>
         </div>
@@ -61,10 +61,12 @@ const demoLabel = (demo: string) =>
             </div>
           </div>
           <div class="w-full">
+            <label for="projects-search" class="sr-only">{p.search}</label>
             <input
               type="text"
               id="projects-search"
               placeholder={p.search}
+              aria-label={p.search}
               class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-white"
             />
           </div>
@@ -79,14 +81,20 @@ const demoLabel = (demo: string) =>
               data-search={`${project.title} ${project.description}`.toLowerCase()}
             >
               <div class="h-48 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  width={400}
-                  height={192}
-                  loading="lazy"
-                />
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    width={400}
+                    height={192}
+                    loading="lazy"
+                  />
+                ) : (
+                  <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
+                    <span class="text-4xl font-bold text-red-500/70">{project.title?.[0] ?? '·'}</span>
+                  </div>
+                )}
               </div>
               <div class="p-6 flex-grow">
                 <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">{project.title}</h3>
@@ -98,9 +106,11 @@ const demoLabel = (demo: string) =>
                 </div>
               </div>
               <div class="p-4 border-t border-gray-200 dark:border-gray-700 mt-auto flex justify-between items-center">
-                <a href={project.github ?? undefined} target="_blank" rel="noopener noreferrer" class="text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-500 flex items-center">
-                  <FiGithub className="mr-1" /><span>GitHub</span>
-                </a>
+                {project.github ? (
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" class="text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-500 flex items-center">
+                    <FiGithub className="mr-1" /><span>GitHub</span>
+                  </a>
+                ) : <span></span>}
                 {project.demo && (
                   <a href={project.demo} target="_blank" rel="noopener noreferrer" class="text-red-600 dark:text-red-500 hover:text-red-700 dark:hover:text-red-400 flex items-center">
                     <FiExternalLink className="mr-1" /><span>{demoLabel(project.demo)}</span>

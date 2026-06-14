@@ -1,0 +1,22 @@
+---
+interface Props {
+  ui: any;
+}
+const { ui } = Astro.props;
+const items = ui.proof?.items ?? [];
+---
+
+{items.length > 0 && (
+  <section class="py-12 border-y border-gray-800 bg-gray-900/40">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto text-center" data-stagger>
+        {items.map((it: any) => (
+          <div>
+            <div class="title-gradient text-2xl md:text-3xl font-bold mb-1">{it.value}</div>
+            <div class="text-sm text-gray-400 leading-snug">{it.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}

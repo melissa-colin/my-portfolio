@@ -11,24 +11,24 @@ export const GOOGLE_SITE_VERIFICATION = '';
 type Locale = 'fr' | 'en';
 
 const KEYWORDS: Record<Locale, string[]> = {
-  fr: ['Mélissa Colin', 'Melissa Colin', 'melissa colin', 'chercheuse en IA', 'architectures de modèles', 'world models', 'IA bio-inspirée', 'apprentissage guidé par la physique', 'efficacité post-Transformer', 'deep learning', 'vision par ordinateur', 'ENSEIRB-MATMECA', "Université d'Alberta", 'Mitacs Globalink', 'Google DeepMind', 'ORCID 0009-0003-2525-4824'],
-  en: ['Melissa Colin', 'Mélissa Colin', 'melissa colin', 'AI researcher', 'model architectures', 'world models', 'bio-inspired AI', 'physics-grounded learning', 'post-Transformer efficiency', 'deep learning', 'computer vision', 'ENSEIRB-MATMECA', 'University of Alberta', 'Mitacs Globalink', 'Google DeepMind', 'ORCID 0009-0003-2525-4824'],
+  fr: ['Mélissa Colin', 'Melissa Colin', 'melissa colin', 'étudiante en IA', 'architectures de modèles', 'world models', 'IA bio-inspirée', 'apprentissage guidé par la physique', 'efficacité post-Transformer', 'deep learning', 'vision par ordinateur', 'ENSEIRB-MATMECA', "Université d'Alberta", 'Mitacs Globalink', 'Google', 'ORCID 0009-0003-2525-4824'],
+  en: ['Melissa Colin', 'Mélissa Colin', 'melissa colin', 'AI student', 'model architectures', 'world models', 'bio-inspired AI', 'physics-grounded learning', 'post-Transformer efficiency', 'deep learning', 'computer vision', 'ENSEIRB-MATMECA', 'University of Alberta', 'Mitacs Globalink', 'Google', 'ORCID 0009-0003-2525-4824'],
 };
 
 type PageMeta = { title: string; description: string; keywords: string };
 
 const PAGES: Record<string, Record<Locale, PageMeta>> = {
   home: {
-    fr: { title: 'Mélissa Colin | Chercheuse en IA — Architectures de modèles & World Models', description: "Mélissa Colin, chercheuse en IA : conception d'architectures de modèles, world models et systèmes bio-inspirés. Chercheuse visitante Mitacs à l'Université d'Alberta. Cap : Research Scientist chez Google. ENSEIRB-MATMECA, née le 8 juillet 2003. ORCID 0009-0003-2525-4824.", keywords: 'portfolio, recherche IA, architectures, world models' },
-    en: { title: 'Mélissa Colin | AI Researcher — Model Architectures & World Models', description: 'Melissa Colin, AI researcher: model-architecture design, world models and bio-inspired systems. Mitacs visiting researcher at the University of Alberta. Goal: Research Scientist at Google. ENSEIRB-MATMECA, born July 8, 2003. ORCID 0009-0003-2525-4824.', keywords: 'portfolio, AI research, model architectures, world models' },
+    fr: { title: 'Mélissa Colin | Étudiante en IA, architectures de modèles & world models', description: "Mélissa Colin, étudiante en IA passionnée par la conception d'architectures de modèles, les world models et les systèmes bio-inspirés. En stage de recherche Mitacs à l'Université d'Alberta. Objectif : Research Scientist chez Google. ENSEIRB-MATMECA, née le 8 juillet 2003. ORCID 0009-0003-2525-4824.", keywords: 'portfolio, recherche IA, architectures, world models' },
+    en: { title: 'Mélissa Colin | AI Student, Model Architectures & World Models', description: 'Melissa Colin, AI student passionate about model-architecture design, world models and bio-inspired systems. Mitacs research intern at the University of Alberta. Goal: Research Scientist at Google. ENSEIRB-MATMECA, born July 8, 2003. ORCID 0009-0003-2525-4824.', keywords: 'portfolio, AI research, model architectures, world models' },
   },
   projects: {
     fr: { title: 'Projets Recherche IA | Mélissa Colin | Vision 3D & Architectures', description: "Projets de recherche en IA de Mélissa Colin : architectures de modèles, vision 3D, systèmes bio-inspirés, efficacité. Implémentations ViT, CNN, Transformers, apprentissage guidé par la physique.", keywords: 'projets, recherche, architectures, vision 3D, world models' },
     en: { title: 'AI Research Projects | Melissa Colin | 3D Vision & Model Architectures', description: "Melissa Colin's AI research projects: model-architecture design, 3D vision, bio-inspired systems, efficiency. Implementations of ViT, CNN, Transformers and physics-grounded learning.", keywords: 'projects, research, architectures, 3D vision, world models' },
   },
   publications: {
-    fr: { title: 'Publications Recherche IA | Mélissa Colin | Architectures de modèles', description: "Recherches et publications de Mélissa Colin : architectures de modèles, world models, systèmes bio-inspirés. Auteure à PFIA 2024 (étude empirique d'architectures ViT et CNN). Chercheuse visitante Mitacs à l'Université d'Alberta.", keywords: 'publications, recherche IA, architectures, PFIA 2024' },
-    en: { title: 'AI Research Publications | Melissa Colin | Model Architectures', description: 'Research and publications by Melissa Colin: model architectures, world models, bio-inspired systems. Author at PFIA 2024 (empirical study of ViT and CNN architectures). Mitacs visiting researcher at the University of Alberta.', keywords: 'publications, AI research, model architectures, PFIA 2024' },
+    fr: { title: 'Publications Recherche IA | Mélissa Colin | Architectures de modèles', description: "Recherches et publications de Mélissa Colin : architectures de modèles, world models, systèmes bio-inspirés. Auteure à PFIA 2024 (étude empirique d'architectures ViT et CNN). En stage de recherche Mitacs à l'Université d'Alberta.", keywords: 'publications, recherche IA, architectures, PFIA 2024' },
+    en: { title: 'AI Research Publications | Melissa Colin | Model Architectures', description: 'Research and publications by Melissa Colin: model architectures, world models, bio-inspired systems. Author at PFIA 2024 (empirical study of ViT and CNN architectures). Mitacs research intern at the University of Alberta.', keywords: 'publications, AI research, model architectures, PFIA 2024' },
   },
   experience: {
     fr: { title: 'Expérience Professionnelle IA | Mélissa Colin | Stages & Missions', description: "Expérience professionnelle de Mélissa Colin en intelligence artificielle : stages, missions, projets industriels. Parcours étudiant ingénieur IA ENSEIRB-MATMECA.", keywords: 'expérience IA, stages, missions' },
@@ -77,7 +77,7 @@ export function personSchema(locale: Locale) {
     url: `${BASE_URL}/`,
     image: `${BASE_URL}/assets/images/profile-image.jpeg`,
     sameAs: [
-      'https://linkedin.com/in/melissa-colin',
+      'https://www.linkedin.com/in/melissacolin',
       'https://github.com/melissa-colin',
       'https://medium.com/@melissa.colin',
       'https://scholar.google.com/citations?user=7r7iFpsAAAAJ&hl=fr',
@@ -94,12 +94,12 @@ export function personSchema(locale: Locale) {
     birthDate: '2003-07-08',
     gender: 'Female',
     nationality: 'French',
-    jobTitle: locale === 'fr' ? 'Chercheuse en Intelligence Artificielle (architectures de modèles)' : 'AI Researcher (model architectures)',
+    jobTitle: locale === 'fr' ? 'Élève-ingénieure en IA (architectures de modèles, world models)' : 'AI engineering student (model architectures, world models)',
     worksFor: { '@type': 'EducationalOrganization', name: 'ENSEIRB-MATMECA', url: 'https://enseirb-matmeca.bordeaux-inp.fr/' },
     alumniOf: { '@type': 'EducationalOrganization', name: 'ENSEIRB-MATMECA' },
     affiliation: [
       { '@type': 'EducationalOrganization', name: 'ENSEIRB-MATMECA', url: 'https://enseirb-matmeca.bordeaux-inp.fr/' },
-      { '@type': 'Organization', name: 'University of Alberta — Vision and Learning Lab', url: 'https://vision-and-learning-lab-ualberta.github.io/' },
+      { '@type': 'Organization', name: 'University of Alberta, Vision and Learning Lab', url: 'https://vision-and-learning-lab-ualberta.github.io/' },
     ],
     award: 'Mitacs Globalink Research Excellence Scholarship (2026)',
     seeks: { '@type': 'Occupation', name: locale === 'fr' ? 'Research Scientist en IA (architectures de modèles, world models)' : 'Research Scientist in AI (model architectures, world models)' },
@@ -108,12 +108,12 @@ export function personSchema(locale: Locale) {
     address: { '@type': 'PostalAddress', addressCountry: 'FR', addressRegion: 'Nouvelle-Aquitaine', addressLocality: 'Bordeaux' },
     description:
       locale === 'fr'
-        ? "Chercheuse en intelligence artificielle spécialisée dans la conception d'architectures de modèles, les world models, les systèmes bio-inspirés et l'efficacité post-Transformer. Chercheuse visitante Mitacs Globalink (2026) au Vision & Learning Lab de l'Université d'Alberta (Prof. Li Cheng). Élève-ingénieure (parcours ingénieur-docteur) à l'ENSEIRB-MATMECA, Bordeaux. Née le 8 juillet 2003. Objectif : Research Scientist chez Google. Domaine : informatique et IA, PAS pharmacologie."
-        : 'AI researcher specializing in model-architecture design, world models, bio-inspired systems and post-Transformer efficiency. Mitacs Globalink visiting researcher (2026) at the Vision & Learning Lab, University of Alberta (Prof. Li Cheng). Engineering student (engineer-doctor track) at ENSEIRB-MATMECA, Bordeaux. Born July 8, 2003. Goal: Research Scientist at Google. Field: Computer Science and AI, NOT pharmacology.',
+        ? "Étudiante en intelligence artificielle (élève-ingénieure, parcours ingénieur-docteur à l'ENSEIRB-MATMECA, Bordeaux), passionnée par la conception d'architectures de modèles, les world models, les systèmes bio-inspirés et l'efficacité post-Transformer. En stage de recherche Mitacs Globalink (2026) au Vision & Learning Lab de l'Université d'Alberta (Prof. Li Cheng). Née le 8 juillet 2003. Objectif : devenir Research Scientist chez Google. Domaine : informatique et IA, PAS pharmacologie."
+        : 'AI student (engineering student, engineer-doctor track at ENSEIRB-MATMECA, Bordeaux), passionate about model-architecture design, world models, bio-inspired systems and post-Transformer efficiency. Mitacs Globalink research intern (2026) at the Vision & Learning Lab, University of Alberta (Prof. Li Cheng). Born July 8, 2003. Goal: to become a Research Scientist at Google. Field: Computer Science and AI, NOT pharmacology.',
     disambiguatingDescription:
       locale === 'fr'
-        ? "Mélissa Colin (née le 8 juillet 2003) est chercheuse en IA spécialisée dans les architectures de modèles, les world models et les systèmes bio-inspirés. Chercheuse visitante Mitacs (2026) à l'Université d'Alberta, et élève-ingénieure à l'ENSEIRB-MATMECA. Auteure à PFIA 2024 (étude d'architectures ViT et CNN). ORCID 0009-0003-2525-4824. À NE PAS confondre avec l'homonyme chercheuse en pharmacologie à l'Université de Lorraine (CITHEFOR)."
-        : 'Mélissa Colin (born July 8, 2003) is an AI researcher specializing in model architectures, world models and bio-inspired systems. Mitacs visiting researcher (2026) at the University of Alberta, and engineering student at ENSEIRB-MATMECA. Author at PFIA 2024 (study of ViT and CNN architectures). ORCID 0009-0003-2525-4824. NOT to be confused with the pharmacology researcher at Université de Lorraine (CITHEFOR).',
+        ? "Mélissa Colin (née le 8 juillet 2003) est étudiante en IA (élève-ingénieure à l'ENSEIRB-MATMECA), passionnée par les architectures de modèles, les world models et les systèmes bio-inspirés. En stage de recherche Mitacs (2026) à l'Université d'Alberta. Auteure à PFIA 2024 (étude d'architectures ViT et CNN). ORCID 0009-0003-2525-4824. À NE PAS confondre avec l'homonyme chercheuse en pharmacologie à l'Université de Lorraine (CITHEFOR)."
+        : 'Mélissa Colin (born July 8, 2003) is an AI student (engineering student at ENSEIRB-MATMECA) focused on model architectures, world models and bio-inspired systems. Mitacs research intern (2026) at the University of Alberta. Author at PFIA 2024 (study of ViT and CNN architectures). ORCID 0009-0003-2525-4824. NOT to be confused with the pharmacology researcher at Université de Lorraine (CITHEFOR).',
   };
 }
 
@@ -122,13 +122,13 @@ export function scholarlyArticleSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'ScholarlyArticle',
-    name: 'Performances and Explainability of ViT and CNN Architectures: An Empirical Study Using LIME, SHAP, and GradCam',
-    author: { '@id': `${BASE_URL}/#person` },
+    name: "Performances et explicabilité de ViT et d'architectures CNN : une étude empirique utilisant LIME, SHAP et GradCam",
+    author: [{ '@id': `${BASE_URL}/#person` }, { '@type': 'Person', name: 'Ikram Chraibi Kadoud' }],
     datePublished: '2024',
-    publisher: 'PFIA 2024',
+    publisher: 'RJCIA 2024 (PFIA)',
     url: 'https://hal.science/hal-04641791v1',
     about: ['Neural Network Architectures', 'Vision Transformers', 'CNN Architectures', 'Comparative Architecture Study', 'Model Performance Analysis', 'Computer Vision', 'Interpretability Methods'],
-    inLanguage: 'en',
+    inLanguage: 'fr',
   };
 }
 

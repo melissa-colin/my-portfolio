@@ -1,10 +1,12 @@
 {
   "title": "Performances and Explainability of ViT and CNN Architectures: An Empirical Study Using LIME, SHAP, and GradCam",
-  "authors": "Colin, M., Chraibi Kkaadoud, I.",
-  "venue": "PFIA 2024",
+  "authors": "Colin, M., Chraibi Kadoud, I.",
+  "venue": "RJCIA 2024 (PFIA), La Rochelle",
   "year": "2024",
   "url": "https://hal.science/hal-04641791v1",
-  "abstract": "In recent years, explainable AI has been presented as the main solution for building trust between users and AI sys- tems. To investigate this hypothesis, we propose an empirical study on the link between the performance and explai- nability of four computer vision algorithms : ViT, ResNet50, VGG16 and InceptionV3. Our study uses three local explai- nability methods : LIME, SHAP and GradCam. We show that, while explainable AI can be a tool for challenging the artificial representation of an algorithm and its behavior, it can also present robustness problems or contradictory in- formation that undermines trust. Our results show that by multiplying the use of explainable AI algorithms to explain one prediction, it is possible to verify the reliability of the explanations and extracted information.",
+  "contribution": "My contribution: experimental protocol design, implementation of the models and explainability methods, analysis of the results, and writing. Written in my own time, teaching myself the scientific method.",
+  "abstract": "In recent years, explainable AI has been presented as the main solution for building trust between users and AI systems. To investigate this hypothesis, we propose an empirical study on the link between the performance and explainability of four computer vision algorithms: ViT, ResNet50, VGG16 and InceptionV3. Our study uses three local explainability methods: LIME, SHAP and GradCam. We show that, while explainable AI can be a tool for challenging the artificial representation of an algorithm and its behavior, it can also present robustness problems or contradictory information that can undermine trust. Our results show that by combining several explainability methods to explain a single prediction, it is possible to verify the reliability of the explanations and the information extracted.",
+  "bibtex": "@inproceedings{colin2024performances,\n  title     = {Performances et explicabilit{\\'e} de ViT et d'architectures CNN : une {\\'e}tude empirique utilisant LIME, SHAP et GradCam},\n  author    = {Colin, M{\\'e}lissa and Chraibi Kadoud, Ikram},\n  booktitle = {RJCIA 2024, Plateforme Fran{\\c{c}}aise pour l'Intelligence Artificielle (PFIA)},\n  year      = {2024},\n  address   = {La Rochelle, France},\n  url       = {https://hal.science/hal-04641791v1}\n}",
   "type": "Conference Paper",
   "order": 10
 }

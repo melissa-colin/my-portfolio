@@ -1,5 +1,5 @@
 ---
-import { FiMenu, FiX, FiMoon, FiGlobe } from 'react-icons/fi';
+import { FiMenu, FiX, FiGlobe } from 'react-icons/fi';
 import { getUI, localizedHref, otherLocaleHref, type Locale } from '../lib/content';
 
 interface Props {
@@ -73,22 +73,13 @@ const otherHref = otherLocaleHref(path, locale);
 
       {/* Header Actions */}
       <div class="flex items-center">
-        {/* Theme Toggle (icon stays moon to match current site; toggles .dark) */}
-        <button
-          data-theme-toggle
-          class="p-2 rounded-full text-gray-300 hover:bg-red-900/30 transition-all duration-200 hover:scale-110 hover:rotate-12"
-          aria-label={ui.theme?.dark}
-        >
-          <FiMoon size={20} />
-        </button>
-
         {/* Language Toggle -> cross-locale link */}
         <a
           href={otherHref}
-          class="p-2 rounded-full text-gray-300 hover:bg-red-900/30 transition-all duration-200 hover:scale-110 ml-2 flex items-center"
+          class="p-2 rounded-full text-gray-300 hover:bg-red-900/30 transition-all duration-200 hover:scale-110 flex items-center"
           aria-label={locale === 'en' ? 'English' : 'Français'}
         >
-          <FiGlobe size={20} className="text-blue-400" />
+          <FiGlobe size={20} />
           <span class="ml-1">{langCode}</span>
         </a>
 
@@ -97,6 +88,8 @@ const otherHref = otherLocaleHref(path, locale);
           id="mobile-menu-btn"
           class="md:hidden p-2 rounded-full text-gray-300 hover:bg-red-900/30 transition-colors ml-2"
           aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
         >
           <span data-menu-icon="closed"><FiMenu size={24} /></span>
           <span data-menu-icon="open" class="hidden"><FiX size={24} className="text-red-500" /></span>
@@ -143,15 +136,21 @@ const otherHref = otherLocaleHref(path, locale);
     var menu = document.getElementById('mobile-menu');
     var iconClosed = header.querySelector('[data-menu-icon="closed"]');
     var iconOpen = header.querySelector('[data-menu-icon="open"]');
-    if (btn) {
-      btn.addEventListener('click', function () {
-        menuOpen = !menuOpen;
-        menu.classList.toggle('hidden', !menuOpen);
-        iconClosed.classList.toggle('hidden', menuOpen);
-        iconOpen.classList.toggle('hidden', !menuOpen);
-        applyBg();
-      });
+    function setMenu(open) {
+      menuOpen = open;
+      menu.classList.toggle('hidden', !menuOpen);
+      iconClosed.classList.toggle('hidden', menuOpen);
+      iconOpen.classList.toggle('hidden', !menuOpen);
+      if (btn) btn.setAttribute('aria-expanded', menuOpen ? 'true' : 'false');
+      applyBg();
     }
+    if (btn) {
+      btn.addEventListener('click', function () { setMenu(!menuOpen); });
+    }
+    // Close the mobile menu on Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && menuOpen) setMenu(false);
+    });
 
     applyBg();
   })();

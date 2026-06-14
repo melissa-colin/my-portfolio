@@ -1,6 +1,7 @@
 ---
 import {
   FiCpu, FiDatabase, FiCode, FiEye, FiMessageSquare, FiBriefcase, FiShield, FiUsers, FiGlobe,
+  FiActivity, FiTrendingUp,
 } from 'react-icons/fi';
 
 interface Props {
@@ -10,14 +11,14 @@ const { ui } = Astro.props;
 const { title, subtitle, skills = [], notableTitle, notable = [] } = ui.home?.skillsSection ?? {};
 
 const Icons: Record<string, any> = {
-  FiCpu, FiEye, FiBriefcase, FiCode, FiDatabase, FiMessageSquare, FiShield, FiUsers, FiGlobe,
+  FiCpu, FiEye, FiBriefcase, FiCode, FiDatabase, FiMessageSquare, FiShield, FiUsers, FiGlobe, FiActivity, FiTrendingUp,
 };
 ---
 
 <section class="py-20">
   <div class="container mx-auto px-4">
     <div class="text-center mb-16 reveal">
-      <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">{title}</h2>
+      <h2 class="title-gradient text-3xl font-bold mb-6">{title}</h2>
       <div class="section-bar mx-auto"></div>
       <p class="mt-6 text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">{subtitle}</p>
     </div>

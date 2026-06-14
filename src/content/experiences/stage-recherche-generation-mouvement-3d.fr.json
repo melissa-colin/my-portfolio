@@ -1,0 +1,19 @@
+{
+  "order": 140,
+  "title": "Stagiaire de recherche en IA (génération de mouvement 3D)",
+  "company": "University of Alberta | Vision and Learning Lab",
+  "companyUrl": "https://vision-and-learning-lab-ualberta.github.io/",
+  "location": "Edmonton, AB, Canada",
+  "period": "Mai 2026 - Sept 2026",
+  "description": "Bourse d'excellence Mitacs Globalink, au Vision and Learning Lab du Prof. Li Cheng. Avec Yilin Wang, je travaille sur un modèle de génération de danse 3D multi-personnes conditionnée par la musique et un prompt textuel, en vue d'une soumission à CVPR.\n\nMa première étape : fiabiliser la donnée, c'est-à-dire produire des mouvements physiquement corrects. Concrètement, j'estime le sol de façon robuste et je corrige les artefacts du mouvement (footskate, flottement, inter-pénétrations entre danseurs, contacts pieds-sol), tout en mettant au point les métriques physiques d'évaluation, sur le jeu de données AIOZ-GDANCE. Ensuite, je m'attaquerai à l'architecture même du modèle de génération.",
+  "technologies": [
+    "Python",
+    "PyTorch",
+    "SMPL",
+    "Génération de mouvement 3D",
+    "Métriques physiques"
+  ],
+  "type": "Stage de recherche",
+  "logo": "/assets/images/images-4.jpeg",
+  "detail": ""
+}

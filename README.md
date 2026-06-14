@@ -1,6 +1,6 @@
 # melissacolin.ai — My Portfolio
 
-This is my personal portfolio. I'm **Mélissa Colin**, an AI engineering student at ENSEIRB-MATMECA (Bordeaux) — I work on computer vision, deep learning, and explainable AI.
+This is my personal portfolio. I'm **Mélissa Colin**, an AI engineering student at ENSEIRB-MATMECA (Bordeaux). I care about designing the model architectures of tomorrow (world models, bio-inspired and post-Transformer approaches), and I'm currently a Mitacs Globalink research intern at the University of Alberta. My goal is to become a Research Scientist at Google.
 
 🔗 **Live:** https://melissacolin.ai
 
@@ -10,7 +10,7 @@ This is my personal portfolio. I'm **Mélissa Colin**, an AI engineering student
 
 ## Overview
 
-A fast, statically-rendered, bilingual (🇫🇷/🇬🇧) portfolio I built with Astro. All content is pre-rendered to HTML for strong SEO and AI-search discoverability, with React islands used only for interactivity (filters, theme toggle, animations). I can edit the content from any device through a built-in CMS, and every change auto-deploys.
+A fast, statically-rendered, bilingual (🇫🇷/🇬🇧) portfolio I built with Astro. All content is pre-rendered to HTML for strong SEO and AI-search discoverability, with React islands used only for interactivity (filters, animations). Fonts are self-hosted (no third-party font CDN). I can edit the content from any device through a built-in CMS, and every change auto-deploys.
 
 ## Tech stack
 
@@ -26,7 +26,7 @@ A fast, statically-rendered, bilingual (🇫🇷/🇬🇧) portfolio I built wit
 - 🔎 SEO & AI-referencing — rich JSON-LD (`Person`, `ScholarlyArticle`, `WebSite`), `sitemap.xml`, `robots.txt`, `llms.txt`, and a `.well-known/ai-context.json` for entity disambiguation
 - 🎂 Always-current age — computed client-side, never needs a rebuild
 - ✍️ I edit content from my phone via `/admin` (no code, no local build)
-- 🌗 Dark/light theme with no flash of unstyled content
+- 🎨 Cohesive dark theme set before first paint (no flash of unstyled content)
 
 ## Project structure
 

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Mélissa Colin">
+  <defs>
+    <linearGradient id="mc-red" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff3131"/>
+      <stop offset="1" stop-color="#e51400"/>
+    </linearGradient>
+    <radialGradient id="mc-glow" cx="32" cy="22" r="34" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff3131" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#ff3131" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="#0c0c0d"/>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="url(#mc-glow)"/>
+  <rect x="2.75" y="2.75" width="58.5" height="58.5" rx="14.25" fill="none" stroke="#ff3131" stroke-opacity="0.30" stroke-width="1.5"/>
+  <path d="M16 47 V19 L32 37 L48 19 V47" fill="none" stroke="url(#mc-red)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
