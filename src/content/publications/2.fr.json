@@ -1,10 +1,10 @@
 {
   "title": "Génération de mouvement 3D multi-personnes physiquement plausible (titre provisoire)",
-  "authors": "Colin, M., Wang, Y., et al.",
+  "authors": "Wang, Y., Colin, M., et al.",
   "venue": "Travail en cours — soumission visée à CVPR 2027",
   "year": "2026",
   "url": "",
-  "contribution": "Travail de recherche en cours au Vision & Learning Lab de l'Université d'Alberta (Prof. Li Cheng), avec Yilin Wang. Génération de danse 3D multi-personnes conditionnée par la musique et un prompt, avec un soin particulier sur la plausibilité physique du mouvement (estimation du sol, contacts, footskate, inter-pénétrations, métriques physiques sur AIOZ-GDANCE).",
+  "contribution": "Co-autrice d'un travail de recherche en cours mené par Yilin Wang au Vision & Learning Lab de l'Université d'Alberta (Prof. Li Cheng). Génération de danse 3D multi-personnes conditionnée par la musique et un prompt ; ma contribution porte sur la plausibilité physique du mouvement (estimation du sol, contacts, footskate, inter-pénétrations, métriques physiques sur AIOZ-GDANCE).",
   "abstract": "",
   "type": "Travaux en cours",
   "order": 20
