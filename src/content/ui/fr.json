@@ -112,7 +112,7 @@
   "proof": {
     "items": [
       {
-        "value": "3ᵉ / 93",
+        "value": "5ᵉ / 81",
         "label": "Classement à l'ENSEIRB-MATMECA"
       },
       {
@@ -153,7 +153,7 @@
     "nowLabel": "En ce moment",
     "now": "En stage de recherche Mitacs Globalink au Vision & Learning Lab de l'Université d'Alberta, sur la génération de mouvement 3D guidée par la physique.",
     "goalLabel": "Objectif",
-    "goal": "Research Scientist chez Google.",
+    "goal": "Research Scientist",
     "ctaPublications": "Voir mes publications",
     "ctaContact": "Discuter recherche"
   },
@@ -302,30 +302,30 @@
     "shareOn": "Partager sur",
     "share": "Partager"
   },
-  "education": {
-    "rank": "Classement",
-    "gpa": "Moyenne Générale",
-    "footer": "Parce qu’apprendre, ce n’est pas seulement optimiser des paramètres, c’est aussi donner du sens à chaque itération.",
-    "subtitle": "Parce que dans l’apprentissage profond, il y a aussi l’apprentissage supervisé. Mais contrairement aux machines, j’ai cherché des savoirs et pas juste des validations."
-  },
-  "nav": {
-    "contact": "Contact",
-    "blog": "Blog",
-    "projects": "Projets",
-    "education": "Formation",
-    "experience": "Expérience",
-    "publications": "Publications",
-    "certification": "Certifications",
-    "home": "Accueil"
+  "site": {
+    "title": "Mélissa Colin | Étudiante en IA, architectures de modèles & world models",
+    "tagline": "Étudiante en IA · World Models",
+    "description": "Étudiante en intelligence artificielle à l'ENSEIRB-MATMECA, passionnée par la conception des architectures de modèles de demain : bio-inspirées, « world models », plus efficaces que les Transformers. Actuellement en stage de recherche Mitacs Globalink à l'Université d'Alberta. Objectif : devenir Research Scientist chez Google."
   },
   "theme": {
-    "toggle": "Changer le thème",
+    "dark": "Mode Sombre",
     "light": "Mode Clair",
-    "dark": "Mode Sombre"
+    "toggle": "Changer le thème"
   },
-  "site": {
-    "description": "Étudiante en intelligence artificielle à l'ENSEIRB-MATMECA, passionnée par la conception des architectures de modèles de demain : bio-inspirées, « world models », plus efficaces que les Transformers. Actuellement en stage de recherche Mitacs Globalink à l'Université d'Alberta. Objectif : devenir Research Scientist chez Google.",
-    "tagline": "Étudiante en IA · World Models",
-    "title": "Mélissa Colin | Étudiante en IA, architectures de modèles & world models"
+  "nav": {
+    "home": "Accueil",
+    "certification": "Certifications",
+    "publications": "Publications",
+    "experience": "Expérience",
+    "education": "Formation",
+    "projects": "Projets",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "education": {
+    "subtitle": "Parce que dans l’apprentissage profond, il y a aussi l’apprentissage supervisé. Mais contrairement aux machines, j’ai cherché des savoirs et pas juste des validations.",
+    "footer": "Parce qu’apprendre, ce n’est pas seulement optimiser des paramètres, c’est aussi donner du sens à chaque itération.",
+    "gpa": "Moyenne Générale",
+    "rank": "Classement"
   }
 }
