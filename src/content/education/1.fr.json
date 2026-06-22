@@ -1,11 +1,11 @@
 {
+  "order": 40,
   "degree": "Diplôme d'Ingénieur en Informatique",
   "specialization": "Spécialisation en Intelligence Artificielle",
   "institution": "ENSEIRB-MATMECA",
   "location": "Talence, Nouvelle-Aquitaine, France",
   "period": "2024 - 2027",
   "description": "Formation d’ingénieure reconnue par la CTI se déroulant sur trois ans et combinant un solide tronc commun scientifique, des projets innovants (en équipe et souvent en partenariat avec l’industrie).",
-  "gpa": "14.92/20",
-  "rank": "Top 3 de la promotion",
-  "order": 40
+  "gpa": "15.44/20",
+  "rank": "Top 5 de la promotion"
 }
