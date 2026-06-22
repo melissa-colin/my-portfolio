@@ -112,7 +112,7 @@
   "proof": {
     "items": [
       {
-        "value": "3rd / 93",
+        "value": "5 / 81",
         "label": "Class rank at ENSEIRB-MATMECA"
       },
       {
@@ -153,7 +153,7 @@
     "nowLabel": "Right now",
     "now": "Mitacs Globalink research intern at the University of Alberta's Vision & Learning Lab, on physics-grounded 3D motion generation.",
     "goalLabel": "Goal",
-    "goal": "Research Scientist at Google.",
+    "goal": "Research Scientist",
     "ctaPublications": "See my publications",
     "ctaContact": "Talk research"
   },
@@ -302,30 +302,30 @@
     "darkMode": "Theme",
     "contactInfo": "Contact Information"
   },
-  "site": {
-    "title": "Mélissa Colin | AI Student, Model Architectures & World Models",
-    "tagline": "AI Student · World Models",
-    "description": "AI student at ENSEIRB-MATMECA, passionate about designing the model architectures of tomorrow: bio-inspired, world models, more efficient than Transformers. Currently a Mitacs Globalink research intern at the University of Alberta. Goal: to become a Research Scientist at Google."
-  },
-  "theme": {
-    "dark": "Dark Mode",
-    "light": "Light Mode",
-    "toggle": "Toggle Theme"
+  "education": {
+    "rank": "Rank",
+    "gpa": "GPA",
+    "footer": "Because learning isn’t just about optimizing parameters, it’s about giving meaning to every iteration.",
+    "subtitle": "Because in deep learning, there’s also supervised learning. But unlike machines, I sought knowledge, not just validation."
   },
   "nav": {
-    "home": "Home",
-    "certification": "Certifications",
-    "publications": "Publications",
-    "experience": "Experience",
-    "education": "Education",
-    "projects": "Projects",
+    "contact": "Contact",
     "blog": "Blog",
-    "contact": "Contact"
+    "projects": "Projects",
+    "education": "Education",
+    "experience": "Experience",
+    "publications": "Publications",
+    "certification": "Certifications",
+    "home": "Home"
   },
-  "education": {
-    "subtitle": "Because in deep learning, there’s also supervised learning. But unlike machines, I sought knowledge, not just validation.",
-    "footer": "Because learning isn’t just about optimizing parameters, it’s about giving meaning to every iteration.",
-    "gpa": "GPA",
-    "rank": "Rank"
+  "theme": {
+    "toggle": "Toggle Theme",
+    "light": "Light Mode",
+    "dark": "Dark Mode"
+  },
+  "site": {
+    "description": "AI student at ENSEIRB-MATMECA, passionate about designing the model architectures of tomorrow: bio-inspired, world models, more efficient than Transformers. Currently a Mitacs Globalink research intern at the University of Alberta. Goal: to become a Research Scientist at Google.",
+    "tagline": "AI Student · World Models",
+    "title": "Mélissa Colin | AI Student, Model Architectures & World Models"
   }
 }
