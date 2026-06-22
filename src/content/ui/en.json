@@ -1,83 +1,83 @@
 {
   "home": {
     "heroTitle": "Mélissa Colin",
-    "heroSubtitle": "What drives me is rethinking the foundations of AI: architectures inspired by living systems, able to build their own \"model of the world\" and more frugal than Transformers, whatever the application domain. Right now, I'm a Mitacs Globalink research intern at the University of Alberta's Vision & Learning Lab, working on physics-grounded 3D motion generation. My dream: to one day become a Research Scientist at Google.",
+    "heroSubtitle": "What drives me is rethinking the foundations of AI: architectures inspired by living systems, able to build their own \"model of the world\" and more frugal than Transformers, whatever the application domain. Right now, I'm a Mitacs Globalink research intern at the University of Alberta's Vision & Learning Lab, working on physics-grounded 3D motion generation. My dream: to one day become a Research Scientist.",
     "status": "Engineering Student",
     "school": "ENSEIRB-MATMECA",
-    "age": "{{age}} years old",
-    "viewAllProjects": "View All Projects",
+    "viewProjects": "View Projects",
+    "viewPublications": "View Publications",
+    "viewExperience": "View Experience",
+    "learnMore": "Learn More",
+    "aboutTitle": "About Me",
     "skillsSection": {
+      "title": "Expertise & Skills",
+      "subtitle": "A technical and human foundation built around what really interests me: model architectures, world models and bio-inspired systems. Computer vision and explainable AI, meanwhile, remain tools.",
+      "skills": [
+        {
+          "id": "architectures",
+          "icon": "FiCpu",
+          "name": "Model-architecture design",
+          "description": "World models, bio-inspired models, post-Transformer efficiency, attention mechanisms, diffusion models, fine-tuning (LoRA/PEFT)"
+        },
+        {
+          "id": "research",
+          "icon": "FiActivity",
+          "name": "Research methodology",
+          "description": "Empirical studies, ablations, metrics and reproducibility, critical reading of the literature, scientific writing"
+        },
+        {
+          "id": "math",
+          "icon": "FiTrendingUp",
+          "name": "Mathematical foundations",
+          "description": "Linear algebra, optimization, probability, information theory"
+        },
+        {
+          "id": "vision",
+          "icon": "FiEye",
+          "name": "Deep Learning & Vision",
+          "description": "CNNs, ViTs, Transformers, diffusion models, pose estimation, OpenCV"
+        },
+        {
+          "id": "languages",
+          "icon": "FiCode",
+          "name": "Languages & frameworks",
+          "description": "Python, PyTorch, NumPy, Pandas, scikit-learn, C, SQL"
+        },
+        {
+          "id": "mlops",
+          "icon": "FiBriefcase",
+          "name": "MLOps & scaling",
+          "description": "Docker, Kubernetes, Kubeflow, optimized training pipelines"
+        },
+        {
+          "id": "ethics",
+          "icon": "FiShield",
+          "name": "AI ethics & reliability",
+          "description": "Robustness, algorithmic bias, GDPR and the AI Act"
+        },
+        {
+          "id": "softskills",
+          "icon": "FiUsers",
+          "name": "Interpersonal skills",
+          "description": "Curiosity, rigor, autonomy, leadership, teamwork"
+        },
+        {
+          "id": "languages-spoken",
+          "icon": "FiGlobe",
+          "name": "Languages",
+          "description": "French (native), English (fluent, TOEIC 840), Chinese (basics)"
+        }
+      ],
+      "notableTitle": "Notable Achievements",
       "notable": [
         "<a href=\"https://www.mitacs.ca/en/programs/globalink/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Mitacs Globalink</a> research excellence scholarship: research internship at the University of Alberta's Vision &amp; Learning Lab, on physics-grounded 3D motion generation",
         "My first peer-reviewed paper, published at age 20: an empirical study of ViT and CNN architectures, presented at <a href=\"https://hal.science/hal-04641791v1\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">PFIA 2024</a>",
         "Ranked among the top 3 (3/93) of ENSEIRB-MATMECA's computer-science track, and winner of a national innovation competition with EcoSort",
         "Vice-president of ENSEIRB-MATMECA's <a href=\"https://www.ingenib.fr/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-red-600 dark:text-red-500 hover:underline\">Ingenib</a> recruitment forum (team of 22)"
-      ],
-      "notableTitle": "Notable Achievements",
-      "skills": [
-        {
-          "description": "World models, bio-inspired models, post-Transformer efficiency, attention mechanisms, diffusion models, fine-tuning (LoRA/PEFT)",
-          "name": "Model-architecture design",
-          "icon": "FiCpu",
-          "id": "architectures"
-        },
-        {
-          "description": "Empirical studies, ablations, metrics and reproducibility, critical reading of the literature, scientific writing",
-          "name": "Research methodology",
-          "icon": "FiActivity",
-          "id": "research"
-        },
-        {
-          "description": "Linear algebra, optimization, probability, information theory",
-          "name": "Mathematical foundations",
-          "icon": "FiTrendingUp",
-          "id": "math"
-        },
-        {
-          "description": "CNNs, ViTs, Transformers, diffusion models, pose estimation, OpenCV",
-          "name": "Deep Learning & Vision",
-          "icon": "FiEye",
-          "id": "vision"
-        },
-        {
-          "description": "Python, PyTorch, NumPy, Pandas, scikit-learn, C, SQL",
-          "name": "Languages & frameworks",
-          "icon": "FiCode",
-          "id": "languages"
-        },
-        {
-          "description": "Docker, Kubernetes, Kubeflow, optimized training pipelines",
-          "name": "MLOps & scaling",
-          "icon": "FiBriefcase",
-          "id": "mlops"
-        },
-        {
-          "description": "Robustness, algorithmic bias, GDPR and the AI Act",
-          "name": "AI ethics & reliability",
-          "icon": "FiShield",
-          "id": "ethics"
-        },
-        {
-          "description": "Curiosity, rigor, autonomy, leadership, teamwork",
-          "name": "Interpersonal skills",
-          "icon": "FiUsers",
-          "id": "softskills"
-        },
-        {
-          "description": "French (native), English (fluent, TOEIC 840), Chinese (basics)",
-          "name": "Languages",
-          "icon": "FiGlobe",
-          "id": "languages-spoken"
-        }
-      ],
-      "subtitle": "A technical and human foundation built around what really interests me: model architectures, world models and bio-inspired systems. Computer vision and explainable AI, meanwhile, remain tools.",
-      "title": "Expertise & Skills"
+      ]
     },
-    "aboutTitle": "About Me",
-    "learnMore": "Learn More",
-    "viewExperience": "View Experience",
-    "viewPublications": "View Publications",
-    "viewProjects": "View Projects"
+    "viewAllProjects": "View All Projects",
+    "age": "{{age}} years old"
   },
   "about": {
     "title": "About Me",
@@ -95,197 +95,38 @@
     "github": "https://github.com/melissa-colin",
     "medium": "https://medium.com/@melissa.colin",
     "scholar": "https://scholar.google.com/citations?user=7r7iFpsAAAAJ&hl=fr",
-    "signalLink": "https://signal.me/#eu/5yuYK2KZs3zqsnzCWn_2mpBqIxc_MbQRDWjif_4UR5twTC5PvupLJo-CbZs2d6Dg",
-    "ctaMail": "Send an email",
-    "phone": "+33 7 82 52 XX XX",
-    "locationAndPhone": "Within earshot, but never exposed",
-    "followMe": "Follow me",
-    "place": "Bordeaux, France",
-    "location": "Location",
-    "signalButton": "Send a message",
-    "signalText": "For conversations that won’t end up in an ad algorithm.",
-    "signalTitle": "Want to talk without filters?",
-    "socialMedia": "My digital clones sometimes speak on my behalf",
+    "title": "Contact",
     "subtitle": "Never too busy to discuss new ideas or collaborations.",
-    "title": "Contact"
-  },
-  "footer": {
-    "contactInfo": "Contact Information",
-    "darkMode": "Theme",
-    "language": "Language",
-    "navigation": "Navigation",
-    "copyright": "© 2025 Mélissa Colin. All rights reserved."
-  },
-  "blog": {
-    "clearTag": "Clear Tag",
-    "sortOptions": {
-      "title": "Title",
-      "popularity": "Popularity",
-      "date": "Date"
-    },
-    "sortBy": "Sort by",
-    "noPosts": "No posts found.",
-    "publishedOn": "Published on",
-    "searchPosts": "Search posts...",
-    "readMore": "Read",
-    "popularTags": "Popular Tags",
-    "recentPosts": "Recent Posts",
-    "categories": "Categories",
-    "readTime": "min read",
-    "subtitle": "Tutorials, hypotheses, and other reasonably serious digressions.",
-    "title": "Blog"
-  },
-  "experience": {
-    "noExperience": "No professional experience available.",
-    "moreInfo": "If you would like to know more about my professional experience, feel free to get in touch.",
-    "pageSubtitle": "The places where I’ve learned outside of school.",
-    "pageTitle": "Professional Experience"
-  },
-  "projects": {
-    "featuredSection": {
-      "publication": "Publication",
-      "demo": "Demo",
-      "button": "View All Projects",
-      "subtitle": "Explore my latest research projects and technical implementations.",
-      "title": "Featured Projects"
-    },
-    "readMore": "Learn More",
-    "viewCode": "View Code",
-    "viewLive": "View Demo",
-    "techStack": "Technologies",
-    "search": "Search projects...",
-    "allCategories": "All Categories",
-    "filter": "Filter By",
-    "subtitle": "A slightly mad lab for ideas that venture out without a guide.",
-    "title": "Projects"
-  },
-  "publications": {
-    "noPublications": "No publications available.",
-    "readMore": "Read More",
-    "citeBibtex": "Cite (BibTeX)",
-    "viewPaper": "View Paper",
-    "keywords": "Keywords",
-    "abstract": "Abstract",
-    "venue": "Publication Venue",
-    "citations": "Citations",
-    "date": "Date",
-    "sort": "Sort by",
-    "filter": "Filter",
-    "subtitle": "Explorations driven by the desire to understand (and explain).",
-    "title": "Publications"
-  },
-  "certification": {
-    "categoriesList": [
-      {
-        "name": "Deep Learning",
-        "id": "deep-learning"
-      },
-      {
-        "name": "Computer Vision",
-        "id": "computer-vision"
-      },
-      {
-        "name": "MLOps",
-        "id": "mlops"
-      },
-      {
-        "name": "Explainable AI",
-        "id": "xai"
-      },
-      {
-        "name": "AI Ethics",
-        "id": "ethics"
-      },
-      {
-        "name": "Cloud Computing",
-        "id": "cloud"
-      },
-      {
-        "name": "Python",
-        "id": "python"
-      },
-      {
-        "name": "Data Science",
-        "id": "data-science"
-      },
-      {
-        "name": "Mathematics",
-        "id": "math"
-      },
-      {
-        "name": "Cross-Disciplinary Skills",
-        "id": "transversal"
-      },
-      {
-        "name": "Research",
-        "id": "research"
-      },
-      {
-        "name": "Machine Learning",
-        "id": "ml"
-      }
-    ],
-    "verified": "Verified Certificate",
-    "viewCertificate": "View Certificate",
-    "noMatch": "No certifications match the selected categories. Please adjust your filters.",
-    "clearFilters": "Clear Filters",
-    "filterByCategory": "Filter by Category",
-    "pageIntro": "When curiosity comes with a stamp of approval.",
-    "pageTitle": "Certifications"
-  },
-  "notFound": {
-    "funFact": "\"To err is human, to really foul things up requires a computer.\" - Paul R. Ehrlich",
-    "goHome": "Home",
-    "goBack": "Go back",
-    "searchHelp": "Use the navigation above or contact me directly.",
-    "searchSuggestion": "What are you looking for?",
-    "quickLinks": "Quick links",
-    "suggestion": "It may have been moved or deleted.",
-    "message": "The page you are looking for does not exist.",
-    "pageNotFound": "Page not found",
-    "title": "Page not found"
-  },
-  "common": {
-    "retry": "Retry",
-    "error": "Error",
-    "loading": "Loading...",
-    "linkCopied": "Link copied!",
-    "copyLink": "Copy link",
-    "shareOn": "Share on",
-    "share": "Share"
-  },
-  "site": {
-    "title": "Mélissa Colin | AI Student, Model Architectures & World Models",
-    "tagline": "AI Student · World Models",
-    "description": "AI student at ENSEIRB-MATMECA, passionate about designing the model architectures of tomorrow: bio-inspired, world models, more efficient than Transformers. Currently a Mitacs Globalink research intern at the University of Alberta. Goal: to become a Research Scientist at Google."
-  },
-  "theme": {
-    "dark": "Dark Mode",
-    "light": "Light Mode",
-    "toggle": "Toggle Theme"
-  },
-  "nav": {
-    "home": "Home",
-    "certification": "Certifications",
-    "publications": "Publications",
-    "experience": "Experience",
-    "education": "Education",
-    "projects": "Projects",
-    "blog": "Blog",
-    "contact": "Contact"
-  },
-  "education": {
-    "subtitle": "Because in deep learning, there’s also supervised learning. But unlike machines, I sought knowledge, not just validation.",
-    "footer": "Because learning isn’t just about optimizing parameters, it’s about giving meaning to every iteration.",
-    "gpa": "GPA",
-    "rank": "Rank"
+    "socialMedia": "My digital clones sometimes speak on my behalf",
+    "signalTitle": "Want to talk without filters?",
+    "signalText": "For conversations that won’t end up in an ad algorithm.",
+    "signalButton": "Send a message",
+    "location": "Location",
+    "place": "Bordeaux, France",
+    "followMe": "Follow me",
+    "locationAndPhone": "Within earshot, but never exposed",
+    "phone": "+33 7 82 52 XX XX",
+    "ctaMail": "Send an email",
+    "signalLink": "https://signal.me/#eu/5yuYK2KZs3zqsnzCWn_2mpBqIxc_MbQRDWjif_4UR5twTC5PvupLJo-CbZs2d6Dg"
   },
   "proof": {
     "items": [
-      { "value": "3rd / 93", "label": "Class rank at ENSEIRB-MATMECA" },
-      { "value": "Mitacs Globalink", "label": "Research internship, University of Alberta" },
-      { "value": "First author", "label": "Peer-reviewed paper (RJCIA / PFIA 2024)" },
-      { "value": "60 → 90%", "label": "Production accuracy on 100k+ videos (Cali)" }
+      {
+        "value": "3rd / 93",
+        "label": "Class rank at ENSEIRB-MATMECA"
+      },
+      {
+        "value": "Mitacs Globalink",
+        "label": "Research internship, University of Alberta"
+      },
+      {
+        "value": "First author",
+        "label": "Peer-reviewed paper (RJCIA / PFIA 2024)"
+      },
+      {
+        "value": "60 → 90%",
+        "label": "Production accuracy on 100k+ videos (Cali)"
+      }
     ]
   },
   "research": {
@@ -315,5 +156,176 @@
     "goal": "Research Scientist at Google.",
     "ctaPublications": "See my publications",
     "ctaContact": "Talk research"
+  },
+  "common": {
+    "share": "Share",
+    "shareOn": "Share on",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied!",
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "pageNotFound": "Page not found",
+    "message": "The page you are looking for does not exist.",
+    "suggestion": "It may have been moved or deleted.",
+    "quickLinks": "Quick links",
+    "searchSuggestion": "What are you looking for?",
+    "searchHelp": "Use the navigation above or contact me directly.",
+    "goBack": "Go back",
+    "goHome": "Home",
+    "funFact": "\"To err is human, to really foul things up requires a computer.\" - Paul R. Ehrlich"
+  },
+  "certification": {
+    "pageTitle": "Certifications",
+    "pageIntro": "When curiosity comes with a stamp of approval.",
+    "filterByCategory": "Filter by Category",
+    "clearFilters": "Clear Filters",
+    "noMatch": "No certifications match the selected categories. Please adjust your filters.",
+    "viewCertificate": "View Certificate",
+    "verified": "Verified Certificate",
+    "categoriesList": [
+      {
+        "id": "deep-learning",
+        "name": "Deep Learning"
+      },
+      {
+        "id": "computer-vision",
+        "name": "Computer Vision"
+      },
+      {
+        "id": "mlops",
+        "name": "MLOps"
+      },
+      {
+        "id": "xai",
+        "name": "Explainable AI"
+      },
+      {
+        "id": "ethics",
+        "name": "AI Ethics"
+      },
+      {
+        "id": "cloud",
+        "name": "Cloud Computing"
+      },
+      {
+        "id": "python",
+        "name": "Python"
+      },
+      {
+        "id": "data-science",
+        "name": "Data Science"
+      },
+      {
+        "id": "math",
+        "name": "Mathematics"
+      },
+      {
+        "id": "transversal",
+        "name": "Cross-Disciplinary Skills"
+      },
+      {
+        "id": "research",
+        "name": "Research"
+      },
+      {
+        "id": "ml",
+        "name": "Machine Learning"
+      }
+    ]
+  },
+  "publications": {
+    "title": "Publications",
+    "subtitle": "Explorations driven by the desire to understand (and explain).",
+    "filter": "Filter",
+    "sort": "Sort by",
+    "date": "Date",
+    "citations": "Citations",
+    "venue": "Publication Venue",
+    "abstract": "Abstract",
+    "keywords": "Keywords",
+    "viewPaper": "View Paper",
+    "citeBibtex": "Cite (BibTeX)",
+    "readMore": "Read More",
+    "noPublications": "No publications available."
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A slightly mad lab for ideas that venture out without a guide.",
+    "filter": "Filter By",
+    "allCategories": "All Categories",
+    "search": "Search projects...",
+    "techStack": "Technologies",
+    "viewLive": "View Demo",
+    "viewCode": "View Code",
+    "readMore": "Learn More",
+    "featuredSection": {
+      "title": "Featured Projects",
+      "subtitle": "Explore my latest research projects and technical implementations.",
+      "button": "View All Projects",
+      "demo": "Demo",
+      "publication": "Publication"
+    }
+  },
+  "experience": {
+    "pageTitle": "Professional Experience",
+    "pageSubtitle": "The places where I’ve learned outside of school.",
+    "moreInfo": "If you would like to know more about my professional experience, feel free to get in touch.",
+    "noExperience": "No professional experience available."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Tutorials, hypotheses, and other reasonably serious digressions.",
+    "readTime": "min read",
+    "categories": "Categories",
+    "recentPosts": "Recent Posts",
+    "popularTags": "Popular Tags",
+    "readMore": "Read",
+    "searchPosts": "Search posts...",
+    "publishedOn": "Published on",
+    "noPosts": "No posts found.",
+    "sortBy": "Sort by",
+    "sortOptions": {
+      "date": "Date",
+      "popularity": "Popularity",
+      "title": "Title"
+    },
+    "clearTag": "Clear Tag"
+  },
+  "footer": {
+    "copyright": "© 2025 Mélissa Colin. All rights reserved.",
+    "navigation": "Navigation",
+    "language": "Language",
+    "darkMode": "Theme",
+    "contactInfo": "Contact Information"
+  },
+  "site": {
+    "title": "Mélissa Colin | AI Student, Model Architectures & World Models",
+    "tagline": "AI Student · World Models",
+    "description": "AI student at ENSEIRB-MATMECA, passionate about designing the model architectures of tomorrow: bio-inspired, world models, more efficient than Transformers. Currently a Mitacs Globalink research intern at the University of Alberta. Goal: to become a Research Scientist at Google."
+  },
+  "theme": {
+    "dark": "Dark Mode",
+    "light": "Light Mode",
+    "toggle": "Toggle Theme"
+  },
+  "nav": {
+    "home": "Home",
+    "certification": "Certifications",
+    "publications": "Publications",
+    "experience": "Experience",
+    "education": "Education",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "education": {
+    "subtitle": "Because in deep learning, there’s also supervised learning. But unlike machines, I sought knowledge, not just validation.",
+    "footer": "Because learning isn’t just about optimizing parameters, it’s about giving meaning to every iteration.",
+    "gpa": "GPA",
+    "rank": "Rank"
   }
 }
