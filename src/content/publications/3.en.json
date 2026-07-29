@@ -1,0 +1,11 @@
+{
+  "title": "3D human motion correction via learning from physically simulated data (working title)",
+  "authors": "Colin, M., et al.",
+  "venue": "Under preparation — CVPR 2027 submission",
+  "year": "2026",
+  "url": "",
+  "contribution": "First author. 3D human motion reconstructed from monocular video exhibits systematic artifacts: penetration, floating, foot skating. I train a correction model on a paired clean ↔ degraded corpus that I build by rendering and then re-estimating motion, in which physics is used solely as training data — neither in the loss function nor in the architecture. Work carried out at the University of Alberta's Vision & Learning Lab (Prof. Li Cheng).",
+  "abstract": "",
+  "type": "Work in progress",
+  "order": 30
+}

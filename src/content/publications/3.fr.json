@@ -1,0 +1,11 @@
+{
+  "title": "Correction de mouvements humains 3D par apprentissage sur données physiques (titre provisoire)",
+  "authors": "Colin, M., et al.",
+  "venue": "En préparation — soumission CVPR 2027",
+  "year": "2026",
+  "url": "",
+  "contribution": "Première autrice. Les mouvements humains 3D reconstruits depuis une vidéo monoculaire présentent des artefacts systématiques : pénétration, flottement, glissement des appuis. J'entraîne un modèle de correction sur un corpus apparié propre ↔ dégradé que je construis par rendu puis ré-estimation, dans lequel la physique n'intervient qu'en données d'entraînement — ni dans la fonction de coût, ni dans l'architecture. Travail mené au Vision & Learning Lab de l'Université d'Alberta (Prof. Li Cheng).",
+  "abstract": "",
+  "type": "Travaux en cours",
+  "order": 30
+}
