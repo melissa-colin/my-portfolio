@@ -11,24 +11,24 @@ export const GOOGLE_SITE_VERIFICATION = '';
 type Locale = 'fr' | 'en';
 
 const KEYWORDS: Record<Locale, string[]> = {
-  fr: ['Mélissa Colin', 'Melissa Colin', 'melissa colin', 'étudiante en IA', 'architectures de modèles', 'world models', 'IA bio-inspirée', 'apprentissage guidé par la physique', 'efficacité post-Transformer', 'deep learning', 'vision par ordinateur', 'ENSEIRB-MATMECA', "Université d'Alberta", 'Mitacs Globalink', 'Google', 'ORCID 0009-0003-2525-4824'],
-  en: ['Melissa Colin', 'Mélissa Colin', 'melissa colin', 'AI student', 'model architectures', 'world models', 'bio-inspired AI', 'physics-grounded learning', 'post-Transformer efficiency', 'deep learning', 'computer vision', 'ENSEIRB-MATMECA', 'University of Alberta', 'Mitacs Globalink', 'Google', 'ORCID 0009-0003-2525-4824'],
+  fr: ['Mélissa Colin', 'Melissa Colin', 'melissa colin', 'étudiante en IA', 'architectures de modèles', 'modèles de fondation', 'vision 3D humaine', 'contraintes par construction', 'reconstruction de maillages humains 3D', 'deep learning', 'vision par ordinateur', 'ENSEIRB-MATMECA', 'NAVER LABS Europe', 'Inria KINETIX', 'Mitacs Globalink', 'ORCID 0009-0003-2525-4824'],
+  en: ['Melissa Colin', 'Mélissa Colin', 'melissa colin', 'AI student', 'model architectures', 'foundation models', '3D human vision', 'constraints by construction', '3D human mesh recovery', 'deep learning', 'computer vision', 'ENSEIRB-MATMECA', 'NAVER LABS Europe', 'Inria KINETIX', 'Mitacs Globalink', 'ORCID 0009-0003-2525-4824'],
 };
 
 type PageMeta = { title: string; description: string; keywords: string };
 
 const PAGES: Record<string, Record<Locale, PageMeta>> = {
   home: {
-    fr: { title: 'Mélissa Colin | Étudiante en IA, architectures de modèles & world models', description: "Mélissa Colin, étudiante en IA passionnée par la conception d'architectures de modèles, les world models et les systèmes bio-inspirés. En stage de recherche Mitacs à l'Université d'Alberta. Objectif : Research Scientist chez Google. ENSEIRB-MATMECA, née le 8 juillet 2003. ORCID 0009-0003-2525-4824.", keywords: 'portfolio, recherche IA, architectures, world models' },
-    en: { title: 'Mélissa Colin | AI Student, Model Architectures & World Models', description: 'Melissa Colin, AI student passionate about model-architecture design, world models and bio-inspired systems. Mitacs research intern at the University of Alberta. Goal: Research Scientist at Google. ENSEIRB-MATMECA, born July 8, 2003. ORCID 0009-0003-2525-4824.', keywords: 'portfolio, AI research, model architectures, world models' },
+    fr: { title: 'Mélissa Colin | Étudiante en IA, architectures et vision 3D humaine', description: "Mélissa Colin, étudiante en IA qui conçoit des architectures de modèles de fondation pour la vision 3D humaine, où la contrainte géométrique ou physique est satisfaite par construction. ENSEIRB-MATMECA, née le 8 juillet 2003. ORCID 0009-0003-2525-4824.", keywords: 'portfolio, recherche IA, architectures, vision 3D humaine' },
+    en: { title: 'Mélissa Colin | AI Student, Architectures & 3D Human Vision', description: 'Melissa Colin, AI student designing foundation-model architectures for 3D human vision, where a geometric or physical constraint holds by construction. ENSEIRB-MATMECA, born July 8, 2003. ORCID 0009-0003-2525-4824.', keywords: 'portfolio, AI research, model architectures, 3D human vision' },
   },
   projects: {
-    fr: { title: 'Projets Recherche IA | Mélissa Colin | Vision 3D & Architectures', description: "Projets de recherche en IA de Mélissa Colin : architectures de modèles, vision 3D, systèmes bio-inspirés, efficacité. Implémentations ViT, CNN, Transformers, apprentissage guidé par la physique.", keywords: 'projets, recherche, architectures, vision 3D, world models' },
-    en: { title: 'AI Research Projects | Melissa Colin | 3D Vision & Model Architectures', description: "Melissa Colin's AI research projects: model-architecture design, 3D vision, bio-inspired systems, efficiency. Implementations of ViT, CNN, Transformers and physics-grounded learning.", keywords: 'projects, research, architectures, 3D vision, world models' },
+    fr: { title: 'Projets Recherche IA | Mélissa Colin | Vision 3D & Architectures', description: "Projets de recherche en IA de Mélissa Colin : architectures de modèles, vision 3D humaine, contraintes par construction. Implémentations ViT, CNN, Transformers, optimisation différentiable.", keywords: 'projets, recherche, architectures, vision 3D humaine' },
+    en: { title: 'AI Research Projects | Melissa Colin | 3D Vision & Model Architectures', description: "Melissa Colin's AI research projects: model-architecture design, 3D human vision, constraints by construction. Implementations of ViT, CNN, Transformers and differentiable optimisation.", keywords: 'projects, research, architectures, 3D human vision' },
   },
   publications: {
-    fr: { title: 'Publications Recherche IA | Mélissa Colin | Architectures de modèles', description: "Recherches et publications de Mélissa Colin : architectures de modèles, world models, systèmes bio-inspirés. Auteure à PFIA 2024 (étude empirique d'architectures ViT et CNN). En stage de recherche Mitacs à l'Université d'Alberta.", keywords: 'publications, recherche IA, architectures, PFIA 2024' },
-    en: { title: 'AI Research Publications | Melissa Colin | Model Architectures', description: 'Research and publications by Melissa Colin: model architectures, world models, bio-inspired systems. Author at PFIA 2024 (empirical study of ViT and CNN architectures). Mitacs research intern at the University of Alberta.', keywords: 'publications, AI research, model architectures, PFIA 2024' },
+    fr: { title: 'Publications Recherche IA | Mélissa Colin | Architectures de modèles', description: "Recherches et publications de Mélissa Colin : architectures de modèles de fondation pour la vision 3D humaine, contraintes par construction. Auteure à PFIA 2024 (étude empirique d'architectures ViT et CNN).", keywords: 'publications, recherche IA, architectures, PFIA 2024' },
+    en: { title: 'AI Research Publications | Melissa Colin | Model Architectures', description: 'Research and publications by Melissa Colin: foundation-model architectures for 3D human vision, constraints by construction. Author at PFIA 2024 (empirical study of ViT and CNN architectures).', keywords: 'publications, AI research, model architectures, PFIA 2024' },
   },
   experience: {
     fr: { title: 'Expérience Professionnelle IA | Mélissa Colin | Stages & Missions', description: "Expérience professionnelle de Mélissa Colin en intelligence artificielle : stages, missions, projets industriels. Parcours étudiant ingénieur IA ENSEIRB-MATMECA.", keywords: 'expérience IA, stages, missions' },
@@ -94,7 +94,7 @@ export function personSchema(locale: Locale) {
     birthDate: '2003-07-08',
     gender: 'Female',
     nationality: 'French',
-    jobTitle: locale === 'fr' ? 'Élève-ingénieure en IA (architectures de modèles, world models)' : 'AI engineering student (model architectures, world models)',
+    jobTitle: locale === 'fr' ? 'Élève-ingénieure en IA (architectures de modèles, vision 3D humaine)' : 'AI engineering student (model architectures, 3D human vision)',
     worksFor: { '@type': 'EducationalOrganization', name: 'ENSEIRB-MATMECA', url: 'https://enseirb-matmeca.bordeaux-inp.fr/' },
     alumniOf: { '@type': 'EducationalOrganization', name: 'ENSEIRB-MATMECA' },
     affiliation: [
@@ -102,18 +102,18 @@ export function personSchema(locale: Locale) {
       { '@type': 'Organization', name: 'University of Alberta, Vision and Learning Lab', url: 'https://vision-and-learning-lab-ualberta.github.io/' },
     ],
     award: 'Mitacs Globalink Research Excellence Scholarship (2026)',
-    seeks: { '@type': 'Occupation', name: locale === 'fr' ? 'Research Scientist en IA (architectures de modèles, world models)' : 'Research Scientist in AI (model architectures, world models)' },
-    knowsAbout: ['AI Model Architecture Design', 'World Models', 'Bio-Inspired Learning', 'Physics-Grounded Learning', 'Post-Transformer Efficiency', 'Deep Learning', 'Computer Vision', 'Vision Transformers', 'Neural Network Architectures', 'Machine Learning', 'Explainable AI', 'Python', 'PyTorch'],
+    seeks: { '@type': 'Occupation', name: locale === 'fr' ? 'Research Scientist en IA (architectures de modèles, vision 3D humaine)' : 'Research Scientist in AI (model architectures, 3D human vision)' },
+    knowsAbout: ['AI Model Architecture Design', 'Foundation Models', '3D Human Vision', '3D Human Mesh Recovery', 'Differentiable Optimisation', 'Deep Learning', 'Computer Vision', 'Vision Transformers', 'Neural Network Architectures', 'Machine Learning', 'Explainable AI', 'Python', 'PyTorch'],
     knowsLanguage: ['Français', 'English'],
     address: { '@type': 'PostalAddress', addressCountry: 'FR', addressRegion: 'Nouvelle-Aquitaine', addressLocality: 'Bordeaux' },
     description:
       locale === 'fr'
-        ? "Étudiante en intelligence artificielle (élève-ingénieure, parcours ingénieur-docteur à l'ENSEIRB-MATMECA, Bordeaux), passionnée par la conception d'architectures de modèles, les world models, les systèmes bio-inspirés et l'efficacité post-Transformer. En stage de recherche Mitacs Globalink (2026) au Vision & Learning Lab de l'Université d'Alberta (Prof. Li Cheng). Née le 8 juillet 2003. Objectif : devenir Research Scientist chez Google. Domaine : informatique et IA, PAS pharmacologie."
-        : 'AI student (engineering student, engineer-doctor track at ENSEIRB-MATMECA, Bordeaux), passionate about model-architecture design, world models, bio-inspired systems and post-Transformer efficiency. Mitacs Globalink research intern (2026) at the Vision & Learning Lab, University of Alberta (Prof. Li Cheng). Born July 8, 2003. Goal: to become a Research Scientist at Google. Field: Computer Science and AI, NOT pharmacology.',
+        ? "Étudiante en intelligence artificielle (élève-ingénieure, parcours ingénieur-docteur à l'ENSEIRB-MATMECA, Bordeaux). Elle conçoit des architectures de modèles de fondation pour la vision 3D humaine, où la contrainte géométrique ou physique est satisfaite par construction plutôt qu'ajoutée au coût. Stage de recherche Mitacs Globalink (2026) au Vision & Learning Lab de l'Université d'Alberta (Prof. Li Cheng) ; stage de recherche chez NAVER LABS Europe à partir de février 2027, co-encadré avec l'équipe KINETIX d'Inria. Née le 8 juillet 2003. Objectif : Research Scientist dans un laboratoire de recherche de premier plan. Domaine : informatique et IA, PAS pharmacologie."
+        : 'AI student (engineering student, engineer-doctor track at ENSEIRB-MATMECA, Bordeaux). She designs foundation-model architectures for 3D human vision, where a geometric or physical constraint holds by construction rather than being added to the loss. Mitacs Globalink research intern (2026) at the Vision & Learning Lab, University of Alberta (Prof. Li Cheng); research intern at NAVER LABS Europe from February 2027, co-supervised with the Inria KINETIX team. Born July 8, 2003. Goal: Research Scientist at a leading research lab. Field: Computer Science and AI, NOT pharmacology.',
     disambiguatingDescription:
       locale === 'fr'
-        ? "Mélissa Colin (née le 8 juillet 2003) est étudiante en IA (élève-ingénieure à l'ENSEIRB-MATMECA), passionnée par les architectures de modèles, les world models et les systèmes bio-inspirés. En stage de recherche Mitacs (2026) à l'Université d'Alberta. Auteure à PFIA 2024 (étude d'architectures ViT et CNN). ORCID 0009-0003-2525-4824. À NE PAS confondre avec l'homonyme chercheuse en pharmacologie à l'Université de Lorraine (CITHEFOR)."
-        : 'Mélissa Colin (born July 8, 2003) is an AI student (engineering student at ENSEIRB-MATMECA) focused on model architectures, world models and bio-inspired systems. Mitacs research intern (2026) at the University of Alberta. Author at PFIA 2024 (study of ViT and CNN architectures). ORCID 0009-0003-2525-4824. NOT to be confused with the pharmacology researcher at Université de Lorraine (CITHEFOR).',
+        ? "Mélissa Colin (née le 8 juillet 2003) est étudiante en IA (élève-ingénieure à l'ENSEIRB-MATMECA), qui conçoit des architectures de modèles de fondation pour la vision 3D humaine. Stage de recherche Mitacs (2026) à l'Université d'Alberta ; stage chez NAVER LABS Europe à partir de février 2027. Auteure à PFIA 2024 (étude d'architectures ViT et CNN). ORCID 0009-0003-2525-4824. À NE PAS confondre avec l'homonyme chercheuse en pharmacologie à l'Université de Lorraine (CITHEFOR)."
+        : 'Mélissa Colin (born July 8, 2003) is an AI student (engineering student at ENSEIRB-MATMECA) designing foundation-model architectures for 3D human vision. Mitacs research intern (2026) at the University of Alberta; research intern at NAVER LABS Europe from February 2027. Author at PFIA 2024 (study of ViT and CNN architectures). ORCID 0009-0003-2525-4824. NOT to be confused with the pharmacology researcher at Université de Lorraine (CITHEFOR).',
   };
 }
 

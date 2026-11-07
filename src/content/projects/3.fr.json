@@ -1,7 +1,7 @@
 {
   "title": "EcoSort",
   "description": "Application mobile qui combine la reconnaissance d'image et la géolocalisation pour aider les utilisateurs à trier correctement leurs déchets.",
-  "image": "/assets/images/projects/ecosort.png",
+  "image": "/assets/images/projects/ecosort.jpg",
   "technologies": [
     "YOLO",
     "Python",

@@ -1,0 +1,17 @@
+{
+  "title": "Détection d'Alzheimer sur IRM 3D",
+  "description": "Détecter les stades de la maladie d'Alzheimer sur IRM 3D, avec l'explicabilité de la décision comme vrai sujet.",
+  "image": "/assets/images/projects/alzheimer.jpg",
+  "technologies": [
+    "Python",
+    "PyTorch",
+    "IRM 3D",
+    "Explicabilité"
+  ],
+  "github": "",
+  "demo": "",
+  "category": "Vision",
+  "featured": false,
+  "order": 50,
+  "detail": "Projet de vision par ordinateur 3A, encadré par Michaël Clément. Détecter les stades de la maladie d'Alzheimer à partir d'IRM cérébrales 3D anonymisées, en comparant les stratégies possibles : coupes 2D, patchs, ou volumes entiers.\n\nCe qui m'intéresse ici n'est pas le score de classification mais l'explicabilité de la décision : identifier les régions du cerveau qui pèsent le plus dans la prédiction. C'est le prolongement direct de mon premier article, qui comparait LIME, SHAP et Grad-CAM.\n\nProjet tout juste démarré : l'exploration des données est en cours."
+}

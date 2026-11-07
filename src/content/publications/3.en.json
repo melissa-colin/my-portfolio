@@ -1,10 +1,10 @@
 {
-  "title": "3D human motion correction via learning from physically simulated data (working title)",
+  "title": "A differentiable physics projection layer for 3D human motion (working title)",
   "authors": "Colin, M., et al.",
-  "venue": "Under preparation — CVPR 2027 submission",
+  "venue": "Manuscript in preparation",
   "year": "2026",
   "url": "",
-  "contribution": "First author. 3D human motion reconstructed from monocular video exhibits systematic artifacts: penetration, floating, foot skating. I train a correction model on a paired clean ↔ degraded corpus that I build by rendering and then re-estimating motion, in which physics is used solely as training data — neither in the loss function nor in the architecture. Work carried out at the University of Alberta's Vision & Learning Lab (Prof. Li Cheng).",
+  "contribution": "First author. The network predicts a pose, and a differentiable optimisation layer at its output returns the nearest physically feasible one: floor contact is a hard constraint there, not a penalty added to the loss. The gradient passes through the layer by implicit differentiation, so the whole thing trains end to end. Work carried out at the University of Alberta's Vision & Learning Lab (Prof. Li Cheng).",
   "abstract": "",
   "type": "Work in progress",
   "order": 30

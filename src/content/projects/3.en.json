@@ -1,7 +1,7 @@
 {
   "title": "EcoSort",
   "description": "A mobile app combining image recognition and geolocation to help users sort their waste properly.",
-  "image": "/assets/images/projects/ecosort.png",
+  "image": "/assets/images/projects/ecosort.jpg",
   "technologies": [
     "YOLO",
     "Python",

@@ -1,19 +1,21 @@
 {
   "order": 140,
-  "title": "AI Research Intern (3D Motion Generation)",
+  "title": "AI Research Intern (3D Human Motion under Physical Constraints)",
   "company": "University of Alberta | Vision and Learning Lab",
   "companyUrl": "https://vision-and-learning-lab-ualberta.github.io/",
   "location": "Edmonton, AB, Canada",
   "period": "May 2026 - Sept 2026",
-  "description": "Mitacs Globalink research excellence scholarship, at Prof. Li Cheng's Vision and Learning Lab. Together with Yilin Wang, I work on a model for music- and text-prompt-conditioned multi-person 3D dance generation, aiming for a CVPR submission.\n\nMy first step is to make the data reliable, meaning physically correct motion. In practice, I estimate the ground plane robustly and fix motion artifacts (foot-skating, floating, dancer-to-dancer interpenetration, foot-ground contacts), while building the physics-based evaluation metrics, on the AIOZ-GDANCE dataset. After that, I'll move on to the architecture of the generative model itself.",
+  "description": "At Prof. Li Cheng's Vision and Learning Lab. I designed a differentiable optimisation layer at the output of the network, so that the pose it produces is physically feasible.",
   "technologies": [
     "Python",
     "PyTorch",
-    "SMPL",
-    "3D Motion Generation",
-    "Physics-based Metrics"
+    "SMPL-X",
+    "Differentiable optimisation",
+    "Contact constraints"
   ],
   "type": "Research Internship",
   "logo": "/assets/images/images-4.jpeg",
-  "detail": ""
+  "detail": "<p>At Prof. Li Cheng's Vision and Learning Lab.</p>\n<p>I designed a differentiable optimisation layer placed at the output of the network. The network predicts a pose, the layer returns the nearest physically feasible one. Floor contact is a hard constraint there, not a penalty added to the loss. The gradient passes through the layer by implicit differentiation, so the whole thing trains end to end. The model is a permutation-equivariant transformer with attention factorised over people, joints and time.</p>",
+  "award": "Mitacs Globalink Research Award",
+  "awardUrl": "https://www.mitacs.ca/our-programs/globalink-research-award-students-postdocs/"
 }

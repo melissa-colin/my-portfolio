@@ -1,7 +1,7 @@
 {
   "title": "WitHub",
   "description": "Une boîte à outils complète pour automatiser le versioning de projets sur Git grâce à l'IA.",
-  "image": "/assets/images/projects/withub2.png",
+  "image": "/assets/images/projects/withub.jpg",
   "technologies": [
     "Python",
     "Git",

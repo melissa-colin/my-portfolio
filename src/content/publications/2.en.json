@@ -1,10 +1,10 @@
 {
-  "title": "Physically plausible multi-person 3D motion generation (working title)",
-  "authors": "Wang, Y., Colin, M., et al.",
-  "venue": "Under preparation — ICLR 2027 submission",
+  "title": "Paper under review — title withheld",
+  "authors": "Authors withheld (double-blind review)",
+  "venue": "Under review, major machine learning conference (withheld)",
   "year": "2026",
   "url": "",
-  "contribution": "Co-author on ongoing research led by Yilin Wang at the University of Alberta's Vision & Learning Lab (Prof. Li Cheng). Music- and text-prompt-conditioned multi-person 3D dance generation; my contribution focuses on the physical plausibility of the motion (ground-plane estimation, contacts, foot-skating, interpenetration, physics-based metrics on AIOZ-GDANCE).",
+  "contribution": "Third author. My contribution covers data refinement and result visualisations. Work carried out at the University of Alberta's Vision & Learning Lab (Prof. Li Cheng).",
   "abstract": "",
   "type": "Work in progress",
   "order": 20

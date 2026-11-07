@@ -1,0 +1,18 @@
+{
+  "title": "Dessiner un graphe en espace écran",
+  "description": "Optimiser la position des nœuds d'un graphe directement en pixels, avec une tête soft-argmax empruntée à l'estimation de pose humaine.",
+  "image": "/assets/images/projects/graph-drawing.jpg",
+  "technologies": [
+    "PyTorch Geometric",
+    "GNN",
+    "Rendu différentiable",
+    "SDF",
+    "Soft-argmax"
+  ],
+  "github": "https://github.com/melissa-colin/graph-drawing",
+  "demo": "/assets/docs/graph-drawing-jalon1.pdf",
+  "category": "Recherche",
+  "featured": true,
+  "order": 60,
+  "detail": "Projet semestriel 3A, en équipe de trois, encadré par Romain Giot (LaBRI). On optimise la position des nœuds d'un graphe directement en pixels : le dessin est rendu de façon différentiable par des fonctions de distance signées, les coûts sont calculés sur l'image, et le gradient remonte jusqu'aux poids d'un GNN récurrent.\n\nL'idée que j'y apporte : une tête soft-argmax en sortie, empruntée à l'estimation de pose humaine. La position d'un nœud devient la moyenne pondérée d'une carte de probabilités sur les pixels, donc différentiable, contrairement à un argmax, et toujours à l'intérieur du cadre par construction.\n\nProjet en cours."
+}

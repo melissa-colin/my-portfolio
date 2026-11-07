@@ -1,6 +1,10 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
-import { FiBookOpen } from 'react-icons/fi';
+import { FiBookOpen, FiEdit3 } from 'react-icons/fi';
+
+// Un travail en cours d'ecriture n'est pas un article paru : crayon plutot que livre.
+// Teste sur le libelle pour couvrir les deux langues (« Travaux en cours » / « Work in progress »).
+const inProgress = (type: string) => /cours|progress/i.test(type ?? '');
 import { getUI, getList, type Locale } from '../../lib/content';
 
 interface Props {
@@ -54,7 +58,9 @@ const groups = Object.entries(grouped);
             groups.map(([type, pubs]: any) => (
               <div class="mb-12">
                 <div class="flex items-center mb-8">
-                  <FiBookOpen className="text-red-600 dark:text-red-500 text-3xl mr-4" />
+                  {inProgress(type)
+                    ? <FiEdit3 className="text-red-600 dark:text-red-500 text-3xl mr-4" />
+                    : <FiBookOpen className="text-red-600 dark:text-red-500 text-3xl mr-4" />}
                   <h2 class="text-3xl font-bold text-gray-900 dark:text-white">
                     {type}
                   </h2>

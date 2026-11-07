@@ -1,0 +1,29 @@
+{
+  "order": 150,
+  "title": "Stagiaire de recherche en IA (vision 3D humaine)",
+  "company": "NAVER LABS Europe × Inria KINETIX",
+  "companyUrl": "https://europe.naverlabs.com/",
+  "companies": [
+    {
+      "name": "NAVER LABS Europe",
+      "url": "https://europe.naverlabs.com/",
+      "logo": "/assets/images/logos/naver-labs-europe.png"
+    },
+    {
+      "name": "Inria | KINETIX",
+      "url": "https://team.inria.fr/kinetix/",
+      "logo": "/assets/images/logos/inria.png"
+    }
+  ],
+  "location": "Meylan, France",
+  "period": "Février 2027 - Juillet 2027",
+  "description": "Stage de fin d'études à venir, co-encadré par NAVER LABS Europe et l'équipe KINETIX du centre Inria de l'Université Grenoble Alpes.\n\nSujet : estimation de maillages humains 3D à partir d'images.",
+  "technologies": [
+    "Python",
+    "PyTorch",
+    "Vision 3D",
+    "Maillages humains 3D"
+  ],
+  "type": "Stage",
+  "detail": ""
+}

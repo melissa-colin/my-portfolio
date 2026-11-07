@@ -1,0 +1,17 @@
+{
+  "title": "Alzheimer's detection from 3D MRI",
+  "description": "Detecting the stages of Alzheimer's disease from 3D MRI, with the explainability of the decision as the real subject.",
+  "image": "/assets/images/projects/alzheimer.jpg",
+  "technologies": [
+    "Python",
+    "PyTorch",
+    "3D MRI",
+    "Explainability"
+  ],
+  "github": "",
+  "demo": "",
+  "category": "Vision",
+  "featured": false,
+  "order": 50,
+  "detail": "Third-year computer vision project, supervised by Michaël Clément. Detecting the stages of Alzheimer's disease from anonymised 3D brain MRI, comparing the possible strategies: 2D slices, patches, or whole volumes.\n\nWhat interests me here is not the classification score but the explainability of the decision: identifying which brain regions weigh most in the prediction. It is the direct continuation of my first paper, which compared LIME, SHAP and Grad-CAM.\n\nJust started: data exploration is under way."
+}

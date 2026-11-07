@@ -1,0 +1,18 @@
+{
+  "title": "Drawing a graph in screen space",
+  "description": "Optimising a graph's node positions directly in pixels, with a soft-argmax head borrowed from human pose estimation.",
+  "image": "/assets/images/projects/graph-drawing.jpg",
+  "technologies": [
+    "PyTorch Geometric",
+    "GNN",
+    "Differentiable rendering",
+    "SDF",
+    "Soft-argmax"
+  ],
+  "github": "https://github.com/melissa-colin/graph-drawing",
+  "demo": "/assets/docs/graph-drawing-jalon1.pdf",
+  "category": "Research",
+  "featured": true,
+  "order": 60,
+  "detail": "Third-year semester project, in a team of three, supervised by Romain Giot (LaBRI). We optimise the positions of a graph's nodes directly in pixels: the drawing is rendered differentiably through signed distance functions, the losses are computed on the image, and the gradient flows back to the weights of a recurrent GNN.\n\nThe idea I brought to it: a soft-argmax output head, borrowed from human pose estimation. A node's position becomes the weighted average of a probability map over pixels, differentiable, unlike an argmax, and always inside the frame by construction.\n\nWork in progress."
+}

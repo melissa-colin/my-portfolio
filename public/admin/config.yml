@@ -38,6 +38,7 @@ collections:
       - { name: category, label: Catégorie, widget: string }
       - { name: github, label: Lien GitHub, widget: string, required: false }
       - { name: demo, label: Lien démo, widget: string, required: false }
+      - { name: detail, label: "Détail (fenêtre « En savoir plus »)", widget: text, required: false, hint: "Texte long. S'il est rempli, la carte devient cliquable et ouvre une fenêtre." }
       - { name: featured, label: Mis en avant, widget: boolean, default: false, required: false, i18n: duplicate }
 
   - name: experiences
@@ -60,7 +61,19 @@ collections:
       - { name: description, label: Description, widget: text }
       - { name: technologies, label: Technologies, widget: list }
       - { name: type, label: Type, widget: string }
+      - { name: award, label: "Distinction (bourse, prix)", widget: string, required: false, hint: "Affiche un badge ambre sur la carte. Laisse vide s'il n'y en a pas." }
+      - { name: awardUrl, label: "Lien de la distinction", widget: string, required: false }
       - { name: logo, label: Logo, widget: image, required: false, i18n: duplicate }
+      - name: companies
+        label: "Employeurs (si plusieurs)"
+        widget: list
+        required: false
+        collapsed: true
+        hint: "Laisse vide s'il n'y a qu'un employeur. Le premier de la liste s'affiche devant, logos superposes."
+        fields:
+          - { name: name, label: Nom, widget: string }
+          - { name: url, label: Site, widget: string, required: false }
+          - { name: logo, label: Logo, widget: image, required: false, i18n: duplicate }
       - { name: detail, label: Détail (HTML), widget: text, required: false }
 
   - name: education
@@ -148,132 +161,565 @@ collections:
       - { name: tags, label: Tags, widget: list }
       - { name: link, label: Lien article, widget: string }
 
-  # Singleton UI text (hero, about, contact, footer, nav…) — one file per locale
+  # Textes d'interface — TOUTES les cles des fichiers ui/*.json sont exposees ici.
+  # Genere depuis src/content/ui/fr.json : 17 sections, 223 valeurs editables.
   - name: site_text
     label: Textes du site
     editor: { preview: false }
     files:
       - name: fr
-        label: Textes (Français)
+        label: "Textes du site — Français"
         file: src/content/ui/fr.json
         fields:
-          - name: home
-            label: Accueil
-            widget: object
-            fields:
-              - { name: heroTitle, label: Titre principal, widget: string }
-              - { name: heroSubtitle, label: Sous-titre, widget: text }
-              - { name: status, label: Statut, widget: string }
-              - { name: school, label: École, widget: string }
           - name: about
-            label: À propos
+            label: "À propos"
             widget: object
+            collapsed: true
             fields:
-              - { name: title, label: Titre, widget: string }
-              - { name: intro, label: Intro (HTML), widget: text }
-              - { name: section1Title, label: Section 1 — titre, widget: string }
-              - { name: section1p1, label: Section 1 — paragraphe 1 (HTML), widget: text }
-              - { name: section1p2, label: Section 1 — paragraphe 2 (HTML), widget: text }
-              - { name: section2Title, label: Section 2 — titre, widget: string }
-              - { name: section2p1, label: Section 2 — paragraphe 1 (HTML), widget: text }
+              - { name: title, label: "Title", widget: string, required: false }
+              - { name: intro, label: "Intro", widget: text, required: false }
+              - { name: section1Title, label: "Section1 Title", widget: string, required: false }
+              - { name: section1p1, label: "Section1p1", widget: text, required: false }
+              - { name: section1p2, label: "Section1p2", widget: text, required: false }
+              - { name: section2Title, label: "Section2 Title", widget: string, required: false }
+              - { name: section2p1, label: "Section2p1", widget: text, required: false }
+              - { name: cta, label: "Cta", widget: string, required: false }
+          - name: blog
+            label: "Blog"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: clearTag, label: "Clear Tag", widget: string, required: false }
+              - name: sortOptions
+                label: "Sort Options"
+                widget: object
+                collapsed: true
+                fields:
+                  - { name: title, label: "Title", widget: string, required: false }
+                  - { name: popularity, label: "Popularity", widget: string, required: false }
+                  - { name: date, label: "Date", widget: string, required: false }
+              - { name: sortBy, label: "Sort By", widget: string, required: false }
+              - { name: noPosts, label: "No Posts", widget: string, required: false }
+              - { name: publishedOn, label: "Published On", widget: string, required: false }
+              - { name: searchPosts, label: "Search Posts", widget: string, required: false }
+              - { name: readMore, label: "Read More", widget: string, required: false }
+              - { name: popularTags, label: "Popular Tags", widget: string, required: false }
+              - { name: recentPosts, label: "Recent Posts", widget: string, required: false }
+              - { name: categories, label: "Categories", widget: string, required: false }
+              - { name: readTime, label: "Read Time", widget: string, required: false }
+              - { name: subtitle, label: "Subtitle", widget: string, required: false }
+              - { name: title, label: "Title", widget: string, required: false }
+          - name: certification
+            label: "Page certifications"
+            widget: object
+            collapsed: true
+            fields:
+              - name: categoriesList
+                label: "Categories List"
+                widget: list
+                collapsed: true
+                fields:
+                  - { name: name, label: "Name", widget: string, required: false }
+                  - { name: id, label: "Id", widget: string, required: false }
+              - { name: verified, label: "Verified", widget: string, required: false }
+              - { name: viewCertificate, label: "View Certificate", widget: string, required: false }
+              - { name: noMatch, label: "No Match", widget: string, required: false }
+              - { name: clearFilters, label: "Clear Filters", widget: string, required: false }
+              - { name: filterByCategory, label: "Filter By Category", widget: string, required: false }
+              - { name: pageIntro, label: "Page Intro", widget: string, required: false }
+              - { name: pageTitle, label: "Page Title", widget: string, required: false }
+          - name: common
+            label: "Textes communs"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: retry, label: "Retry", widget: string, required: false }
+              - { name: error, label: "Error", widget: string, required: false }
+              - { name: loading, label: "Loading", widget: string, required: false }
+              - { name: linkCopied, label: "Link Copied", widget: string, required: false }
+              - { name: copyLink, label: "Copy Link", widget: string, required: false }
+              - { name: shareOn, label: "Share On", widget: string, required: false }
+              - { name: share, label: "Share", widget: string, required: false }
           - name: contact
-            label: Contact
+            label: "Contact"
             widget: object
+            collapsed: true
             fields:
-              - { name: emailAddress, label: Email, widget: string }
-              - { name: linkedin, label: LinkedIn, widget: string }
-              - { name: github, label: GitHub, widget: string }
-              - { name: medium, label: Medium, widget: string }
-              - { name: scholar, label: Google Scholar, widget: string }
-          - name: proof
-            label: Bande de preuves
+              - { name: emailAddress, label: "Email Address", widget: string, required: false }
+              - { name: linkedin, label: "Linkedin", widget: string, required: false }
+              - { name: github, label: "Github", widget: string, required: false }
+              - { name: medium, label: "Medium", widget: string, required: false }
+              - { name: scholar, label: "Scholar", widget: string, required: false }
+              - { name: signalLink, label: "Signal Link", widget: string, required: false }
+              - { name: ctaMail, label: "Cta Mail", widget: string, required: false }
+              - { name: phone, label: "Phone", widget: string, required: false }
+              - { name: locationAndPhone, label: "Location And Phone", widget: string, required: false }
+              - { name: followMe, label: "Follow Me", widget: string, required: false }
+              - { name: place, label: "Place", widget: string, required: false }
+              - { name: location, label: "Location", widget: string, required: false }
+              - { name: signalButton, label: "Signal Button", widget: string, required: false }
+              - { name: signalText, label: "Signal Text", widget: string, required: false }
+              - { name: signalTitle, label: "Signal Title", widget: string, required: false }
+              - { name: socialMedia, label: "Social Media", widget: string, required: false }
+              - { name: subtitle, label: "Subtitle", widget: string, required: false }
+              - { name: title, label: "Title", widget: string, required: false }
+          - name: education
+            label: "Page formation"
             widget: object
+            collapsed: true
+            fields:
+              - { name: subtitle, label: "Subtitle", widget: text, required: false }
+              - { name: footer, label: "Footer", widget: text, required: false }
+              - { name: gpa, label: "Gpa", widget: string, required: false }
+              - { name: rank, label: "Rank", widget: string, required: false }
+          - name: experience
+            label: "Page expérience"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: noExperience, label: "No Experience", widget: string, required: false }
+              - { name: moreInfo, label: "More Info", widget: string, required: false }
+              - { name: pageSubtitle, label: "Page Subtitle", widget: string, required: false }
+              - { name: pageTitle, label: "Page Title", widget: string, required: false }
+          - name: footer
+            label: "Pied de page"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: contactInfo, label: "Contact Info", widget: string, required: false }
+              - { name: darkMode, label: "Dark Mode", widget: string, required: false }
+              - { name: language, label: "Language", widget: string, required: false }
+              - { name: navigation, label: "Navigation", widget: string, required: false }
+              - { name: copyright, label: "Copyright", widget: string, required: false }
+          - name: home
+            label: "Accueil"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: heroTitle, label: "Hero Title", widget: string, required: false }
+              - { name: heroSubtitle, label: "Hero Subtitle", widget: text, required: false }
+              - { name: status, label: "Status", widget: string, required: false }
+              - { name: school, label: "School", widget: string, required: false }
+              - { name: age, label: "Age", widget: string, required: false }
+              - { name: viewAllProjects, label: "View All Projects", widget: string, required: false }
+              - name: skillsSection
+                label: "Skills Section"
+                widget: object
+                collapsed: true
+                fields:
+                  - { name: notable, label: "Notable", widget: list }
+                  - { name: notableTitle, label: "Notable Title", widget: string, required: false }
+                  - name: skills
+                    label: "Skills"
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - { name: description, label: "Description", widget: text, required: false }
+                      - { name: name, label: "Name", widget: string, required: false }
+                      - { name: icon, label: "Icon", widget: string, required: false }
+                      - { name: id, label: "Id", widget: string, required: false }
+                  - { name: subtitle, label: "Subtitle", widget: text, required: false }
+                  - { name: title, label: "Title", widget: string, required: false }
+              - { name: aboutTitle, label: "About Title", widget: string, required: false }
+              - { name: learnMore, label: "Learn More", widget: string, required: false }
+              - { name: viewExperience, label: "View Experience", widget: string, required: false }
+              - { name: viewPublications, label: "View Publications", widget: string, required: false }
+              - { name: viewProjects, label: "View Projects", widget: string, required: false }
+          - name: nav
+            label: "Navigation"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: home, label: "Home", widget: string, required: false }
+              - { name: certification, label: "Certification", widget: string, required: false }
+              - { name: publications, label: "Publications", widget: string, required: false }
+              - { name: experience, label: "Experience", widget: string, required: false }
+              - { name: education, label: "Education", widget: string, required: false }
+              - { name: projects, label: "Projects", widget: string, required: false }
+              - { name: blog, label: "Blog", widget: string, required: false }
+              - { name: contact, label: "Contact", widget: string, required: false }
+          - name: notFound
+            label: "Page 404"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: funFact, label: "Fun Fact", widget: string, required: false }
+              - { name: goHome, label: "Go Home", widget: string, required: false }
+              - { name: goBack, label: "Go Back", widget: string, required: false }
+              - { name: searchHelp, label: "Search Help", widget: string, required: false }
+              - { name: searchSuggestion, label: "Search Suggestion", widget: string, required: false }
+              - { name: quickLinks, label: "Quick Links", widget: string, required: false }
+              - { name: suggestion, label: "Suggestion", widget: string, required: false }
+              - { name: message, label: "Message", widget: string, required: false }
+              - { name: pageNotFound, label: "Page Not Found", widget: string, required: false }
+              - { name: title, label: "Title", widget: string, required: false }
+          - name: projects
+            label: "Page projets"
+            widget: object
+            collapsed: true
+            fields:
+              - name: featuredSection
+                label: "Featured Section"
+                widget: object
+                collapsed: true
+                fields:
+                  - { name: publication, label: "Publication", widget: string, required: false }
+                  - { name: demo, label: "Demo", widget: string, required: false }
+                  - { name: button, label: "Button", widget: string, required: false }
+                  - { name: subtitle, label: "Subtitle", widget: string, required: false }
+                  - { name: title, label: "Title", widget: string, required: false }
+              - { name: readMore, label: "Read More", widget: string, required: false }
+              - { name: viewCode, label: "View Code", widget: string, required: false }
+              - { name: viewLive, label: "View Live", widget: string, required: false }
+              - { name: techStack, label: "Tech Stack", widget: string, required: false }
+              - { name: search, label: "Search", widget: string, required: false }
+              - { name: allCategories, label: "All Categories", widget: string, required: false }
+              - { name: filter, label: "Filter", widget: string, required: false }
+              - { name: subtitle, label: "Subtitle", widget: string, required: false }
+              - { name: title, label: "Title", widget: string, required: false }
+          - name: proof
+            label: "Bande de preuves"
+            widget: object
+            collapsed: true
             fields:
               - name: items
-                label: Chiffres clés
+                label: "Items"
                 widget: list
+                collapsed: true
                 fields:
-                  - { name: value, label: Valeur, widget: string }
-                  - { name: label, label: Légende, widget: string }
-          - name: research
-            label: Section recherche
+                  - { name: value, label: "Value", widget: string, required: false }
+                  - { name: label, label: "Label", widget: string, required: false }
+          - name: publications
+            label: "Page publications"
             widget: object
+            collapsed: true
             fields:
-              - { name: title, label: Titre, widget: string }
-              - { name: lead, label: Accroche, widget: string }
-              - { name: intro, label: Intro, widget: text }
+              - { name: noPublications, label: "No Publications", widget: string, required: false }
+              - { name: readMore, label: "Read More", widget: string, required: false }
+              - { name: citeBibtex, label: "Cite Bibtex", widget: string, required: false }
+              - { name: viewPaper, label: "View Paper", widget: string, required: false }
+              - { name: keywords, label: "Keywords", widget: string, required: false }
+              - { name: abstract, label: "Abstract", widget: string, required: false }
+              - { name: venue, label: "Venue", widget: string, required: false }
+              - { name: citations, label: "Citations", widget: string, required: false }
+              - { name: date, label: "Date", widget: string, required: false }
+              - { name: sort, label: "Sort", widget: string, required: false }
+              - { name: filter, label: "Filter", widget: string, required: false }
+              - { name: subtitle, label: "Subtitle", widget: string, required: false }
+              - { name: title, label: "Title", widget: string, required: false }
+          - name: research
+            label: "Section recherche"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: title, label: "Title", widget: string, required: false }
+              - { name: lead, label: "Lead", widget: string, required: false }
+              - { name: intro, label: "Intro", widget: text, required: false }
               - name: pillars
-                label: Piliers
+                label: "Pillars"
                 widget: list
+                collapsed: true
                 fields:
-                  - { name: icon, label: 'Icône (FiGlobe/FiActivity/FiZap)', widget: string }
-                  - { name: title, label: Titre, widget: string }
-                  - { name: desc, label: Description, widget: text }
-              - { name: nowLabel, label: 'Libellé « en ce moment »', widget: string }
-              - { name: now, label: 'En ce moment', widget: text }
-              - { name: goalLabel, label: 'Libellé « objectif »', widget: string }
-              - { name: goal, label: Objectif, widget: string }
-              - { name: ctaPublications, label: 'CTA publications', widget: string }
-              - { name: ctaContact, label: 'CTA contact', widget: string }
+                  - { name: icon, label: "Icon", widget: string, required: false }
+                  - { name: title, label: "Title", widget: string, required: false }
+                  - { name: desc, label: "Desc", widget: string, required: false }
+              - { name: nowLabel, label: "Now Label", widget: string, required: false }
+              - { name: now, label: "Now", widget: text, required: false }
+              - { name: goalLabel, label: "Goal Label", widget: string, required: false }
+              - { name: goal, label: "Goal", widget: string, required: false }
+              - { name: ctaPublications, label: "Cta Publications", widget: string, required: false }
+              - { name: ctaContact, label: "Cta Contact", widget: string, required: false }
+          - name: site
+            label: "SEO du site"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: title, label: "Title", widget: string, required: false }
+              - { name: tagline, label: "Tagline", widget: string, required: false }
+              - { name: description, label: "Description", widget: text, required: false }
+          - name: theme
+            label: "Thème"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: dark, label: "Dark", widget: string, required: false }
+              - { name: light, label: "Light", widget: string, required: false }
+              - { name: toggle, label: "Toggle", widget: string, required: false }
       - name: en
-        label: Text (English)
+        label: "Site text — English"
         file: src/content/ui/en.json
         fields:
-          - name: home
-            label: Home
-            widget: object
-            fields:
-              - { name: heroTitle, label: Hero title, widget: string }
-              - { name: heroSubtitle, label: Hero subtitle, widget: text }
-              - { name: status, label: Status, widget: string }
-              - { name: school, label: School, widget: string }
           - name: about
-            label: About
+            label: "About"
             widget: object
+            collapsed: true
             fields:
-              - { name: title, label: Title, widget: string }
-              - { name: intro, label: Intro (HTML), widget: text }
-              - { name: section1Title, label: Section 1 title, widget: string }
-              - { name: section1p1, label: Section 1 paragraph 1 (HTML), widget: text }
-              - { name: section1p2, label: Section 1 paragraph 2 (HTML), widget: text }
-              - { name: section2Title, label: Section 2 title, widget: string }
-              - { name: section2p1, label: Section 2 paragraph 1 (HTML), widget: text }
+              - { name: title, label: "Title", widget: string, required: false }
+              - { name: intro, label: "Intro", widget: text, required: false }
+              - { name: section1Title, label: "Section1 Title", widget: string, required: false }
+              - { name: section1p1, label: "Section1p1", widget: text, required: false }
+              - { name: section1p2, label: "Section1p2", widget: text, required: false }
+              - { name: section2Title, label: "Section2 Title", widget: string, required: false }
+              - { name: section2p1, label: "Section2p1", widget: text, required: false }
+              - { name: cta, label: "Cta", widget: string, required: false }
+          - name: blog
+            label: "Blog"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: clearTag, label: "Clear Tag", widget: string, required: false }
+              - name: sortOptions
+                label: "Sort Options"
+                widget: object
+                collapsed: true
+                fields:
+                  - { name: title, label: "Title", widget: string, required: false }
+                  - { name: popularity, label: "Popularity", widget: string, required: false }
+                  - { name: date, label: "Date", widget: string, required: false }
+              - { name: sortBy, label: "Sort By", widget: string, required: false }
+              - { name: noPosts, label: "No Posts", widget: string, required: false }
+              - { name: publishedOn, label: "Published On", widget: string, required: false }
+              - { name: searchPosts, label: "Search Posts", widget: string, required: false }
+              - { name: readMore, label: "Read More", widget: string, required: false }
+              - { name: popularTags, label: "Popular Tags", widget: string, required: false }
+              - { name: recentPosts, label: "Recent Posts", widget: string, required: false }
+              - { name: categories, label: "Categories", widget: string, required: false }
+              - { name: readTime, label: "Read Time", widget: string, required: false }
+              - { name: subtitle, label: "Subtitle", widget: string, required: false }
+              - { name: title, label: "Title", widget: string, required: false }
+          - name: certification
+            label: "Certifications page"
+            widget: object
+            collapsed: true
+            fields:
+              - name: categoriesList
+                label: "Categories List"
+                widget: list
+                collapsed: true
+                fields:
+                  - { name: name, label: "Name", widget: string, required: false }
+                  - { name: id, label: "Id", widget: string, required: false }
+              - { name: verified, label: "Verified", widget: string, required: false }
+              - { name: viewCertificate, label: "View Certificate", widget: string, required: false }
+              - { name: noMatch, label: "No Match", widget: string, required: false }
+              - { name: clearFilters, label: "Clear Filters", widget: string, required: false }
+              - { name: filterByCategory, label: "Filter By Category", widget: string, required: false }
+              - { name: pageIntro, label: "Page Intro", widget: string, required: false }
+              - { name: pageTitle, label: "Page Title", widget: string, required: false }
+          - name: common
+            label: "Common strings"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: retry, label: "Retry", widget: string, required: false }
+              - { name: error, label: "Error", widget: string, required: false }
+              - { name: loading, label: "Loading", widget: string, required: false }
+              - { name: linkCopied, label: "Link Copied", widget: string, required: false }
+              - { name: copyLink, label: "Copy Link", widget: string, required: false }
+              - { name: shareOn, label: "Share On", widget: string, required: false }
+              - { name: share, label: "Share", widget: string, required: false }
           - name: contact
-            label: Contact
+            label: "Contact"
             widget: object
+            collapsed: true
             fields:
-              - { name: emailAddress, label: Email, widget: string }
-              - { name: linkedin, label: LinkedIn, widget: string }
-              - { name: github, label: GitHub, widget: string }
-              - { name: medium, label: Medium, widget: string }
-              - { name: scholar, label: Google Scholar, widget: string }
-          - name: proof
-            label: Proof bar
+              - { name: emailAddress, label: "Email Address", widget: string, required: false }
+              - { name: linkedin, label: "Linkedin", widget: string, required: false }
+              - { name: github, label: "Github", widget: string, required: false }
+              - { name: medium, label: "Medium", widget: string, required: false }
+              - { name: scholar, label: "Scholar", widget: string, required: false }
+              - { name: signalLink, label: "Signal Link", widget: string, required: false }
+              - { name: ctaMail, label: "Cta Mail", widget: string, required: false }
+              - { name: phone, label: "Phone", widget: string, required: false }
+              - { name: locationAndPhone, label: "Location And Phone", widget: string, required: false }
+              - { name: followMe, label: "Follow Me", widget: string, required: false }
+              - { name: place, label: "Place", widget: string, required: false }
+              - { name: location, label: "Location", widget: string, required: false }
+              - { name: signalButton, label: "Signal Button", widget: string, required: false }
+              - { name: signalText, label: "Signal Text", widget: string, required: false }
+              - { name: signalTitle, label: "Signal Title", widget: string, required: false }
+              - { name: socialMedia, label: "Social Media", widget: string, required: false }
+              - { name: subtitle, label: "Subtitle", widget: string, required: false }
+              - { name: title, label: "Title", widget: string, required: false }
+          - name: education
+            label: "Education page"
             widget: object
+            collapsed: true
+            fields:
+              - { name: subtitle, label: "Subtitle", widget: text, required: false }
+              - { name: footer, label: "Footer", widget: text, required: false }
+              - { name: gpa, label: "Gpa", widget: string, required: false }
+              - { name: rank, label: "Rank", widget: string, required: false }
+          - name: experience
+            label: "Experience page"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: noExperience, label: "No Experience", widget: string, required: false }
+              - { name: moreInfo, label: "More Info", widget: string, required: false }
+              - { name: pageSubtitle, label: "Page Subtitle", widget: string, required: false }
+              - { name: pageTitle, label: "Page Title", widget: string, required: false }
+          - name: footer
+            label: "Footer"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: contactInfo, label: "Contact Info", widget: string, required: false }
+              - { name: darkMode, label: "Dark Mode", widget: string, required: false }
+              - { name: language, label: "Language", widget: string, required: false }
+              - { name: navigation, label: "Navigation", widget: string, required: false }
+              - { name: copyright, label: "Copyright", widget: string, required: false }
+          - name: home
+            label: "Home"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: heroTitle, label: "Hero Title", widget: string, required: false }
+              - { name: heroSubtitle, label: "Hero Subtitle", widget: text, required: false }
+              - { name: status, label: "Status", widget: string, required: false }
+              - { name: school, label: "School", widget: string, required: false }
+              - { name: age, label: "Age", widget: string, required: false }
+              - { name: viewAllProjects, label: "View All Projects", widget: string, required: false }
+              - name: skillsSection
+                label: "Skills Section"
+                widget: object
+                collapsed: true
+                fields:
+                  - { name: notable, label: "Notable", widget: list }
+                  - { name: notableTitle, label: "Notable Title", widget: string, required: false }
+                  - name: skills
+                    label: "Skills"
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - { name: description, label: "Description", widget: text, required: false }
+                      - { name: name, label: "Name", widget: string, required: false }
+                      - { name: icon, label: "Icon", widget: string, required: false }
+                      - { name: id, label: "Id", widget: string, required: false }
+                  - { name: subtitle, label: "Subtitle", widget: text, required: false }
+                  - { name: title, label: "Title", widget: string, required: false }
+              - { name: aboutTitle, label: "About Title", widget: string, required: false }
+              - { name: learnMore, label: "Learn More", widget: string, required: false }
+              - { name: viewExperience, label: "View Experience", widget: string, required: false }
+              - { name: viewPublications, label: "View Publications", widget: string, required: false }
+              - { name: viewProjects, label: "View Projects", widget: string, required: false }
+          - name: nav
+            label: "Navigation"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: home, label: "Home", widget: string, required: false }
+              - { name: certification, label: "Certification", widget: string, required: false }
+              - { name: publications, label: "Publications", widget: string, required: false }
+              - { name: experience, label: "Experience", widget: string, required: false }
+              - { name: education, label: "Education", widget: string, required: false }
+              - { name: projects, label: "Projects", widget: string, required: false }
+              - { name: blog, label: "Blog", widget: string, required: false }
+              - { name: contact, label: "Contact", widget: string, required: false }
+          - name: notFound
+            label: "404 page"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: funFact, label: "Fun Fact", widget: string, required: false }
+              - { name: goHome, label: "Go Home", widget: string, required: false }
+              - { name: goBack, label: "Go Back", widget: string, required: false }
+              - { name: searchHelp, label: "Search Help", widget: string, required: false }
+              - { name: searchSuggestion, label: "Search Suggestion", widget: string, required: false }
+              - { name: quickLinks, label: "Quick Links", widget: string, required: false }
+              - { name: suggestion, label: "Suggestion", widget: string, required: false }
+              - { name: message, label: "Message", widget: string, required: false }
+              - { name: pageNotFound, label: "Page Not Found", widget: string, required: false }
+              - { name: title, label: "Title", widget: string, required: false }
+          - name: projects
+            label: "Projects page"
+            widget: object
+            collapsed: true
+            fields:
+              - name: featuredSection
+                label: "Featured Section"
+                widget: object
+                collapsed: true
+                fields:
+                  - { name: publication, label: "Publication", widget: string, required: false }
+                  - { name: demo, label: "Demo", widget: string, required: false }
+                  - { name: button, label: "Button", widget: string, required: false }
+                  - { name: subtitle, label: "Subtitle", widget: string, required: false }
+                  - { name: title, label: "Title", widget: string, required: false }
+              - { name: readMore, label: "Read More", widget: string, required: false }
+              - { name: viewCode, label: "View Code", widget: string, required: false }
+              - { name: viewLive, label: "View Live", widget: string, required: false }
+              - { name: techStack, label: "Tech Stack", widget: string, required: false }
+              - { name: search, label: "Search", widget: string, required: false }
+              - { name: allCategories, label: "All Categories", widget: string, required: false }
+              - { name: filter, label: "Filter", widget: string, required: false }
+              - { name: subtitle, label: "Subtitle", widget: string, required: false }
+              - { name: title, label: "Title", widget: string, required: false }
+          - name: proof
+            label: "Proof bar"
+            widget: object
+            collapsed: true
             fields:
               - name: items
-                label: Key figures
+                label: "Items"
                 widget: list
+                collapsed: true
                 fields:
-                  - { name: value, label: Value, widget: string }
-                  - { name: label, label: Caption, widget: string }
-          - name: research
-            label: Research section
+                  - { name: value, label: "Value", widget: string, required: false }
+                  - { name: label, label: "Label", widget: string, required: false }
+          - name: publications
+            label: "Publications page"
             widget: object
+            collapsed: true
             fields:
-              - { name: title, label: Title, widget: string }
-              - { name: lead, label: Lead, widget: string }
-              - { name: intro, label: Intro, widget: text }
+              - { name: noPublications, label: "No Publications", widget: string, required: false }
+              - { name: readMore, label: "Read More", widget: string, required: false }
+              - { name: citeBibtex, label: "Cite Bibtex", widget: string, required: false }
+              - { name: viewPaper, label: "View Paper", widget: string, required: false }
+              - { name: keywords, label: "Keywords", widget: string, required: false }
+              - { name: abstract, label: "Abstract", widget: string, required: false }
+              - { name: venue, label: "Venue", widget: string, required: false }
+              - { name: citations, label: "Citations", widget: string, required: false }
+              - { name: date, label: "Date", widget: string, required: false }
+              - { name: sort, label: "Sort", widget: string, required: false }
+              - { name: filter, label: "Filter", widget: string, required: false }
+              - { name: subtitle, label: "Subtitle", widget: string, required: false }
+              - { name: title, label: "Title", widget: string, required: false }
+          - name: research
+            label: "Research section"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: title, label: "Title", widget: string, required: false }
+              - { name: lead, label: "Lead", widget: string, required: false }
+              - { name: intro, label: "Intro", widget: text, required: false }
               - name: pillars
-                label: Pillars
+                label: "Pillars"
                 widget: list
+                collapsed: true
                 fields:
-                  - { name: icon, label: 'Icon (FiGlobe/FiActivity/FiZap)', widget: string }
-                  - { name: title, label: Title, widget: string }
-                  - { name: desc, label: Description, widget: text }
-              - { name: nowLabel, label: '"Right now" label', widget: string }
-              - { name: now, label: 'Right now', widget: text }
-              - { name: goalLabel, label: '"Goal" label', widget: string }
-              - { name: goal, label: Goal, widget: string }
-              - { name: ctaPublications, label: 'CTA publications', widget: string }
-              - { name: ctaContact, label: 'CTA contact', widget: string }
+                  - { name: icon, label: "Icon", widget: string, required: false }
+                  - { name: title, label: "Title", widget: string, required: false }
+                  - { name: desc, label: "Desc", widget: string, required: false }
+              - { name: nowLabel, label: "Now Label", widget: string, required: false }
+              - { name: now, label: "Now", widget: text, required: false }
+              - { name: goalLabel, label: "Goal Label", widget: string, required: false }
+              - { name: goal, label: "Goal", widget: string, required: false }
+              - { name: ctaPublications, label: "Cta Publications", widget: string, required: false }
+              - { name: ctaContact, label: "Cta Contact", widget: string, required: false }
+          - name: site
+            label: "Site SEO"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: title, label: "Title", widget: string, required: false }
+              - { name: tagline, label: "Tagline", widget: string, required: false }
+              - { name: description, label: "Description", widget: text, required: false }
+          - name: theme
+            label: "Theme"
+            widget: object
+            collapsed: true
+            fields:
+              - { name: dark, label: "Dark", widget: string, required: false }
+              - { name: light, label: "Light", widget: string, required: false }
+              - { name: toggle, label: "Toggle", widget: string, required: false }

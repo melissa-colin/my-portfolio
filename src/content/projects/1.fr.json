@@ -1,7 +1,7 @@
 {
   "title": "PoseNet",
   "description": "Un projet de recherche sur la reconnaissance d'actions grâce aux données de pose humaine.",
-  "image": "/assets/images/projects/posenet2.png",
+  "image": "/assets/images/projects/posenet.jpg",
   "technologies": [
     "Python",
     "Pose Estimation",

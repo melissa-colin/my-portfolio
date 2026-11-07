@@ -1,7 +1,7 @@
 {
   "home": {
     "heroTitle": "Mélissa Colin",
-    "heroSubtitle": "What drives me is rethinking the foundations of AI: architectures inspired by living systems, able to build their own \"model of the world\" and more frugal than Transformers, whatever the application domain. Right now, I'm a Mitacs Globalink research intern at the University of Alberta's Vision & Learning Lab, working on physics-grounded 3D motion generation. My dream: to one day become a Research Scientist.",
+    "heroSubtitle": "What drives me is designing foundation-model architectures for 3D human vision: having a geometric or physical constraint carried by the architecture itself, rather than added to the loss. My goal: to become a Research Scientist at a leading research lab.",
     "status": "Engineering Student",
     "school": "ENSEIRB-MATMECA",
     "viewProjects": "View Projects",
@@ -11,13 +11,13 @@
     "aboutTitle": "About Me",
     "skillsSection": {
       "title": "Expertise & Skills",
-      "subtitle": "A technical and human foundation built around what really interests me: model architectures, world models and bio-inspired systems. Computer vision and explainable AI, meanwhile, remain tools.",
+      "subtitle": "A technical and human foundation built around what really interests me: foundation-model architectures and 3D human vision. Classical computer vision and explainable AI, meanwhile, remain tools.",
       "skills": [
         {
           "id": "architectures",
           "icon": "FiCpu",
           "name": "Model-architecture design",
-          "description": "World models, bio-inspired models, post-Transformer efficiency, attention mechanisms, diffusion models, fine-tuning (LoRA/PEFT)"
+          "description": "Foundation models for 3D vision, constraints by construction, implicit differentiation, attention mechanisms, diffusion models, fine-tuning (LoRA/PEFT)"
         },
         {
           "id": "research",
@@ -81,12 +81,12 @@
   },
   "about": {
     "title": "About Me",
-    "intro": "I'm an engineering student at <strong>ENSEIRB-MATMECA</strong>, on the engineer-doctor track. What drives me is <strong>rethinking model architectures</strong>: making them more inspired by living systems, able to build their own \"model of the world\" and more efficient than Transformers. Right now, I'm a <strong>Mitacs Globalink research intern</strong> at the University of Alberta's Vision &amp; Learning Lab, working on physics-grounded 3D motion generation. And my longer-term goal is to become a <strong>Research Scientist at Google</strong>.",
+    "intro": "I'm an engineering student at <strong>ENSEIRB-MATMECA</strong>, on the engineer-doctor track. What drives me is <strong>designing foundation-model architectures for 3D human vision</strong>: making a geometric or physical constraint hold through the architecture, rather than through a term added to the loss. And I take that constraint from anatomy, from mechanics, from what a real body allows.",
     "section1Title": "From a village in Gironde to AI research",
     "section1p1": "I grew up in a rural village in Gironde, in a working-class family. As a kid, I was told I wasn't made for studying, but for working. I taught myself to code: Scratch at <strong>12</strong>, Python at <strong>13</strong>, then a technical high school. What captivated me, very quickly, was <strong>algorithms</strong> and the way a machine can learn, far more than websites or games.",
     "section1p2": "The spark came during an internship at Cali Intelligences, a computer-vision startup. I threw myself into it with a conviction that never left me: rather than stacking more layers, I wanted to contribute to the <strong>very foundations of AI</strong> by rethinking model architectures. I moved up one step at a time, ranking first at each stage, until I was admitted to <strong>ENSEIRB-MATMECA</strong> on merit and ranked <strong>3rd out of 93</strong>, then earned a <strong>Mitacs Globalink</strong> scholarship to do research at the University of Alberta.",
     "section2Title": "Why I do this",
-    "section2p1": "At heart, my drive isn't only scientific. I want to <strong>prove it's possible</strong>: so that another girl from a modest background can look at me and think, \"if she could, then so can I.\" Science is the tool, opening the way is the goal. And I hold one red line: never to put my work in the service of surveillance or military uses. My motto is a line from Stephen Hawking: <em>\"Intelligence is the ability to adapt to change.\"</em>",
+    "section2p1": "My drive isn't only scientific. I was told I wasn't cut out for studying; I did it anyway. If I say where I come from instead of hiding it, it's because it helps to have seen someone else do it first. And I hold one line: <strong>my work will not go to surveillance or to military uses</strong>.",
     "cta": "Explore My Journey"
   },
   "contact": {
@@ -131,29 +131,29 @@
   },
   "research": {
     "title": "What drives me",
-    "lead": "Designing the model architectures of tomorrow.",
-    "intro": "My north star: rethinking the foundations of AI, toward more general, more frugal, life-inspired models, whatever the application domain.",
+    "lead": "Designing foundation-model architectures for 3D human vision.",
+    "intro": "I want what a model produces to be valid from the start, not fixed afterwards. So I take the constraint from where it already exists: anatomy, mechanics, living bodies. 3D human vision is my testing ground, but the question comes up in every domain.",
     "pillars": [
       {
         "icon": "FiGlobe",
-        "title": "World Models",
-        "desc": "Models that learn an internal representation of the world to anticipate, reason and act."
+        "title": "Foundation models for 3D vision",
+        "desc": "Large-scale encoders that place the scene and the people in it in one shared 3D frame."
       },
       {
         "icon": "FiActivity",
-        "title": "Bio-inspired architectures",
-        "desc": "Drawing from living systems for more efficient, robust and generalizable models."
+        "title": "Constraints by construction",
+        "desc": "A differentiable optimisation layer, a restricted parametrisation, equivariance: three ways to impose a property without adding it to the loss."
       },
       {
         "icon": "FiZap",
-        "title": "Post-Transformer efficiency",
-        "desc": "Rethinking attention and compute for models that are frugal in energy and data."
+        "title": "The living body as a constraint",
+        "desc": "Anatomy, mechanics, contact: what a real body rules out, a model should not be able to produce."
       }
     ],
     "nowLabel": "Right now",
-    "now": "Mitacs Globalink research intern at the University of Alberta's Vision & Learning Lab, on physics-grounded 3D motion generation.",
+    "now": "Final year at ENSEIRB-MATMECA. From February 2027, research intern at NAVER LABS Europe, co-supervised with the KINETIX team at the Inria centre of Université Grenoble Alpes.",
     "goalLabel": "Goal",
-    "goal": "Research Scientist",
+    "goal": "Research Scientist at a leading research lab",
     "ctaPublications": "See my publications",
     "ctaContact": "Talk research"
   },
@@ -261,20 +261,23 @@
     "techStack": "Technologies",
     "viewLive": "View Demo",
     "viewCode": "View Code",
-    "readMore": "Learn More",
+    "readMore": "Read more",
     "featuredSection": {
       "title": "Featured Projects",
       "subtitle": "Explore my latest research projects and technical implementations.",
       "button": "View All Projects",
       "demo": "Demo",
       "publication": "Publication"
-    }
+    },
+    "close": "Close"
   },
   "experience": {
     "pageTitle": "Professional Experience",
     "pageSubtitle": "The places where I’ve learned outside of school.",
-    "moreInfo": "If you would like to know more about my professional experience, feel free to get in touch.",
-    "noExperience": "No professional experience available."
+    "moreInfo": "To hear more about my professional background, write to me.",
+    "noExperience": "No professional experience available.",
+    "readMore": "Read more",
+    "close": "Close"
   },
   "blog": {
     "title": "Blog",
@@ -324,8 +327,8 @@
     "dark": "Dark Mode"
   },
   "site": {
-    "description": "AI student at ENSEIRB-MATMECA, passionate about designing the model architectures of tomorrow: bio-inspired, world models, more efficient than Transformers. Currently a Mitacs Globalink research intern at the University of Alberta. Goal: to become a Research Scientist at Google.",
-    "tagline": "AI Student · World Models",
-    "title": "Mélissa Colin | AI Student, Model Architectures & World Models"
+    "description": "AI student at ENSEIRB-MATMECA. I design foundation-model architectures for 3D human vision, where a geometric or physical constraint holds by construction rather than being added to the loss.",
+    "tagline": "AI Student · 3D Human Vision",
+    "title": "Mélissa Colin | AI Student, Architectures & 3D Human Vision"
   }
 }

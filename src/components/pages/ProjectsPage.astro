@@ -1,6 +1,6 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
-import { FiGithub, FiExternalLink, FiFilter } from 'react-icons/fi';
+import { FiGithub, FiExternalLink, FiFilter, FiX } from 'react-icons/fi';
 import { getUI, getList, type Locale } from '../../lib/content';
 
 interface Props {
@@ -14,7 +14,11 @@ const projects = await getList('projects', locale);
 // Unique categories in first-seen order (matches Array.from(new Set(...)))
 const categories = [...new Set(projects.map((x: any) => x.category))];
 const demoLabel = (demo: string) =>
-  demo && demo.includes('hal.science') ? 'Publication' : p.viewLive;
+  demo && demo.includes('hal.science')
+    ? 'Publication'
+    : demo && demo.endsWith('.pdf')
+      ? (locale === 'fr' ? 'Présentation (PDF)' : 'Slides (PDF)')
+      : p.viewLive;
 ---
 
 <PageLayout locale={locale} path="/projects" title={`${p.title} | Mélissa Colin`}>
@@ -74,11 +78,13 @@ const demoLabel = (demo: string) =>
 
         {/* Cards */}
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto" id="projects-grid" data-stagger>
-          {projects.map((project: any) => (
+          {projects.map((project: any, i: number) => (
             <div
               class="js-project bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
+              class:list={[project.detail && 'has-detail']}
               data-category={project.category}
-              data-search={`${project.title} ${project.description}`.toLowerCase()}
+              data-modal={project.detail ? `pm-${i}` : undefined}
+              data-search={`${project.title} ${project.description} ${project.detail ?? ''}`.toLowerCase()}
             >
               <div class="h-48 overflow-hidden">
                 {project.image ? (
@@ -104,6 +110,11 @@ const demoLabel = (demo: string) =>
                     <span class="px-2 py-1 text-xs bg-red-100 dark:bg-red-900/20 rounded text-red-800 dark:text-red-300">{tech}</span>
                   ))}
                 </div>
+                {project.detail && (
+                  <button type="button" class="js-more read-more" data-modal={`pm-${i}`}>
+                    {p.readMore ?? 'En savoir plus'} <span aria-hidden="true">&#8594;</span>
+                  </button>
+                )}
               </div>
               <div class="p-4 border-t border-gray-200 dark:border-gray-700 mt-auto flex justify-between items-center">
                 {project.github ? (
@@ -120,10 +131,96 @@ const demoLabel = (demo: string) =>
             </div>
           ))}
         </div>
+
+        {projects.map((project: any, i: number) => project.detail && (
+          <dialog id={`pm-${i}`} class="project-modal" aria-label={project.title}>
+            <form method="dialog" class="pm-close-wrap">
+              <button class="pm-close" aria-label={p.close ?? 'Fermer'}><FiX /></button>
+            </form>
+            {project.image && <img class="pm-img" src={project.image} alt={project.title} loading="lazy" />}
+            <div class="pm-body">
+              <h3>{project.title}</h3>
+              {String(project.detail).split('\n\n').map((para: string) => <p>{para}</p>)}
+              <div class="pm-tags">
+                {project.technologies.map((tech: string) => (
+                  <span class="px-2 py-1 text-xs bg-red-100 dark:bg-red-900/20 rounded text-red-800 dark:text-red-300">{tech}</span>
+                ))}
+              </div>
+              <div class="pm-links">
+                {project.github && (
+                  <a href={project.github} target="_blank" rel="noopener noreferrer"><FiGithub /> GitHub</a>
+                )}
+                {project.demo && (
+                  <a href={project.demo} target="_blank" rel="noopener noreferrer"><FiExternalLink /> {demoLabel(project.demo)}</a>
+                )}
+              </div>
+            </div>
+          </dialog>
+        ))}
       </div>
     </section>
   </div>
 </PageLayout>
+
+<style>
+  .has-detail { cursor: pointer; }
+  .read-more {
+    background: none; border: 0; padding: 0;
+    font-size: 0.875rem; font-weight: 600;
+    color: rgb(220 38 38); cursor: pointer;
+  }
+  .read-more:hover { text-decoration: underline; }
+
+  .project-modal {
+    width: min(640px, calc(100vw - 2rem));
+    max-height: 85vh;
+    padding: 0;
+    border: 0;
+    border-radius: 0.75rem;
+    background: #ffffff;
+    color: #1f2937;
+    overflow: auto;
+  }
+  :global(.dark) .project-modal { background: #1f2937; color: #e5e7eb; }
+  .project-modal::backdrop { background: rgb(0 0 0 / 0.65); }
+  .pm-img { width: 100%; height: 220px; object-fit: cover; display: block; }
+  .pm-body { padding: 1.5rem; }
+  .pm-body h3 { font-size: 1.35rem; font-weight: 700; margin-bottom: 0.75rem; }
+  .pm-body p { margin-bottom: 0.85rem; line-height: 1.65; }
+  .pm-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+  .pm-links { display: flex; gap: 1.25rem; padding-top: 0.75rem; border-top: 1px solid rgb(128 128 128 / 0.25); }
+  .pm-links a { display: inline-flex; align-items: center; gap: 0.4rem; color: rgb(220 38 38); font-weight: 600; }
+  .pm-close-wrap { position: sticky; top: 0; height: 0; text-align: right; z-index: 2; }
+  .pm-close {
+    margin: 0.6rem; width: 2rem; height: 2rem;
+    display: inline-flex; align-items: center; justify-content: center;
+    border: 0; border-radius: 9999px; cursor: pointer;
+    background: rgb(0 0 0 / 0.55); color: #fff;
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    function open(id) {
+      var d = document.getElementById(id);
+      if (d && typeof d.showModal === 'function') d.showModal();
+    }
+    document.querySelectorAll('.js-more').forEach(function (b) {
+      b.addEventListener('click', function (e) { e.stopPropagation(); open(b.getAttribute('data-modal')); });
+    });
+    document.querySelectorAll('.js-project[data-modal]').forEach(function (c) {
+      c.addEventListener('click', function (e) {
+        // on laisse passer les clics sur un vrai lien ou bouton
+        if (e.target.closest('a, button')) return;
+        open(c.getAttribute('data-modal'));
+      });
+    });
+    // clic sur le fond = fermeture
+    document.querySelectorAll('dialog.project-modal').forEach(function (d) {
+      d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
+    });
+  })();
+</script>
 
 <script is:inline>
   (function () {

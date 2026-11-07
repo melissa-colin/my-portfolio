@@ -1,0 +1,29 @@
+{
+  "order": 150,
+  "title": "AI Research Intern (3D Human Vision)",
+  "company": "NAVER LABS Europe × Inria KINETIX",
+  "companyUrl": "https://europe.naverlabs.com/",
+  "companies": [
+    {
+      "name": "NAVER LABS Europe",
+      "url": "https://europe.naverlabs.com/",
+      "logo": "/assets/images/logos/naver-labs-europe.png"
+    },
+    {
+      "name": "Inria | KINETIX",
+      "url": "https://team.inria.fr/kinetix/",
+      "logo": "/assets/images/logos/inria.png"
+    }
+  ],
+  "location": "Meylan, France",
+  "period": "February 2027 - July 2027",
+  "description": "Upcoming end-of-studies research internship, co-supervised by NAVER LABS Europe and the KINETIX team at the Inria centre of Université Grenoble Alpes.\n\nTopic: 3D human mesh estimation from images.",
+  "technologies": [
+    "Python",
+    "PyTorch",
+    "3D Vision",
+    "3D Human Meshes"
+  ],
+  "type": "Research Internship",
+  "detail": ""
+}

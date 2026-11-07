@@ -1,7 +1,7 @@
 {
   "home": {
     "heroTitle": "Mélissa Colin",
-    "heroSubtitle": "Ce qui me passionne, c'est de repenser les fondations de l'IA : des architectures inspirées du vivant, capables de se construire un « modèle du monde » et plus sobres que les Transformers, quel que soit leur domaine d'application. En ce moment, je suis en stage de recherche Mitacs Globalink au Vision & Learning Lab de l'Université d'Alberta, où je travaille sur la génération de mouvement 3D guidée par la physique. Mon rêve : devenir un jour Research Scientist.",
+    "heroSubtitle": "Ce qui me passionne, c'est de concevoir des architectures de modèles de fondation pour la vision 3D humaine : que la contrainte géométrique ou physique soit portée par l'architecture, plutôt qu'ajoutée à la fonction de coût. Mon objectif : devenir Research Scientist dans un laboratoire de recherche de premier plan.",
     "status": "Élève-Ingénieure",
     "school": "ENSEIRB-MATMECA",
     "age": "{{age}} ans",
@@ -16,7 +16,7 @@
       "notableTitle": "Réalisations Notables",
       "skills": [
         {
-          "description": "World models, modèles bio-inspirés, efficacité post-Transformer, mécanismes d'attention, modèles de diffusion, fine-tuning (LoRA/PEFT)",
+          "description": "Modèles de fondation pour la vision 3D, contraintes par construction, différentiation implicite, mécanismes d'attention, modèles de diffusion, fine-tuning (LoRA/PEFT)",
           "name": "Conception d'architectures de modèles",
           "icon": "FiCpu",
           "id": "architectures"
@@ -70,7 +70,7 @@
           "id": "languages-spoken"
         }
       ],
-      "subtitle": "Un socle technique et humain, tourné vers ce qui m'intéresse vraiment : les architectures de modèles, les world models et les systèmes bio-inspirés. La vision par ordinateur et l'IA explicable, elles, restent des outils.",
+      "subtitle": "Un socle technique et humain, tourné vers ce qui m'intéresse vraiment : les architectures de modèles de fondation et la vision 3D humaine. La vision par ordinateur classique et l'IA explicable, elles, restent des outils.",
       "title": "Expertise & Compétences"
     },
     "aboutTitle": "À Propos de Moi",
@@ -81,12 +81,12 @@
   },
   "about": {
     "title": "À Propos de Moi",
-    "intro": "Je suis élève-ingénieure à l'<strong>ENSEIRB-MATMECA</strong>, en parcours ingénieur-docteur. Ce qui m'anime, c'est de <strong>repenser les architectures de modèles</strong> : les rendre plus inspirées du vivant, capables de se construire un « modèle du monde » et plus efficaces que les Transformers. En ce moment, je suis en <strong>stage de recherche Mitacs Globalink</strong> au Vision &amp; Learning Lab de l'<strong>Université d'Alberta</strong>, sur la génération de mouvement 3D guidée par la physique. Et mon objectif à terme, c'est de devenir <strong>Research Scientist chez Google</strong>.",
+    "intro": "Je suis élève-ingénieure à l'<strong>ENSEIRB-MATMECA</strong>, en parcours ingénieur-docteur. Ce qui m'anime, c'est de <strong>concevoir des architectures de modèles de fondation pour la vision 3D humaine</strong> : faire porter une contrainte géométrique ou physique par l'architecture, plutôt que par un terme ajouté à la perte. Et cette contrainte, je vais la chercher dans l'anatomie, dans la mécanique, dans ce que le corps réel autorise.",
     "section1Title": "D'un village de Gironde à la recherche en IA",
     "section1p1": "J'ai grandi dans un village rural de Gironde, dans une famille d'ouvriers. Petite, on m'a dit que je n'étais pas faite pour les études, mais pour le travail. J'ai appris à coder seule : Scratch à <strong>12 ans</strong>, Python à <strong>13 ans</strong>, puis un bac technologique. Ce qui m'a captivée, très vite, c'était l'<strong>algorithmique</strong> et la façon dont une machine peut apprendre, bien plus que les sites web ou les jeux.",
     "section1p2": "Le déclic est venu pendant un stage chez Cali Intelligences, une start-up de vision par ordinateur. Je m'y suis lancée à fond, avec une conviction qui ne m'a plus quittée : plutôt que d'empiler des couches, j'ai eu envie de contribuer aux <strong>fondations mêmes de l'IA</strong>, en repensant les architectures de modèles. J'ai avancé une marche après l'autre, major à chaque étape, jusqu'à intégrer l'<strong>ENSEIRB-MATMECA</strong> sur titre et m'y classer <strong>3ᵉ sur 93</strong>, puis décrocher une bourse <strong>Mitacs Globalink</strong> pour faire de la recherche à l'Université d'Alberta.",
     "section2Title": "Pourquoi je fais ça",
-    "section2p1": "Au fond, mon moteur n'est pas que scientifique. Je veux <strong>prouver que c'est possible</strong> : qu'une autre fille d'un milieu modeste puisse se dire, en me voyant, « si elle a pu, alors moi aussi ». La science est l'outil, ouvrir la voie est le but. Et je tiens à une ligne rouge : ne pas mettre mon travail au service de la surveillance ou d'usages militaires. Ma devise tient en une phrase de Stephen Hawking : <em>« L'intelligence est la capacité à s'adapter au changement. »</em>",
+    "section2p1": "Mon moteur n'est pas seulement scientifique. On m'a dit que je n'étais pas faite pour les études ; je l'ai fait quand même. Si je raconte d'où je viens au lieu de le taire, c'est parce que ça aide d'avoir vu quelqu'un d'autre le faire avant. Et je m'en tiens à une ligne : <strong>mon travail n'ira pas à la surveillance ni à des usages militaires</strong>.",
     "cta": "Découvrir mon parcours"
   },
   "contact": {
@@ -131,29 +131,29 @@
   },
   "research": {
     "title": "Ce qui me passionne",
-    "lead": "Concevoir les architectures de modèles de demain.",
-    "intro": "Mon cap : repenser les fondations de l'IA, vers des modèles plus généraux, plus sobres et inspirés du vivant, quel que soit le domaine d'application.",
+    "lead": "Concevoir des architectures de modèles de fondation pour la vision 3D humaine.",
+    "intro": "Je veux que ce qu'un modèle produit soit valide d'emblée, pas corrigé après coup. Alors je vais chercher la contrainte là où elle existe déjà : dans l'anatomie, dans la mécanique, dans le vivant. La vision 3D du corps humain est mon terrain d'essai, mais la question se pose dans tous les domaines.",
     "pillars": [
       {
         "icon": "FiGlobe",
-        "title": "World Models",
-        "desc": "Des modèles qui apprennent une représentation interne du monde pour anticiper, raisonner et agir."
+        "title": "Modèles de fondation pour la vision 3D",
+        "desc": "Des encodeurs entraînés à grande échelle qui placent la scène et les personnes dans un même repère 3D."
       },
       {
         "icon": "FiActivity",
-        "title": "Architectures bio-inspirées",
-        "desc": "S'inspirer du vivant pour des modèles plus efficaces, robustes et généralisables."
+        "title": "Contraintes par construction",
+        "desc": "Couche d'optimisation différentiable, paramétrisation restreinte, équivariance : trois façons d'imposer une propriété sans l'ajouter à la perte."
       },
       {
         "icon": "FiZap",
-        "title": "Efficacité post-Transformer",
-        "desc": "Repenser l'attention et le calcul pour des modèles plus sobres en énergie et en données."
+        "title": "Le vivant comme contrainte",
+        "desc": "L'anatomie, la mécanique, le contact : ce que le corps réel interdit, un modèle ne devrait pas pouvoir le produire."
       }
     ],
     "nowLabel": "En ce moment",
-    "now": "En stage de recherche Mitacs Globalink au Vision & Learning Lab de l'Université d'Alberta, sur la génération de mouvement 3D guidée par la physique.",
+    "now": "En dernière année à l'ENSEIRB-MATMECA. À partir de février 2027, stage de recherche chez NAVER LABS Europe, co-encadré avec l'équipe KINETIX du centre Inria de l'Université Grenoble Alpes.",
     "goalLabel": "Objectif",
-    "goal": "Research Scientist",
+    "goal": "Research Scientist dans un laboratoire de recherche de premier plan",
     "ctaPublications": "Voir mes publications",
     "ctaContact": "Discuter recherche"
   },
@@ -185,9 +185,11 @@
   },
   "experience": {
     "noExperience": "Aucune expérience professionnelle disponible.",
-    "moreInfo": "Si vous souhaitez en savoir plus sur mon expérience professionnelle, n'hésitez pas à me contacter.",
+    "moreInfo": "Pour en savoir plus sur mon parcours professionnel, écrivez-moi.",
     "pageSubtitle": "Les endroits où j’ai appris autrement qu’à l’école.",
-    "pageTitle": "Expérience Professionnelle"
+    "pageTitle": "Expérience Professionnelle",
+    "readMore": "En savoir plus",
+    "close": "Fermer"
   },
   "projects": {
     "featuredSection": {
@@ -197,7 +199,7 @@
       "subtitle": "Découvrez mes derniers projets de recherche et implémentations techniques.",
       "title": "Projets phares"
     },
-    "readMore": "En Savoir Plus",
+    "readMore": "En savoir plus",
     "viewCode": "Voir le Code",
     "viewLive": "Voir la Démo",
     "techStack": "Technologies",
@@ -205,7 +207,8 @@
     "allCategories": "Toutes les Catégories",
     "filter": "Filtrer Par",
     "subtitle": "Le laboratoire un peu fou des idées qui s’aventurent sans guide.",
-    "title": "Projets"
+    "title": "Projets",
+    "close": "Fermer"
   },
   "publications": {
     "noPublications": "Aucune publication disponible.",
@@ -303,9 +306,9 @@
     "share": "Partager"
   },
   "site": {
-    "title": "Mélissa Colin | Étudiante en IA, architectures de modèles & world models",
-    "tagline": "Étudiante en IA · World Models",
-    "description": "Étudiante en intelligence artificielle à l'ENSEIRB-MATMECA, passionnée par la conception des architectures de modèles de demain : bio-inspirées, « world models », plus efficaces que les Transformers. Actuellement en stage de recherche Mitacs Globalink à l'Université d'Alberta. Objectif : devenir Research Scientist chez Google."
+    "title": "Mélissa Colin | Étudiante en IA, architectures et vision 3D humaine",
+    "tagline": "Étudiante en IA · Vision 3D humaine",
+    "description": "Étudiante en intelligence artificielle à l'ENSEIRB-MATMECA. Je conçois des architectures de modèles de fondation pour la vision 3D humaine, où la contrainte géométrique ou physique est satisfaite par construction plutôt qu'ajoutée au coût."
   },
   "theme": {
     "dark": "Mode Sombre",
