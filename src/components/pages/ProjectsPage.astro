@@ -1,6 +1,6 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
-import { FiGithub, FiExternalLink, FiFilter, FiX } from 'react-icons/fi';
+import { FiCpu, FiGithub, FiExternalLink, FiFilter, FiX } from 'react-icons/fi';
 import { getUI, getList, type Locale } from '../../lib/content';
 
 interface Props {
@@ -84,9 +84,12 @@ const demoLabel = (demo: string) =>
               class:list={[project.detail && 'has-detail']}
               data-category={project.category}
               data-modal={project.detail ? `pm-${i}` : undefined}
-              data-search={`${project.title} ${project.description} ${project.detail ?? ''}`.toLowerCase()}
+              data-search={`${project.title} ${project.description} ${project.detail ?? ''} ${project.vibeCoded ? p.vibeCoded : ''}`.toLowerCase()}
             >
-              <div class="h-48 overflow-hidden">
+              <div class="h-48 overflow-hidden relative">
+                {project.vibeCoded && (
+                  <span class="vibe-badge" title={p.vibeCodedHint}><FiCpu />{p.vibeCoded}</span>
+                )}
                 {project.image ? (
                   <img
                     src={project.image}
@@ -140,6 +143,9 @@ const demoLabel = (demo: string) =>
             {project.image && <img class="pm-img" src={project.image} alt={project.title} loading="lazy" />}
             <div class="pm-body">
               <h3>{project.title}</h3>
+              {project.vibeCoded && (
+                <p class="vibe-note"><span class="vibe-badge"><FiCpu />{p.vibeCoded}</span>{p.vibeCodedHint}</p>
+              )}
               {String(project.detail).split('\n\n').map((para: string) => <p>{para}</p>)}
               <div class="pm-tags">
                 {project.technologies.map((tech: string) => (
@@ -164,6 +170,20 @@ const demoLabel = (demo: string) =>
 
 <style>
   .has-detail { cursor: pointer; }
+  /* Marks projects whose code was written by an AI from my specification. */
+  .vibe-badge {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    padding: 0.2rem 0.65rem;
+    border: 1px solid rgb(220 38 38); border-radius: 9999px;
+    background: rgb(17 19 24 / 0.85); color: #fff;
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.02em;
+    backdrop-filter: blur(4px);
+  }
+  .h-48 > .vibe-badge { position: absolute; top: 0.75rem; left: 0.75rem; z-index: 1; }
+  .vibe-note {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem;
+    font-size: 0.9rem; opacity: 0.85;
+  }
   .read-more {
     background: none; border: 0; padding: 0;
     font-size: 0.875rem; font-weight: 600;

@@ -40,6 +40,7 @@ collections:
       - { name: demo, label: Lien démo, widget: string, required: false }
       - { name: detail, label: "Détail (fenêtre « En savoir plus »)", widget: text, required: false, hint: "Texte long. S'il est rempli, la carte devient cliquable et ouvre une fenêtre." }
       - { name: featured, label: Mis en avant, widget: boolean, default: false, required: false, i18n: duplicate }
+      - { name: vibeCoded, label: "Vibe-codé (besoin spécifié par moi, code écrit par une IA)", widget: boolean, default: false, required: false, i18n: duplicate, hint: "Affiche le badge « Vibe-codé » sur la carte et dans la fenêtre du projet." }
 
   - name: experiences
     label: Expériences
@@ -371,6 +372,8 @@ collections:
               - { name: readMore, label: "Read More", widget: string, required: false }
               - { name: viewCode, label: "View Code", widget: string, required: false }
               - { name: viewLive, label: "View Live", widget: string, required: false }
+              - { name: vibeCoded, label: "Vibe Coded badge", widget: string, required: false }
+              - { name: vibeCodedHint, label: "Vibe Coded explanation", widget: string, required: false }
               - { name: techStack, label: "Tech Stack", widget: string, required: false }
               - { name: search, label: "Search", widget: string, required: false }
               - { name: allCategories, label: "All Categories", widget: string, required: false }
@@ -649,6 +652,8 @@ collections:
               - { name: readMore, label: "Read More", widget: string, required: false }
               - { name: viewCode, label: "View Code", widget: string, required: false }
               - { name: viewLive, label: "View Live", widget: string, required: false }
+              - { name: vibeCoded, label: "Vibe Coded badge", widget: string, required: false }
+              - { name: vibeCodedHint, label: "Vibe Coded explanation", widget: string, required: false }
               - { name: techStack, label: "Tech Stack", widget: string, required: false }
               - { name: search, label: "Search", widget: string, required: false }
               - { name: allCategories, label: "All Categories", widget: string, required: false }

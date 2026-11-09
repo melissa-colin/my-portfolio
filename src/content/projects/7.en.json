@@ -1,0 +1,20 @@
+{
+  "title": "Annotheca",
+  "description": "A local reference manager for research projects: verified BibTeX, PDFs, highlights and notes, and an MCP server so that AI assistants file the papers they cite.",
+  "image": "",
+  "technologies": [
+    "Python",
+    "FastAPI",
+    "SQLite",
+    "JavaScript",
+    "pdf.js",
+    "MCP"
+  ],
+  "github": "https://github.com/melissa-colin/annotheca",
+  "demo": "",
+  "featured": false,
+  "order": 35,
+  "vibeCoded": true,
+  "category": "Tools",
+  "detail": "A tool I needed for my own research: one place per project for its bibliography, organised by stage (state of the art, method, experiments). Paste a DOI, an arXiv ID, a BibTeX entry or a formatted citation, and it fetches verified metadata and the open-access PDF; then highlight passages, pin sticky notes and export one clean .bib file per project.\n\nA paper filed in two folders is stored once but annotated separately in each, because what matters for the state of the art is not what matters for the method. A whole project, with its notes and PDFs, can be shared as a single file.\n\nIt also works with AI assistants. Through an MCP server, Claude files the papers it finds with metadata resolved from doi.org, arXiv and Crossref, so it cannot get an author or a title wrong, and every paper it adds is marked as such.\n\nOpen source and published on PyPI: pip install annotheca."
+}

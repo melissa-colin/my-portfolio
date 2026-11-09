@@ -1,0 +1,20 @@
+{
+  "title": "Annotheca",
+  "description": "Un gestionnaire de références local pour les projets de recherche : BibTeX vérifié, PDF, surlignages et notes, et un serveur MCP pour que les assistants IA rangent les articles qu'ils citent.",
+  "image": "",
+  "technologies": [
+    "Python",
+    "FastAPI",
+    "SQLite",
+    "JavaScript",
+    "pdf.js",
+    "MCP"
+  ],
+  "github": "https://github.com/melissa-colin/annotheca",
+  "demo": "",
+  "featured": false,
+  "order": 35,
+  "vibeCoded": true,
+  "category": "Outils",
+  "detail": "Un outil dont j'avais besoin pour ma propre recherche : un seul endroit par projet pour sa bibliographie, organisée par étape (état de l'art, méthode, expériences). On colle un DOI, un identifiant arXiv, une entrée BibTeX ou une citation formatée, et il récupère des métadonnées vérifiées et le PDF en libre accès ; on surligne, on pose des post-it, et on exporte un .bib propre par projet.\n\nUn article rangé dans deux dossiers n'est stocké qu'une fois mais annoté séparément dans chacun, parce que ce qui compte pour l'état de l'art n'est pas ce qui compte pour la méthode. Un projet entier, avec ses notes et ses PDF, se partage en un seul fichier.\n\nIl fonctionne aussi avec les assistants IA. Grâce à un serveur MCP, Claude range les articles qu'il trouve avec des métadonnées issues de doi.org, arXiv et Crossref : il ne peut pas se tromper sur un auteur ou un titre, et chaque article qu'il ajoute est signalé comme tel.\n\nOpen source et publié sur PyPI : pip install annotheca."
+}

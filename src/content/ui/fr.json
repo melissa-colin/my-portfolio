@@ -208,7 +208,9 @@
     "filter": "Filtrer Par",
     "subtitle": "Le laboratoire un peu fou des idées qui s’aventurent sans guide.",
     "title": "Projets",
-    "close": "Fermer"
+    "close": "Fermer",
+    "vibeCoded": "Vibe-codé",
+    "vibeCodedHint": "Besoin exprimé et spécifié par moi ; code écrit par une IA (Claude)."
   },
   "publications": {
     "noPublications": "Aucune publication disponible.",

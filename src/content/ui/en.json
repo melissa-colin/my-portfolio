@@ -269,7 +269,9 @@
       "demo": "Demo",
       "publication": "Publication"
     },
-    "close": "Close"
+    "close": "Close",
+    "vibeCoded": "Vibe-coded",
+    "vibeCodedHint": "Need expressed and specified by me; code written by an AI (Claude)."
   },
   "experience": {
     "pageTitle": "Professional Experience",
