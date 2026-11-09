@@ -1,14 +1,14 @@
 {
   "title": "Annotheca",
-  "description": "Un gestionnaire de références local pour les projets de recherche : BibTeX vérifié, PDF, surlignages et notes, et un serveur MCP pour que les assistants IA rangent les articles qu'ils citent.",
-  "image": "",
+  "description": "Un gestionnaire de références pensé pour la recherche avec des assistants IA : via MCP, Claude range les articles qu'il cite avec des métadonnées vérifiées à la source, sans aucune référence hallucinée.",
+  "image": "/assets/images/projects/annotheca.jpg",
   "technologies": [
+    "MCP",
+    "Claude",
     "Python",
     "FastAPI",
     "SQLite",
-    "JavaScript",
-    "pdf.js",
-    "MCP"
+    "pdf.js"
   ],
   "github": "https://github.com/melissa-colin/annotheca",
   "demo": "",
@@ -16,5 +16,5 @@
   "order": 35,
   "vibeCoded": true,
   "category": "Outils",
-  "detail": "Un outil dont j'avais besoin pour ma propre recherche : un seul endroit par projet pour sa bibliographie, organisée par étape (état de l'art, méthode, expériences). On colle un DOI, un identifiant arXiv, une entrée BibTeX ou une citation formatée, et il récupère des métadonnées vérifiées et le PDF en libre accès ; on surligne, on pose des post-it, et on exporte un .bib propre par projet.\n\nUn article rangé dans deux dossiers n'est stocké qu'une fois mais annoté séparément dans chacun, parce que ce qui compte pour l'état de l'art n'est pas ce qui compte pour la méthode. Un projet entier, avec ses notes et ses PDF, se partage en un seul fichier.\n\nIl fonctionne aussi avec les assistants IA. Grâce à un serveur MCP, Claude range les articles qu'il trouve avec des métadonnées issues de doi.org, arXiv et Crossref : il ne peut pas se tromper sur un auteur ou un titre, et chaque article qu'il ajoute est signalé comme tel.\n\nOpen source et publié sur PyPI : pip install annotheca."
+  "detail": "Les modèles de langage trouvent bien les articles mais les citent mal : un auteur inversé, une mauvaise année, un titre qui n'existe pas. Annotheca supprime ce risque. Il expose un serveur MCP : Claude, ou tout assistant compatible MCP, n'écrit jamais une référence lui-même. Il indique seulement de quel article il parle, par DOI, identifiant arXiv ou citation, et Annotheca récupère les métadonnées auprès de doi.org, arXiv et Crossref puis lui renvoie la clé de citation, le titre et les auteurs exacts à utiliser.\n\nChaque article ajouté par un assistant porte son nom et une note expliquant son intérêt : on peut toujours retracer et vérifier la bibliographie sur laquelle une IA s'est appuyée. L'assistant peut aussi lire mes notes et mes surlignages avant de résumer un article, et récupérer le .bib du projet pour citer en LaTeX. Une seule commande, annotheca connect, le branche sur Claude Code et Claude Desktop.\n\nDerrière, il y a le gestionnaire de références dont j'avais besoin pour ma propre recherche : un espace par projet, organisé par étape (état de l'art, méthode, expériences), avec les PDF en libre accès téléchargés automatiquement, des surlignages, des post-it et un .bib propre par projet. Un article rangé dans deux dossiers n'est stocké qu'une fois mais annoté séparément dans chacun, et un projet entier se partage en un seul fichier.\n\nOpen source et publié sur PyPI : pip install annotheca."
 }

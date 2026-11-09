@@ -1,14 +1,14 @@
 {
   "title": "Annotheca",
-  "description": "A local reference manager for research projects: verified BibTeX, PDFs, highlights and notes, and an MCP server so that AI assistants file the papers they cite.",
-  "image": "",
+  "description": "A reference manager built for research with AI assistants: through MCP, Claude files the papers it cites with metadata verified at the source, so its bibliography cannot contain hallucinated references.",
+  "image": "/assets/images/projects/annotheca.jpg",
   "technologies": [
+    "MCP",
+    "Claude",
     "Python",
     "FastAPI",
     "SQLite",
-    "JavaScript",
-    "pdf.js",
-    "MCP"
+    "pdf.js"
   ],
   "github": "https://github.com/melissa-colin/annotheca",
   "demo": "",
@@ -16,5 +16,5 @@
   "order": 35,
   "vibeCoded": true,
   "category": "Tools",
-  "detail": "A tool I needed for my own research: one place per project for its bibliography, organised by stage (state of the art, method, experiments). Paste a DOI, an arXiv ID, a BibTeX entry or a formatted citation, and it fetches verified metadata and the open-access PDF; then highlight passages, pin sticky notes and export one clean .bib file per project.\n\nA paper filed in two folders is stored once but annotated separately in each, because what matters for the state of the art is not what matters for the method. A whole project, with its notes and PDFs, can be shared as a single file.\n\nIt also works with AI assistants. Through an MCP server, Claude files the papers it finds with metadata resolved from doi.org, arXiv and Crossref, so it cannot get an author or a title wrong, and every paper it adds is marked as such.\n\nOpen source and published on PyPI: pip install annotheca."
+  "detail": "Language models are good at finding papers and bad at citing them: a swapped author, a wrong year, a title that does not exist. Annotheca removes that risk. It runs an MCP server, so Claude, or any assistant that speaks MCP, never writes a reference itself: it only says which paper it means, by DOI, arXiv ID or citation, and Annotheca resolves the metadata from doi.org, arXiv and Crossref and returns the exact citation key, title and authors to use.\n\nEvery paper an assistant adds is marked with its name and comes with a note on why it matters, so the bibliography an AI relied on can always be traced and checked. The assistant can also read my notes and highlights before summarising a paper, and get the project's .bib file to cite with LaTeX. A single command, annotheca connect, plugs it into Claude Code and Claude Desktop.\n\nUnderneath is the reference manager I needed for my own research: one place per project, organised by stage (state of the art, method, experiments), with open-access PDFs downloaded automatically, highlights, sticky notes and one clean .bib per project. A paper filed in two folders is stored once but annotated separately in each, and a whole project can be shared as a single file.\n\nOpen source and published on PyPI: pip install annotheca."
 }
